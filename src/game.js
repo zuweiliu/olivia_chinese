@@ -1,33 +1,21 @@
 /**
- * 飞越中华 - Fly Through China
- * Main game configuration and initialization
+ * 飞越中华 - Fly Through China 3D
+ * Main entry point - Babylon.js initialization
  */
-const config = {
-    type: Phaser.AUTO,
-    parent: 'game-container',
-    width: 960,
-    height: 600,
-    backgroundColor: '#0a0a1a',
-    physics: {
-        default: 'arcade',
-        arcade: {
-            gravity: { y: 0 },
-            debug: false
-        }
-    },
-    scale: {
-        mode: Phaser.Scale.FIT,
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-        min: {
-            width: 640,
-            height: 400
-        },
-        max: {
-            width: 1920,
-            height: 1080
-        }
-    },
-    scene: [BootScene, MenuScene, GameScene, ReviewScene]
-};
+window.addEventListener('DOMContentLoaded', async () => {
+    const canvas = document.getElementById('renderCanvas');
 
-const game = new Phaser.Game(config);
+    const gameEngine = new GameEngine(canvas);
+
+    try {
+        await gameEngine.init();
+        console.log('飞越中华 3D - Game initialized successfully');
+    } catch (err) {
+        console.error('Failed to initialize game:', err);
+        const loadingEl = document.getElementById('loadingScreen');
+        if (loadingEl) {
+            loadingEl.querySelector('p').textContent = 'Error loading game: ' + err.message;
+            loadingEl.querySelector('.spinner').style.display = 'none';
+        }
+    }
+});

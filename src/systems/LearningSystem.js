@@ -3,7 +3,8 @@
  * Handles the core learning flow: discover → teach → review → master
  */
 class LearningSystem {
-    constructor() {
+    constructor(storageKey) {
+        this.storageKey = storageKey || 'flyChina_progress';
         this.words = [];
         this.stories = [];
         this.config = null;
@@ -217,7 +218,7 @@ class LearningSystem {
             completedStories: Array.from(this.completedStories)
         };
         try {
-            localStorage.setItem('flyChina_progress', JSON.stringify(data));
+            localStorage.setItem(this.storageKey, JSON.stringify(data));
         } catch (e) {
             console.warn('Could not save progress:', e);
         }
@@ -225,7 +226,7 @@ class LearningSystem {
 
     _loadProgress() {
         try {
-            const saved = localStorage.getItem('flyChina_progress');
+            const saved = localStorage.getItem(this.storageKey);
             if (saved) {
                 const data = JSON.parse(saved);
                 if (data.theme === this.currentTheme || !this.currentTheme) {
@@ -248,6 +249,6 @@ class LearningSystem {
         this.totalLight = 0;
         this.currentAreaLight = 0;
         this.completedStories = new Set();
-        localStorage.removeItem('flyChina_progress');
+        localStorage.removeItem(this.storageKey);
     }
 }
