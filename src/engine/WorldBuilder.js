@@ -1,152 +1,103 @@
 /**
- * WorldBuilder - Procedural Song Dynasty city from config data
+ * WorldBuilder - Procedural dynasty city built entirely from config/style data.
+ * To add a new dynasty: create data/themes/<id>/ with config.json (including "style" block),
+ * words.json, and stories.json — no code changes needed.
  */
 class WorldBuilder {
     constructor(scene, learningSystem) {
         this.scene = scene;
         this.learningSystem = learningSystem;
         this.areas = learningSystem.config.areas;
-        this.areaLength = 180 / this.areas.length; // total world Z = 180
+        this.areaLength = 180 / this.areas.length;
         this.currentAreaIndex = 0;
-        this._areaNameTimeout = null;
+        this._showingGate = false;
+
+        // Merge provided style with defaults so optional keys are always present
+        this._style = Object.assign(this._defaultStyle(), learningSystem.config.style || {});
 
         // Materials cache
         this._materials = {};
         this._createMaterials();
     }
 
+    _defaultStyle() {
+        return {
+            roofColor:           [0.45, 0.15, 0.10],
+            roofColorAlt:        [0.60, 0.12, 0.10],
+            wallColors:          [[0.35,0.25,0.15],[0.40,0.30,0.20],[0.30,0.20,0.12],[0.45,0.35,0.25]],
+            gateColor:           [0.60, 0.15, 0.10],
+            lanternBodyColor:    [0.80, 0.15, 0.10],
+            lanternEmissive:     [0.90, 0.30, 0.10],
+            lanternLightColor:   [1.00, 0.60, 0.20],
+            treeCanopyColor:     [0.20, 0.45, 0.20],
+            specialTreeCanopy:   [1.00, 0.75, 0.80],
+            specialTreeEmissive: [0.15, 0.05, 0.06],
+            specialTreeType:     'cherry',
+            stallFabricColor:    [0.70, 0.55, 0.20],
+            stallFabricColorAlt: [0.15, 0.25, 0.50],
+            waterColor:          [0.10, 0.20, 0.40],
+            pondColor:           [0.08, 0.15, 0.35],
+            fogColor:            [0.15, 0.10, 0.05],
+            fogDensity:          0.012,
+            skyColor:            [0.05, 0.04, 0.08],
+            ambientLightColor:   [0.25, 0.20, 0.18],
+            roofStyle:           'curved',
+            gateStyle:           'standard',
+            marketAreas:         [2, 3],
+            bridgeAreas:         [1, 4, 6],
+            waterAreas:          [3, 5],
+            specialTreeAreas:    [4, 5, 7],
+            shopSignNames:       ['茶馆','酒楼','布庄','书坊','药铺','米店','饭馆','花店']
+        };
+    }
+
+    _c3(arr) { return new BABYLON.Color3(arr[0], arr[1], arr[2]); }
+
     _createMaterials() {
         const s = this.scene;
-
-        // Wall materials with different colors per area
-        const wallColors = [
-            [0.35, 0.25, 0.15], // dark wood
-            [0.4, 0.3, 0.2],    // light wood
-            [0.3, 0.2, 0.12],   // deep brown
-            [0.45, 0.35, 0.25], // tan
-        ];
-        wallColors.forEach((c, i) => {
-            const mat = new BABYLON.PBRMaterial(`wall${i}`, s);
-            mat.albedoColor = new BABYLON.Color3(c[0], c[1], c[2]);
-            mat.roughness = 0.85;
+        const st = this._style;
+        const m = (name, color, roughness = 0.85, emissive, alpha) => {
+            const mat = new BABYLON.PBRMaterial(name, s);
+            mat.albedoColor = this._c3(color);
+            mat.roughness = roughness;
             mat.metallic = 0;
-            this._materials[`wall${i}`] = mat;
+            if (emissive) mat.emissiveColor = this._c3(emissive);
+            if (alpha !== undefined) mat.alpha = alpha;
+            return mat;
+        };
+
+        // Wall variants from style
+        st.wallColors.forEach((c, i) => {
+            this._materials[`wall${i}`] = m(`wall${i}`, c);
         });
 
-        // Roof material (dark red/brown)
-        const roofMat = new BABYLON.PBRMaterial('roof', s);
-        roofMat.albedoColor = new BABYLON.Color3(0.45, 0.15, 0.1);
-        roofMat.roughness = 0.7;
-        roofMat.metallic = 0;
-        this._materials.roof = roofMat;
+        this._materials.roof      = m('roof',    st.roofColor,    0.70);
+        this._materials.redRoof   = m('redRoof', st.roofColorAlt, 0.70);
+        this._materials.gate      = m('gate',    st.gateColor,    0.70);
 
-        // Red roof variant
-        const redRoof = new BABYLON.PBRMaterial('redRoof', s);
-        redRoof.albedoColor = new BABYLON.Color3(0.6, 0.12, 0.1);
-        redRoof.roughness = 0.7;
-        redRoof.metallic = 0;
-        this._materials.redRoof = redRoof;
+        this._materials.window    = m('window',  [0.5, 0.4, 0.2], 0.50,
+                                        [0.9, 0.7, 0.3], 0.70);
 
-        // Window emissive
-        const winMat = new BABYLON.PBRMaterial('window', s);
-        winMat.albedoColor = new BABYLON.Color3(1, 0.9, 0.5);
-        winMat.emissiveColor = new BABYLON.Color3(0.8, 0.6, 0.2);
-        winMat.roughness = 0.5;
-        winMat.metallic = 0;
-        winMat.alpha = 0.7;
-        this._materials.window = winMat;
+        this._materials.lantern   = m('lantern', st.lanternBodyColor, 0.60,
+                                        st.lanternEmissive);
 
-        // Lantern
-        const lanternMat = new BABYLON.PBRMaterial('lantern', s);
-        lanternMat.albedoColor = new BABYLON.Color3(0.8, 0.15, 0.1);
-        lanternMat.emissiveColor = new BABYLON.Color3(0.9, 0.3, 0.1);
-        lanternMat.roughness = 0.6;
-        lanternMat.metallic = 0;
-        this._materials.lantern = lanternMat;
+        this._materials.trunk     = m('trunk',   [0.30, 0.20, 0.10], 0.95);
+        this._materials.leaves    = m('leaves',  st.treeCanopyColor,  0.90);
+        this._materials.blossom   = m('blossom', st.specialTreeCanopy, 0.80,
+                                        st.specialTreeEmissive);
 
-        // Tree trunk
-        const trunkMat = new BABYLON.PBRMaterial('trunk', s);
-        trunkMat.albedoColor = new BABYLON.Color3(0.3, 0.2, 0.1);
-        trunkMat.roughness = 0.95;
-        trunkMat.metallic = 0;
-        this._materials.trunk = trunkMat;
+        this._materials.stone     = m('stone',   [0.40, 0.38, 0.35], 0.95);
+        this._materials.bridge    = m('bridge',  [0.35, 0.30, 0.25], 0.85);
+        this._materials.pot       = m('pot',     [0.60, 0.35, 0.20], 0.80);
+        this._materials.sign      = m('sign',    [0.50, 0.25, 0.10], 0.80);
 
-        // Tree leaves
-        const leavesMat = new BABYLON.PBRMaterial('leaves', s);
-        leavesMat.albedoColor = new BABYLON.Color3(0.2, 0.45, 0.2);
-        leavesMat.roughness = 0.9;
-        leavesMat.metallic = 0;
-        this._materials.leaves = leavesMat;
+        this._materials.fabric    = m('fabric',    st.stallFabricColor,    0.90);
+        this._materials.blueFabric= m('blueFabric', st.stallFabricColorAlt, 0.85);
 
-        // Gate/pillar
-        const gateMat = new BABYLON.PBRMaterial('gate', s);
-        gateMat.albedoColor = new BABYLON.Color3(0.6, 0.15, 0.1);
-        gateMat.roughness = 0.7;
-        gateMat.metallic = 0;
-        this._materials.gate = gateMat;
-
-        // Stone
-        const stoneMat = new BABYLON.PBRMaterial('stone', s);
-        stoneMat.albedoColor = new BABYLON.Color3(0.4, 0.38, 0.35);
-        stoneMat.roughness = 0.95;
-        stoneMat.metallic = 0;
-        this._materials.stone = stoneMat;
-
-        // Bridge
-        const bridgeMat = new BABYLON.PBRMaterial('bridge', s);
-        bridgeMat.albedoColor = new BABYLON.Color3(0.35, 0.3, 0.25);
-        bridgeMat.roughness = 0.85;
-        bridgeMat.metallic = 0;
-        this._materials.bridge = bridgeMat;
-
-        // Market stall fabric
-        const fabricMat = new BABYLON.PBRMaterial('fabric', s);
-        fabricMat.albedoColor = new BABYLON.Color3(0.7, 0.55, 0.2);
-        fabricMat.roughness = 0.9;
-        fabricMat.metallic = 0;
-        this._materials.fabric = fabricMat;
-
-        // Blue fabric variant
-        const blueFabric = new BABYLON.PBRMaterial('blueFabric', s);
-        blueFabric.albedoColor = new BABYLON.Color3(0.15, 0.25, 0.5);
-        blueFabric.roughness = 0.85;
-        blueFabric.metallic = 0;
-        this._materials.blueFabric = blueFabric;
-
-        // Terracotta (flower pots)
-        const potMat = new BABYLON.PBRMaterial('pot', s);
-        potMat.albedoColor = new BABYLON.Color3(0.6, 0.35, 0.2);
-        potMat.roughness = 0.8;
-        potMat.metallic = 0;
-        this._materials.pot = potMat;
-
-        // Flower colors
-        const flowerPink = new BABYLON.PBRMaterial('flowerPink', s);
-        flowerPink.albedoColor = new BABYLON.Color3(1, 0.6, 0.7);
-        flowerPink.emissiveColor = new BABYLON.Color3(0.2, 0.05, 0.08);
-        flowerPink.roughness = 0.7;
-        this._materials.flowerPink = flowerPink;
-
-        const flowerWhite = new BABYLON.PBRMaterial('flowerWhite', s);
-        flowerWhite.albedoColor = new BABYLON.Color3(1, 0.95, 0.9);
-        flowerWhite.emissiveColor = new BABYLON.Color3(0.15, 0.12, 0.1);
-        flowerWhite.roughness = 0.7;
-        this._materials.flowerWhite = flowerWhite;
-
-        // Signboard wood
-        const signMat = new BABYLON.PBRMaterial('sign', s);
-        signMat.albedoColor = new BABYLON.Color3(0.5, 0.25, 0.1);
-        signMat.roughness = 0.8;
-        signMat.metallic = 0;
-        this._materials.sign = signMat;
-
-        // Cherry blossom
-        const blossomMat = new BABYLON.PBRMaterial('blossom', s);
-        blossomMat.albedoColor = new BABYLON.Color3(1, 0.75, 0.8);
-        blossomMat.emissiveColor = new BABYLON.Color3(0.15, 0.05, 0.06);
-        blossomMat.roughness = 0.8;
-        blossomMat.metallic = 0;
-        this._materials.blossom = blossomMat;
+        this._materials.flowerPink = m('flowerPink', [1, 0.6, 0.7], 0.70,
+                                         [0.2, 0.05, 0.08]);
+        this._materials.flowerWhite= m('flowerWhite', [1, 0.95, 0.9], 0.70,
+                                         [0.15, 0.12, 0.10]);
     }
 
     buildCity() {
@@ -169,17 +120,17 @@ class WorldBuilder {
             this._createTrees(zStart, this.areaLength, index);
 
             // Bridge in some areas
-            if (index === 1 || index === 4 || index === 6) {
+            if (this._style.bridgeAreas.includes(index)) {
                 this._createBridge(zMid);
             }
 
             // Water features in certain areas
-            if (index === 3 || index === 5) {
+            if (this._style.waterAreas.includes(index)) {
                 this._createWaterFeature(zMid, index);
             }
 
             // Market stalls in market/street areas
-            if (index === 2 || index === 3) {
+            if (this._style.marketAreas.includes(index)) {
                 this._createMarketStalls(zStart, this.areaLength, index);
             }
 
@@ -189,9 +140,9 @@ class WorldBuilder {
             // Stone path edge details
             this._createPathEdges(zStart, this.areaLength);
 
-            // Cherry blossom trees in some areas
-            if (index === 4 || index === 5 || index === 7) {
-                this._createCherryTrees(zStart, this.areaLength);
+            // Special trees (cherry/pine/etc) in style-defined areas
+            if (this._style.specialTreeAreas.includes(index)) {
+                this._createSpecialTrees(zStart, this.areaLength);
             }
 
             // Courtyard walls behind buildings
@@ -234,28 +185,35 @@ class WorldBuilder {
         walls.material = this._materials[`wall${wallIdx}`];
         walls.receiveShadows = true;
 
-        // Sloped roof
+        // Roof base slab
         const roof = BABYLON.MeshBuilder.CreateBox(`roof_${x}_${z}`, {
             width: w + 1, height: 0.3, depth: d + 1
         }, s);
         roof.position = new BABYLON.Vector3(x, h + 0.15, z);
-        roof.scaling.y = 1;
         roof.material = this._materials.roof;
 
-        // Roof ridge (triangular prism via extruded shape)
-        const ridgeHeight = 1.2;
-        const ridgeShape = [
-            new BABYLON.Vector3(-w / 2 - 0.3, 0, 0),
-            new BABYLON.Vector3(0, ridgeHeight, 0),
-            new BABYLON.Vector3(w / 2 + 0.3, 0, 0)
-        ];
-        const ridge = BABYLON.MeshBuilder.ExtrudeShape(`ridge_${x}_${z}`, {
-            shape: ridgeShape,
-            path: [new BABYLON.Vector3(0, 0, -d / 2 - 0.3), new BABYLON.Vector3(0, 0, d / 2 + 0.3)],
-            sideOrientation: BABYLON.Mesh.DOUBLESIDE
-        }, s);
-        ridge.position = new BABYLON.Vector3(x, h + 0.3, z);
-        ridge.material = this._materials.roof;
+        // Roof ridge — curved (triangular prism) or flat (box cap) based on style
+        if (this._style.roofStyle === 'flat') {
+            const cap = BABYLON.MeshBuilder.CreateBox(`ridge_${x}_${z}`, {
+                width: w + 0.8, height: 0.35, depth: d + 0.8
+            }, s);
+            cap.position = new BABYLON.Vector3(x, h + 0.45, z);
+            cap.material = this._materials.roof;
+        } else {
+            const ridgeHeight = this._style.roofStyle === 'upturned' ? 1.8 : 1.2;
+            const ridgeShape = [
+                new BABYLON.Vector3(-w / 2 - 0.3, 0, 0),
+                new BABYLON.Vector3(0, ridgeHeight, 0),
+                new BABYLON.Vector3(w / 2 + 0.3, 0, 0)
+            ];
+            const ridge = BABYLON.MeshBuilder.ExtrudeShape(`ridge_${x}_${z}`, {
+                shape: ridgeShape,
+                path: [new BABYLON.Vector3(0, 0, -d / 2 - 0.3), new BABYLON.Vector3(0, 0, d / 2 + 0.3)],
+                sideOrientation: BABYLON.Mesh.DOUBLESIDE
+            }, s);
+            ridge.position = new BABYLON.Vector3(x, h + 0.3, z);
+            ridge.material = this._materials.roof;
+        }
 
         // Windows (emissive rectangles)
         const windowPlane = BABYLON.MeshBuilder.CreatePlane(`win_${x}_${z}`, {
@@ -294,7 +252,8 @@ class WorldBuilder {
                 width: fw + 1.2, height: 0.15, depth: fw + 1.2
             }, s);
             eave.position = new BABYLON.Vector3(x, y + floorH * 0.75, z);
-            eave.material = this._materials.redRoof;
+            eave.material = this._style.roofStyle === 'flat'
+                ? this._materials.roof : this._materials.redRoof;
         }
 
         // Top spire
@@ -334,8 +293,8 @@ class WorldBuilder {
         display.rotation.y = side > 0 ? Math.PI / 2 : -Math.PI / 2;
         display.material = this._materials.window;
 
-        // Hanging shop sign
-        const signNames = ['茶馆', '酒楼', '布庄', '书坊', '药铺', '米店', '饭馆', '花店'];
+        // Hanging shop sign — names come from style so each dynasty has its own
+        const signNames = this._style.shopSignNames;
         const signText = signNames[Math.floor(Math.random() * signNames.length)];
         const signBoard = BABYLON.MeshBuilder.CreatePlane(`shopSign_${x}_${z}`, {
             width: 0.5, height: 1.2
@@ -463,7 +422,7 @@ class WorldBuilder {
         const light = new BABYLON.PointLight(`lanternLight_${x}_${z}`,
             new BABYLON.Vector3(x, 3.7, z), s);
         light.intensity = 0.6;
-        light.diffuse = new BABYLON.Color3(1, 0.6, 0.2);
+        light.diffuse = this._c3(this._style.lanternLightColor);
         light.range = 8;
     }
 
@@ -678,7 +637,7 @@ class WorldBuilder {
         }
     }
 
-    _createCherryTrees(zStart, length) {
+    _createSpecialTrees(zStart, length) {
         const s = this.scene;
         const num = 2 + Math.floor(Math.random() * 2);
 

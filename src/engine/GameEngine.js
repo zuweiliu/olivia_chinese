@@ -23,7 +23,9 @@ class GameEngine {
 
         // Game state
         this.state = 'menu'; // 'menu' | 'playing' | 'overlay'
-        this.currentTheme = 'song-dynasty';
+        // Read theme from ?theme=<id> URL param, fallback to song-dynasty
+        const params = new URLSearchParams(window.location.search);
+        this.currentTheme = params.get('theme') || 'song-dynasty';
     }
 
     async init() {
@@ -43,6 +45,9 @@ class GameEngine {
             console.error('Failed to load theme data');
             return;
         }
+
+        // Apply theme-specific visuals (fog, ambient, sky) from style config
+        this._applyThemeStyle();
 
         // Init game modules
         this.particles = new ParticleEffects(this.scene);
@@ -242,6 +247,24 @@ class GameEngine {
         this.scene.fogMode = BABYLON.Scene.FOGMODE_EXP2;
         this.scene.fogDensity = 0.006;
         this.scene.fogColor = new BABYLON.Color3(0.1, 0.08, 0.15);
+    }
+
+    _applyThemeStyle() {
+        const st = this.learningSystem.config.style;
+        if (!st) return;
+        const c3 = (a) => new BABYLON.Color3(a[0], a[1], a[2]);
+
+        if (st.fogColor) {
+            this.scene.fogColor = c3(st.fogColor);
+            this.scene.fogDensity = st.fogDensity || 0.012;
+        }
+        if (st.skyColor) {
+            const sc = st.skyColor;
+            this.scene.clearColor = new BABYLON.Color4(sc[0], sc[1], sc[2], 1);
+        }
+        if (st.ambientLightColor) {
+            this.scene.ambientColor = c3(st.ambientLightColor);
+        }
     }
 
     _setupFollowCamera() {
