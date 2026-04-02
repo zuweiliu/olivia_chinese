@@ -1,0 +1,202 @@
+[
+  {
+    "id": "story-bianjing",
+    "title": "汴京的大街",
+    "titleEn": "The Streets of Bianjing",
+    "area": "main-street",
+    "reward": 50,
+    "sentences": [
+      {
+        "chinese": "汴京是宋朝的都城。",
+        "pinyin": "Biànjīng shì Sòng cháo de dū chéng.",
+        "meaning": "Bianjing was the capital of the Song Dynasty."
+      },
+      {
+        "chinese": "大街上人很多。",
+        "pinyin": "Dà jiē shàng rén hěn duō.",
+        "meaning": "There were many people on the main street."
+      },
+      {
+        "chinese": "街上有车、有马、有桥。",
+        "pinyin": "Jiē shàng yǒu chē, yǒu mǎ, yǒu qiáo.",
+        "meaning": "On the street there were carts, horses, and bridges."
+      },
+      {
+        "chinese": "晚上，灯很亮。",
+        "pinyin": "Wǎnshàng, dēng hěn liàng.",
+        "meaning": "At night, the lanterns were very bright."
+      }
+    ],
+    "source": "supplementary"
+  },
+  {
+    "id": "story-tea",
+    "title": "宋朝人爱喝茶",
+    "titleEn": "Song Dynasty People Loved Tea",
+    "area": "tea-house",
+    "reward": 50,
+    "sentences": [
+      {
+        "chinese": "宋朝人很爱喝茶。",
+        "pinyin": "Sòng cháo rén hěn ài hē chá.",
+        "meaning": "Song Dynasty people loved to drink tea."
+      },
+      {
+        "chinese": "茶馆是人们聊天的地方。",
+        "pinyin": "Chá guǎn shì rénmen liáo tiān de dìfang.",
+        "meaning": "Tea houses were places where people chatted."
+      },
+      {
+        "chinese": "他们用茶杯喝茶。",
+        "pinyin": "Tāmen yòng chá bēi hē chá.",
+        "meaning": "They used tea cups to drink tea."
+      }
+    ],
+    "source": "supplementary"
+  },
+  {
+    "id": "story-market",
+    "title": "热闹的市场",
+    "titleEn": "The Lively Market",
+    "area": "market",
+    "reward": 50,
+    "sentences": [
+      {
+        "chinese": "宋朝的市场很热闹。",
+        "pinyin": "Sòng cháo de shìchǎng hěn rènao.",
+        "meaning": "The Song Dynasty market was very lively."
+      },
+      {
+        "chinese": "人们在这里买包子和豆腐。",
+        "pinyin": "Rénmen zài zhèlǐ mǎi bāozi hé dòufu.",
+        "meaning": "People bought steamed buns and tofu here."
+      },
+      {
+        "chinese": "还有面条和饺子。",
+        "pinyin": "Hái yǒu miàntiáo hé jiǎozi.",
+        "meaning": "There were also noodles and dumplings."
+      },
+      {
+        "chinese": "每个摊位都很好吃！",
+        "pinyin": "Měi gè tānwèi dōu hěn hǎo chī!",
+        "meaning": "Every stall had delicious food!"
+      }
+    ],
+    "source": "supplementary"
+  },
+  {
+    "id": "story-silk",
+    "title": "美丽的丝绸",
+    "titleEn": "Beautiful Silk",
+    "area": "silk-shop",
+    "reward": 50,
+    "sentences": [
+      {
+        "chinese": "宋朝的丝绸很有名。",
+        "pinyin": "Sòng cháo de sīchóu hěn yǒumíng.",
+        "meaning": "Song Dynasty silk was very famous."
+      },
+      {
+        "chinese": "人们用丝绸做衣服。",
+        "pinyin": "Rénmen yòng sīchóu zuò yīfu.",
+        "meaning": "People used silk to make clothes."
+      },
+      {
+        "chinese": "丝绸有很多颜色。",
+        "pinyin": "Sīchóu yǒu hěn duō yánsè.",
+        "meaning": "Silk came in many colors."
+      }
+    ],
+    "source": "supplementary"
+  },
+  {
+    "id": "story-temple",
+    "title": "安静的寺庙",
+    "titleEn": "The Quiet Temple",
+    "area": "temple",
+    "reward": 50,
+    "sentences": [
+      {
+        "chinese": "寺庙很安静。",
+        "pinyin": "Sìmiào hěn ānjìng.",
+        "meaning": "The temple was very quiet."
+      },
+      {
+        "chinese": "和尚在这里祈祷。",
+        "pinyin": "Héshang zài zhèlǐ qídǎo.",
+        "meaning": "Monks prayed here."
+      },
+      {
+        "chinese": "你可以听到钟声。",
+        "pinyin": "Nǐ kěyǐ tīng dào zhōng shēng.",
+        "meaning": "You could hear the sound of bells."
+      },
+      {
+        "chinese": "空气中有香的味道。",
+        "pinyin": "Kōngqì zhōng yǒu xiāng de wèidào.",
+        "meaning": "The air smelled of incense."
+      }
+    ],
+    "source": "supplementary"
+  },
+  {
+    "id": "story-garden",
+    "title": "皇帝的花园",
+    "titleEn": "The Emperor's Garden",
+    "area": "imperial-garden",
+    "reward": 50,
+    "sentences": [
+      {
+        "chinese": "御花园很大很美。",
+        "pinyin": "Yù huāyuán hěn dà hěn měi.",
+        "meaning": "The imperial garden was large and beautiful."
+      },
+      {
+        "chinese": "花园里有花和柳树。",
+        "pinyin": "Huāyuán lǐ yǒu huā hé liǔ shù.",
+        "meaning": "In the garden there were flowers and willow trees."
+      },
+      {
+        "chinese": "池里有鱼。",
+        "pinyin": "Chí lǐ yǒu yú.",
+        "meaning": "There were fish in the pond."
+      },
+      {
+        "chinese": "景色非常美丽。",
+        "pinyin": "Jǐngsè fēicháng měilì.",
+        "meaning": "The scenery was very beautiful."
+      }
+    ],
+    "source": "supplementary"
+  },
+  {
+    "id": "story-inventions",
+    "title": "宋朝的发明",
+    "titleEn": "Inventions of the Song Dynasty",
+    "area": "scholars-study",
+    "reward": 80,
+    "sentences": [
+      {
+        "chinese": "宋朝有很多伟大的发明。",
+        "pinyin": "Sòng cháo yǒu hěn duō wěidà de fāmíng.",
+        "meaning": "The Song Dynasty had many great inventions."
+      },
+      {
+        "chinese": "活字印刷让书变多了。",
+        "pinyin": "Huózì yìnshuā ràng shū biàn duō le.",
+        "meaning": "Movable type printing made books more common."
+      },
+      {
+        "chinese": "火药可以做烟花。",
+        "pinyin": "Huǒyào kěyǐ zuò yānhuā.",
+        "meaning": "Gunpowder could make fireworks."
+      },
+      {
+        "chinese": "指南针帮助人们找到方向。",
+        "pinyin": "Zhǐnánzhēn bāngzhù rénmen zhǎo dào fāngxiàng.",
+        "meaning": "The compass helped people find their way."
+      }
+    ],
+    "source": "supplementary"
+  }
+]

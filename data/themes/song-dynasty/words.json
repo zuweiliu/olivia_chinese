@@ -1,0 +1,402 @@
+[
+  {
+    "id": "chengmen",
+    "characters": "城门",
+    "pinyin": "chéng mén",
+    "meaning": "city gate",
+    "category": "place",
+    "area": "city-gate",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "chengqiang",
+    "characters": "城墙",
+    "pinyin": "chéng qiáng",
+    "meaning": "city wall",
+    "category": "place",
+    "area": "city-gate",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "shibing",
+    "characters": "士兵",
+    "pinyin": "shì bīng",
+    "meaning": "soldier",
+    "category": "person",
+    "area": "city-gate",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "malu",
+    "characters": "马路",
+    "pinyin": "mǎ lù",
+    "meaning": "road",
+    "category": "place",
+    "area": "city-gate",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "matou",
+    "characters": "码头",
+    "pinyin": "mǎ tóu",
+    "meaning": "wharf / dock",
+    "category": "place",
+    "area": "city-gate",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "jie",
+    "characters": "街",
+    "pinyin": "jiē",
+    "meaning": "street",
+    "category": "place",
+    "area": "main-street",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "ren",
+    "characters": "人",
+    "pinyin": "rén",
+    "meaning": "person / people",
+    "category": "person",
+    "area": "main-street",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "che",
+    "characters": "车",
+    "pinyin": "chē",
+    "meaning": "cart / vehicle",
+    "category": "object",
+    "area": "main-street",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "deng",
+    "characters": "灯",
+    "pinyin": "dēng",
+    "meaning": "lantern / lamp",
+    "category": "object",
+    "area": "main-street",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "qiao",
+    "characters": "桥",
+    "pinyin": "qiáo",
+    "meaning": "bridge",
+    "category": "place",
+    "area": "main-street",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "cha",
+    "characters": "茶",
+    "pinyin": "chá",
+    "meaning": "tea",
+    "category": "food",
+    "area": "tea-house",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "chaguan",
+    "characters": "茶馆",
+    "pinyin": "chá guǎn",
+    "meaning": "tea house",
+    "category": "place",
+    "area": "tea-house",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "chabei",
+    "characters": "茶杯",
+    "pinyin": "chá bēi",
+    "meaning": "tea cup",
+    "category": "object",
+    "area": "tea-house",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "hecha",
+    "characters": "喝茶",
+    "pinyin": "hē chá",
+    "meaning": "to drink tea",
+    "category": "action",
+    "area": "tea-house",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "chatai",
+    "characters": "茶台",
+    "pinyin": "chá tái",
+    "meaning": "tea table",
+    "category": "object",
+    "area": "tea-house",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "baozi",
+    "characters": "包子",
+    "pinyin": "bāo zi",
+    "meaning": "steamed bun",
+    "category": "food",
+    "area": "market",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "doufu",
+    "characters": "豆腐",
+    "pinyin": "dòu fu",
+    "meaning": "tofu",
+    "category": "food",
+    "area": "market",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "miantiao",
+    "characters": "面条",
+    "pinyin": "miàn tiáo",
+    "meaning": "noodles",
+    "category": "food",
+    "area": "market",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "jiaozi",
+    "characters": "饺子",
+    "pinyin": "jiǎo zi",
+    "meaning": "dumplings",
+    "category": "food",
+    "area": "market",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "tanwei",
+    "characters": "摊位",
+    "pinyin": "tān wèi",
+    "meaning": "market stall",
+    "category": "place",
+    "area": "market",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "sichou",
+    "characters": "丝绸",
+    "pinyin": "sī chóu",
+    "meaning": "silk",
+    "category": "art",
+    "area": "silk-shop",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "yifu",
+    "characters": "衣服",
+    "pinyin": "yī fu",
+    "meaning": "clothes",
+    "category": "object",
+    "area": "silk-shop",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "ciqi",
+    "characters": "瓷器",
+    "pinyin": "cí qì",
+    "meaning": "porcelain",
+    "category": "art",
+    "area": "silk-shop",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "shanzi",
+    "characters": "扇子",
+    "pinyin": "shàn zi",
+    "meaning": "fan",
+    "category": "object",
+    "area": "silk-shop",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "yanse",
+    "characters": "颜色",
+    "pinyin": "yán sè",
+    "meaning": "color",
+    "category": "object",
+    "area": "silk-shop",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "simiao",
+    "characters": "寺庙",
+    "pinyin": "sì miào",
+    "meaning": "temple",
+    "category": "place",
+    "area": "temple",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "heshang",
+    "characters": "和尚",
+    "pinyin": "hé shang",
+    "meaning": "monk",
+    "category": "person",
+    "area": "temple",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "zhong",
+    "characters": "钟",
+    "pinyin": "zhōng",
+    "meaning": "bell",
+    "category": "object",
+    "area": "temple",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "xiang",
+    "characters": "香",
+    "pinyin": "xiāng",
+    "meaning": "incense",
+    "category": "object",
+    "area": "temple",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "qidao",
+    "characters": "祈祷",
+    "pinyin": "qí dǎo",
+    "meaning": "to pray",
+    "category": "action",
+    "area": "temple",
+    "difficulty": 3,
+    "source": "supplementary"
+  },
+  {
+    "id": "huayuan",
+    "characters": "花园",
+    "pinyin": "huā yuán",
+    "meaning": "garden",
+    "category": "place",
+    "area": "imperial-garden",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "hua",
+    "characters": "花",
+    "pinyin": "huā",
+    "meaning": "flower",
+    "category": "object",
+    "area": "imperial-garden",
+    "difficulty": 1,
+    "source": "supplementary"
+  },
+  {
+    "id": "liu",
+    "characters": "柳",
+    "pinyin": "liǔ",
+    "meaning": "willow tree",
+    "category": "object",
+    "area": "imperial-garden",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "chi",
+    "characters": "池",
+    "pinyin": "chí",
+    "meaning": "pond",
+    "category": "place",
+    "area": "imperial-garden",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "jingse",
+    "characters": "景色",
+    "pinyin": "jǐng sè",
+    "meaning": "scenery",
+    "category": "object",
+    "area": "imperial-garden",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "shufa",
+    "characters": "书法",
+    "pinyin": "shū fǎ",
+    "meaning": "calligraphy",
+    "category": "art",
+    "area": "scholars-study",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "huoziyin",
+    "characters": "活字印刷",
+    "pinyin": "huó zì yìn shuā",
+    "meaning": "movable type printing",
+    "category": "historical",
+    "area": "scholars-study",
+    "difficulty": 3,
+    "source": "supplementary"
+  },
+  {
+    "id": "huoyao",
+    "characters": "火药",
+    "pinyin": "huǒ yào",
+    "meaning": "gunpowder",
+    "category": "historical",
+    "area": "scholars-study",
+    "difficulty": 2,
+    "source": "supplementary"
+  },
+  {
+    "id": "zhinanzhen",
+    "characters": "指南针",
+    "pinyin": "zhǐ nán zhēn",
+    "meaning": "compass",
+    "category": "historical",
+    "area": "scholars-study",
+    "difficulty": 3,
+    "source": "supplementary"
+  },
+  {
+    "id": "zaozhi",
+    "characters": "造纸",
+    "pinyin": "zào zhǐ",
+    "meaning": "papermaking",
+    "category": "historical",
+    "area": "scholars-study",
+    "difficulty": 2,
+    "source": "supplementary"
+  }
+]

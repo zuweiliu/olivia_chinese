@@ -1,0 +1,11 @@
+{
+  "name": "fly-through-china",
+  "version": "1.0.0",
+  "description": "飞越中华 - Chinese History Learning Game inspired by Sky: Children of the Light",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "dev": "npx serve -l 3000 ."
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
