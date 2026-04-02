@@ -14,70 +14,70 @@
       "nameEn": "City Gate",
       "requiredLight": 0,
       "backgroundColors": ["#2a1a0a", "#4a3020", "#6a4a30"],
-      "wordIds": ["chengmen", "chengqiang", "shibing", "malu", "matou"],
+      "wordIds": ["weixie", "jiuyan", "miewang", "fenlie", "jianli", "dingdu"],
       "storyIds": []
     },
     {
       "id": "main-street",
       "name": "大街",
       "nameEn": "Main Street",
-      "requiredLight": 30,
+      "requiredLight": 20,
       "backgroundColors": ["#3a2a1a", "#5a4030", "#7a5a40"],
-      "wordIds": ["jie", "ren", "che", "deng", "qiao"],
+      "wordIds": ["kongzhi", "junzhu", "jiechu", "bingquan", "jundui", "zhidu"],
       "storyIds": ["story-bianjing"]
     },
     {
       "id": "tea-house",
       "name": "茶馆",
       "nameEn": "Tea House",
-      "requiredLight": 80,
+      "requiredLight": 50,
       "backgroundColors": ["#2a3a2a", "#3a5a3a", "#4a6a4a"],
-      "wordIds": ["cha", "chaguan", "chabei", "hecha", "chatai"],
+      "wordIds": ["jiazhiguan", "mingxian", "xiaoxiang", "keju", "rencai"],
       "storyIds": ["story-tea"]
     },
     {
       "id": "market",
       "name": "市场",
       "nameEn": "Market",
-      "requiredLight": 150,
+      "requiredLight": 80,
       "backgroundColors": ["#4a2a1a", "#6a4a30", "#8a6a40"],
-      "wordIds": ["baozi", "doufu", "miantiao", "jiaozi", "tanwei"],
+      "wordIds": ["caizheng", "zuozhan", "shili", "zaixiang", "bianfa", "shuishou"],
       "storyIds": ["story-market"]
     },
     {
       "id": "silk-shop",
       "name": "丝绸店",
       "nameEn": "Silk Shop",
-      "requiredLight": 230,
+      "requiredLight": 115,
       "backgroundColors": ["#4a1a3a", "#6a3a5a", "#8a5a7a"],
-      "wordIds": ["sichou", "yifu", "ciqi", "shanzi", "yanse"],
+      "wordIds": ["xingsheng", "yule", "fandui", "zhili", "wuneng"],
       "storyIds": ["story-silk"]
     },
     {
       "id": "temple",
       "name": "寺庙",
       "nameEn": "Temple",
-      "requiredLight": 320,
+      "requiredLight": 150,
       "backgroundColors": ["#3a1a1a", "#5a3a2a", "#7a5a3a"],
-      "wordIds": ["simiao", "heshang", "zhong", "xiang", "qidao"],
+      "wordIds": ["luzou", "chaopiao", "gongzhan", "dachen", "zhibi", "faxing"],
       "storyIds": ["story-temple"]
     },
     {
       "id": "imperial-garden",
       "name": "御花园",
       "nameEn": "Imperial Garden",
-      "requiredLight": 420,
+      "requiredLight": 190,
       "backgroundColors": ["#1a3a2a", "#2a5a3a", "#3a7a4a"],
-      "wordIds": ["huayuan", "hua", "liu", "chi", "jingse"],
+      "wordIds": ["zunjing", "qinfen", "wuyi", "zhangong", "yuanshuai", "shoufu"],
       "storyIds": ["story-garden"]
     },
     {
       "id": "scholars-study",
       "name": "书房",
       "nameEn": "Scholar's Study",
-      "requiredLight": 530,
+      "requiredLight": 230,
       "backgroundColors": ["#2a2a3a", "#3a3a5a", "#4a4a7a"],
-      "wordIds": ["shufa", "huoziyin", "huoyao", "zhinanzhen", "zaozhi"],
+      "wordIds": ["zhaohui", "zaji", "tuibing", "qiuhe", "wuxian", "pinde"],
       "storyIds": ["story-inventions"]
     }
   ]

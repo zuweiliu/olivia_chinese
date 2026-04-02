@@ -752,17 +752,39 @@ class WorldBuilder {
 
         if (clampedIndex !== this.currentAreaIndex) {
             const newArea = this.areas[clampedIndex];
+            const movingForward = clampedIndex > this.currentAreaIndex;
+            const boundary = -90 + clampedIndex * this.areaLength;
 
             if (!this.learningSystem.isAreaUnlocked(newArea.id)) {
-                // Push player back
-                const boundary = -90 + clampedIndex * this.areaLength;
-                if (clampedIndex > this.currentAreaIndex) {
+                // Push player back — not enough light yet
+                if (movingForward) {
                     playerPos.z = boundary - 0.5;
                 } else {
                     playerPos.z = boundary + this.areaLength + 0.5;
                 }
                 if (ui) ui.showLockMessage(newArea.requiredLight);
                 return;
+            }
+
+            // Check if player must read the gate paragraph first (only moving forward)
+            if (movingForward) {
+                const gateStory = this.learningSystem.getGateStoryForArea(newArea.id);
+                if (gateStory && !this.learningSystem.isGateRead(gateStory.id)) {
+                    // Block at the gate boundary
+                    playerPos.z = boundary - 0.5;
+
+                    // Show reading overlay once (guard against re-triggering)
+                    if (!this._showingGate) {
+                        this._showingGate = true;
+                        if (ui) {
+                            ui.showGateReading(gateStory, () => {
+                                this.learningSystem.markGateRead(gateStory.id);
+                                this._showingGate = false;
+                            });
+                        }
+                    }
+                    return;
+                }
             }
 
             this.currentAreaIndex = clampedIndex;

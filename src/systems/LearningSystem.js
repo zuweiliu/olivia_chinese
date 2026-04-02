@@ -21,6 +21,8 @@ class LearningSystem {
         this.currentAreaLight = 0;
         // Stories completed
         this.completedStories = new Set();
+        // Gate paragraphs read (unlocks passage to next area)
+        this.readGates = new Set();
 
         this._loadProgress();
     }
@@ -148,6 +150,21 @@ class LearningSystem {
         return this.totalLight >= area.requiredLight;
     }
 
+    markGateRead(storyId) {
+        this.readGates.add(storyId);
+        this._saveProgress();
+    }
+
+    isGateRead(storyId) {
+        return this.readGates.has(storyId);
+    }
+
+    getGateStoryForArea(areaId) {
+        const area = this.config.areas.find(a => a.id === areaId);
+        if (!area || !area.storyIds || area.storyIds.length === 0) return null;
+        return this.stories.find(s => s.id === area.storyIds[0]) || null;
+    }
+
     getCurrentArea() {
         // Return the latest unlocked area
         let current = this.config.areas[0];
@@ -215,7 +232,8 @@ class LearningSystem {
             reviewList: this.reviewList,
             collected: Array.from(this.collected),
             totalLight: this.totalLight,
-            completedStories: Array.from(this.completedStories)
+            completedStories: Array.from(this.completedStories),
+            readGates: Array.from(this.readGates)
         };
         try {
             localStorage.setItem(this.storageKey, JSON.stringify(data));
@@ -235,6 +253,7 @@ class LearningSystem {
                     this.collected = new Set(data.collected || []);
                     this.totalLight = data.totalLight || 0;
                     this.completedStories = new Set(data.completedStories || []);
+                    this.readGates = new Set(data.readGates || []);
                 }
             }
         } catch (e) {
@@ -249,6 +268,7 @@ class LearningSystem {
         this.totalLight = 0;
         this.currentAreaLight = 0;
         this.completedStories = new Set();
+        this.readGates = new Set();
         localStorage.removeItem(this.storageKey);
     }
 }

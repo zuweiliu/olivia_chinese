@@ -19,6 +19,7 @@ class UIManager {
         this._overlayElements = [];
         this._areaNameTimeout = null;
         this._lockTimeout = null;
+        this._gateReadingOpen = false;
 
         // Input
         this._setupInput();
@@ -216,6 +217,149 @@ class UIManager {
             requestAnimationFrame(fade);
         };
         fade();
+    }
+
+    // ==================== GATE READING ====================
+
+    showGateReading(story, onComplete) {
+        if (this._gateReadingOpen) return;
+        this._gateReadingOpen = true;
+        if (this.gameEngine) this.gameEngine.state = 'paused';
+
+        let sentenceIndex = 0;
+        const sentences = story.sentences;
+        let showPinyin = false;
+
+        // Dim backdrop
+        const backdrop = new BABYLON.GUI.Rectangle('grBackdrop');
+        backdrop.width = '100%';
+        backdrop.height = '100%';
+        backdrop.background = 'rgba(0,0,0,0.82)';
+        backdrop.thickness = 0;
+        this.gui.addControl(backdrop);
+
+        // Card panel
+        const card = new BABYLON.GUI.Rectangle('grCard');
+        card.width = '720px';
+        card.height = '480px';
+        card.background = 'rgba(30,15,5,0.97)';
+        card.thickness = 2;
+        card.color = '#8B6914';
+        card.cornerRadius = 12;
+        this.gui.addControl(card);
+
+        // Title
+        const title = new BABYLON.GUI.TextBlock('grTitle', `📜 ${story.title}  •  ${story.titleEn}`);
+        title.color = '#ffd700';
+        title.fontSize = 18;
+        title.fontWeight = 'bold';
+        title.top = '-190px';
+        title.height = '30px';
+        card.addControl(title);
+
+        // Progress indicator
+        const progress = new BABYLON.GUI.TextBlock('grProgress', '');
+        progress.color = '#aaa';
+        progress.fontSize = 13;
+        progress.top = '-160px';
+        progress.height = '20px';
+        card.addControl(progress);
+
+        // Chinese sentence text
+        const chineseText = new BABYLON.GUI.TextBlock('grChinese', '');
+        chineseText.color = '#fff';
+        chineseText.fontSize = 26;
+        chineseText.fontFamily = '"Microsoft YaHei", serif';
+        chineseText.textWrapping = true;
+        chineseText.top = '-60px';
+        chineseText.height = '80px';
+        chineseText.paddingLeft = '40px';
+        chineseText.paddingRight = '40px';
+        card.addControl(chineseText);
+
+        // Pinyin text
+        const pinyinText = new BABYLON.GUI.TextBlock('grPinyin', '');
+        pinyinText.color = '#aaddff';
+        pinyinText.fontSize = 15;
+        pinyinText.fontFamily = 'serif';
+        pinyinText.textWrapping = true;
+        pinyinText.top = '40px';
+        pinyinText.height = '40px';
+        pinyinText.paddingLeft = '40px';
+        pinyinText.paddingRight = '40px';
+        card.addControl(pinyinText);
+
+        // English meaning
+        const meaningText = new BABYLON.GUI.TextBlock('grMeaning', '');
+        meaningText.color = '#ccaa66';
+        meaningText.fontSize = 14;
+        meaningText.fontStyle = 'italic';
+        meaningText.textWrapping = true;
+        meaningText.top = '90px';
+        meaningText.height = '50px';
+        meaningText.paddingLeft = '40px';
+        meaningText.paddingRight = '40px';
+        card.addControl(meaningText);
+
+        // Pinyin toggle button
+        const pinyinBtn = new BABYLON.GUI.Button.CreateSimpleButton('grPinyinBtn', '拼音 ▾');
+        pinyinBtn.width = '100px';
+        pinyinBtn.height = '32px';
+        pinyinBtn.top = '155px';
+        pinyinBtn.left = '-160px';
+        pinyinBtn.background = 'rgba(50,30,10,0.9)';
+        pinyinBtn.color = '#aaddff';
+        pinyinBtn.fontSize = 13;
+        pinyinBtn.thickness = 1;
+        pinyinBtn.cornerRadius = 6;
+        card.addControl(pinyinBtn);
+
+        // Next / Done button
+        const nextBtn = new BABYLON.GUI.Button.CreateSimpleButton('grNextBtn', '下一句 ▶');
+        nextBtn.width = '140px';
+        nextBtn.height = '40px';
+        nextBtn.top = '155px';
+        nextBtn.left = '60px';
+        nextBtn.background = '#8B1a1a';
+        nextBtn.color = '#ffd700';
+        nextBtn.fontSize = 16;
+        nextBtn.fontWeight = 'bold';
+        nextBtn.thickness = 1;
+        nextBtn.cornerRadius = 8;
+        card.addControl(nextBtn);
+
+        const updateSentence = () => {
+            const s = sentences[sentenceIndex];
+            chineseText.text = s.chinese;
+            pinyinText.text = showPinyin ? s.pinyin : '';
+            meaningText.text = s.meaning;
+            progress.text = `第 ${sentenceIndex + 1} / ${sentences.length} 句`;
+            const isLast = sentenceIndex === sentences.length - 1;
+            nextBtn.children[0].text = isLast ? '✓ 已读完' : '下一句 ▶';
+            nextBtn.background = isLast ? '#1a6a1a' : '#8B1a1a';
+        };
+
+        pinyinBtn.onPointerClickObservable.add(() => {
+            showPinyin = !showPinyin;
+            pinyinBtn.children[0].text = showPinyin ? '拼音 ▴' : '拼音 ▾';
+            updateSentence();
+        });
+
+        nextBtn.onPointerClickObservable.add(() => {
+            if (sentenceIndex < sentences.length - 1) {
+                sentenceIndex++;
+                updateSentence();
+            } else {
+                // Done reading
+                this.gui.removeControl(backdrop);
+                this.gui.removeControl(card);
+                this._gateReadingOpen = false;
+                if (this.gameEngine) this.gameEngine.state = 'playing';
+                if (onComplete) onComplete();
+            }
+        });
+
+        updateSentence();
     }
 
     // ==================== INPUT ====================
