@@ -160,10 +160,38 @@ class UIManager {
         this.hud.areaAnnounce.text = `${name}\n${nameEn}`;
         this.hud.areaAnnounce.alpha = 1;
 
+        // Screen flash on area transition
+        this._flashScreen();
+
         if (this._areaNameTimeout) clearTimeout(this._areaNameTimeout);
         this._areaNameTimeout = setTimeout(() => {
             this._fadeOut(this.hud.areaAnnounce);
         }, 2500);
+    }
+
+    _flashScreen() {
+        if (!this._flashRect) {
+            this._flashRect = new BABYLON.GUI.Rectangle('flash');
+            this._flashRect.width = '100%';
+            this._flashRect.height = '100%';
+            this._flashRect.background = '#ffd700';
+            this._flashRect.thickness = 0;
+            this._flashRect.alpha = 0;
+            this._flashRect.isPointerBlocker = false;
+            this.gui.addControl(this._flashRect);
+        }
+        this._flashRect.alpha = 0.25;
+        let a = 0.25;
+        const fade = () => {
+            a -= 0.008;
+            if (a <= 0) {
+                this._flashRect.alpha = 0;
+                return;
+            }
+            this._flashRect.alpha = a;
+            requestAnimationFrame(fade);
+        };
+        fade();
     }
 
     showLockMessage(requiredLight) {

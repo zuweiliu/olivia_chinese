@@ -67,6 +67,8 @@ class ParticleEffects {
             // Pulse alpha
             mote._mat.alpha = mote._baseAlpha + Math.sin(this._time * 2 + mote._phase) * 0.15;
         });
+
+        this._updateFireflies(dt);
     }
 
     burstAt(position) {
@@ -170,6 +172,113 @@ class ParticleEffects {
         this.scene.beginAnimation(trail, 0, 20, false, 1, () => {
             trail.dispose();
             mat.dispose();
+        });
+    }
+
+    /**
+     * Create a persistent particle trail attached to the player mesh
+     */
+    createPlayerTrail(playerNode) {
+        // Emitter positioned at player's dress hem
+        const emitter = new BABYLON.TransformNode('trailEmitter', this.scene);
+        emitter.position.y = -0.2;
+        emitter.parent = playerNode;
+
+        const ps = new BABYLON.ParticleSystem('playerTrail', 200, this.scene);
+        ps.emitter = emitter;
+
+        // Particle texture (create procedural circle)
+        const texSize = 64;
+        const dt = new BABYLON.DynamicTexture('trailTex', texSize, this.scene);
+        const ctx = dt.getContext();
+        const grad = ctx.createRadialGradient(texSize/2, texSize/2, 0, texSize/2, texSize/2, texSize/2);
+        grad.addColorStop(0, 'rgba(255, 220, 100, 1)');
+        grad.addColorStop(0.4, 'rgba(255, 180, 50, 0.6)');
+        grad.addColorStop(1, 'rgba(255, 150, 30, 0)');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, texSize, texSize);
+        dt.update();
+        ps.particleTexture = dt;
+
+        ps.color1 = new BABYLON.Color4(1, 0.9, 0.5, 0.6);
+        ps.color2 = new BABYLON.Color4(1, 0.7, 0.3, 0.4);
+        ps.colorDead = new BABYLON.Color4(1, 0.5, 0.2, 0);
+
+        ps.minSize = 0.05;
+        ps.maxSize = 0.2;
+        ps.minLifeTime = 0.3;
+        ps.maxLifeTime = 0.8;
+        ps.emitRate = 30;
+        ps.blendMode = BABYLON.ParticleSystem.BLENDMODE_ADD;
+
+        ps.direction1 = new BABYLON.Vector3(-0.3, -0.5, -0.3);
+        ps.direction2 = new BABYLON.Vector3(0.3, 0.2, 0.3);
+        ps.minEmitPower = 0.5;
+        ps.maxEmitPower = 1.5;
+
+        ps.gravity = new BABYLON.Vector3(0, -0.3, 0);
+        ps.updateSpeed = 0.01;
+
+        ps.start();
+        this._playerTrail = ps;
+    }
+
+    /**
+     * Adjust trail emission based on player speed
+     */
+    setTrailIntensity(speed) {
+        if (!this._playerTrail) return;
+        if (speed > 0.5) {
+            this._playerTrail.emitRate = Math.min(80, 30 + speed * 15);
+            this._playerTrail.maxSize = 0.15 + speed * 0.05;
+        } else {
+            this._playerTrail.emitRate = 10;
+            this._playerTrail.maxSize = 0.1;
+        }
+    }
+
+    /**
+     * Create firefly particles near lanterns
+     */
+    createFireflies() {
+        // Scattered firefly-like particles throughout city
+        this._fireflies = [];
+        for (let i = 0; i < 30; i++) {
+            const ff = BABYLON.MeshBuilder.CreateSphere(`firefly_${i}`, {
+                diameter: 0.06, segments: 4
+            }, this.scene);
+            ff.position = new BABYLON.Vector3(
+                (Math.random() - 0.5) * 40,
+                1.5 + Math.random() * 4,
+                (Math.random() - 0.5) * 160
+            );
+            const mat = new BABYLON.StandardMaterial(`ffMat_${i}`, this.scene);
+            mat.emissiveColor = new BABYLON.Color3(0.8, 1, 0.3);
+            mat.alpha = 0;
+            ff.material = mat;
+            ff._mat = mat;
+            ff._phase = Math.random() * Math.PI * 2;
+            ff._speed = 0.3 + Math.random() * 0.5;
+            ff._baseX = ff.position.x;
+            ff._baseY = ff.position.y;
+            ff._baseZ = ff.position.z;
+            this._fireflies.push(ff);
+        }
+    }
+
+    _updateFireflies(dt) {
+        if (!this._fireflies) return;
+        this._fireflies.forEach(ff => {
+            if (ff.isDisposed()) return;
+            const t = this._time;
+            const p = ff._phase;
+            // Gentle drifting path
+            ff.position.x = ff._baseX + Math.sin(t * ff._speed + p) * 1.5;
+            ff.position.y = ff._baseY + Math.sin(t * ff._speed * 0.7 + p) * 0.5;
+            ff.position.z = ff._baseZ + Math.cos(t * ff._speed * 0.5 + p) * 1.0;
+            // Blink on/off
+            const blink = Math.sin(t * 3 + p * 5);
+            ff._mat.alpha = blink > 0.3 ? 0.7 * blink : 0;
         });
     }
 }

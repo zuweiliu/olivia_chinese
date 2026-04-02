@@ -55,6 +55,8 @@ class GameEngine {
         this.world.buildCity();
         this.collectibles.spawnAll();
         this.particles.createAmbient();
+        this.particles.createFireflies();
+        this.particles.createPlayerTrail(this.player.mesh);
 
         // Setup camera to follow player
         this._setupFollowCamera();
@@ -169,7 +171,7 @@ class GameEngine {
     }
 
     _createGround() {
-        // Main ground
+        // Main ground (earthy)
         const ground = BABYLON.MeshBuilder.CreateGround('ground', {
             width: 200,
             height: 200,
@@ -177,31 +179,69 @@ class GameEngine {
         }, this.scene);
 
         const groundMat = new BABYLON.PBRMaterial('groundMat', this.scene);
-        groundMat.albedoColor = new BABYLON.Color3(0.25, 0.2, 0.15);
+        groundMat.albedoColor = new BABYLON.Color3(0.2, 0.22, 0.12);
         groundMat.roughness = 0.95;
         groundMat.metallic = 0;
-        groundMat.ambientColor = new BABYLON.Color3(0.3, 0.25, 0.2);
         ground.material = groundMat;
         ground.receiveShadows = true;
 
-        // Road/path strip along the center
+        // Road surface (cobblestone-colored)
         const road = BABYLON.MeshBuilder.CreateGround('road', {
-            width: 8,
-            height: 200
+            width: 8, height: 200
         }, this.scene);
         road.position.y = 0.02;
         const roadMat = new BABYLON.PBRMaterial('roadMat', this.scene);
         roadMat.albedoColor = new BABYLON.Color3(0.35, 0.3, 0.22);
-        roadMat.roughness = 0.9;
+        roadMat.roughness = 0.85;
         roadMat.metallic = 0;
         road.material = roadMat;
         road.receiveShadows = true;
+
+        // Road center line (darker stripe)
+        const centerLine = BABYLON.MeshBuilder.CreateGround('centerLine', {
+            width: 0.15, height: 200
+        }, this.scene);
+        centerLine.position.y = 0.03;
+        const clMat = new BABYLON.PBRMaterial('clMat', this.scene);
+        clMat.albedoColor = new BABYLON.Color3(0.28, 0.24, 0.18);
+        clMat.roughness = 0.9;
+        centerLine.material = clMat;
+
+        // Side gutters (stone channels)
+        for (let side = -1; side <= 1; side += 2) {
+            const gutter = BABYLON.MeshBuilder.CreateGround(`gutter_${side}`, {
+                width: 0.4, height: 200
+            }, this.scene);
+            gutter.position = new BABYLON.Vector3(side * 4.1, 0.01, 0);
+            const gutterMat = new BABYLON.PBRMaterial(`gutterMat_${side}`, this.scene);
+            gutterMat.albedoColor = new BABYLON.Color3(0.3, 0.28, 0.25);
+            gutterMat.roughness = 0.95;
+            gutter.material = gutterMat;
+        }
+
+        // Grass patches along outer areas
+        const grassMat = new BABYLON.PBRMaterial('grassMat', this.scene);
+        grassMat.albedoColor = new BABYLON.Color3(0.18, 0.28, 0.12);
+        grassMat.roughness = 0.95;
+        for (let i = 0; i < 20; i++) {
+            const side = i % 2 === 0 ? -1 : 1;
+            const patch = BABYLON.MeshBuilder.CreateDisc(`grass_${i}`, {
+                radius: 1.5 + Math.random() * 2, tessellation: 8
+            }, this.scene);
+            patch.position = new BABYLON.Vector3(
+                side * (15 + Math.random() * 20),
+                0.015,
+                (Math.random() - 0.5) * 180
+            );
+            patch.rotation.x = Math.PI / 2;
+            patch.material = grassMat;
+        }
     }
 
     _createFog() {
         this.scene.fogMode = BABYLON.Scene.FOGMODE_EXP2;
-        this.scene.fogDensity = 0.008;
-        this.scene.fogColor = new BABYLON.Color3(0.12, 0.1, 0.18);
+        this.scene.fogDensity = 0.006;
+        this.scene.fogColor = new BABYLON.Color3(0.1, 0.08, 0.15);
     }
 
     _setupFollowCamera() {
@@ -237,9 +277,9 @@ class GameEngine {
     _setupGlow() {
         const gl = new BABYLON.GlowLayer('glow', this.scene, {
             mainTextureFixedSize: 512,
-            blurKernelSize: 32
+            blurKernelSize: 48
         });
-        gl.intensity = 0.6;
+        gl.intensity = 0.8;
         this.glowLayer = gl;
     }
 
@@ -258,9 +298,12 @@ class GameEngine {
             this.collectibles.update(deltaTime, this.player.mesh.position);
         }
 
-        // Update particles
+        // Update particles + adjust trail based on player speed
         if (this.particles) {
             this.particles.update(deltaTime);
+            if (this.player) {
+                this.particles.setTrailIntensity(this.player.velocity.length());
+            }
         }
 
         // Update UI

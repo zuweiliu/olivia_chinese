@@ -122,6 +122,20 @@ class CollectibleManager {
         labelTex.addControl(labelText);
         orb._labelPlane = labelPlane;
 
+        // Spinning sparkle ring
+        const ring = BABYLON.MeshBuilder.CreateTorus(`wordRing_${word.id}`, {
+            diameter: 1.6, thickness: 0.04, tessellation: 24
+        }, s);
+        ring.parent = orb;
+        ring.rotation.x = Math.PI / 3;
+        const ringMat = new BABYLON.PBRMaterial(`wordRingMat_${word.id}`, s);
+        ringMat.albedoColor = color;
+        ringMat.emissiveColor = color.scale(0.8);
+        ringMat.roughness = 0.2;
+        ringMat.metallic = 0.5;
+        ring.material = ringMat;
+        orb._ring = ring;
+
         // Store data
         orb._wordData = word;
         orb._itemType = 'word';
@@ -196,6 +210,11 @@ class CollectibleManager {
             if (orb._glowMesh) {
                 const pulse = 1 + Math.sin(this._time * 3 + orb._phaseOffset) * 0.15;
                 orb._glowMesh.scaling.setAll(pulse);
+            }
+            // Spin ring
+            if (orb._ring) {
+                orb._ring.rotation.y += dt * 2;
+                orb._ring.rotation.z = Math.sin(this._time * 1.5 + orb._phaseOffset) * 0.3;
             }
         });
 
@@ -284,6 +303,7 @@ class CollectibleManager {
         if (orb._light) orb._light.dispose();
         if (orb._glowMesh) orb._glowMesh.dispose();
         if (orb._labelPlane) orb._labelPlane.dispose();
+        if (orb._ring) orb._ring.dispose();
         orb.dispose();
 
         this._removePrompt();
@@ -295,6 +315,7 @@ class CollectibleManager {
             if (orb._light) orb._light.dispose();
             if (orb._glowMesh) orb._glowMesh.dispose();
             if (orb._labelPlane) orb._labelPlane.dispose();
+            if (orb._ring) orb._ring.dispose();
             if (!orb.isDisposed()) orb.dispose();
         });
         this.wordOrbs = [];
