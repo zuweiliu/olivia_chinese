@@ -352,13 +352,78 @@ class FeastScene {
 
     _sprayGeneralChain(idx) {
         if (idx >= this._generalNPCs.length) {
-            // All generals done
             this._allGeneralsGone();
             return;
         }
-        this._sprayGeneral(idx, () => {
-            setTimeout(() => this._sprayGeneralChain(idx + 1), 600);
+        // Must learn 3 words before 猫猫 can spray this general
+        this._teachWordsForGeneral(idx, () => {
+            this._sprayGeneral(idx, () => {
+                setTimeout(() => this._sprayGeneralChain(idx + 1), 600);
+            });
         });
+    }
+
+    _pickWordsForGeneral(generalIdx) {
+        const all = this.engine.learningSystem.words;
+        if (!all || all.length === 0) return [];
+        // Prefer unmastered words; offset each general by 3 slots
+        const unmastered = all.filter(w =>
+            this.engine.learningSystem.getWordState(w.id) !== 'mastered'
+        );
+        const pool = unmastered.length >= 3 ? unmastered : all;
+        const start = (generalIdx * 3) % pool.length;
+        const picked = [];
+        for (let i = 0; i < 3; i++) {
+            picked.push(pool[(start + i) % pool.length]);
+        }
+        return picked;
+    }
+
+    _teachWordsForGeneral(generalIdx, onAllCorrect) {
+        const g     = this._generalNPCs[generalIdx];
+        const words = this._pickWordsForGeneral(generalIdx);
+        let wordIdx = 0;
+
+        // Move 猫猫 beside this general while player learns
+        const cat = this.engine.catCompanion;
+        if (cat) cat.setPosition(new BABYLON.Vector3(g.root.position.x, 0.5, g.root.position.z - 1.5));
+
+        // Counter badge: "猫猫充能 0/3"
+        const badge = new BABYLON.GUI.Rectangle('genBadge_' + generalIdx);
+        badge.width = '220px'; badge.height = '44px';
+        badge.background = 'rgba(10,5,20,0.92)';
+        badge.cornerRadius = 10; badge.thickness = 2; badge.color = '#ffaa33';
+        badge.verticalAlignment   = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+        badge.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
+        badge.top = '14px'; badge.isPointerBlocker = false;
+        this.engine.ui.addControl(badge);
+
+        const badgeTxt = new BABYLON.GUI.TextBlock('genBadgeTxt', '');
+        badgeTxt.color = '#ffcc66'; badgeTxt.fontSize = 15;
+        badgeTxt.fontFamily = '"Microsoft YaHei", serif';
+        badge.addControl(badgeTxt);
+
+        const updateBadge = (n) => {
+            const dots = '●'.repeat(n) + '○'.repeat(3 - n);
+            badgeTxt.text = `🐱 猫猫充能 ${dots}  ${g.def.name}`;
+        };
+        updateBadge(0);
+
+        const showNextWord = () => {
+            if (wordIdx >= words.length) {
+                this.engine.ui.removeControl(badge); badge.dispose();
+                onAllCorrect();
+                return;
+            }
+            const word = words[wordIdx];
+            const prompt = `让 ${g.def.name} 交出兵权！猫猫需要充能 (${wordIdx + 1}/3)`;
+            this.engine.showWordChallenge(word, prompt, () => {
+                wordIdx++;
+                updateBadge(wordIdx);
+                setTimeout(showNextWord, 400);
+            });
+        };
+        showNextWord();
     }
 
     _sprayGeneral(idx, onDone) {
