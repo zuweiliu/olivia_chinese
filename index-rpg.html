@@ -85,12 +85,22 @@
     <script src="src/engine/ParticleEffects.js"></script>
     <script src="src/engine/BackgroundMusic.js"></script>
 
-    <!-- RPG-specific modules -->
-    <script src="src/engine/rpg/DialogueSystem.js"></script>
-    <script src="src/engine/rpg/CompanionNPC.js"></script>
-    <script src="src/engine/rpg/DressSystem.js"></script>
-    <script src="src/engine/rpg/OpenWorldBuilder.js"></script>
-    <script src="src/engine/rpg/ConquestManager.js"></script>
+    <!-- RPG shared systems -->
+    <script src="src/engine/rpg/shared/DialogueSystem.js"></script>
+    <script src="src/engine/rpg/shared/CompanionNPC.js"></script>
+    <script src="src/engine/rpg/shared/DressSystem.js"></script>
+
+    <!-- Chapter 1: 五代十国征服 -->
+    <script src="src/engine/rpg/chapters/ch1-conquest/OpenWorldBuilder.js"></script>
+    <script src="src/engine/rpg/chapters/ch1-conquest/ConquestManager.js"></script>
+    <script src="src/engine/rpg/chapters/ch1-conquest/Chapter1.js"></script>
+
+    <!-- Chapter 2: 杯酒释兵权 + 科举 -->
+    <script src="src/engine/rpg/chapters/ch2-feast/FeastScene.js"></script>
+    <script src="src/engine/rpg/chapters/ch2-feast/ExamScene.js"></script>
+    <script src="src/engine/rpg/chapters/ch2-feast/Chapter2.js"></script>
+
+    <!-- RPG orchestrator (must load after all chapter classes) -->
     <script src="src/engine/rpg/RPGGameEngine.js"></script>
 
     <!-- RPG entry point -->

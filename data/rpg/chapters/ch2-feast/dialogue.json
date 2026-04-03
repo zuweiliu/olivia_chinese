@@ -1,0 +1,81 @@
+{
+  "transition": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "大宋建立了！但有一件事让我夜不能寐……" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "那些将军手握重兵。如果他们造反，大宋就会重蹈五代的覆辙！" },
+    { "speaker": "你", "portrait": "player", "text": "你打算怎么办？把他们关起来？" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "哈哈，不不。我要请他们喝酒——然后，请他们自愿交出兵权。" },
+    { "speaker": "猫猫", "portrait": "cat", "text": "喵～（发出了神秘的期待声）" }
+  ],
+  "feast_open": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "各位老兄弟，今日设宴，不谈公事，只叙旧情！" },
+    { "speaker": "众将军", "portrait": "zhao", "text": "谢陛下！" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "来，满饮此杯！" }
+  ],
+  "general_surrender": [
+    {
+      "name": "韩令坤", "title": "骑兵统领",
+      "spray_reaction": "啊！猫……猫喷酒了！！",
+      "think": "陛下，臣……臣明白了。兵权乃祸端，臣愿归还军印！",
+      "farewell": "臣告退，此后只愿归田养老。"
+    },
+    {
+      "name": "慕容延钊", "title": "步兵统帅",
+      "spray_reaction": "我的脸……猫猫你！！",
+      "think": "陛下深意，臣不敢不从。军印奉上！",
+      "farewell": "臣卸甲归田，祝大宋昌盛。"
+    },
+    {
+      "name": "石守信", "title": "禁军首领",
+      "spray_reaction": "这酒……是从猫嘴里喷出来的？？",
+      "think": "臣…臣懂了。陛下不希望看到军人威胁君主。臣交出兵权！",
+      "farewell": "从今日起，臣只是一介平民。"
+    },
+    {
+      "name": "王审琦", "title": "京城守备",
+      "spray_reaction": "喵！！（满脸酒水）",
+      "think": "好吧好吧，猫都懂了，我更要懂。军印给你！",
+      "farewell": "臣告辞，回家含饴弄孙去了！"
+    },
+    {
+      "name": "高怀德", "title": "首都驻军",
+      "spray_reaction": "这只猫……真是太厉害了！！",
+      "think": "臣心悦诚服！陛下英明，军权归皇帝才是正道。军印奉上！",
+      "farewell": "臣告退。大宋万岁！"
+    }
+  ],
+  "feast_end": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "五位大将军都交出了兵权。从今日起，军队由皇帝直接统领！" },
+    { "speaker": "你", "portrait": "player", "text": "但是……只靠皇帝管军队，怎么治理这么大的国家呢？" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "好问题！你有什么主意吗？" }
+  ],
+  "suggest_exam": [
+    { "speaker": "你", "portrait": "player", "text": "我记得历史书上说……宋朝有科举考试？让有学问的人来做官！" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "妙啊！！科举考试！国家需要文官来管理，不是只靠武将！" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "重文轻武——这将是大宋的传统！我们马上举行科举！" },
+    { "speaker": "猫猫", "portrait": "cat", "text": "喵！（竖起大拇指的姿势）" }
+  ],
+  "exam_start": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "传令全国：凡有才华者，皆可参加科举考试，为国效力！" },
+    { "speaker": "你", "portrait": "player", "text": "看，学者们来了！帮他们复习一下这些词，他们就能通过考试！" }
+  ],
+  "exam_word_prompt": "📝 帮这位学者记住这个词：",
+  "scholar_pass": [
+    "太好了！我通过了！",
+    "多谢指点，我一定报效国家！",
+    "学以致用，这就是科举的意义！",
+    "有了才华，才能为百姓服务！",
+    "吾辈读书人，终于有用武之地了！"
+  ],
+  "exam_complete": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "五位学者全部通过科举，成为了大宋的官员！" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "渐渐地，'万般皆下品，唯有读书高'成为了宋朝的价值观。" },
+    { "speaker": "你", "portrait": "player", "text": "大家都去读书了……但这样武力会不会太弱？" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "这是一个代价……但文化的繁荣，让大宋成为最富有的朝代！" },
+    { "speaker": "猫猫", "portrait": "cat", "text": "喵～（满足地打了个滚）" }
+  ],
+  "ending": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "感谢你，来自未来的朋友。大宋的太平盛世，有你的一份功劳！" },
+    { "speaker": "你", "portrait": "player", "text": "我学到了很多……还有，猫猫，你真是太厉害了！" },
+    { "speaker": "猫猫", "portrait": "cat", "text": "喵～（骄傲地昂起头）" }
+  ]
+}
