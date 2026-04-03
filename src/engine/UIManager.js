@@ -473,7 +473,7 @@ class UIManager {
         // Card
         const card = new BABYLON.GUI.Rectangle('wordCard');
         card.width = '420px';
-        card.height = '360px';
+        card.height = '440px';
         card.background = 'rgba(20, 20, 40, 0.95)';
         card.cornerRadius = 16;
         card.thickness = 2;
@@ -522,7 +522,7 @@ class UIManager {
         card.addControl(meaning);
 
         // Speak button
-        const speakBtn = this._createButton('🎤 Speak', '130px', '-100px', '#2a5a2a', () => {
+        const speakBtn = this._createButton('🎤 Speak', '175px', '-100px', '#2a5a2a', () => {
             status.text = '🎤 Listening... speak now!';
             status.color = '#ffcc44';
 
@@ -555,10 +555,17 @@ class UIManager {
         card.addControl(speakBtn);
 
         // Don't know button
-        const dontKnowBtn = this._createButton("I don't know", '130px', '100px', '#5a3a2a', () => {
+        const dontKnowBtn = this._createButton("I don't know", '175px', '100px', '#5a3a2a', () => {
             pinyin.alpha = 1;
             meaning.alpha = 1;
             this.learningSystem.markLearning(word.id);
+            if (window.speechSynthesis) {
+                const utt = new SpeechSynthesisUtterance(word.characters);
+                utt.lang = 'zh-CN';
+                utt.rate = 0.8;
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utt);
+            }
             status.text = 'Now try to read it! Press 🎤 Speak';
             status.color = '#88ccff';
 
@@ -577,6 +584,23 @@ class UIManager {
         // Close button
         const closeBtn = this._createCloseButton();
         card.addControl(closeBtn);
+
+        this._addPinyinInput(card, 88, () => word.pinyin,
+            () => {
+                if (this.gameEngine.music) this.gameEngine.music.playCheer();
+                const light = this.learningSystem.masterWord(word.id);
+                status.text = `✨ Correct! +${light} light`;
+                status.color = '#44ff88';
+                meaning.alpha = 1;
+                charText.color = '#ffd700';
+                this.gameEngine.collectibles.collectItem(item);
+                setTimeout(() => this.closeOverlay(), 1200);
+            },
+            (typed) => {
+                status.text = `✗ "${typed}" — try again`;
+                status.color = '#ff8888';
+            }
+        );
 
         // Typing fallback if no speech support
         if (!this.speechSystem.isSupported) {
@@ -600,7 +624,7 @@ class UIManager {
         // Card
         const card = new BABYLON.GUI.Rectangle('storyCard');
         card.width = '540px';
-        card.height = '520px';
+        card.height = '580px';
         card.background = 'rgba(40, 25, 10, 0.95)';
         card.cornerRadius = 16;
         card.thickness = 2;
@@ -674,7 +698,9 @@ class UIManager {
         meaningText.alpha = 0;
         card.addControl(meaningText);
 
+        let pinyinInputCtrl = null;
         const advanceSentence = () => {
+            if (pinyinInputCtrl) pinyinInputCtrl.text = '';
             currentSentence++;
             if (currentSentence >= story.sentences.length) {
                 const light = this.learningSystem.completeStory(story.id);
@@ -697,7 +723,7 @@ class UIManager {
         };
 
         // Speak button
-        const speakBtn = this._createButton('🎤 Speak', '210px', '-100px', '#2a5a2a', () => {
+        const speakBtn = this._createButton('🎤 Speak', '240px', '-100px', '#2a5a2a', () => {
             const sent = story.sentences[currentSentence];
             status.text = '🎤 Listening...';
             this.speechSystem.startListening(
@@ -729,7 +755,7 @@ class UIManager {
         card.addControl(speakBtn);
 
         // Help button
-        const helpBtn = this._createButton('Show Help', '210px', '0px', '#5a3a2a', () => {
+        const helpBtn = this._createButton('Show Help', '240px', '0px', '#5a3a2a', () => {
             const sent = story.sentences[currentSentence];
             pinyinText.text = sent.pinyin;
             pinyinText.alpha = 1;
@@ -741,11 +767,26 @@ class UIManager {
         card.addControl(helpBtn);
 
         // Next button
-        const nextBtn = this._createButton('Next →', '210px', '100px', '#3a3a5a', advanceSentence);
+        const nextBtn = this._createButton('Next →', '240px', '100px', '#3a3a5a', advanceSentence);
         card.addControl(nextBtn);
 
         // Close
         card.addControl(this._createCloseButton());
+        pinyinInputCtrl = this._addPinyinInput(card, 192,
+            () => story.sentences[currentSentence].pinyin,
+            () => {
+                if (this.gameEngine.music) this.gameEngine.music.playCheer();
+                status.text = '✨ Correct!';
+                status.color = '#44ff88';
+                meaningText.text = story.sentences[currentSentence].meaning;
+                meaningText.alpha = 1;
+                setTimeout(advanceSentence, 1000);
+            },
+            (typed) => {
+                status.text = `✗ "${typed}" — try again`;
+                status.color = '#ff8888';
+            }
+        );
     }
 
     // ==================== REVIEW OVERLAY ====================
@@ -770,7 +811,7 @@ class UIManager {
 
         const card = new BABYLON.GUI.Rectangle('reviewCard');
         card.width = '420px';
-        card.height = '380px';
+        card.height = '460px';
         card.background = 'rgba(20, 30, 20, 0.95)';
         card.cornerRadius = 16;
         card.thickness = 2;
@@ -818,7 +859,9 @@ class UIManager {
         meaning.alpha = 0;
         card.addControl(meaning);
 
+        let pinyinInputCtrl = null;
         const advance = () => {
+            if (pinyinInputCtrl) pinyinInputCtrl.text = '';
             currentIndex++;
             if (currentIndex >= reviewWords.length) {
                 charText.text = '🎉 Review Complete!';
@@ -841,7 +884,7 @@ class UIManager {
         };
 
         // Speak
-        const speakBtn = this._createButton('🎤 Speak', '120px', '-100px', '#2a5a2a', () => {
+        const speakBtn = this._createButton('🎤 Speak', '160px', '-100px', '#2a5a2a', () => {
             const w = reviewWords[currentIndex];
             status.text = '🎤 Listening...';
             this.speechSystem.startListening(
@@ -871,17 +914,34 @@ class UIManager {
         card.addControl(speakBtn);
 
         // Show hint
-        const hintBtn = this._createButton('Show Hint', '120px', '0px', '#5a3a2a', () => {
+        const hintBtn = this._createButton('Show Hint', '160px', '0px', '#5a3a2a', () => {
             pinyin.alpha = 1;
             meaning.alpha = 1;
         });
         card.addControl(hintBtn);
 
         // Skip
-        const skipBtn = this._createButton('Skip →', '120px', '100px', '#3a3a5a', advance);
+        const skipBtn = this._createButton('Skip →', '160px', '100px', '#3a3a5a', advance);
         card.addControl(skipBtn);
 
         card.addControl(this._createCloseButton());
+        pinyinInputCtrl = this._addPinyinInput(card, 90,
+            () => reviewWords[currentIndex].pinyin,
+            () => {
+                if (this.gameEngine.music) this.gameEngine.music.playCheer();
+                const w = reviewWords[currentIndex];
+                this.learningSystem.masterWord(w.id);
+                this.learningSystem.reviewList = this.learningSystem.reviewList.filter(id => id !== w.id);
+                status.text = '✨ Correct! Mastered!';
+                status.color = '#44ff88';
+                meaning.alpha = 1;
+                setTimeout(advance, 1000);
+            },
+            (typed) => {
+                status.text = `✗ "${typed}" — try again`;
+                status.color = '#ff8888';
+            }
+        );
     }
 
     // ==================== UI HELPERS ====================
@@ -926,6 +986,69 @@ class UIManager {
         btn.onPointerClickObservable.add(callback);
 
         return btn;
+    }
+
+    _matchPinyin(typed, expected) {
+        const norm = s => s.normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .replace(/v/g, 'u')
+            .replace(/[^a-z]/g, '');
+        const t = norm(typed), e = norm(expected);
+        return t.length > 0 && t === e;
+    }
+
+    _addPinyinInput(card, top, getExpected, onCorrect, onWrong) {
+        const input = new BABYLON.GUI.InputText('pinyinInput');
+        input.width = '215px';
+        input.height = '34px';
+        input.top = top + 'px';
+        input.left = '-55px';
+        input.color = '#aaddff';
+        input.background = 'rgba(0,0,30,0.85)';
+        input.focusedBackground = 'rgba(10,10,60,0.95)';
+        input.placeholderText = 'type pinyin e.g. ni hao';
+        input.placeholderColor = '#445566';
+        input.fontSize = 13;
+        input.thickness = 1;
+        input.isPointerBlocker = true;
+        card.addControl(input);
+
+        const checkBtn = new BABYLON.GUI.Rectangle('checkBtn');
+        checkBtn.width = '90px';
+        checkBtn.height = '34px';
+        checkBtn.top = top + 'px';
+        checkBtn.left = '120px';
+        checkBtn.background = '#1a4a2a';
+        checkBtn.cornerRadius = 6;
+        checkBtn.thickness = 1;
+        checkBtn.color = '#44aa66';
+        checkBtn.isPointerBlocker = true;
+        card.addControl(checkBtn);
+
+        const checkLabel = new BABYLON.GUI.TextBlock();
+        checkLabel.text = 'Check ✓';
+        checkLabel.color = '#44ff88';
+        checkLabel.fontSize = 13;
+        checkBtn.addControl(checkLabel);
+
+        checkBtn.onPointerEnterObservable.add(() => { checkBtn.background = '#2a6a3a'; });
+        checkBtn.onPointerOutObservable.add(() => { checkBtn.background = '#1a4a2a'; });
+
+        const checkFn = () => {
+            const typed = input.text.trim();
+            if (!typed) return;
+            if (this._matchPinyin(typed, getExpected())) {
+                onCorrect();
+            } else {
+                onWrong(typed);
+            }
+        };
+        input.onKeyboardEventProcessedObservable.add((e) => {
+            if (e.key === 'Enter' || e.keyCode === 13) checkFn();
+        });
+        checkBtn.onPointerClickObservable.add(checkFn);
+        return input;
     }
 
     _createCloseButton() {
