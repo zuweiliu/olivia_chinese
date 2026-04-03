@@ -231,6 +231,62 @@ class BackgroundMusic {
     }
 
     // Short celebratory arpeggio — call on correct answer
+    // Big triumphant fanfare — played when a kingdom is conquered
+    playConquestFanfare() {
+        if (!this.ctx || this.isMuted) return;
+        const ctx = this.ctx;
+        const now = ctx.currentTime;
+
+        // Trumpet-like sawtooth chord: G4 B4 D5 G5
+        const chordFreqs = [392.00, 493.88, 587.33, 783.99];
+        chordFreqs.forEach((freq, i) => {
+            const osc = ctx.createOscillator();
+            osc.type = 'sawtooth';
+            osc.frequency.value = freq;
+            const filt = ctx.createBiquadFilter();
+            filt.type = 'lowpass';
+            filt.frequency.value = 2200;
+            const env = ctx.createGain();
+            const t = now + i * 0.04;
+            env.gain.setValueAtTime(0, t);
+            env.gain.linearRampToValueAtTime(0.18, t + 0.025);
+            env.gain.setValueAtTime(0.18, t + 0.55);
+            env.gain.exponentialRampToValueAtTime(0.0001, t + 0.95);
+            osc.connect(filt); filt.connect(env);
+            env.connect(this.masterGain);
+            if (this._reverb) env.connect(this._reverb);
+            osc.start(t); osc.stop(t + 1.0);
+        });
+
+        // Rising run: C5 E5 G5 C6 E6 — staggered 80ms
+        const runFreqs = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+        runFreqs.forEach((freq, i) => {
+            const osc = ctx.createOscillator();
+            osc.type = 'sine';
+            osc.frequency.value = freq;
+            const env = ctx.createGain();
+            const t = now + 0.55 + i * 0.08;
+            env.gain.setValueAtTime(0, t);
+            env.gain.linearRampToValueAtTime(0.24, t + 0.01);
+            env.gain.exponentialRampToValueAtTime(0.0001, t + 0.28);
+            osc.connect(env);
+            env.connect(this.masterGain);
+            osc.start(t); osc.stop(t + 0.3);
+        });
+
+        // Bass boom on beat 1
+        const bass = ctx.createOscillator();
+        bass.type = 'sine';
+        bass.frequency.value = 65.41;
+        const bassEnv = ctx.createGain();
+        bassEnv.gain.setValueAtTime(0, now);
+        bassEnv.gain.linearRampToValueAtTime(0.5, now + 0.02);
+        bassEnv.gain.exponentialRampToValueAtTime(0.0001, now + 0.6);
+        bass.connect(bassEnv);
+        bassEnv.connect(this.masterGain);
+        bass.start(now); bass.stop(now + 0.65);
+    }
+
     playCheer() {
         if (!this.ctx || this.isMuted) return;
 

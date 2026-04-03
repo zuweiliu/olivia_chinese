@@ -11,24 +11,215 @@ class OpenWorldBuilder {
     }
 
     build() {
-        this._createGround();
+        this._createTerrain();
         this._createSkybox();
         this._createFog();
+        this._createRivers();
         this._createPaths();
         this.kingdoms.forEach(k => this._buildCity(k));
+        this._createMountains();
         this._createAmbientDetails();
     }
 
-    _createGround() {
+    // ── Height function (multi-octave sin/cos pseudo-noise) ──────────────────
+    _getHeight(x, z) {
+        let h = 0;
+        h += Math.sin(x * 0.013 + 0.3) * Math.cos(z * 0.011 + 0.7) * 5.5;
+        h += Math.sin(x * 0.038 + 1.1) * Math.cos(z * 0.032 + 0.4) * 2.8;
+        h += Math.sin(x * 0.075 + 2.0) * Math.cos(z * 0.068 + 1.8) * 1.2;
+        h += Math.sin(x * 0.18  + 3.1) * Math.cos(z * 0.15  + 2.3) * 0.5;
+
+        // Flatten near each kingdom (city platforms stay level)
+        for (const k of this.kingdoms) {
+            const d = Math.hypot(x - k.position.x, z - k.position.z);
+            const flatRadius = k.isBase ? 35 : 28;
+            const blendRange = 25;
+            if (d < flatRadius) { h = 0; break; }
+            if (d < flatRadius + blendRange) {
+                h *= (d - flatRadius) / blendRange;
+            }
+        }
+        return Math.max(0, h);
+    }
+
+    _createTerrain() {
+        const subs = 100;
         const ground = BABYLON.MeshBuilder.CreateGround('ground', {
-            width: 700, height: 700, subdivisions: 30
+            width: 700, height: 700, subdivisions: subs
         }, this.scene);
-        const mat = new BABYLON.PBRMaterial('groundMat', this.scene);
-        mat.albedoColor = new BABYLON.Color3(0.22, 0.28, 0.14);
-        mat.roughness = 0.95;
-        mat.metallic = 0;
+
+        // Deform vertices
+        const positions = ground.getVerticesData(BABYLON.VertexBuffer.PositionKind);
+        for (let i = 0; i < positions.length; i += 3) {
+            positions[i + 1] = this._getHeight(positions[i], positions[i + 2]);
+        }
+        ground.updateVerticesData(BABYLON.VertexBuffer.PositionKind, positions);
+        const normals = [];
+        BABYLON.VertexData.ComputeNormals(positions, ground.getIndices(), normals);
+        ground.updateVerticesData(BABYLON.VertexBuffer.NormalKind, normals);
+
+        // Multi-zone ground material using a DynamicTexture
+        const texSize = 1024;
+        const tex = new BABYLON.DynamicTexture('groundTex', { width: texSize, height: texSize }, this.scene);
+        const ctx = tex.getContext();
+        // Base green
+        ctx.fillStyle = '#384820';
+        ctx.fillRect(0, 0, texSize, texSize);
+        // Dirt patches
+        const patchCount = 120;
+        for (let i = 0; i < patchCount; i++) {
+            const px = Math.random() * texSize, py = Math.random() * texSize;
+            const r = 15 + Math.random() * 50;
+            const grad = ctx.createRadialGradient(px, py, 0, px, py, r);
+            if (Math.random() < 0.4) {
+                grad.addColorStop(0, 'rgba(90,65,30,0.5)');
+                grad.addColorStop(1, 'rgba(90,65,30,0)');
+            } else {
+                grad.addColorStop(0, 'rgba(55,75,22,0.6)');
+                grad.addColorStop(1, 'rgba(55,75,22,0)');
+            }
+            ctx.fillStyle = grad;
+            ctx.beginPath(); ctx.arc(px, py, r, 0, Math.PI * 2); ctx.fill();
+        }
+        tex.update();
+
+        const mat = new BABYLON.StandardMaterial('groundMat', this.scene);
+        mat.diffuseTexture = tex;
+        mat.diffuseTexture.uScale = 8;
+        mat.diffuseTexture.vScale = 8;
+        mat.specularColor = BABYLON.Color3.Black();
         ground.material = mat;
         ground.receiveShadows = true;
+        this._ground = ground;
+    }
+
+    _createMountains() {
+        // Mountain cluster positions — away from all cities
+        const clusterSeeds = [
+            { x: -220, z: -180 }, { x: 240, z: -160 }, { x: -180, z: 220 },
+            { x: 260, z: 180 }, { x: -260, z: 50 }, { x: 50, z: -240 },
+            { x: 200, z: 260 }, { x: -240, z: -250 }
+        ];
+
+        const snowMat = new BABYLON.StandardMaterial('snowMat', this.scene);
+        snowMat.diffuseColor = new BABYLON.Color3(0.92, 0.95, 1.0);
+        snowMat.emissiveColor = new BABYLON.Color3(0.06, 0.06, 0.08);
+
+        const rockMats = [0.42, 0.38, 0.35].map((b, i) => {
+            const m = new BABYLON.StandardMaterial('rockMat' + i, this.scene);
+            m.diffuseColor = new BABYLON.Color3(b, b * 0.95, b * 0.88);
+            m.specularColor = new BABYLON.Color3(0.05, 0.05, 0.05);
+            return m;
+        });
+
+        clusterSeeds.forEach((seed, si) => {
+            // Skip if too close to a city
+            const tooClose = this.kingdoms.some(k =>
+                Math.hypot(seed.x - k.position.x, seed.z - k.position.z) < 60
+            );
+            if (tooClose) return;
+
+            const peakCount = 3 + Math.floor(Math.random() * 4);
+            for (let p = 0; p < peakCount; p++) {
+                const ox = seed.x + (Math.random() - 0.5) * 60;
+                const oz = seed.z + (Math.random() - 0.5) * 60;
+                const gy = this._getHeight(ox, oz);
+                const h = 18 + Math.random() * 32;
+                const w = 10 + Math.random() * 14;
+
+                // Main peak (cone)
+                const peak = BABYLON.MeshBuilder.CreateCylinder('mtn_' + si + '_' + p, {
+                    diameterTop: 0.5, diameterBottom: w,
+                    height: h, tessellation: 7
+                }, this.scene);
+                peak.position = new BABYLON.Vector3(ox, gy + h * 0.5, oz);
+                peak.rotation.y = Math.random() * Math.PI;
+                peak.material = rockMats[p % rockMats.length];
+
+                // Snow cap
+                const capH = h * 0.28;
+                const cap = BABYLON.MeshBuilder.CreateCylinder('cap_' + si + '_' + p, {
+                    diameterTop: 0.3, diameterBottom: w * 0.35,
+                    height: capH, tessellation: 7
+                }, this.scene);
+                cap.position = new BABYLON.Vector3(ox, gy + h - capH * 0.3, oz);
+                cap.rotation.y = peak.rotation.y;
+                cap.material = snowMat;
+
+                // Foothills (smaller cones around base)
+                for (let f = 0; f < 3; f++) {
+                    const fa = (f / 3) * Math.PI * 2 + si;
+                    const fr = w * 0.5 + Math.random() * w * 0.4;
+                    const fx = ox + Math.cos(fa) * fr;
+                    const fz = oz + Math.sin(fa) * fr;
+                    const fgy = this._getHeight(fx, fz);
+                    const fh = h * (0.3 + Math.random() * 0.35);
+                    const fw = w * (0.4 + Math.random() * 0.3);
+                    const hill = BABYLON.MeshBuilder.CreateCylinder('hill_' + si + '_' + p + '_' + f, {
+                        diameterTop: 0.4, diameterBottom: fw,
+                        height: fh, tessellation: 6
+                    }, this.scene);
+                    hill.position = new BABYLON.Vector3(fx, fgy + fh * 0.5, fz);
+                    hill.material = rockMats[(p + f) % rockMats.length];
+                }
+            }
+        });
+    }
+
+    _createRivers() {
+        const riverMat = new BABYLON.StandardMaterial('riverMat', this.scene);
+        riverMat.diffuseColor = new BABYLON.Color3(0.18, 0.45, 0.72);
+        riverMat.emissiveColor = new BABYLON.Color3(0.04, 0.12, 0.22);
+        riverMat.alpha = 0.72;
+        riverMat.specularColor = new BABYLON.Color3(0.6, 0.7, 0.8);
+        riverMat.backFaceCulling = false;
+
+        // Two rivers with winding paths
+        const rivers = [
+            // River 1: meanders from top-left to center-right
+            [
+                new BABYLON.Vector3(-300, 0.25, -200),
+                new BABYLON.Vector3(-220, 0.25, -160),
+                new BABYLON.Vector3(-160, 0.25, -80),
+                new BABYLON.Vector3(-90,  0.25, -40),
+                new BABYLON.Vector3(-20,  0.25,  20),
+                new BABYLON.Vector3( 60,  0.25,  80),
+                new BABYLON.Vector3(140,  0.25, 140),
+                new BABYLON.Vector3(220,  0.25, 200)
+            ],
+            // River 2: from top-right down to bottom
+            [
+                new BABYLON.Vector3( 280, 0.25, -280),
+                new BABYLON.Vector3( 200, 0.25, -180),
+                new BABYLON.Vector3( 220, 0.25, -80),
+                new BABYLON.Vector3( 180, 0.25,  10),
+                new BABYLON.Vector3( 120, 0.25,  90),
+                new BABYLON.Vector3(  60, 0.25, 190),
+                new BABYLON.Vector3( -20, 0.25, 280)
+            ]
+        ];
+
+        rivers.forEach((path, ri) => {
+            // Skip segments that pass through city areas
+            for (let i = 0; i < path.length - 1; i++) {
+                const mid = path[i].add(path[i + 1]).scale(0.5);
+                const tooClose = this.kingdoms.some(k =>
+                    Math.hypot(mid.x - k.position.x, mid.z - k.position.z) < 32
+                );
+                if (tooClose) continue;
+
+                const seg = BABYLON.MeshBuilder.CreateGround('river_' + ri + '_' + i, {
+                    width: 12, height: path[i].subtract(path[i + 1]).length()
+                }, this.scene);
+                seg.material = riverMat;
+                seg.position = mid;
+                seg.position.y = 0.25;
+
+                // Orient along path direction
+                const dir = path[i + 1].subtract(path[i]);
+                seg.rotation.y = Math.atan2(dir.x, dir.z);
+            }
+        });
     }
 
     _createSkybox() {

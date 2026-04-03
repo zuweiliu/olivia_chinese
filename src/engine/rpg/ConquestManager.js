@@ -292,20 +292,137 @@ class ConquestManager {
             icons.icon.color = '#44ff88';
         }
 
-        // Particle burst at castle site
-        if (this.gameEngine.particles) {
-            this.gameEngine.particles.burstAt(
-                new BABYLON.Vector3(kingdom.position.x, 5, kingdom.position.z)
-            );
-        }
+        // Full celebration
+        this._playCelebration(kingdom);
 
         // Check all conquered
         const enemyKingdoms = this.kingdoms.filter(k => !k.isBase);
         if (this.conquered.size >= enemyKingdoms.length) {
             setTimeout(() => {
                 if (this._onVictory) this._onVictory();
-            }, 1200);
+            }, 3200);
         }
+    }
+
+    _playCelebration(kingdom) {
+        const pos = new BABYLON.Vector3(kingdom.position.x, 5, kingdom.position.z);
+
+        // 1. Fanfare sound
+        if (this.gameEngine.music) this.gameEngine.music.playConquestFanfare();
+
+        // 2. Multi-wave particle bursts (staggered)
+        if (this.gameEngine.particles) {
+            const offsets = [
+                new BABYLON.Vector3(0, 5, 0),
+                new BABYLON.Vector3(6, 8, 0), new BABYLON.Vector3(-6, 8, 0),
+                new BABYLON.Vector3(0, 8, 6), new BABYLON.Vector3(0, 8, -6),
+                new BABYLON.Vector3(4, 12, 4), new BABYLON.Vector3(-4, 12, -4)
+            ];
+            offsets.forEach((off, i) => {
+                setTimeout(() => {
+                    this.gameEngine.particles.burstAt(
+                        new BABYLON.Vector3(kingdom.position.x + off.x, off.y, kingdom.position.z + off.z)
+                    );
+                }, i * 200);
+            });
+        }
+
+        // 3. Screen flash (gold → transparent)
+        const flash = new BABYLON.GUI.Rectangle('conquestFlash');
+        flash.width = '100%'; flash.height = '100%';
+        flash.background = 'rgba(255, 215, 0, 0.55)';
+        flash.thickness = 0;
+        flash.isPointerBlocker = false;
+        this.gui.addControl(flash);
+
+        let flashT = 0;
+        const flashAnim = this.scene.onBeforeRenderObservable.add(() => {
+            flashT += this.scene.getEngine().getDeltaTime() / 1000;
+            const alpha = Math.max(0, 0.55 - flashT * 1.4);
+            flash.background = `rgba(255,215,0,${alpha.toFixed(3)})`;
+            if (flashT >= 0.4) {
+                this.scene.onBeforeRenderObservable.remove(flashAnim);
+                this.gui.removeControl(flash);
+                flash.dispose();
+            }
+        });
+
+        // 4. Floating cheer popup
+        const col = kingdom.colorTheme;
+        const hexCol = `rgb(${Math.round(col[0]*255)},${Math.round(col[1]*255)},${Math.round(col[2]*255)})`;
+
+        const popup = new BABYLON.GUI.Rectangle('cheerPopup');
+        popup.width = '480px'; popup.height = '130px';
+        popup.background = 'rgba(10,8,20,0.88)';
+        popup.cornerRadius = 18; popup.thickness = 3;
+        popup.color = hexCol; popup.top = '-60px';
+        popup.isPointerBlocker = false;
+        this.gui.addControl(popup);
+
+        const cheerTitle = new BABYLON.GUI.TextBlock('cheerTitle', `🎉 ${kingdom.name} 已征服！`);
+        cheerTitle.color = '#ffd700';
+        cheerTitle.fontSize = 32;
+        cheerTitle.fontFamily = '"Microsoft YaHei", serif';
+        cheerTitle.fontWeight = 'bold';
+        cheerTitle.top = '-22px';
+        popup.addControl(cheerTitle);
+
+        const cheerSub = new BABYLON.GUI.TextBlock('cheerSub', `猫猫把 ${kingdom.ruler ? kingdom.ruler + '的' : ''}城堡吞掉了！剩余：${5 - this.conquered.size} 个`);
+        cheerSub.color = hexCol;
+        cheerSub.fontSize = 16;
+        cheerSub.fontFamily = '"Microsoft YaHei", serif';
+        cheerSub.top = '24px';
+        popup.addControl(cheerSub);
+
+        // Animate popup: slide up then fade out
+        let popT = 0;
+        const startTop = -60;
+        const popAnim = this.scene.onBeforeRenderObservable.add(() => {
+            popT += this.scene.getEngine().getDeltaTime() / 1000;
+            if (popT < 0.3) {
+                popup.top = (startTop - popT / 0.3 * 30) + 'px';
+            } else if (popT < 2.2) {
+                popup.top = (startTop - 30) + 'px';
+            } else {
+                const fade = Math.max(0, 1 - (popT - 2.2) / 0.6);
+                popup.alpha = fade;
+                if (fade <= 0) {
+                    this.scene.onBeforeRenderObservable.remove(popAnim);
+                    this.gui.removeControl(popup);
+                    popup.dispose();
+                }
+            }
+        });
+
+        // 5. 万岁 text explosion — brief Chinese cheering text floating up
+        const cheers = ['万岁！', '好棒！', '胜利！', '🎊'];
+        cheers.forEach((txt, ci) => {
+            setTimeout(() => {
+                const cheer = new BABYLON.GUI.TextBlock('cheer_' + ci, txt);
+                cheer.color = ['#ffd700', '#ff8844', '#88ff88', '#ff66cc'][ci];
+                cheer.fontSize = 24 + ci * 4;
+                cheer.fontFamily = '"Microsoft YaHei", serif';
+                cheer.fontWeight = 'bold';
+                cheer.outlineColor = '#000';
+                cheer.outlineWidth = 2;
+                cheer.left = ((ci - 1.5) * 120) + 'px';
+                cheer.top = '80px';
+                this.gui.addControl(cheer);
+
+                let ct = 0;
+                const startY = 80;
+                const cAnim = this.scene.onBeforeRenderObservable.add(() => {
+                    ct += this.scene.getEngine().getDeltaTime() / 1000;
+                    cheer.top = (startY - ct * 120) + 'px';
+                    cheer.alpha = Math.max(0, 1 - ct * 1.1);
+                    if (ct >= 0.9) {
+                        this.scene.onBeforeRenderObservable.remove(cAnim);
+                        this.gui.removeControl(cheer);
+                        cheer.dispose();
+                    }
+                });
+            }, 400 + ci * 120);
+        });
     }
 
     _matchPinyin(typed, expected) {
