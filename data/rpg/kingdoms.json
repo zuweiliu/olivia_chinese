@@ -1,0 +1,73 @@
+[
+  {
+    "id": "kaifeng",
+    "name": "开封",
+    "title": "赵匡胤的大本营",
+    "ruler": "赵匡胤",
+    "description": "Your starting base. Help 赵匡胤 unify China!",
+    "position": { "x": 0, "z": 0 },
+    "colorTheme": [0.85, 0.72, 0.22],
+    "isBase": true,
+    "words": []
+  },
+  {
+    "id": "houling",
+    "name": "后梁",
+    "city": "汴州",
+    "years": "907–923",
+    "ruler": "朱温",
+    "rulerTitle": "梁太祖",
+    "description": "Founded by 朱温. Known for cruelty and wine feasts. The dynasty that ended the Tang.",
+    "position": { "x": -130, "z": -70 },
+    "colorTheme": [0.75, 0.18, 0.12],
+    "words": ["weixie", "miewang", "jiuyan"]
+  },
+  {
+    "id": "houtang",
+    "name": "后唐",
+    "city": "洛阳",
+    "years": "923–936",
+    "ruler": "李存勖",
+    "rulerTitle": "唐庄宗",
+    "description": "Founded by 李存勖, a Shatuo warrior who claimed to continue the Tang legacy.",
+    "position": { "x": 130, "z": -90 },
+    "colorTheme": [0.45, 0.18, 0.68],
+    "words": ["junzhu", "kongzhi", "bingquan"]
+  },
+  {
+    "id": "houjin",
+    "name": "后晋",
+    "city": "晋阳",
+    "years": "936–947",
+    "ruler": "石敬瑭",
+    "rulerTitle": "晋高祖",
+    "description": "Founded by 石敬瑭, who surrendered the Sixteen Prefectures to the Khitans for power.",
+    "position": { "x": 160, "z": 40 },
+    "colorTheme": [0.18, 0.35, 0.68],
+    "words": ["caizheng", "shuishou", "shili"]
+  },
+  {
+    "id": "houhan",
+    "name": "后汉",
+    "city": "太原",
+    "years": "947–950",
+    "ruler": "刘知远",
+    "rulerTitle": "汉高祖",
+    "description": "Founded by 刘知远, a short-lived dynasty after expelling the Khitans.",
+    "position": { "x": 70, "z": 140 },
+    "colorTheme": [0.22, 0.62, 0.28],
+    "words": ["dachen", "zaixiang", "luzou"]
+  },
+  {
+    "id": "houzhou",
+    "name": "后周",
+    "city": "邺都",
+    "years": "951–960",
+    "ruler": "郭威",
+    "rulerTitle": "周太祖",
+    "description": "Founded by 郭威, the last of the Five Dynasties. Replaced by 赵匡胤's Song.",
+    "position": { "x": -90, "z": 120 },
+    "colorTheme": [0.55, 0.55, 0.6],
+    "words": ["zhidu", "bianfa", "zhili"]
+  }
+]

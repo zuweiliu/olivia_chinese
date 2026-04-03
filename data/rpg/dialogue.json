@@ -1,0 +1,58 @@
+{
+  "intro": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "你好！我是赵匡胤，未来的大宋皇帝！" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "中原大地，五代十国，战乱纷纷，百姓苦不堪言……" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "我在时间裂缝中找到了你——我感觉到你有非凡的天赋：" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "你能感知古汉语的力量！每学会一个词，你就能给我们带来神奇的助力！" },
+    { "speaker": "你", "portrait": "player", "text": "……我？一个普通的初中生，能有什么用？" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "别小看自己！你的猫猫也有神力——它能吞噬敌国的城堡！" },
+    { "speaker": "你", "portrait": "player", "text": "猫猫？！那只小黑猫？！好吧……我愿意去试试！" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "太好了！先选好你的装扮，然后来找猫猫，我们一起出发！" }
+  ],
+  "dress_prompt": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "穿越时间要穿古代服装。学会3个词，就能解锁这套装扮！" }
+  ],
+  "cat_prompt": [
+    { "speaker": "猫猫", "portrait": "cat", "text": "喵～（我愿意帮你，但你得先教我3个词！）" }
+  ],
+  "depart": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "出发！五代十国正在等着我们！记住，每个词都是我们的力量！" }
+  ],
+  "kingdoms": {
+    "houling": [
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "这里是后梁！朱温此人凶残，以酒宴笼络人心。" },
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "学会这三个词，猫猫就能吞掉他的城堡！" }
+    ],
+    "houtang": [
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "后唐！李存勖是个沙陀勇士，自称继承大唐。" },
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "但他把军权抓得太紧，百姓无法控诉。学好这三个词！" }
+    ],
+    "houjin": [
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "后晋……石敬瑭居然把幽云十六州割让给契丹，真是国家财政的耻辱！" },
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "我们来替天行道！学这三个词吧！" }
+    ],
+    "houhan": [
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "后汉，刘知远建立，只存在了短短几年。" },
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "朝廷大臣争权夺利，百姓流离失所。猫猫，准备好了吗？" }
+    ],
+    "houzhou": [
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "最后一个——后周。郭威是个明君，可惜继承人无法守业。" },
+      { "speaker": "赵匡胤", "portrait": "zhao", "text": "这是最后一战！学完这三个词，大宋就要诞生了！" }
+    ]
+  },
+  "conquest_success": {
+    "houling": [{ "speaker": "赵匡胤", "portrait": "zhao", "text": "太棒了！猫猫把后梁吞掉了！一个消灭，还剩四个！" }],
+    "houtang": [{ "speaker": "赵匡胤", "portrait": "zhao", "text": "后唐也倒下了！猫猫威武！还剩三个！" }],
+    "houjin": [{ "speaker": "赵匡胤", "portrait": "zhao", "text": "后晋完了！石敬瑭再也无法出卖国土了！还剩两个！" }],
+    "houhan": [{ "speaker": "赵匡胤", "portrait": "zhao", "text": "后汉灭亡！四个拿下，最后一个！加油！" }],
+    "houzhou": [{ "speaker": "赵匡胤", "portrait": "zhao", "text": "五代尽灭！大宋——就要建立了！！" }]
+  },
+  "victory": [
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "我们做到了！！五代十国，烟消云散！" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "公元960年，大宋王朝正式建立，定都开封！" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "百姓终于可以过上太平日子了！这都是你和猫猫的功劳！" },
+    { "speaker": "你", "portrait": "player", "text": "猫猫，你吃了五个国家……你是不是有点撑？" },
+    { "speaker": "猫猫", "portrait": "cat", "text": "喵～（打了个嗝）" },
+    { "speaker": "赵匡胤", "portrait": "zhao", "text": "哈哈哈！感谢你，来自未来的英雄！大宋会是一个文化繁荣的盛世！" }
+  ]
+}

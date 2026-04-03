@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五代十国 — 穿越时空的少女</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; height: 100%; overflow: hidden; }
+        body {
+            background: #06040f;
+            font-family: 'Microsoft YaHei', 'STHeiti', 'Segoe UI', system-ui, sans-serif;
+        }
+        #renderCanvas {
+            width: 100%; height: 100%;
+            display: block; outline: none; touch-action: none;
+        }
+        #loadingScreen {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(135deg, #06040f 0%, #120820 50%, #0d0618 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            transition: opacity 1s;
+        }
+        #loadingScreen.hidden { opacity: 0; pointer-events: none; }
+        #loadingScreen h1 {
+            font-size: 52px;
+            color: #ffd700;
+            font-family: "Microsoft YaHei", "SimHei", serif;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 0 0 60px rgba(255, 100, 0, 0.3);
+            margin-bottom: 8px;
+        }
+        #loadingScreen .subtitle {
+            font-size: 20px;
+            color: #cc9944;
+            margin-bottom: 6px;
+            letter-spacing: 2px;
+        }
+        #loadingScreen .tagline {
+            font-size: 14px;
+            color: #886644;
+            margin-bottom: 32px;
+            font-style: italic;
+        }
+        #loadingScreen .spinner {
+            width: 44px; height: 44px;
+            border: 3px solid #2a1a08;
+            border-top-color: #ffd700;
+            border-radius: 50%;
+            animation: spin 0.9s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        #loadingScreen p {
+            font-size: 14px;
+            color: #886644;
+            margin-top: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loadingScreen">
+        <h1>五代十国</h1>
+        <div class="subtitle">穿越时空的少女</div>
+        <div class="tagline">与赵匡胤和猫猫一起，统一中原，建立大宋！</div>
+        <div class="spinner"></div>
+        <p>正在加载……</p>
+    </div>
+    <canvas id="renderCanvas"></canvas>
+
+    <!-- Babylon.js -->
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/gui/babylon.gui.min.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+    <!-- Shared game systems -->
+    <script src="src/systems/SpeechSystem.js"></script>
+    <script src="src/systems/LearningSystem.js"></script>
+
+    <!-- Shared engine modules (reused) -->
+    <script src="src/engine/PlayerController.js"></script>
+    <script src="src/engine/ParticleEffects.js"></script>
+    <script src="src/engine/BackgroundMusic.js"></script>
+
+    <!-- RPG-specific modules -->
+    <script src="src/engine/rpg/DialogueSystem.js"></script>
+    <script src="src/engine/rpg/CompanionNPC.js"></script>
+    <script src="src/engine/rpg/DressSystem.js"></script>
+    <script src="src/engine/rpg/OpenWorldBuilder.js"></script>
+    <script src="src/engine/rpg/ConquestManager.js"></script>
+    <script src="src/engine/rpg/RPGGameEngine.js"></script>
+
+    <!-- RPG entry point -->
+    <script src="src/rpg-game.js"></script>
+</body>
+</html>
