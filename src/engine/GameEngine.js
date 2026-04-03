@@ -20,6 +20,7 @@ class GameEngine {
         this.ui = null;
         this.learningSystem = null;
         this.speechSystem = null;
+        this.music = null;
 
         // Game state
         this.state = 'menu'; // 'menu' | 'playing' | 'overlay'
@@ -55,6 +56,10 @@ class GameEngine {
         this.world = new WorldBuilder(this.scene, this.learningSystem);
         this.collectibles = new CollectibleManager(this.scene, this.learningSystem, this.particles);
         this.ui = new UIManager(this.scene, this.learningSystem, this.speechSystem, this);
+
+        // Background music (starts on first user gesture)
+        this.music = new BackgroundMusic();
+        this.music.init();
 
         // Build the world
         this.world.buildCity();

@@ -739,6 +739,10 @@ class WorldBuilder {
                             ui.showGateReading(gateStory, () => {
                                 this.learningSystem.markGateRead(gateStory.id);
                                 this._showingGate = false;
+                                // Immediately pass player through — no re-walk needed
+                                playerPos.z = boundary + 1;
+                                this.currentAreaIndex = clampedIndex;
+                                if (ui) ui.showAreaName(newArea.name, newArea.nameEn);
                             });
                         }
                     }

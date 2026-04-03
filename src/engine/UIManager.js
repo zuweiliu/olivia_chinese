@@ -84,6 +84,56 @@ class UIManager {
         controls.top = '8px';
         topBar.addControl(controls);
 
+        // ── Mute button — added directly to gui (not topBar) for reliable click events ──
+        const muteBtn = new BABYLON.GUI.Rectangle('muteBtn');
+        muteBtn.width = '32px';
+        muteBtn.height = '32px';
+        muteBtn.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+        muteBtn.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+        muteBtn.top = '9px';
+        muteBtn.left = '-130px';
+        muteBtn.cornerRadius = 16;
+        muteBtn.thickness = 0;
+        muteBtn.background = 'transparent';
+        muteBtn.isPointerBlocker = true;
+        this.gui.addControl(muteBtn);
+
+        this.hud.muteLabel = new BABYLON.GUI.TextBlock('muteLabel', '🎵');
+        this.hud.muteLabel.fontSize = 18;
+        muteBtn.addControl(this.hud.muteLabel);
+
+        muteBtn.onPointerEnterObservable.add(() => { muteBtn.background = 'rgba(255,255,255,0.15)'; });
+        muteBtn.onPointerOutObservable.add(() => { muteBtn.background = 'transparent'; });
+        muteBtn.onPointerClickObservable.add(() => {
+            const music = this.gameEngine && this.gameEngine.music;
+            if (!music) return;
+            const muted = music.toggle();
+            this.hud.muteLabel.text = muted ? '🔇' : '🎵';
+        });
+
+        // ── Reset button — also directly on gui ──
+        const resetBtn = new BABYLON.GUI.Rectangle('resetBtn');
+        resetBtn.width = '32px';
+        resetBtn.height = '32px';
+        resetBtn.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+        resetBtn.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_RIGHT;
+        resetBtn.top = '9px';
+        resetBtn.left = '-168px';
+        resetBtn.cornerRadius = 16;
+        resetBtn.thickness = 0;
+        resetBtn.background = 'transparent';
+        resetBtn.isPointerBlocker = true;
+        this.gui.addControl(resetBtn);
+
+        const resetLabel = new BABYLON.GUI.TextBlock('resetLabel', '↺');
+        resetLabel.color = '#886666';
+        resetLabel.fontSize = 20;
+        resetBtn.addControl(resetLabel);
+
+        resetBtn.onPointerEnterObservable.add(() => { resetBtn.background = 'rgba(255,80,80,0.2)'; resetLabel.color = '#ff8888'; });
+        resetBtn.onPointerOutObservable.add(() => { resetBtn.background = 'transparent'; resetLabel.color = '#886666'; });
+        resetBtn.onPointerClickObservable.add(() => this._showResetConfirm());
+
         // Progress bar background
         const progressBg = new BABYLON.GUI.Rectangle('progressBg');
         progressBg.width = '200px';
@@ -224,109 +274,138 @@ class UIManager {
     showGateReading(story, onComplete) {
         if (this._gateReadingOpen) return;
         this._gateReadingOpen = true;
-        if (this.gameEngine) this.gameEngine.state = 'paused';
+        this.gameEngine.state = 'overlay';        // same state as word/story overlays
+        this.gameEngine.player.isLocked = true;   // freeze movement during reading
+        this._clearOverlay();                     // close any stale overlay first
 
         let sentenceIndex = 0;
         const sentences = story.sentences;
         let showPinyin = false;
 
-        // Dim backdrop
-        const backdrop = new BABYLON.GUI.Rectangle('grBackdrop');
-        backdrop.width = '100%';
-        backdrop.height = '100%';
-        backdrop.background = 'rgba(0,0,0,0.82)';
-        backdrop.thickness = 0;
-        this.gui.addControl(backdrop);
+        // Dim backdrop — tracked so _clearOverlay can remove it
+        this._createDimBg();
 
-        // Card panel
+        // Card panel — also tracked
         const card = new BABYLON.GUI.Rectangle('grCard');
         card.width = '720px';
-        card.height = '480px';
+        card.height = '560px';
         card.background = 'rgba(30,15,5,0.97)';
         card.thickness = 2;
         card.color = '#8B6914';
         card.cornerRadius = 12;
         this.gui.addControl(card);
+        this._overlayElements.push(card);
 
-        // Title
         const title = new BABYLON.GUI.TextBlock('grTitle', `📜 ${story.title}  •  ${story.titleEn}`);
         title.color = '#ffd700';
         title.fontSize = 18;
         title.fontWeight = 'bold';
-        title.top = '-190px';
+        title.top = '-245px';
         title.height = '30px';
         card.addControl(title);
 
-        // Progress indicator
         const progress = new BABYLON.GUI.TextBlock('grProgress', '');
-        progress.color = '#aaa';
+        progress.color = '#aaaaaa';
         progress.fontSize = 13;
-        progress.top = '-160px';
+        progress.top = '-215px';
         progress.height = '20px';
         card.addControl(progress);
 
-        // Chinese sentence text
         const chineseText = new BABYLON.GUI.TextBlock('grChinese', '');
-        chineseText.color = '#fff';
-        chineseText.fontSize = 26;
+        chineseText.color = '#ffffff';
+        chineseText.fontSize = 24;
         chineseText.fontFamily = '"Microsoft YaHei", serif';
         chineseText.textWrapping = true;
-        chineseText.top = '-60px';
-        chineseText.height = '80px';
+        chineseText.top = '-100px';
+        chineseText.height = '120px';
         chineseText.paddingLeft = '40px';
         chineseText.paddingRight = '40px';
         card.addControl(chineseText);
 
-        // Pinyin text
         const pinyinText = new BABYLON.GUI.TextBlock('grPinyin', '');
         pinyinText.color = '#aaddff';
-        pinyinText.fontSize = 15;
-        pinyinText.fontFamily = 'serif';
+        pinyinText.fontSize = 14;
         pinyinText.textWrapping = true;
-        pinyinText.top = '40px';
-        pinyinText.height = '40px';
+        pinyinText.top = '35px';
+        pinyinText.height = '75px';
         pinyinText.paddingLeft = '40px';
         pinyinText.paddingRight = '40px';
         card.addControl(pinyinText);
 
-        // English meaning
         const meaningText = new BABYLON.GUI.TextBlock('grMeaning', '');
         meaningText.color = '#ccaa66';
-        meaningText.fontSize = 14;
+        meaningText.fontSize = 13;
         meaningText.fontStyle = 'italic';
         meaningText.textWrapping = true;
-        meaningText.top = '90px';
-        meaningText.height = '50px';
+        meaningText.top = '118px';
+        meaningText.height = '70px';
         meaningText.paddingLeft = '40px';
         meaningText.paddingRight = '40px';
         card.addControl(meaningText);
 
-        // Pinyin toggle button
-        const pinyinBtn = new BABYLON.GUI.Button.CreateSimpleButton('grPinyinBtn', '拼音 ▾');
+        // ── Pinyin toggle button (Rectangle, same pattern as _createButton) ──
+        const pinyinLabel = new BABYLON.GUI.TextBlock();
+        pinyinLabel.text = '拼音 ▾';
+        pinyinLabel.color = '#aaddff';
+        pinyinLabel.fontSize = 13;
+
+        const pinyinBtn = new BABYLON.GUI.Rectangle('grPinyinBtn');
         pinyinBtn.width = '100px';
         pinyinBtn.height = '32px';
-        pinyinBtn.top = '155px';
+        pinyinBtn.top = '215px';
         pinyinBtn.left = '-160px';
         pinyinBtn.background = 'rgba(50,30,10,0.9)';
-        pinyinBtn.color = '#aaddff';
-        pinyinBtn.fontSize = 13;
-        pinyinBtn.thickness = 1;
         pinyinBtn.cornerRadius = 6;
+        pinyinBtn.thickness = 1;
+        pinyinBtn.isPointerBlocker = true;
+        pinyinBtn.addControl(pinyinLabel);
         card.addControl(pinyinBtn);
 
-        // Next / Done button
-        const nextBtn = new BABYLON.GUI.Button.CreateSimpleButton('grNextBtn', '下一句 ▶');
+        pinyinBtn.onPointerEnterObservable.add(() => { pinyinBtn.background = '#ffd700'; pinyinLabel.color = '#000'; });
+        pinyinBtn.onPointerOutObservable.add(() => { pinyinBtn.background = 'rgba(50,30,10,0.9)'; pinyinLabel.color = '#aaddff'; });
+        pinyinBtn.onPointerClickObservable.add(() => {
+            showPinyin = !showPinyin;
+            pinyinLabel.text = showPinyin ? '拼音 ▴' : '拼音 ▾';
+            updateSentence();
+        });
+
+        // ── Next / Done button ──
+        const nextLabel = new BABYLON.GUI.TextBlock();
+        nextLabel.text = '下一句 ▶';
+        nextLabel.color = '#ffd700';
+        nextLabel.fontSize = 16;
+        nextLabel.fontWeight = 'bold';
+
+        const nextBtn = new BABYLON.GUI.Rectangle('grNextBtn');
         nextBtn.width = '140px';
         nextBtn.height = '40px';
-        nextBtn.top = '155px';
+        nextBtn.top = '215px';
         nextBtn.left = '60px';
         nextBtn.background = '#8B1a1a';
-        nextBtn.color = '#ffd700';
-        nextBtn.fontSize = 16;
-        nextBtn.fontWeight = 'bold';
-        nextBtn.thickness = 1;
         nextBtn.cornerRadius = 8;
+        nextBtn.thickness = 1;
+        nextBtn.isPointerBlocker = true;
+        nextBtn.addControl(nextLabel);
         card.addControl(nextBtn);
+
+        nextBtn.onPointerEnterObservable.add(() => { nextBtn.background = '#ffd700'; nextLabel.color = '#000'; });
+        nextBtn.onPointerOutObservable.add(() => {
+            const isLast = sentenceIndex === sentences.length - 1;
+            nextBtn.background = isLast ? '#1a6a1a' : '#8B1a1a';
+            nextLabel.color = '#ffd700';
+        });
+        nextBtn.onPointerClickObservable.add(() => {
+            if (sentenceIndex < sentences.length - 1) {
+                sentenceIndex++;
+                updateSentence();
+            } else {
+                this._clearOverlay();
+                this._gateReadingOpen = false;
+                this.gameEngine.state = 'playing';
+                this.gameEngine.player.isLocked = false;
+                if (onComplete) onComplete();
+            }
+        });
 
         const updateSentence = () => {
             const s = sentences[sentenceIndex];
@@ -335,29 +414,9 @@ class UIManager {
             meaningText.text = s.meaning;
             progress.text = `第 ${sentenceIndex + 1} / ${sentences.length} 句`;
             const isLast = sentenceIndex === sentences.length - 1;
-            nextBtn.children[0].text = isLast ? '✓ 已读完' : '下一句 ▶';
+            nextLabel.text = isLast ? '✓ 已读完' : '下一句 ▶';
             nextBtn.background = isLast ? '#1a6a1a' : '#8B1a1a';
         };
-
-        pinyinBtn.onPointerClickObservable.add(() => {
-            showPinyin = !showPinyin;
-            pinyinBtn.children[0].text = showPinyin ? '拼音 ▴' : '拼音 ▾';
-            updateSentence();
-        });
-
-        nextBtn.onPointerClickObservable.add(() => {
-            if (sentenceIndex < sentences.length - 1) {
-                sentenceIndex++;
-                updateSentence();
-            } else {
-                // Done reading
-                this.gui.removeControl(backdrop);
-                this.gui.removeControl(card);
-                this._gateReadingOpen = false;
-                if (this.gameEngine) this.gameEngine.state = 'playing';
-                if (onComplete) onComplete();
-            }
-        });
 
         updateSentence();
     }
@@ -471,6 +530,7 @@ class UIManager {
                 (results) => {
                     const check = this.speechSystem.checkMatch(results, word.characters);
                     if (check.match) {
+                        if (this.gameEngine.music) this.gameEngine.music.playCheer();
                         const light = this.learningSystem.masterWord(word.id);
                         status.text = `✨ Correct! +${light} light`;
                         status.color = '#44ff88';
@@ -539,8 +599,8 @@ class UIManager {
 
         // Card
         const card = new BABYLON.GUI.Rectangle('storyCard');
-        card.width = '520px';
-        card.height = '440px';
+        card.width = '540px';
+        card.height = '520px';
         card.background = 'rgba(40, 25, 10, 0.95)';
         card.cornerRadius = 16;
         card.thickness = 2;
@@ -551,15 +611,17 @@ class UIManager {
         // Title
         const title = new BABYLON.GUI.TextBlock('title', '📜 ' + story.title);
         title.color = '#ffd700';
-        title.fontSize = 24;
+        title.fontSize = 22;
         title.fontFamily = '"Microsoft YaHei", serif';
-        title.top = '-175px';
+        title.top = '-230px';
+        title.height = '30px';
         card.addControl(title);
 
         const titleEn = new BABYLON.GUI.TextBlock('titleEn', story.titleEn);
         titleEn.color = '#aa8866';
-        titleEn.fontSize = 14;
-        titleEn.top = '-145px';
+        titleEn.fontSize = 13;
+        titleEn.top = '-200px';
+        titleEn.height = '20px';
         card.addControl(titleEn);
 
         // Progress
@@ -567,43 +629,48 @@ class UIManager {
             `Sentence 1 / ${story.sentences.length}`);
         progress.color = '#888888';
         progress.fontSize = 12;
-        progress.top = '-100px';
+        progress.top = '-172px';
+        progress.height = '18px';
         card.addControl(progress);
 
         // Sentence
         const sentence = new BABYLON.GUI.TextBlock('sentence', story.sentences[0].chinese);
         sentence.color = '#ffffff';
-        sentence.fontSize = 28;
+        sentence.fontSize = 24;
         sentence.fontFamily = '"Microsoft YaHei", serif';
-        sentence.top = '-50px';
+        sentence.top = '-80px';
+        sentence.height = '100px';
         sentence.textWrapping = true;
-        sentence.width = '450px';
+        sentence.width = '490px';
         card.addControl(sentence);
 
         // Status
         const status = new BABYLON.GUI.TextBlock('status', '🎤 Read this sentence aloud!');
         status.color = '#ffcc44';
-        status.fontSize = 14;
-        status.top = '20px';
+        status.fontSize = 13;
+        status.top = '10px';
+        status.height = '22px';
         card.addControl(status);
 
         // Pinyin
         const pinyinText = new BABYLON.GUI.TextBlock('pinyin', '');
         pinyinText.color = '#88ccff';
-        pinyinText.fontSize = 16;
-        pinyinText.top = '50px';
+        pinyinText.fontSize = 14;
+        pinyinText.top = '65px';
+        pinyinText.height = '60px';
         pinyinText.textWrapping = true;
-        pinyinText.width = '450px';
+        pinyinText.width = '490px';
         pinyinText.alpha = 0;
         card.addControl(pinyinText);
 
         // Meaning
         const meaningText = new BABYLON.GUI.TextBlock('meaning', '');
         meaningText.color = '#aaddaa';
-        meaningText.fontSize = 14;
-        meaningText.top = '80px';
+        meaningText.fontSize = 13;
+        meaningText.top = '140px';
+        meaningText.height = '60px';
         meaningText.textWrapping = true;
-        meaningText.width = '450px';
+        meaningText.width = '490px';
         meaningText.alpha = 0;
         card.addControl(meaningText);
 
@@ -630,13 +697,14 @@ class UIManager {
         };
 
         // Speak button
-        const speakBtn = this._createButton('🎤 Speak', '150px', '-100px', '#2a5a2a', () => {
+        const speakBtn = this._createButton('🎤 Speak', '210px', '-100px', '#2a5a2a', () => {
             const sent = story.sentences[currentSentence];
             status.text = '🎤 Listening...';
             this.speechSystem.startListening(
                 (results) => {
                     const check = this.speechSystem.checkMatch(results, sent.chinese);
                     if (check.match) {
+                        if (this.gameEngine.music) this.gameEngine.music.playCheer();
                         status.text = '✨ Correct!';
                         status.color = '#44ff88';
                         meaningText.text = sent.meaning;
@@ -661,7 +729,7 @@ class UIManager {
         card.addControl(speakBtn);
 
         // Help button
-        const helpBtn = this._createButton('Show Help', '150px', '0px', '#5a3a2a', () => {
+        const helpBtn = this._createButton('Show Help', '210px', '0px', '#5a3a2a', () => {
             const sent = story.sentences[currentSentence];
             pinyinText.text = sent.pinyin;
             pinyinText.alpha = 1;
@@ -673,7 +741,7 @@ class UIManager {
         card.addControl(helpBtn);
 
         // Next button
-        const nextBtn = this._createButton('Next →', '150px', '100px', '#3a3a5a', advanceSentence);
+        const nextBtn = this._createButton('Next →', '210px', '100px', '#3a3a5a', advanceSentence);
         card.addControl(nextBtn);
 
         // Close
@@ -780,6 +848,7 @@ class UIManager {
                 (results) => {
                     const check = this.speechSystem.checkMatch(results, w.characters);
                     if (check.match) {
+                        if (this.gameEngine.music) this.gameEngine.music.playCheer();
                         this.learningSystem.masterWord(w.id);
                         this.learningSystem.reviewList = this.learningSystem.reviewList.filter(id => id !== w.id);
                         status.text = '✨ Correct! Mastered!';
@@ -882,7 +951,60 @@ class UIManager {
         return btn;
     }
 
+    _showResetConfirm() {
+        if (this._gateReadingOpen) return;
+        this.gameEngine.state = 'overlay';
+        this.gameEngine.player.isLocked = true;
+        this._clearOverlay();
+
+        this._createDimBg();
+
+        const card = new BABYLON.GUI.Rectangle('resetCard');
+        card.width = '360px';
+        card.height = '200px';
+        card.background = 'rgba(20,10,10,0.97)';
+        card.cornerRadius = 12;
+        card.thickness = 2;
+        card.color = '#883333';
+        this.gui.addControl(card);
+        this._overlayElements.push(card);
+
+        const msg = new BABYLON.GUI.TextBlock('resetMsg', '↺  Reset Progress?');
+        msg.color = '#ff8888';
+        msg.fontSize = 20;
+        msg.fontWeight = 'bold';
+        msg.top = '-60px';
+        card.addControl(msg);
+
+        const sub = new BABYLON.GUI.TextBlock('resetSub', 'All words, gates and light\nwill be cleared.');
+        sub.color = '#aaaaaa';
+        sub.fontSize = 13;
+        sub.top = '-10px';
+        sub.textWrapping = true;
+        card.addControl(sub);
+
+        const confirmBtn = this._createButton('Yes, reset', '60px', '-60px', '#8B1a1a', () => {
+            localStorage.removeItem('flyChina3D_progress');
+            location.reload();
+        });
+        card.addControl(confirmBtn);
+
+        const cancelBtn = this._createButton('Cancel', '60px', '60px', '#2a3a2a', () => {
+            this.closeOverlay();
+        });
+        card.addControl(cancelBtn);
+    }
+
     closeOverlay() {
+        if (this._gateReadingOpen) {
+            // Emergency Escape during gate reading: unlock player.
+            // Gate is NOT marked read, so overlay re-shows on next approach.
+            this._clearOverlay();
+            this._gateReadingOpen = false;
+            this.gameEngine.state = 'playing';
+            this.gameEngine.player.isLocked = false;
+            return;
+        }
         this._clearOverlay();
         this.gameEngine.state = 'playing';
         this.gameEngine.player.isLocked = false;
