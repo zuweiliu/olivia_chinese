@@ -64,8 +64,8 @@ class RPGGameEngine {
         const el = document.getElementById('loadingScreen');
         if (el) el.classList.add('hidden');
 
-        // Start first chapter
-        await this.loadChapter(0);
+        // Chapter select screen
+        this._showChapterSelect();
     }
 
     /**
@@ -177,6 +177,114 @@ class RPGGameEngine {
 
     setChapterBadge(text) {
         if (this._chapterBadge) this._chapterBadge.text = text;
+    }
+
+    // ── Chapter select screen ─────────────────────────────────────────────────
+
+    _showChapterSelect() {
+        const chapters = [
+            {
+                index: 0,
+                title:    '第一章',
+                subtitle: '五代十国',
+                desc:     '穿越到乱世，学习词语，\n帮助赵匡胤征服五个王国，\n建立大宋！',
+                emoji:    '⚔️',
+                color:    '#c84a10',
+                bgDim:    'rgba(200,74,16,0.20)',
+                bgHover:  'rgba(200,74,16,0.45)'
+            },
+            {
+                index: 1,
+                title:    '第二章',
+                subtitle: '杯酒释兵权·科举考试',
+                desc:     '宴会上让将军交出兵权，\n建立科举制度选拔人才，\n开创文治盛世！',
+                emoji:    '🏮',
+                color:    '#1a7abf',
+                bgDim:    'rgba(26,122,191,0.20)',
+                bgHover:  'rgba(26,122,191,0.45)'
+            }
+        ];
+
+        // Dark full-screen background
+        const bg = new BABYLON.GUI.Rectangle('csBg');
+        bg.width = '100%'; bg.height = '100%';
+        bg.background = 'rgba(6,4,15,0.97)';
+        bg.thickness = 0; bg.isPointerBlocker = true;
+        this.ui.addControl(bg);
+
+        // Title
+        const title = new BABYLON.GUI.TextBlock('csTitle', '五代十国 · 穿越时空的少女');
+        title.color = '#ffd700'; title.fontSize = 28;
+        title.fontFamily = '"Microsoft YaHei", serif';
+        title.fontWeight = 'bold';
+        title.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+        title.top = '38px';
+        bg.addControl(title);
+
+        const sub = new BABYLON.GUI.TextBlock('csSub', '选择章节');
+        sub.color = '#887744'; sub.fontSize = 15;
+        sub.fontFamily = '"Microsoft YaHei", serif';
+        sub.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+        sub.top = '76px';
+        bg.addControl(sub);
+
+        chapters.forEach((ch, i) => {
+            const card = new BABYLON.GUI.Rectangle('csCard' + i);
+            card.width = '220px'; card.height = '300px';
+            card.background = 'rgba(14,10,28,0.96)';
+            card.cornerRadius = 16; card.thickness = 2;
+            card.color = ch.color;
+            card.left = ((i - (chapters.length - 1) / 2) * 254) + 'px';
+            card.isPointerBlocker = true;
+            bg.addControl(card);
+
+            const icon = new BABYLON.GUI.TextBlock('csIcon' + i, ch.emoji);
+            icon.fontSize = 48; icon.top = '-90px';
+            card.addControl(icon);
+
+            const label = new BABYLON.GUI.TextBlock('csLabel' + i, ch.title);
+            label.color = ch.color; label.fontSize = 22;
+            label.fontFamily = '"Microsoft YaHei", serif';
+            label.fontWeight = 'bold'; label.top = '-40px';
+            card.addControl(label);
+
+            const stitle = new BABYLON.GUI.TextBlock('csStitle' + i, ch.subtitle);
+            stitle.color = '#ffffff'; stitle.fontSize = 14;
+            stitle.fontFamily = '"Microsoft YaHei", serif';
+            stitle.top = '-8px';
+            card.addControl(stitle);
+
+            const desc = new BABYLON.GUI.TextBlock('csDesc' + i, ch.desc);
+            desc.color = '#aaaaaa'; desc.fontSize = 12;
+            desc.fontFamily = '"Microsoft YaHei", serif';
+            desc.textWrapping = true; desc.width = '190px';
+            desc.top = '52px'; desc.lineSpacing = '4px';
+            card.addControl(desc);
+
+            const btn = new BABYLON.GUI.Rectangle('csBtn' + i);
+            btn.width = '150px'; btn.height = '38px';
+            btn.top = '118px'; btn.background = ch.bgDim;
+            btn.cornerRadius = 10; btn.thickness = 2;
+            btn.color = ch.color; btn.isPointerBlocker = true;
+            card.addControl(btn);
+            const btnL = new BABYLON.GUI.TextBlock('csBtnL' + i, '▶ 开始');
+            btnL.color = '#ffffff'; btnL.fontSize = 15;
+            btnL.fontFamily = '"Microsoft YaHei", serif';
+            btn.addControl(btnL);
+
+            const select = async () => {
+                this.ui.removeControl(bg); bg.dispose();
+                await this.fadeScreen('in', 500);
+                await this.loadChapter(ch.index);
+                await this.fadeScreen('out', 500);
+            };
+            card.onPointerEnterObservable.add(() => { card.thickness = 3; card.background = 'rgba(30,20,50,0.98)'; btn.background = ch.bgHover; });
+            card.onPointerOutObservable.add(() => { card.thickness = 2; card.background = 'rgba(14,10,28,0.96)'; btn.background = ch.bgDim; });
+            btn.onPointerEnterObservable.add(() => { btn.background = ch.bgHover; });
+            btn.onPointerOutObservable.add(() => { btn.background = ch.bgDim; });
+            btn.onPointerClickObservable.add(select);
+            card.onPointerClickObservable.add(select);
+        });
     }
 
     // ── Utility shared by all chapters ────────────────────────────────────────
