@@ -205,7 +205,7 @@ class FeastScene {
         const s = this.engine.scene;
         const generalDefs = this.dlg.general_surrender;
         const xPositions   = [-8, -4, 0, 4, 8];
-        const zSide        = 4.5; // south side of table
+        const zSide        = -4.5; // north side of table — generals face south toward player
 
         const bodyColors = [
             new BABYLON.Color3(0.15, 0.25, 0.55),
@@ -219,6 +219,7 @@ class FeastScene {
             const def  = generalDefs[i];
             const root = new BABYLON.TransformNode('gen_' + i, s);
             root.position = new BABYLON.Vector3(x, 0, zSide);
+            root.rotation.y = Math.PI; // face south toward player
             this._meshes.push(root);
 
             // Body (armored box)
@@ -254,7 +255,7 @@ class FeastScene {
             sealMat.emissiveColor = new BABYLON.Color3(0.3, 0.22, 0.04);
             const seal = BABYLON.MeshBuilder.CreateBox('seal' + i,
                 { width: 0.28, height: 0.18, depth: 0.28 }, s);
-            seal.position = new BABYLON.Vector3(x, 1.18, zSide - 1.8);
+            seal.position = new BABYLON.Vector3(x, 1.18, zSide + 1.8); // on table, south of general
             seal.material = sealMat;
             this._meshes.push(seal);
 
@@ -283,11 +284,11 @@ class FeastScene {
             lMat.alpha = 0.9;
             lMat.backFaceCulling = false;
             labelPlane.material = lMat;
-            labelPlane.position = new BABYLON.Vector3(x, 2.7, zSide);
+            labelPlane.position = new BABYLON.Vector3(x, 2.7, zSide + 0.4); // slightly south so player sees it
             this._meshes.push(labelPlane);
 
-            // Chair for this general
-            this._buildChair(new BABYLON.Vector3(x, 0, zSide + 0.9), Math.PI, false);
+            // Chair for this general — behind them on north side
+            this._buildChair(new BABYLON.Vector3(x, 0, zSide - 0.9), 0, false);
 
             this._generalNPCs.push({ root, head, body, seal, labelPlane, def, alive: true });
         });
@@ -302,9 +303,13 @@ class FeastScene {
         zhaoMat.diffuseColor  = new BABYLON.Color3(0.65, 0.48, 0.12);
         zhaoMat.emissiveColor = new BABYLON.Color3(0.15, 0.10, 0.02);
 
+        // Emperor at west head of table, facing east
         const root = new BABYLON.TransformNode('zhaoFeast', s);
-        root.position = new BABYLON.Vector3(0, 0, -11.8);
+        root.position = new BABYLON.Vector3(-13, 0, 0);
+        root.rotation.y = Math.PI / 2; // face east (toward the table)
         this._meshes.push(root);
+        // Throne chair behind him (further west)
+        this._buildChair(new BABYLON.Vector3(-14.5, 0, 0), Math.PI / 2, true);
 
         const body = BABYLON.MeshBuilder.CreateBox('zhaoBody',
             { width: 0.75, height: 1.2, depth: 0.45 }, s);
@@ -329,23 +334,38 @@ class FeastScene {
     }
 
     _positionPlayer() {
-        // Player watches from south entrance
-        this.engine.player.mesh.position = new BABYLON.Vector3(0, 1.5, 13);
+        const s = this.engine.scene;
+        const add = m => { this._meshes.push(m); return m; };
+
+        // Player sits at south side of table, facing north toward generals
+        this.engine.player.mesh.position = new BABYLON.Vector3(0, 0.8, 5.5);
         this.engine.player.isLocked = true;
-        // Swing camera to see the feast table
+
+        // Player seat
+        const seatMat = new BABYLON.StandardMaterial('playerSeatMat', s);
+        seatMat.diffuseColor  = new BABYLON.Color3(0.55, 0.38, 0.15);
+        seatMat.emissiveColor = new BABYLON.Color3(0.08, 0.05, 0.01);
+        const pSeat = add(BABYLON.MeshBuilder.CreateBox('playerSeat',
+            { width: 1.2, height: 0.2, depth: 1.0 }, s));
+        pSeat.position = new BABYLON.Vector3(0, 0.7, 5.5);
+        pSeat.material = seatMat;
+        const pBack = add(BABYLON.MeshBuilder.CreateBox('playerBack',
+            { width: 1.2, height: 1.3, depth: 0.14 }, s));
+        pBack.position = new BABYLON.Vector3(0, 1.35, 6.15);
+        pBack.material = seatMat;
+
+        // Camera south of player, looking north toward generals
         if (this.engine.camera) {
-            this.engine.camera.alpha  = Math.PI;
-            this.engine.camera.beta   = Math.PI / 3.2;
-            this.engine.camera.radius = 22;
+            this.engine.camera.alpha  = Math.PI / 2; // camera to south
+            this.engine.camera.beta   = Math.PI / 3.5;
+            this.engine.camera.radius = 14;
         }
     }
 
     // ── Feast sequence ────────────────────────────────────────────────────────
 
     _runSequence() {
-        // Step 1: opening dialogue
         this.engine.dialogueSystem.show(this.dlg.feast_open, () => {
-            // Step 2: spray each general one by one
             this._sprayGeneralChain(0);
         });
     }
@@ -355,11 +375,54 @@ class FeastScene {
             this._allGeneralsGone();
             return;
         }
-        // Must learn 3 words before 猫猫 can spray this general
-        this._teachWordsForGeneral(idx, () => {
-            this._sprayGeneral(idx, () => {
-                setTimeout(() => this._sprayGeneralChain(idx + 1), 600);
+        // Player must click button to send 猫猫, then answer 3 words
+        this._showSprayButton(idx, () => {
+            this._teachWordsForGeneral(idx, () => {
+                this._sprayGeneral(idx, () => {
+                    setTimeout(() => this._sprayGeneralChain(idx + 1), 600);
+                });
             });
+        });
+    }
+
+    _showSprayButton(idx, onConfirm) {
+        const g   = this._generalNPCs[idx];
+        const def = g.def;
+        const remaining = this._generalNPCs.length - idx;
+
+        const panel = new BABYLON.GUI.Rectangle('sprayPanel_' + idx);
+        panel.width = '340px'; panel.height = '110px';
+        panel.background = 'rgba(10,5,20,0.94)';
+        panel.cornerRadius = 14; panel.thickness = 2; panel.color = '#ffaa33';
+        panel.verticalAlignment   = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_BOTTOM;
+        panel.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
+        panel.top = '-28px'; panel.isPointerBlocker = true;
+        this.engine.ui.addControl(panel);
+
+        const prompt = new BABYLON.GUI.TextBlock('sprayPrompt', `${def.name} 还没交出兵权！`);
+        prompt.color = '#ffdd88'; prompt.fontSize = 15;
+        prompt.fontFamily = '"Microsoft YaHei", serif';
+        prompt.top = '-22px';
+        panel.addControl(prompt);
+
+        const btn = new BABYLON.GUI.Rectangle('sprayBtn_' + idx);
+        btn.width = '240px'; btn.height = '38px'; btn.top = '22px';
+        btn.background = 'rgba(180,80,10,0.7)';
+        btn.cornerRadius = 10; btn.thickness = 2; btn.color = '#ffcc66';
+        btn.isPointerBlocker = true;
+        panel.addControl(btn);
+
+        const btnTxt = new BABYLON.GUI.TextBlock();
+        btnTxt.text = `🐱 让猫猫去喷 ${def.name}！`;
+        btnTxt.color = '#fff8e0'; btnTxt.fontSize = 15;
+        btnTxt.fontFamily = '"Microsoft YaHei", serif';
+        btn.addControl(btnTxt);
+
+        btn.onPointerEnterObservable.add(() => { btn.background = 'rgba(220,110,20,0.9)'; });
+        btn.onPointerOutObservable.add(() => { btn.background = 'rgba(180,80,10,0.7)'; });
+        btn.onPointerClickObservable.add(() => {
+            this.engine.ui.removeControl(panel); panel.dispose();
+            onConfirm();
         });
     }
 
