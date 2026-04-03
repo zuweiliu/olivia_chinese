@@ -55,6 +55,9 @@ class Chapter1 {
         };
         window.addEventListener('keydown', this._keyHandler);
 
+        // Reveal scene (dismiss the black overlay left by the chapter select fade)
+        this.engine.fadeScreen('out', 600);
+
         this._startIntro();
     }
 

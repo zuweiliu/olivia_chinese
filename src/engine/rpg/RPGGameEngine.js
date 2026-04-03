@@ -274,9 +274,9 @@ class RPGGameEngine {
 
             const select = async () => {
                 this.ui.removeControl(bg); bg.dispose();
-                await this.fadeScreen('in', 500);
+                await this.fadeScreen('in', 400);
                 await this.loadChapter(ch.index);
-                await this.fadeScreen('out', 500);
+                // Each chapter calls fadeScreen('out') itself to reveal its own scene
             };
             card.onPointerEnterObservable.add(() => { card.thickness = 3; card.background = 'rgba(30,20,50,0.98)'; btn.background = ch.bgHover; });
             card.onPointerOutObservable.add(() => { card.thickness = 2; card.background = 'rgba(14,10,28,0.96)'; btn.background = ch.bgDim; });
@@ -299,12 +299,19 @@ class RPGGameEngine {
 
     /** Fade the screen to/from black. dir: 'in' = fade to black, 'out' = fade from black */
     fadeScreen(dir, durationMs = 600) {
+        // Remove any previous fade overlay first
+        if (this._fadeOverlay) {
+            try { this.ui.removeControl(this._fadeOverlay); this._fadeOverlay.dispose(); } catch(e) {}
+            this._fadeOverlay = null;
+        }
+
         return new Promise(resolve => {
             const overlay = new BABYLON.GUI.Rectangle('fadeOverlay');
             overlay.width = '100%'; overlay.height = '100%';
             overlay.background = dir === 'in' ? 'rgba(0,0,0,0)' : 'rgba(0,0,0,1)';
             overlay.thickness = 0; overlay.isPointerBlocker = true;
             this.ui.addControl(overlay);
+            this._fadeOverlay = overlay;
 
             let t = 0;
             const obs = this.scene.onBeforeRenderObservable.add(() => {
@@ -314,7 +321,10 @@ class RPGGameEngine {
                 overlay.background = `rgba(0,0,0,${a.toFixed(3)})`;
                 if (p >= 1) {
                     this.scene.onBeforeRenderObservable.remove(obs);
-                    if (dir === 'out') { this.ui.removeControl(overlay); overlay.dispose(); }
+                    if (dir === 'out') {
+                        this.ui.removeControl(overlay); overlay.dispose();
+                        this._fadeOverlay = null;
+                    }
                     resolve();
                 }
             });
