@@ -134,30 +134,42 @@ class DialogueSystem {
         this.panel.addControl(this._dotsBlock);
     }
 
+    /** Normalise a line: plain string "Speaker：text" or {speaker,text,portrait} object */
+    _parseLine(raw) {
+        if (raw && typeof raw === 'object') return raw;
+        const s = String(raw);
+        const sep = s.indexOf('：');
+        if (sep > 0 && sep <= 12) {
+            return { speaker: s.slice(0, sep), text: s.slice(sep + 1), portrait: null };
+        }
+        return { speaker: '', text: s, portrait: null };
+    }
+
     _showLine() {
         if (this._lineIndex >= this._lines.length) {
             this._finish();
             return;
         }
 
-        const line = this._lines[this._lineIndex];
+        const line = this._parseLine(this._lines[this._lineIndex]);
 
         // Update portrait
-        const portrait = line.portrait || 'zhao';
-        this._portraitLabel.text = this._portraitEmoji[portrait] || '?';
+        const portrait = line.portrait || this._guessPortrait(line.speaker);
+        this._portraitLabel.text = this._portraitEmoji[portrait] || '💬';
         this._portraitCircle.color = this._portraitColors[portrait] || '#888888';
 
-        this._nameBlock.text = line.speaker;
+        this._nameBlock.text = line.speaker || '';
         this._textBlock.text = '';
         this._charIndex = 0;
         this._isTyping = true;
 
         this._dotsBlock.text = `${this._lineIndex + 1} / ${this._lines.length}`;
 
+        const text = line.text || '';
         if (this._typeTimer) clearInterval(this._typeTimer);
         this._typeTimer = setInterval(() => {
-            if (this._charIndex < line.text.length) {
-                this._textBlock.text += line.text[this._charIndex];
+            if (this._charIndex < text.length) {
+                this._textBlock.text += text[this._charIndex];
                 this._charIndex++;
             } else {
                 clearInterval(this._typeTimer);
@@ -166,12 +178,19 @@ class DialogueSystem {
         }, 40);
     }
 
+    _guessPortrait(speaker) {
+        if (!speaker) return 'player';
+        if (speaker.includes('赵') || speaker.includes('匡胤')) return 'zhao';
+        if (speaker.includes('猫')) return 'cat';
+        if (speaker.includes('你') || speaker.includes('player')) return 'player';
+        return 'zhao';
+    }
+
     _advance() {
         if (this._isTyping) {
-            // Skip typing — show full text immediately
             clearInterval(this._typeTimer);
             this._isTyping = false;
-            this._textBlock.text = this._lines[this._lineIndex].text;
+            this._textBlock.text = this._parseLine(this._lines[this._lineIndex]).text || '';
             return;
         }
         this._lineIndex++;

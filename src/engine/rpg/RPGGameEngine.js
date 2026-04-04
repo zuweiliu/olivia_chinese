@@ -23,7 +23,7 @@ class RPGGameEngine {
         this.shadowGenerator = null;
 
         this._currentChapter = null;
-        this._chapterList    = [Chapter1, Chapter2]; // ordered list
+        this._chapterList    = [Chapter1, Chapter2, Chapter3]; // ordered list
         this._chapterIndex   = 0;
     }
 
@@ -202,6 +202,16 @@ class RPGGameEngine {
                 color:    '#1a7abf',
                 bgDim:    'rgba(26,122,191,0.20)',
                 bgHover:  'rgba(26,122,191,0.45)'
+            },
+            {
+                index: 2,
+                title:    '第三章',
+                subtitle: '王安石变法',
+                desc:     '宰相王安石面临财政危机，\n玩家建议变法，推行三项新法，\n最终遭保守派反对而失败。',
+                emoji:    '📜',
+                color:    '#2aaa55',
+                bgDim:    'rgba(42,170,85,0.20)',
+                bgHover:  'rgba(42,170,85,0.45)'
             }
         ];
 
@@ -212,20 +222,24 @@ class RPGGameEngine {
         bg.thickness = 0; bg.isPointerBlocker = true;
         this.ui.addControl(bg);
 
-        // Title
+        // Title — explicit size + TOP anchor so cards can never cover it
         const title = new BABYLON.GUI.TextBlock('csTitle', '五代十国 · 穿越时空的少女');
         title.color = '#ffd700'; title.fontSize = 28;
         title.fontFamily = '"Microsoft YaHei", serif';
         title.fontWeight = 'bold';
-        title.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
-        title.top = '38px';
+        title.height = '44px';
+        title.verticalAlignment   = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+        title.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
+        title.top = '22px';
         bg.addControl(title);
 
-        const sub = new BABYLON.GUI.TextBlock('csSub', '选择章节');
-        sub.color = '#887744'; sub.fontSize = 15;
+        const sub = new BABYLON.GUI.TextBlock('csSub', '— 选择章节 —');
+        sub.color = '#887744'; sub.fontSize = 14;
+        sub.height = '24px';
         sub.fontFamily = '"Microsoft YaHei", serif';
-        sub.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
-        sub.top = '76px';
+        sub.verticalAlignment   = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+        sub.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
+        sub.top = '72px';
         bg.addControl(sub);
 
         chapters.forEach((ch, i) => {
@@ -234,7 +248,11 @@ class RPGGameEngine {
             card.background = 'rgba(14,10,28,0.96)';
             card.cornerRadius = 16; card.thickness = 2;
             card.color = ch.color;
+            // TOP-anchored so title is always fully visible above cards
             card.left = ((i - (chapters.length - 1) / 2) * 254) + 'px';
+            card.top  = '108px';
+            card.verticalAlignment   = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
+            card.horizontalAlignment = BABYLON.GUI.Control.HORIZONTAL_ALIGNMENT_CENTER;
             card.isPointerBlocker = true;
             bg.addControl(card);
 
