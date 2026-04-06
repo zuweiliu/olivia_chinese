@@ -17,7 +17,7 @@
         { "front": "军队", "pinyin": "jūnduì", "back": "army; troops", "example": "宋朝有强大的军队。", "exampleTranslation": "The Song had a powerful army." },
         { "front": "制度", "pinyin": "zhìdù", "back": "system; institution", "example": "科举制度非常重要。", "exampleTranslation": "The imperial examination system was very important." },
         { "front": "威胁", "pinyin": "wēixié", "back": "threaten; menace", "example": "金国威胁北宋。", "exampleTranslation": "The Jin Dynasty threatened the Northern Song." },
-        { "front": "灭亡", "pinyin": "mièwáng", "back": "perish; fall (of a dynasty)", "example": "北宋灭亡了。", "exampleTranslation": "The Northern Song fell." },
+        { "front": "灭亡", "pinyin": "mièwáng", "back": "perish; fall (of a dynasty)", "example": "北宋灭亡了。", "exampleTranslation": "The Northern Song fell.", "breakdown": "灭：一横压在火上面，把火压灭了 · 亡：一个人躲进角落，藏起来不见了" },
         { "front": "分裂", "pinyin": "fēnliè", "back": "split; divide; break apart", "example": "国家分裂成两半。", "exampleTranslation": "The country split into two parts." },
         { "front": "酒宴", "pinyin": "jiǔyàn", "back": "banquet; feast", "example": "皇帝举行了盛大的酒宴。", "exampleTranslation": "The emperor held a grand banquet." }
       ]
@@ -67,7 +67,7 @@
         { "front": "武艺", "pinyin": "wǔyì", "back": "martial arts skill; military arts", "example": "岳飞从小练习武艺。", "exampleTranslation": "Yue Fei practiced martial arts from childhood." },
         { "front": "勤奋", "pinyin": "qínfèn", "back": "diligent; hardworking; industrious", "example": "岳飞非常勤奋。", "exampleTranslation": "Yue Fei was very hardworking." },
         { "front": "战功", "pinyin": "zhàngōng", "back": "military merit; battle achievements", "example": "岳飞立下了赫赫战功。", "exampleTranslation": "Yue Fei achieved outstanding military merit." },
-        { "front": "收复", "pinyin": "shōufù", "back": "recover; recapture (lost territory)", "example": "岳飞立志收复失地。", "exampleTranslation": "Yue Fei vowed to recover the lost territories." },
+        { "front": "收复", "pinyin": "shōufù", "back": "recover; recapture (lost territory)", "example": "岳飞立志收复失地。", "exampleTranslation": "Yue Fei vowed to recover the lost territories.", "breakdown": "复：走回来，回到原来的地方" },
         { "front": "尊敬", "pinyin": "zūnjìng", "back": "respect; esteem; revere", "example": "百姓都尊敬岳飞。", "exampleTranslation": "The people all respected Yue Fei." },
         { "front": "求和", "pinyin": "qiúhé", "back": "sue for peace; seek a truce", "example": "皇帝想向金国求和。", "exampleTranslation": "The emperor wanted to sue for peace with the Jin." },
         { "front": "退兵", "pinyin": "tuìbīng", "back": "withdraw troops; pull back forces", "example": "秦桧命令岳飞退兵。", "exampleTranslation": "Qin Hui ordered Yue Fei to withdraw his troops." },
