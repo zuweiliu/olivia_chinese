@@ -1,0 +1,81 @@
+{
+  "lesson": "7b",
+  "title": "北宋词汇",
+  "subtitle": "Game Words · Song Dynasty",
+  "groups": [
+    {
+      "id": "founding",
+      "name": "建立与统治",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "建立", "pinyin": "jiànlì", "back": "establish; found", "example": "赵匡胤建立了北宋。", "exampleTranslation": "Zhao Kuangyin established the Northern Song." },
+        { "front": "定都", "pinyin": "dìngdū", "back": "establish a capital", "example": "北宋定都汴京。", "exampleTranslation": "The Northern Song established its capital at Bianjing." },
+        { "front": "君主", "pinyin": "jūnzhǔ", "back": "monarch; sovereign", "example": "宋朝的君主是皇帝。", "exampleTranslation": "The ruler of the Song was the emperor." },
+        { "front": "控制", "pinyin": "kòngzhì", "back": "control", "example": "皇帝控制军队。", "exampleTranslation": "The emperor controlled the army." },
+        { "front": "解除", "pinyin": "jiěchú", "back": "relieve; remove (from a post)", "example": "皇帝解除了将领的兵权。", "exampleTranslation": "The emperor relieved the generals of their military power." },
+        { "front": "兵权", "pinyin": "bīngquán", "back": "military power; command", "example": "兵权掌握在皇帝手中。", "exampleTranslation": "Military power was in the emperor's hands." },
+        { "front": "军队", "pinyin": "jūnduì", "back": "army; troops", "example": "宋朝有强大的军队。", "exampleTranslation": "The Song had a powerful army." },
+        { "front": "制度", "pinyin": "zhìdù", "back": "system; institution", "example": "科举制度非常重要。", "exampleTranslation": "The imperial examination system was very important." },
+        { "front": "威胁", "pinyin": "wēixié", "back": "threaten; menace", "example": "金国威胁北宋。", "exampleTranslation": "The Jin Dynasty threatened the Northern Song." },
+        { "front": "灭亡", "pinyin": "mièwáng", "back": "perish; fall (of a dynasty)", "example": "北宋灭亡了。", "exampleTranslation": "The Northern Song fell." },
+        { "front": "分裂", "pinyin": "fēnliè", "back": "split; divide; break apart", "example": "国家分裂成两半。", "exampleTranslation": "The country split into two parts." },
+        { "front": "酒宴", "pinyin": "jiǔyàn", "back": "banquet; feast", "example": "皇帝举行了盛大的酒宴。", "exampleTranslation": "The emperor held a grand banquet." }
+      ]
+    },
+    {
+      "id": "reform",
+      "name": "改革与文化",
+      "emoji": "📜",
+      "cards": [
+        { "front": "科举", "pinyin": "kējǔ", "back": "imperial examination system", "example": "通过科举可以做官。", "exampleTranslation": "One could become an official through the imperial examination." },
+        { "front": "人才", "pinyin": "réncái", "back": "talented person; talent", "example": "科举制度选拔人才。", "exampleTranslation": "The exam system selected talented people." },
+        { "front": "价值观念", "pinyin": "jiàzhí guānniàn", "back": "values; sense of values", "example": "宋朝的价值观念重视教育。", "exampleTranslation": "Song dynasty values emphasized education." },
+        { "front": "变法", "pinyin": "biànfǎ", "back": "reform; change the laws", "example": "王安石推行变法。", "exampleTranslation": "Wang Anshi carried out reforms." },
+        { "front": "宰相", "pinyin": "zǎixiàng", "back": "prime minister (ancient China)", "example": "王安石是宋朝的宰相。", "exampleTranslation": "Wang Anshi was the prime minister of Song." },
+        { "front": "财政", "pinyin": "cáizhèng", "back": "finance; public finance", "example": "变法改善了国家的财政。", "exampleTranslation": "The reforms improved the state finances." },
+        { "front": "税收", "pinyin": "shuìshōu", "back": "tax revenue; taxation", "example": "政府增加了税收。", "exampleTranslation": "The government increased tax revenue." },
+        { "front": "反对", "pinyin": "fǎnduì", "back": "oppose; object to", "example": "许多大臣反对变法。", "exampleTranslation": "Many ministers opposed the reforms." },
+        { "front": "明显", "pinyin": "míngxiǎn", "back": "obvious; clear; evident", "example": "经济进步十分明显。", "exampleTranslation": "Economic progress was very obvious." },
+        { "front": "小巷", "pinyin": "xiǎoxiàng", "back": "lane; alley", "example": "城里有许多热闹的小巷。", "exampleTranslation": "The city had many lively alleys." },
+        { "front": "兴盛", "pinyin": "xīngshèng", "back": "prosperous; thriving; flourishing", "example": "宋朝经济兴盛。", "exampleTranslation": "The Song dynasty economy was thriving." }
+      ]
+    },
+    {
+      "id": "crisis",
+      "name": "危机与入侵",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "作战", "pinyin": "zuòzhàn", "back": "fight; do battle; engage in war", "example": "军队奋勇作战。", "exampleTranslation": "The army fought bravely." },
+        { "front": "失利", "pinyin": "shīlì", "back": "suffer a defeat; lose a battle", "example": "宋军失利，被迫退守。", "exampleTranslation": "The Song army suffered defeat and was forced to retreat." },
+        { "front": "攻占", "pinyin": "gōngzhàn", "back": "attack and seize; capture", "example": "金兵攻占了汴京。", "exampleTranslation": "The Jin troops attacked and seized Bianjing." },
+        { "front": "掳走", "pinyin": "lǔzǒu", "back": "capture and carry off; abduct", "example": "金兵把皇帝掳走了。", "exampleTranslation": "The Jin troops carried off the emperor." },
+        { "front": "无能", "pinyin": "wúnéng", "back": "incompetent; incapable", "example": "无能的官员让国家陷入危机。", "exampleTranslation": "Incompetent officials led the country into crisis." },
+        { "front": "治理", "pinyin": "zhìlǐ", "back": "govern; manage; administer", "example": "皇帝治理国家。", "exampleTranslation": "The emperor governed the country." },
+        { "front": "大臣", "pinyin": "dàchén", "back": "minister; court official", "example": "皇帝和大臣们商量对策。", "exampleTranslation": "The emperor discussed strategy with his ministers." },
+        { "front": "纸币", "pinyin": "zhǐbì", "back": "paper currency; paper money", "example": "宋朝开始发行纸币。", "exampleTranslation": "The Song dynasty began issuing paper currency." },
+        { "front": "钞票", "pinyin": "chāopiào", "back": "banknote; bill", "example": "世界上最早的钞票出现在宋朝。", "exampleTranslation": "The world's earliest banknotes appeared in the Song dynasty." },
+        { "front": "发行", "pinyin": "fāxíng", "back": "issue; publish; release", "example": "政府发行了新的纸币。", "exampleTranslation": "The government issued new paper currency." },
+        { "front": "娱乐", "pinyin": "yúlè", "back": "entertainment; recreation", "example": "宋朝城市有各种娱乐活动。", "exampleTranslation": "Song dynasty cities had all kinds of entertainment." }
+      ]
+    },
+    {
+      "id": "hero",
+      "name": "英雄与品德",
+      "emoji": "🦅",
+      "cards": [
+        { "front": "元帅", "pinyin": "yuánshuài", "back": "marshal; commander-in-chief", "example": "岳飞成为了抗金的元帅。", "exampleTranslation": "Yue Fei became the marshal leading resistance against the Jin." },
+        { "front": "武艺", "pinyin": "wǔyì", "back": "martial arts skill; military arts", "example": "岳飞从小练习武艺。", "exampleTranslation": "Yue Fei practiced martial arts from childhood." },
+        { "front": "勤奋", "pinyin": "qínfèn", "back": "diligent; hardworking; industrious", "example": "岳飞非常勤奋。", "exampleTranslation": "Yue Fei was very hardworking." },
+        { "front": "战功", "pinyin": "zhàngōng", "back": "military merit; battle achievements", "example": "岳飞立下了赫赫战功。", "exampleTranslation": "Yue Fei achieved outstanding military merit." },
+        { "front": "收复", "pinyin": "shōufù", "back": "recover; recapture (lost territory)", "example": "岳飞立志收复失地。", "exampleTranslation": "Yue Fei vowed to recover the lost territories." },
+        { "front": "尊敬", "pinyin": "zūnjìng", "back": "respect; esteem; revere", "example": "百姓都尊敬岳飞。", "exampleTranslation": "The people all respected Yue Fei." },
+        { "front": "求和", "pinyin": "qiúhé", "back": "sue for peace; seek a truce", "example": "皇帝想向金国求和。", "exampleTranslation": "The emperor wanted to sue for peace with the Jin." },
+        { "front": "退兵", "pinyin": "tuìbīng", "back": "withdraw troops; pull back forces", "example": "秦桧命令岳飞退兵。", "exampleTranslation": "Qin Hui ordered Yue Fei to withdraw his troops." },
+        { "front": "召回", "pinyin": "zhàohuí", "back": "recall; call back; summon back", "example": "皇帝把岳飞召回了。", "exampleTranslation": "The emperor recalled Yue Fei." },
+        { "front": "诬陷", "pinyin": "wūxiàn", "back": "frame; falsely accuse; set up", "example": "秦桧诬陷岳飞谋反。", "exampleTranslation": "Qin Hui falsely accused Yue Fei of treason." },
+        { "front": "品德", "pinyin": "pǐndé", "back": "moral character; virtue", "example": "岳飞品德高尚，受人爱戴。", "exampleTranslation": "Yue Fei had noble character and was loved by all." },
+        { "front": "杂技", "pinyin": "zájì", "back": "acrobatics; acrobatic performance", "example": "宋朝人喜欢看杂技表演。", "exampleTranslation": "Song dynasty people loved watching acrobatic shows." }
+      ]
+    }
+  ]
+}

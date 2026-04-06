@@ -1,0 +1,66 @@
+{
+  "lesson": 7,
+  "title": "南宋与民族英雄岳飞",
+  "subtitle": "The Southern Song & National Hero Yue Fei",
+  "groups": [
+    {
+      "id": "war-hero",
+      "name": "War & Hero Words",
+      "chinese": "战争和英雄",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "灭亡", "pinyin": "miè wáng", "back": "to fall / perish (a country or dynasty ends)", "example": "北宋灭亡了。", "exampleTranslation": "The Northern Song fell." },
+        { "front": "继位", "pinyin": "jì wèi", "back": "to succeed to the throne (become the new emperor)", "example": "赵构继位了。", "exampleTranslation": "Zhao Gou became emperor." },
+        { "front": "朝廷", "pinyin": "cháo tíng", "back": "imperial court / royal government", "example": "南宋朝廷害怕金兵。", "exampleTranslation": "The Southern Song court was afraid of the Jin soldiers." },
+        { "front": "求和", "pinyin": "qiú hé", "back": "to beg for peace / sue for peace", "example": "宋高宗想求和。", "exampleTranslation": "Emperor Gaozong wanted to make peace." },
+        { "front": "抗金", "pinyin": "kàng Jīn", "back": "to resist the Jin (fight against the Jin invaders)", "example": "人民组成抗金义军。", "exampleTranslation": "The people formed anti-Jin volunteer armies." },
+        { "front": "义军", "pinyin": "yì jūn", "back": "volunteer / righteous army", "example": "岳家军是很强的义军。", "exampleTranslation": "The Yue Family Army was a very strong volunteer army." },
+        { "front": "将领", "pinyin": "jiàng lǐng", "back": "military general / commander", "example": "岳飞是著名的将领。", "exampleTranslation": "Yue Fei was a famous general." },
+        { "front": "打败", "pinyin": "dǎ bài", "back": "to defeat / beat (in battle)", "example": "岳飞多次打败金军。", "exampleTranslation": "Yue Fei defeated the Jin army many times." },
+        { "front": "收复", "pinyin": "shōu fù", "back": "to recover (lost land)", "example": "他们收复了很多失地。", "exampleTranslation": "They recovered a lot of lost land." },
+        { "front": "英勇", "pinyin": "yīng yǒng", "back": "heroic / brave", "example": "岳飞英勇抗金。", "exampleTranslation": "Yue Fei bravely fought the Jin." }
+      ]
+    },
+    {
+      "id": "science-culture",
+      "name": "Inventor & Culture Words",
+      "chinese": "发明和文化",
+      "emoji": "🧪",
+      "cards": [
+        { "front": "科学技术", "pinyin": "kē xué jì shù", "back": "science and technology", "example": "南宋科学技术进步很大。", "exampleTranslation": "Science and technology in the Southern Song made big progress." },
+        { "front": "活字印刷术", "pinyin": "huó zì yìn shuā shù", "back": "movable type printing", "example": "活字印刷术是中国伟大的发明。", "exampleTranslation": "Movable type printing is a great Chinese invention." },
+        { "front": "火药", "pinyin": "huǒ yào", "back": "gunpowder", "example": "火药被用于军事。", "exampleTranslation": "Gunpowder was used in the military." },
+        { "front": "宋词", "pinyin": "Sòng cí", "back": "Song Ci poetry (beautiful Chinese poems from Song times)", "example": "宋词是中国文学的瑰宝。", "exampleTranslation": "Song Ci is a treasure of Chinese literature." },
+        { "front": "瑰宝", "pinyin": "guī bǎo", "back": "treasure / gem (something very precious)", "example": "《清明上河图》是绘画瑰宝。", "exampleTranslation": "Qingming Shanghe Tu is a painting treasure." },
+        { "front": "成就", "pinyin": "chéng jiù", "back": "achievement / great success", "example": "两宋在文学和绘画上都有成就。", "exampleTranslation": "The Song dynasties had achievements in literature and painting." }
+      ]
+    },
+    {
+      "id": "city-trade",
+      "name": "Busy City & Trade Words",
+      "chinese": "城市和贸易",
+      "emoji": "🏙️",
+      "cards": [
+        { "front": "繁荣", "pinyin": "fán róng", "back": "prosperous / booming", "example": "两宋商业繁荣。", "exampleTranslation": "Commerce in the Song dynasties was very prosperous." },
+        { "front": "商业", "pinyin": "shāng yè", "back": "commerce / business", "example": "宋朝的商业很发达。", "exampleTranslation": "Song commerce was very developed." },
+        { "front": "夜市", "pinyin": "yè shì", "back": "night market", "example": "城里有热闹的夜市。", "exampleTranslation": "There were lively night markets in the city." },
+        { "front": "林立", "pinyin": "lín lì", "back": "standing everywhere (like lots of shops in a row)", "example": "大街小巷店铺林立。", "exampleTranslation": "Shops stood everywhere in the streets and alleys." },
+        { "front": "海外贸易", "pinyin": "hǎi wài mào yì", "back": "overseas trade", "example": "两宋海外贸易兴盛。", "exampleTranslation": "Overseas trade flourished in the Song." },
+        { "front": "瓷器", "pinyin": "cí qì", "back": "porcelain / china (beautiful plates and bowls)", "example": "中国海船出口瓷器。", "exampleTranslation": "Chinese ships exported porcelain." },
+        { "front": "丝绸", "pinyin": "sī chóu", "back": "silk", "example": "主要出口瓷器和丝绸。", "exampleTranslation": "They mainly exported porcelain and silk." }
+      ]
+    },
+    {
+      "id": "proper-names",
+      "name": "Important Names",
+      "chinese": "重要人名和朝代",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "南宋", "pinyin": "Nán Sòng", "back": "Southern Song Dynasty", "example": null, "exampleTranslation": null },
+        { "front": "岳飞", "pinyin": "Yuè Fēi", "back": "Yue Fei – brave general and national hero", "example": null, "exampleTranslation": null },
+        { "front": "秦桧", "pinyin": "Qín Huì", "back": "Qin Hui – the sneaky prime minister who betrayed Yue Fei", "example": null, "exampleTranslation": null },
+        { "front": "忽必烈", "pinyin": "Hū bì liè", "back": "Kublai Khan – Mongol ruler who ended the Song Dynasty", "example": null, "exampleTranslation": null }
+      ]
+    }
+  ]
+}

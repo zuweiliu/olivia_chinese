@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson · 汉语闪卡</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #ffd700; --gold-dim: #c8a800;
+      --bg: #0d0d1f; --bg2: #141428; --bg3: #1e1e3a; --bg4: #252545;
+      --text: #f0e6d3; --text-dim: #a08060;
+      --green: #2ecc71; --red: #e74c3c;
+      --radius: 16px;
+    }
+    html, body { min-height: 100%; background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; background: var(--bg2); border-bottom: 1px solid #2a2a50; gap: 12px; flex-wrap: wrap; }
+    .back-btn { display: flex; align-items: center; gap: 8px; color: var(--text-dim); text-decoration: none; font-size: 14px; background: var(--bg3); border: 1px solid #3a3a60; padding: 7px 14px; border-radius: 8px; transition: all .2s; }
+    .back-btn:hover { color: var(--text); border-color: var(--gold-dim); }
+    .header-title { font-size: 22px; color: var(--gold); font-family: "Microsoft YaHei","STHeiti",serif; }
+    .header-sub { font-size: 13px; color: var(--text-dim); margin-top: 3px; }
+    main { max-width: 860px; margin: 0 auto; padding: 40px 24px 64px; }
+    .lesson-hero { text-align: center; margin-bottom: 40px; }
+    .lesson-num { display: inline-block; background: linear-gradient(135deg, var(--bg3), var(--bg4)); border: 1px solid #3a3a65; border-radius: 12px; padding: 6px 18px; font-size: 13px; color: var(--text-dim); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 14px; }
+    .lesson-title-zh { font-size: 32px; color: var(--gold); font-family: "Microsoft YaHei","STHeiti",serif; text-shadow: 0 0 24px rgba(255,215,0,.25); margin-bottom: 8px; }
+    .lesson-title-en { font-size: 16px; color: var(--text-dim); }
+    .decks-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; }
+    .deck-card { background: linear-gradient(135deg, var(--bg2), var(--bg3)); border: 1px solid #3a3a65; border-radius: var(--radius); padding: 28px 28px 24px; text-decoration: none; color: var(--text); display: flex; flex-direction: column; gap: 14px; transition: all .2s; position: relative; overflow: hidden; }
+    .deck-card::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,215,0,.04), transparent); opacity: 0; transition: opacity .2s; }
+    .deck-card:hover { border-color: var(--gold-dim); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,.4); }
+    .deck-card:hover::before { opacity: 1; }
+    .deck-emoji { font-size: 40px; line-height: 1; }
+    .deck-title-zh { font-size: 22px; color: var(--gold); font-family: "Microsoft YaHei","STHeiti",serif; }
+    .deck-title-en { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
+    .deck-meta { display: flex; gap: 10px; flex-wrap: wrap; font-size: 12px; }
+    .deck-tag { background: var(--bg4); border: 1px solid #3a3a60; padding: 4px 10px; border-radius: 20px; color: var(--text-dim); }
+    .deck-count { font-size: 28px; font-weight: 700; color: var(--gold); line-height: 1; }
+    .deck-count span { font-size: 14px; font-weight: 400; color: var(--text-dim); margin-left: 4px; }
+    .deck-progress-bar { background: var(--bg4); border-radius: 6px; height: 5px; overflow: hidden; }
+    .deck-progress-fill { height: 100%; background: linear-gradient(90deg, var(--gold), #ff9500); border-radius: 6px; transition: width .4s; }
+    .deck-progress-label { font-size: 11px; color: #666; margin-top: 5px; }
+    .deck-arrow { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 22px; color: #444; transition: all .2s; }
+    .deck-card:hover .deck-arrow { color: var(--gold-dim); right: 14px; }
+    #errorMsg { text-align: center; color: #e74c3c; padding: 40px; display: none; }
+    @media (max-width: 500px) { .lesson-title-zh { font-size: 24px; } main { padding: 28px 16px 48px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-btn" href="../index.html">← Home</a>
+  <div>
+    <div class="header-title" id="hNum">—</div>
+    <div class="header-sub" id="hSub"></div>
+  </div>
+</header>
+
+<main>
+  <div class="lesson-hero">
+    <div class="lesson-num" id="lessonNum">—</div>
+    <div class="lesson-title-zh" id="titleZh">—</div>
+    <div class="lesson-title-en" id="titleEn"></div>
+  </div>
+  <div class="decks-grid" id="decksGrid"></div>
+  <div id="errorMsg">Lesson not found. <a href="../index.html" style="color:var(--gold)">← Go Home</a></div>
+</main>
+
+<script>
+function getProgress(storeKey) {
+  try { return Object.values(JSON.parse(localStorage.getItem(storeKey) || '{}')).filter(v => v === 'know').length; }
+  catch { return 0; }
+}
+
+async function init() {
+  const p        = new URLSearchParams(window.location.search);
+  const lessonId = p.get('lesson');
+  if (!lessonId) { window.location.href = '../index.html'; return; }
+
+  const res     = await fetch('lessons.json');
+  const lessons = await res.json();
+  const lesson  = lessons.find(l => l.id === lessonId);
+
+  if (!lesson) { document.getElementById('errorMsg').style.display = 'block'; return; }
+
+  document.title = lesson.num + ' · 汉语闪卡';
+  document.getElementById('hNum').textContent    = lesson.num;
+  document.getElementById('hSub').textContent    = lesson.titleEn;
+  document.getElementById('lessonNum').textContent = lesson.num;
+  document.getElementById('titleZh').textContent  = lesson.titleZh;
+  document.getElementById('titleEn').textContent  = lesson.titleEn;
+
+  const grid = document.getElementById('decksGrid');
+  lesson.decks.forEach(deck => {
+    const known = getProgress(deck.storeKey);
+    const total = deck.total;
+    const pct   = total ? Math.round(known / total * 100) : 0;
+    const url   = `viewer.html?lesson=${lessonId}&cards=${deck.file}&storeKey=${deck.storeKey}`;
+
+    const card = document.createElement('a');
+    card.href = url;
+    card.className = 'deck-card';
+    card.innerHTML = `
+      <div class="deck-emoji">${deck.emoji}</div>
+      <div>
+        <div class="deck-title-zh">${deck.titleZh}</div>
+        <div class="deck-title-en">${deck.titleEn}</div>
+      </div>
+      <div class="deck-meta">
+        ${deck.tags.map(t => `<span class="deck-tag">${t}</span>`).join('')}
+      </div>
+      <div><div class="deck-count">${total}<span>cards</span></div></div>
+      <div>
+        <div class="deck-progress-bar"><div class="deck-progress-fill" style="width:${pct}%"></div></div>
+        <div class="deck-progress-label">${known} / ${total} known (${pct}%)</div>
+      </div>
+      <div class="deck-arrow">›</div>`;
+    grid.appendChild(card);
+  });
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "lesson7",
+    "num": "Lesson 7",
+    "titleZh": "宋朝——繁荣与危机",
+    "titleEn": "Song Dynasty — Prosperity & Crisis",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L7",
+        "emoji": "⚔️",
+        "titleZh": "南宋与民族英雄岳飞",
+        "titleEn": "Southern Song & National Hero Yue Fei",
+        "tags": ["⚔️ War & Heroes", "🧪 Inventions", "🏙️ City & Trade", "⭐ Names"],
+        "total": 27
+      },
+      {
+        "file": "cards-beisong.json",
+        "storeKey": "fc_L7b",
+        "emoji": "🏛️",
+        "titleZh": "北宋词汇",
+        "titleEn": "Northern Song · Game Words",
+        "tags": ["🏛️ Founding & Rule", "📜 Reform & Culture", "⚔️ Crisis & Invasion", "🦅 Hero & Virtue"],
+        "total": 46
+      }
+    ]
+  }
+]

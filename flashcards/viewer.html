@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flashcard Viewer · 汉语闪卡</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #ffd700; --gold-dim: #c8a800;
+      --bg: #0d0d1f; --bg2: #141428; --bg3: #1e1e3a; --bg4: #252545;
+      --text: #f0e6d3; --text-dim: #a08060;
+      --green: #2ecc71; --red: #e74c3c;
+      --radius: 16px;
+    }
+    html, body { min-height: 100%; background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; background: var(--bg2); border-bottom: 1px solid #2a2a50; gap: 12px; flex-wrap: wrap; }
+    .back-btn { display: flex; align-items: center; gap: 8px; color: var(--text-dim); text-decoration: none; font-size: 14px; background: var(--bg3); border: 1px solid #3a3a60; padding: 7px 14px; border-radius: 8px; transition: all .2s; }
+    .back-btn:hover { color: var(--text); border-color: var(--gold-dim); }
+    .header-center { text-align: center; flex: 1; }
+    .header-title { font-size: 20px; color: var(--gold); font-family: "Microsoft YaHei","STHeiti",serif; }
+    .header-sub { font-size: 12px; color: var(--text-dim); margin-top: 2px; }
+    .header-count { font-size: 13px; color: var(--text-dim); white-space: nowrap; }
+    main { display: flex; flex-direction: column; align-items: center; padding: 24px 20px 56px; gap: 20px; }
+    #groupTabs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .tab-btn { background: var(--bg3); border: 1px solid #3a3a60; color: var(--text-dim); padding: 7px 16px; border-radius: 20px; font-size: 13px; cursor: pointer; transition: all .2s; white-space: nowrap; }
+    .tab-btn:hover { border-color: var(--gold-dim); color: var(--text); }
+    .tab-btn.active { background: var(--gold); color: #111; border-color: var(--gold); font-weight: 600; }
+    #progressWrap { width: 100%; max-width: 580px; }
+    .prog-row { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-dim); margin-bottom: 6px; }
+    .prog-bar { background: var(--bg3); border-radius: 8px; height: 6px; overflow: hidden; }
+    .prog-fill { height: 100%; background: linear-gradient(90deg, var(--gold), #ff9500); border-radius: 8px; transition: width .4s ease; }
+    #cardWrap { perspective: 1200px; width: 580px; max-width: 100%; height: 320px; user-select: none; cursor: default; }
+    .card-inner { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform .5s cubic-bezier(.4,.2,.2,1); }
+    .card-inner.flipped { transform: rotateY(180deg); }
+    .card-face { position: absolute; inset: 0; border-radius: var(--radius); backface-visibility: hidden; -webkit-backface-visibility: hidden; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px 32px; text-align: center; }
+    .card-front { background: linear-gradient(135deg, var(--bg3), var(--bg4)); border: 1px solid #3a3a65; box-shadow: 0 8px 40px rgba(0,0,0,.5), 0 0 0 1px rgba(255,215,0,.05); transition: box-shadow .3s; }
+    .card-front.correct { box-shadow: 0 0 0 2px var(--green), 0 8px 40px rgba(46,204,113,.2); }
+    .card-front.wrong   { box-shadow: 0 0 0 2px var(--red),   0 8px 40px rgba(231,76,60,.2); }
+    .card-back { background: linear-gradient(135deg, #1a2a1a, #0f1f0f); border: 1px solid #2a5a2a; box-shadow: 0 8px 40px rgba(0,0,0,.5); transform: rotateY(180deg); justify-content: flex-start; padding-top: 40px; overflow-y: auto; }
+    .card-meta { position: absolute; top: 14px; left: 14px; right: 14px; display: flex; justify-content: space-between; }
+    .card-num { font-size: 12px; color: #555; }
+    .card-badge { font-size: 18px; }
+    .card-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim); margin-bottom: 16px; }
+    .card-chinese { font-size: 62px; font-family: "Microsoft YaHei","STHeiti","Noto Sans SC",serif; color: var(--gold); text-shadow: 0 0 20px rgba(255,215,0,.3); line-height: 1.15; }
+    .card-hint { position: absolute; bottom: 14px; font-size: 11px; color: #444; letter-spacing: 1px; }
+    .back-pinyin-row { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 8px; }
+    .back-pinyin  { font-size: 24px; color: #add8e6; font-style: italic; }
+    .tts-btn { background: rgba(173,216,230,.1); border: 1px solid rgba(173,216,230,.3); color: #add8e6; border-radius: 8px; padding: 4px 10px; font-size: 16px; cursor: pointer; transition: all .2s; line-height: 1; }
+    .tts-btn:hover { background: rgba(173,216,230,.2); border-color: #add8e6; }
+    .tts-btn.speaking { opacity: .5; cursor: default; animation: pulse .8s ease-in-out infinite; }
+    .back-meaning { font-size: 20px; color: #90ee90; font-weight: 600; margin-bottom: 10px; line-height: 1.4; }
+    .back-example { background: rgba(0,0,0,.3); border-radius: 10px; padding: 10px 16px; width: 100%; }
+    .back-example .zh { font-size: 18px; font-family: "Microsoft YaHei","STHeiti",serif; color: #ddd; margin-bottom: 4px; }
+    .back-example .en { font-size: 12px; color: #888; font-style: italic; }
+    .back-breakdown { background: rgba(255,215,0,.07); border: 1px solid rgba(255,215,0,.2); border-radius: 10px; padding: 9px 14px; width: 100%; margin-top: 8px; text-align: left; }
+    .back-breakdown .bd-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dim); margin-bottom: 5px; }
+    .back-breakdown .bd-text { font-size: 14px; color: #d4c080; font-family: "Microsoft YaHei","STHeiti",serif; line-height: 1.6; }
+    #interactPanel { width: 580px; max-width: 100%; background: var(--bg2); border: 1px solid #2a2a50; border-radius: var(--radius); overflow: hidden; }
+    .mode-tabs { display: flex; border-bottom: 1px solid #2a2a50; }
+    .mode-tab { flex: 1; padding: 10px; font-size: 14px; cursor: pointer; background: none; border: none; color: var(--text-dim); transition: all .15s; }
+    .mode-tab.active { background: var(--bg3); color: var(--text); font-weight: 600; }
+    .mode-tab:hover:not(.active) { background: rgba(255,255,255,.03); color: var(--text); }
+    .mode-panel { display: none; padding: 18px 20px; flex-direction: column; align-items: center; gap: 12px; }
+    .mode-panel.active { display: flex; }
+    #micBtn { width: 68px; height: 68px; border-radius: 50%; border: 2px solid #5a5aaa; background: var(--bg3); color: var(--text); font-size: 28px; cursor: pointer; transition: all .2s; display: flex; align-items: center; justify-content: center; }
+    #micBtn:hover { background: var(--bg4); border-color: #8888cc; }
+    #micBtn.listening { background: rgba(231,76,60,.2); border-color: var(--red); animation: pulse 1s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
+    #micStatus { font-size: 13px; color: var(--text-dim); text-align: center; }
+    #speechNoSupport { font-size: 13px; color: #e74c3c; display: none; }
+    .type-row { display: flex; gap: 8px; width: 100%; }
+    #pinyinInput { flex: 1; background: var(--bg3); border: 1px solid #3a3a60; color: var(--text); padding: 10px 14px; border-radius: 8px; font-size: 16px; outline: none; }
+    #pinyinInput:focus { border-color: #6060a0; }
+    #pinyinInput::placeholder { color: #555; }
+    #checkBtn { background: var(--bg3); border: 1px solid #6060a0; color: var(--text); padding: 10px 18px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: all .15s; white-space: nowrap; }
+    #checkBtn:hover { background: var(--bg4); }
+    #feedback { width: 100%; padding: 12px 16px; border-radius: 10px; font-size: 15px; text-align: center; display: none; }
+    #feedback.correct { background: rgba(46,204,113,.15); border: 1px solid var(--green); color: #90ee90; }
+    #feedback.wrong   { background: rgba(231,76,60,.12);  border: 1px solid #c0392b;     color: #ff8a8a; }
+    .feedback-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 10px; }
+    .ctrl-row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+    .btn { background: var(--bg3); border: 1px solid #3a3a60; color: var(--text); padding: 9px 18px; border-radius: 10px; font-size: 14px; cursor: pointer; transition: all .15s; display: flex; align-items: center; gap: 6px; }
+    .btn:hover { background: var(--bg4); border-color: #5a5a90; }
+    .btn:active { transform: scale(.97); }
+    .btn:disabled { opacity: .3; cursor: not-allowed; }
+    .btn-know  { background: rgba(46,204,113,.15); border-color: var(--green); color: var(--green); }
+    .btn-know:hover  { background: rgba(46,204,113,.25); }
+    .btn-learn { background: rgba(231,76,60,.15); border-color: var(--red); color: var(--red); }
+    .btn-learn:hover { background: rgba(231,76,60,.25); }
+    .btn-gold  { background: var(--gold); border-color: var(--gold); color: #111; font-weight: 600; }
+    .btn-gold:hover  { background: #ffeb50; }
+    .btn-sm { padding: 7px 14px; font-size: 13px; }
+    #statusRow { display: flex; gap: 20px; font-size: 13px; color: var(--text-dim); flex-wrap: wrap; justify-content: center; }
+    .stat { display: flex; align-items: center; gap: 6px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-k { background: var(--green); } .dot-l { background: var(--red); } .dot-u { background: #555; }
+    #keyHints { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; font-size: 12px; color: #555; }
+    kbd { display: inline-block; background: #1a1a30; border: 1px solid #333; border-radius: 5px; padding: 2px 7px; font-family: monospace; color: #888; }
+    #emptyState { display: none; text-align: center; color: var(--text-dim); padding: 60px 20px; }
+    #emptyState h3 { font-size: 22px; margin-bottom: 8px; }
+    #toast { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(80px); background: #222244; border: 1px solid #4a4a80; color: var(--text); padding: 10px 22px; border-radius: 20px; font-size: 14px; transition: transform .3s; pointer-events: none; z-index: 99; white-space: nowrap; }
+    #toast.show { transform: translateX(-50%) translateY(0); }
+    @media (max-width: 620px) { #cardWrap { height: 280px; } .card-chinese { font-size: 46px; } .back-meaning { font-size: 16px; } header { padding: 10px 16px; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <a class="back-btn" id="backBtn" href="lesson.html">← Lesson</a>
+  <div class="header-center">
+    <div class="header-title" id="hTitle">—</div>
+    <div class="header-sub" id="hSub"></div>
+  </div>
+  <div class="header-count" id="hCount"></div>
+</header>
+
+<main>
+  <div id="groupTabs"></div>
+  <div id="progressWrap">
+    <div class="prog-row"><span id="progText">Card 0 / 0</span><span id="knownCount">0 known</span></div>
+    <div class="prog-bar"><div class="prog-fill" id="progFill" style="width:0%"></div></div>
+  </div>
+
+  <div id="cardWrap" tabindex="0" title="Double-click to reveal answer">
+    <div class="card-inner" id="cardInner">
+      <div class="card-face card-front" id="cardFront">
+        <div class="card-meta"><span class="card-num" id="cNum"></span><span class="card-badge" id="cBadge"></span></div>
+        <div class="card-label">what is this word?</div>
+        <div class="card-chinese" id="fChinese">—</div>
+        <div class="card-hint">double-click to peek</div>
+      </div>
+      <div class="card-face card-back">
+        <div class="card-meta"><span class="card-num" id="cNumB"></span><span class="card-badge" id="cBadgeB"></span></div>
+        <div class="back-pinyin-row">
+          <div class="back-pinyin" id="bPinyin"></div>
+          <button class="tts-btn" id="ttsBtn" title="Read aloud">🔊</button>
+        </div>
+        <div class="back-meaning" id="bMeaning">—</div>
+        <div class="back-example" id="bExample" style="display:none">
+          <div class="zh" id="bExZh"></div>
+          <div class="en" id="bExEn"></div>
+        </div>
+        <div class="back-breakdown" id="bBreakdown" style="display:none">
+          <div class="bd-label">💡 字的结构</div>
+          <div class="bd-text" id="bBdText"></div>
+        </div>
+        <div class="card-hint">← → to navigate</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="interactPanel">
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="speak">🎤 Speak</button>
+      <button class="mode-tab"        data-mode="type">⌨️ Type Pinyin</button>
+    </div>
+    <div class="mode-panel active" id="panelSpeak">
+      <div id="speechNoSupport">Speech recognition unavailable — use Chrome/Edge</div>
+      <button id="micBtn" title="Tap to speak">🎤</button>
+      <div id="micStatus">Tap the mic and say the word in Chinese</div>
+    </div>
+    <div class="mode-panel" id="panelType">
+      <div class="type-row">
+        <input id="pinyinInput" type="text" placeholder="type pinyin (tones optional)" autocomplete="off" spellcheck="false">
+        <button id="checkBtn">Check →</button>
+      </div>
+      <div style="font-size:12px;color:#555;">Tip: tone marks optional — "jian li" also accepted</div>
+    </div>
+    <div style="padding: 0 20px 16px"><div id="feedback"></div></div>
+  </div>
+
+  <div class="ctrl-row">
+    <button class="btn" id="btnPrev">← Prev</button>
+    <button class="btn" id="btnShowAns">👁 Show Answer</button>
+    <button class="btn" id="btnNext">Next →</button>
+  </div>
+  <div class="ctrl-row">
+    <button class="btn btn-sm" id="btnShuffle">🔀 Shuffle</button>
+    <button class="btn btn-sm" id="btnReset">↺ Reset</button>
+    <button class="btn btn-sm btn-gold" id="btnWeak">⚡ Review Still Learning</button>
+  </div>
+
+  <div id="statusRow">
+    <div class="stat"><div class="dot dot-k"></div><span id="sKnown">0 Know It</span></div>
+    <div class="stat"><div class="dot dot-l"></div><span id="sLearn">0 Still Learning</span></div>
+    <div class="stat"><div class="dot dot-u"></div><span id="sUnseen">0 Unseen</span></div>
+  </div>
+  <div id="keyHints">
+    <span><kbd>←</kbd><kbd>→</kbd> navigate</span>
+    <span><kbd>Enter</kbd> check / speak</span>
+    <span><kbd>K</kbd> know it</span><span><kbd>L</kbd> still learning</span>
+    <span><kbd>S</kbd> shuffle</span><span><kbd>dbl-click</kbd> peek</span>
+  </div>
+  <div id="emptyState"><h3>🎉 All Done!</h3><p>You have reviewed every card in this group.<br>Try another group or press Reset.</p></div>
+</main>
+<div id="toast"></div>
+
+<script>
+const FC = {
+  data: null, allCards: [], deck: [], pos: 0, flipped: false,
+  group: 'all', progress: {}, storeKey: '', toastT: null,
+  mode: 'speak', recog: null, listening: false, speechOK: false, ttsOK: false,
+
+  async init() {
+    const p        = new URLSearchParams(window.location.search);
+    const lessonId = p.get('lesson') || 'lesson7';
+    const cardsFile = p.get('cards') || 'cards.json';
+
+    document.getElementById('backBtn').href = `lesson.html?lesson=${lessonId}`;
+
+    const res  = await fetch(`${lessonId}/${cardsFile}`);
+    this.data  = await res.json();
+    this.storeKey = p.get('storeKey') || ('fc_' + lessonId + '_' + cardsFile.replace('.json',''));
+    this.progress = JSON.parse(localStorage.getItem(this.storeKey) || '{}');
+
+    document.title = this.data.title + ' · 汉语闪卡';
+    document.getElementById('hTitle').textContent = this.data.title;
+    document.getElementById('hSub').textContent   = this.data.subtitle || '';
+
+    this.initSpeech();
+    this.initTTS();
+    this.buildTabs();
+    this.buildDeck();
+    this.bindEvents();
+  },
+
+  initTTS() {
+    if (!window.speechSynthesis) {
+      document.getElementById('ttsBtn').style.display = 'none';
+      return;
+    }
+    this.ttsOK = true;
+  },
+
+  speak() {
+    if (!this.ttsOK) return;
+    const card = this.currentCard();
+    if (!card) return;
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(card.front);
+    u.lang = 'zh-CN';
+    u.rate = 0.85;
+    const btn = document.getElementById('ttsBtn');
+    btn.classList.add('speaking');
+    u.onend = u.onerror = () => btn.classList.remove('speaking');
+    window.speechSynthesis.speak(u);
+  },
+
+  initSpeech() {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) {
+      document.getElementById('speechNoSupport').style.display = 'block';
+      document.getElementById('micBtn').style.display = 'none';
+      document.getElementById('micStatus').style.display = 'none';
+      return;
+    }
+    this.speechOK = true;
+    this.recog = new SR();
+    this.recog.lang = 'zh-CN';
+    this.recog.continuous = false;
+    this.recog.interimResults = false;
+    this.recog.maxAlternatives = 5;
+    this.recog.onresult = (e) => {
+      const hits = Array.from(e.results[0]).map(r => r.transcript.trim());
+      const card = this.currentCard();
+      const ok   = hits.some(t => t.includes(card.front) || t === card.front);
+      this.setMicStatus('Heard: ' + hits[0]);
+      this.judgeResult(ok);
+    };
+    this.recog.onerror = (e) => {
+      this.setMicStatus(e.error === 'no-speech' ? 'No speech detected — try again' : 'Error: ' + e.error);
+      this.listening = false; this.updateMicBtn();
+    };
+    this.recog.onend = () => { this.listening = false; this.updateMicBtn(); };
+  },
+
+  toggleMic() {
+    if (!this.speechOK || this.flipped) return;
+    if (this.listening) { this.recog.stop(); return; }
+    this.clearFeedback();
+    this.recog.start();
+    this.listening = true; this.updateMicBtn();
+  },
+
+  updateMicBtn() {
+    const btn = document.getElementById('micBtn');
+    btn.classList.toggle('listening', this.listening);
+    btn.textContent = this.listening ? '🔴' : '🎤';
+    this.setMicStatus(this.listening ? 'Listening… say the word in Chinese' : 'Tap the mic and say the word in Chinese');
+  },
+
+  setMicStatus(msg) { document.getElementById('micStatus').textContent = msg; },
+
+  checkType() {
+    const input = document.getElementById('pinyinInput').value.trim();
+    if (!input) return;
+    const norm = s => s.toLowerCase().replace(/\s+/g,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+    const ok   = norm(input) === norm(this.currentCard().pinyin);
+    this.judgeResult(ok);
+  },
+
+  judgeResult(ok) {
+    const card  = this.currentCard();
+    const fb    = document.getElementById('feedback');
+    const front = document.getElementById('cardFront');
+    front.classList.remove('correct','wrong');
+    void front.offsetWidth;
+    front.classList.add(ok ? 'correct' : 'wrong');
+    setTimeout(() => front.classList.remove('correct','wrong'), 1200);
+    fb.className = ok ? 'correct' : 'wrong';
+    fb.style.display = 'block';
+    fb.innerHTML = ok
+      ? `<div>✓ Correct! &nbsp;<strong>${card.pinyin}</strong></div>
+         <div class="feedback-actions">
+           <button class="btn btn-sm btn-know"  onclick="FC.mark('know')">✓ Know It!</button>
+           <button class="btn btn-sm btn-learn" onclick="FC.mark('learn')">Still Learning</button>
+         </div>`
+      : `<div>✗ Not quite — correct pinyin: &nbsp;<strong>${card.pinyin}</strong></div>
+         <div class="feedback-actions">
+           <button class="btn btn-sm" onclick="FC.retryCard()">🔁 Try Again</button>
+           <button class="btn btn-sm btn-learn" onclick="FC.mark('learn')">Still Learning</button>
+         </div>`;
+  },
+
+  clearFeedback() {
+    const fb = document.getElementById('feedback');
+    fb.style.display = 'none'; fb.className = ''; fb.innerHTML = '';
+    if (this.mode === 'type') document.getElementById('pinyinInput').value = '';
+  },
+
+  retryCard() {
+    this.clearFeedback();
+    if (this.mode === 'type') document.getElementById('pinyinInput').focus();
+  },
+
+  reveal() {
+    if (this.flipped) return;
+    this.flipped = true;
+    document.getElementById('cardInner').classList.add('flipped');
+    const fb = document.getElementById('feedback');
+    fb.className = ''; fb.style.display = 'block';
+    fb.innerHTML = `<div style="color:var(--text-dim)">Revealed — how well did you know it?</div>
+      <div class="feedback-actions">
+        <button class="btn btn-sm btn-know"  onclick="FC.mark('know')">✓ Know It!</button>
+        <button class="btn btn-sm btn-learn" onclick="FC.mark('learn')">Still Learning</button>
+      </div>`;
+  },
+
+  buildTabs() {
+    const el   = document.getElementById('groupTabs');
+    const tabs = [{ id:'all', emoji:'🀄', name:'All Cards' }, ...this.data.groups];
+    el.innerHTML = tabs.map(g =>
+      `<button class="tab-btn${g.id===this.group?' active':''}" data-gid="${g.id}">${g.emoji||''} ${g.name}</button>`
+    ).join('');
+    el.querySelectorAll('.tab-btn').forEach(b => b.addEventListener('click', () => {
+      this.group = b.dataset.gid;
+      el.querySelectorAll('.tab-btn').forEach(x => x.classList.toggle('active', x.dataset.gid === this.group));
+      this.buildDeck();
+    }));
+  },
+
+  buildDeck(onlyWeak = false) {
+    let cards = [];
+    const groups = this.data.groups;
+    (this.group === 'all' ? groups : groups.filter(g => g.id === this.group))
+      .forEach(g => g.cards.forEach(c => cards.push({ ...c, emoji: g.emoji })));
+    this.allCards = cards;
+    this.deck = cards.map((_,i) => i).filter(i => !onlyWeak || this.st(cards[i]) === 'learn');
+    this.pos = 0; this.flipped = false;
+    document.getElementById('hCount').textContent = this.deck.length + ' cards';
+    this.render();
+  },
+
+  currentCard() { return this.allCards[this.deck[this.pos]]; },
+  key(c)  { return c.front + '|' + c.pinyin; },
+  st(c)   { return this.progress[this.key(c)] || 'unseen'; },
+  setSt(c, s) { this.progress[this.key(c)] = s; localStorage.setItem(this.storeKey, JSON.stringify(this.progress)); },
+
+  render() {
+    const empty = this.deck.length === 0;
+    document.getElementById('cardWrap').style.display      = empty ? 'none' : '';
+    document.getElementById('interactPanel').style.display = empty ? 'none' : '';
+    document.getElementById('emptyState').style.display    = empty ? 'block' : 'none';
+    if (empty) { this.updateStats(); return; }
+
+    const c = this.currentCard(), label = `${this.pos+1} / ${this.deck.length}`;
+    document.getElementById('cardInner').classList.remove('flipped');
+    document.getElementById('cardFront').classList.remove('correct','wrong');
+    this.flipped = false; this.clearFeedback();
+    if (this.ttsOK) { window.speechSynthesis.cancel(); document.getElementById('ttsBtn').classList.remove('speaking'); }
+    if (this.speechOK) this.setMicStatus('Tap the mic and say the word in Chinese');
+
+    ['cNum','cNumB'].forEach(id  => document.getElementById(id).textContent = label);
+    ['cBadge','cBadgeB'].forEach(id => document.getElementById(id).textContent = c.emoji || '');
+    document.getElementById('fChinese').textContent = c.front;
+    document.getElementById('bPinyin').textContent  = c.pinyin;
+    document.getElementById('bMeaning').textContent = c.back;
+
+    const ex = document.getElementById('bExample');
+    if (c.example) {
+      ex.style.display = '';
+      document.getElementById('bExZh').textContent = c.example;
+      document.getElementById('bExEn').textContent = c.exampleTranslation || '';
+    } else { ex.style.display = 'none'; }
+
+    const bd = document.getElementById('bBreakdown');
+    if (c.breakdown) {
+      bd.style.display = '';
+      document.getElementById('bBdText').textContent = c.breakdown;
+    } else { bd.style.display = 'none'; }
+
+    document.getElementById('btnPrev').disabled = this.pos === 0;
+    document.getElementById('btnNext').disabled = this.pos === this.deck.length - 1;
+    this.updateStats();
+  },
+
+  go(d) {
+    const p = this.pos + d;
+    if (p < 0 || p >= this.deck.length) return;
+    if (this.listening) this.recog.stop();
+    this.pos = p; this.render();
+  },
+
+  mark(s) {
+    if (!this.deck.length) return;
+    this.setSt(this.currentCard(), s);
+    this.toast(s === 'know' ? '✓ Know It!' : '📚 Still Learning');
+    this.updateStats();
+    if (this.pos < this.deck.length - 1) setTimeout(() => this.go(1), 350);
+  },
+
+  shuffle() {
+    for (let i = this.deck.length-1; i > 0; i--) {
+      const j = Math.floor(Math.random()*(i+1));
+      [this.deck[i],this.deck[j]] = [this.deck[j],this.deck[i]];
+    }
+    this.pos = 0; this.render(); this.toast('🔀 Shuffled!');
+  },
+
+  reset() {
+    if (!confirm('Reset all progress for this deck?')) return;
+    this.progress = {}; localStorage.removeItem(this.storeKey);
+    this.buildDeck(); this.toast('↺ Progress reset');
+  },
+
+  reviewWeak() {
+    this.buildDeck(true);
+    if (!this.deck.length) { this.toast('🎉 No "Still Learning" cards!'); this.buildDeck(); }
+    else this.toast('⚡ Reviewing ' + this.deck.length + ' cards');
+  },
+
+  updateStats() {
+    const total = this.deck.length;
+    const known = this.deck.filter(i => this.st(this.allCards[i]) === 'know').length;
+    const learn = this.deck.filter(i => this.st(this.allCards[i]) === 'learn').length;
+    document.getElementById('progText').textContent   = `Card ${this.pos+1} / ${total}`;
+    document.getElementById('knownCount').textContent = `${known} known`;
+    document.getElementById('progFill').style.width   = total ? `${Math.round(known/total*100)}%` : '0%';
+    document.getElementById('sKnown').textContent  = `${known} Know It`;
+    document.getElementById('sLearn').textContent  = `${learn} Still Learning`;
+    document.getElementById('sUnseen').textContent = `${total-known-learn} Unseen`;
+  },
+
+  toast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(this.toastT);
+    this.toastT = setTimeout(() => t.classList.remove('show'), 2000);
+  },
+
+  setMode(m) {
+    this.mode = m;
+    document.querySelectorAll('.mode-tab').forEach(b => b.classList.toggle('active', b.dataset.mode === m));
+    document.getElementById('panelSpeak').classList.toggle('active', m === 'speak');
+    document.getElementById('panelType').classList.toggle('active',  m === 'type');
+    this.clearFeedback();
+    if (m === 'type') setTimeout(() => document.getElementById('pinyinInput').focus(), 50);
+  },
+
+  bindEvents() {
+    document.getElementById('cardWrap').addEventListener('dblclick', () => this.reveal());
+    document.querySelectorAll('.mode-tab').forEach(b => b.addEventListener('click', () => this.setMode(b.dataset.mode)));
+    document.getElementById('micBtn').addEventListener('click',   () => this.toggleMic());
+    document.getElementById('ttsBtn').addEventListener('click',   () => this.speak());
+    document.getElementById('checkBtn').addEventListener('click', () => this.checkType());
+    document.getElementById('pinyinInput').addEventListener('keydown', e => { if (e.key==='Enter') this.checkType(); });
+    document.getElementById('btnPrev').addEventListener('click',    () => this.go(-1));
+    document.getElementById('btnNext').addEventListener('click',    () => this.go(1));
+    document.getElementById('btnShowAns').addEventListener('click', () => this.reveal());
+    document.getElementById('btnShuffle').addEventListener('click', () => this.shuffle());
+    document.getElementById('btnReset').addEventListener('click',   () => this.reset());
+    document.getElementById('btnWeak').addEventListener('click',    () => this.reviewWeak());
+    document.addEventListener('keydown', e => {
+      if (['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)) return;
+      if (e.key==='ArrowLeft')       this.go(-1);
+      else if (e.key==='ArrowRight') this.go(1);
+      else if (e.key==='Enter') { if (this.mode==='speak') this.toggleMic(); else this.checkType(); }
+      else if (e.key==='k'||e.key==='K') this.mark('know');
+      else if (e.key==='l'||e.key==='L') this.mark('learn');
+      else if (e.key==='s'||e.key==='S') this.shuffle();
+    });
+  }
+};
+
+FC.init();
+</script>
+</body>
+</html>
