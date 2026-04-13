@@ -39,6 +39,15 @@
         "titleEn": "Yuan Dynasty · Vocabulary",
         "tags": ["🏛️ Rule & Policy", "🗺️ Territory", "🌾 Economy", "🎭 Culture", "⭐ Names"],
         "total": 36
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L8b",
+        "emoji": "⛵",
+        "titleZh": "元朝词汇（第二节）",
+        "titleEn": "Yuan Dynasty · Section 2",
+        "tags": ["👑 Governance", "🗺️ Administration", "📚 Culture & Education", "⛵ Economy & Trade", "🧵 Technology", "⚠️ Decline & Fall"],
+        "total": 27
       }
     ]
   },
