@@ -1,0 +1,83 @@
+{
+  "lesson": 8,
+  "title": "元朝词汇",
+  "subtitle": "Yuan Dynasty · Vocabulary",
+  "groups": [
+    {
+      "id": "rule-policy",
+      "name": "Rule & Policy",
+      "chinese": "统治与政策",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "统治", "pinyin": "tǒng zhì", "back": "to rule / govern (a country)", "example": "元朝是少数民族统治全国的政权。", "exampleTranslation": "The Yuan Dynasty was a regime where an ethnic minority ruled the whole country.", "breakdown": "统：丝线（纟）把所有东西统统串在一起 · 治：用水（氵）把台地上的洪水治理好" },
+        { "front": "政策", "pinyin": "zhèng cè", "back": "policy", "example": "元朝把人分为四个等级的政策很不得人心。", "exampleTranslation": "The Yuan policy of dividing people into four ranks was very unpopular.", "breakdown": "政：用行动（攵）维持正确（正）的秩序 · 策：竹简（竹）上写下的计谋，用来推动执行" },
+        { "front": "少数民族", "pinyin": "shǎo shù mín zú", "back": "ethnic minority group", "example": "蒙古族是少数民族。", "exampleTranslation": "The Mongols are an ethnic minority.", "breakdown": "少：数目很少，只有几个点 · 族：旗帜（方）下聚集的一群人（矢）" },
+        { "front": "行省制度", "pinyin": "xíng shěng zhì dù", "back": "provincial system (Yuan's way of governing regions)", "example": "元朝建立了行省制度管理辽阔的国家。", "exampleTranslation": "The Yuan established the provincial system to govern the vast country.", "breakdown": "行：两条腿走路，表示行动和管理 · 省：用眼睛（目）少看一点，节省又精简" },
+        { "front": "等级", "pinyin": "děng jí", "back": "rank / social class", "example": "元朝把国人分为四个等级。", "exampleTranslation": "The Yuan divided people into four social classes.", "breakdown": "等：竹简（竹）上写着寺庙（寺）的规矩，大家排队等候 · 级：丝线（纟）一级一级往上爬" },
+        { "front": "歧视", "pinyin": "qí shì", "back": "discrimination / to discriminate against", "example": "汉人和南人受到歧视。", "exampleTranslation": "Han and Southern people faced discrimination.", "breakdown": "歧：走路时脚分叉，走了不同的路 · 视：像眼睛在看，带着偏见判断别人" },
+        { "front": "起义", "pinyin": "qǐ yì", "back": "uprising / rebellion", "example": "红巾军起义推翻了元朝。", "exampleTranslation": "The Red Turban uprising overthrew the Yuan Dynasty.", "breakdown": "起：自己（己）走起来（走），出发行动 · 义：心里有善良（羊），愿意牺牲自己" }
+      ]
+    },
+    {
+      "id": "territory-admin",
+      "name": "Territory & Administration",
+      "chinese": "疆域与行政",
+      "emoji": "🗺️",
+      "cards": [
+        { "front": "疆域", "pinyin": "jiāng yù", "back": "territory / the land a country controls", "example": "元朝的疆域比以往任何朝代都要辽阔。", "exampleTranslation": "The Yuan territory was more vast than any previous dynasty.", "breakdown": "疆：弓（弓）箭划出边界（土），表示国家的领土范围 · 域：用武器（戈）守护自己的土地（土）" },
+        { "front": "辽阔", "pinyin": "liáo kuò", "back": "vast / extensive (very big and wide)", "example": "元朝管理着辽阔的国家。", "exampleTranslation": "The Yuan governed a vast country.", "breakdown": "辽：走很远的路（辶）才能到达 · 阔：水（氵）很宽广，连门（门）都装不下" },
+        { "front": "西藏", "pinyin": "Xī zàng", "back": "Tibet", "example": "西藏成为元朝的正式行政区。", "exampleTranslation": "Tibet became an official administrative region of the Yuan.", "breakdown": "藏：草丛（艹）中藏着宝贝，藏起来不见了" },
+        { "front": "澎湖", "pinyin": "Péng hú", "back": "Penghu Islands (island group near Taiwan)", "example": "元朝设立澎湖巡检司管理澎湖列岛。", "exampleTranslation": "The Yuan set up the Penghu Patrol Office to govern the Penghu Islands.", "breakdown": null },
+        { "front": "琉球", "pinyin": "Liú qiú", "back": "Ryukyu / today's Taiwan", "example": "元朝管理澎湖列岛和琉球（今台湾）。", "exampleTranslation": "The Yuan governed the Penghu Islands and Ryukyu (today's Taiwan).", "breakdown": "琉：像流水一样的玉石（王旁） · 球：玉（王旁）做成的圆球" },
+        { "front": "巡检", "pinyin": "xún jiǎn", "back": "patrol inspector / official who checks on a region", "example": "元朝设立澎湖巡检司。", "exampleTranslation": "The Yuan established the Penghu Patrol Inspection Office.", "breakdown": "巡：走来走去（辶）绕一圈，检查情况 · 检：用木头（木）做标签，一一查验（佥）" },
+        { "front": "户口", "pinyin": "hù kǒu", "back": "household register / registered residence", "example": "元朝官员清查户口和收税。", "exampleTranslation": "Yuan officials checked household registers and collected taxes.", "breakdown": "户：半扇门，代表一家人住的地方 · 口：张开的嘴，代表家里的人口" },
+        { "front": "收税", "pinyin": "shōu shuì", "back": "to collect taxes", "example": "官员负责收税。", "exampleTranslation": "Officials were responsible for collecting taxes.", "breakdown": "收：用手（攵）把散落的东西收拢起来 · 税：把粮食（禾）换成（兑）钱交给国家" },
+        { "front": "民族", "pinyin": "mín zú", "back": "ethnic group / people / nation", "example": "中国有五十六个民族。", "exampleTranslation": "China has fifty-six ethnic groups.", "breakdown": "民：古代表示被统治的人民 · 族：旗帜（方）下聚集的一群人（矢）" }
+      ]
+    },
+    {
+      "id": "economy-trade",
+      "name": "Economy & Trade",
+      "chinese": "经济与贸易",
+      "emoji": "🌾",
+      "cards": [
+        { "front": "活跃", "pinyin": "huó yuè", "back": "vibrant / active / lively", "example": "欧亚之间的商业活动相当活跃。", "exampleTranslation": "Commercial activities between Europe and Asia were quite vibrant.", "breakdown": "活：像水（氵）一样流动，充满生命力 · 跃：脚（足）使劲跳起来，生气勃勃" },
+        { "front": "通行无阻", "pinyin": "tōng xíng wú zǔ", "back": "unobstructed passage / travel freely without barriers", "example": "东西方来往的道路通行无阻。", "exampleTranslation": "The routes between East and West had unobstructed passage.", "breakdown": "通：走通了（辶）整条路 · 阻：土山挡在路上，无阻就是没有阻碍" },
+        { "front": "发达", "pinyin": "fā dá", "back": "developed / thriving / advanced", "example": "元朝中期，海外贸易空前发达。", "exampleTranslation": "In the mid-Yuan period, overseas trade was unprecedentedly thriving.", "breakdown": "发：头发生长，引申为出发、蓬勃发展 · 达：走路（辶）到达（大）目的地，成功了" },
+        { "front": "开垦", "pinyin": "kāi kěn", "back": "to bring land under cultivation / clear land for farming", "example": "忽必烈让百姓开垦田地，种桑养蚕。", "exampleTranslation": "Kublai Khan had the people cultivate the land and grow mulberry to raise silkworms.", "breakdown": "开：用手把门打开，引申为开辟 · 垦：用力翻开土地（土），让荒地变良田" },
+        { "front": "农业", "pinyin": "nóng yè", "back": "agriculture / farming", "example": "忽必烈下令保护农业。", "exampleTranslation": "Kublai Khan ordered the protection of agriculture.", "breakdown": "农：在田野里弯腰劳作的人，辛苦耕作 · 业：像书架一排排竖立，表示一项事业" },
+        { "front": "经验", "pinyin": "jīng yàn", "back": "experience (knowledge from doing things)", "example": "蒙古人在治理国家上经验不足。", "exampleTranslation": "The Mongols lacked experience in governing a country.", "breakdown": "经：丝线（纟）从头到尾穿过，走过每一个环节 · 验：经过考验（佥），证明了自己的能力" }
+      ]
+    },
+    {
+      "id": "culture-science",
+      "name": "Culture & Science",
+      "chinese": "文化与科技",
+      "emoji": "🎭",
+      "cards": [
+        { "front": "提倡", "pinyin": "tí chàng", "back": "to advocate / to promote (an idea or practice)", "example": "忽必烈提倡以儒学为主的汉族传统文化。", "exampleTranslation": "Kublai Khan advocated Han traditional culture centered on Confucianism.", "breakdown": "提：用手（扌）把东西提出来，让大家注意 · 倡：人（亻）站出来带头鼓励大家跟随" },
+        { "front": "面貌", "pinyin": "miàn mào", "back": "appearance / features / look of something", "example": "忽必烈使元朝面貌一新。", "exampleTranslation": "Kublai Khan gave the Yuan Dynasty a completely new look.", "breakdown": "面：脸的轮廓，四方形里有眼睛 · 貌：看起来的样子，外表和形象" },
+        { "front": "杰出", "pinyin": "jié chū", "back": "outstanding / exceptional", "example": "忽必烈是一位杰出的皇帝。", "exampleTranslation": "Kublai Khan was an outstanding emperor.", "breakdown": "杰：树木（木）上有鸟（大），站得比别人高 · 出：从山洞里走出来，超越了原来的界限" },
+        { "front": "元曲", "pinyin": "yuán qǔ", "back": "Yuan opera / a type of verse and drama popular in the Yuan Dynasty", "example": "元代文化最著名的是元曲，它是中国现代戏曲的开端。", "exampleTranslation": "The most famous Yuan culture is Yuan opera, which is the beginning of modern Chinese drama.", "breakdown": "曲：弯弯曲曲的形状，像歌曲的旋律起伏不定" },
+        { "front": "纺车", "pinyin": "fǎng chē", "back": "spinning wheel (machine for making thread and cloth)", "example": "黄道婆改进纺车技术，使棉布大量生产。", "exampleTranslation": "Huang Daopo improved spinning wheel technology, enabling mass production of cotton cloth.", "breakdown": "纺：用丝线（纟）按照一定方向（方）纺织 · 车：有轮子转动的机器" },
+        { "front": "儒学", "pinyin": "rú xué", "back": "Confucianism / Confucian learning", "example": "忽必烈提倡以儒学为主的汉族传统文化。", "exampleTranslation": "Kublai Khan promoted Han traditional culture centered on Confucianism.", "breakdown": "儒：人（亻）需要（需）学习，指读书人和学者 · 学：双手教孩子在屋子（宀）里学习" },
+        { "front": "窦娥冤", "pinyin": "Dòu é yuān", "back": "Dou E Yuan – a famous Yuan opera about an innocent woman wrongly executed", "example": "《窦娥冤》是元曲的代表作品。", "exampleTranslation": "Dou E Yuan is a masterpiece of Yuan opera.", "breakdown": "冤：兔子（兔）被关在网（冂）里，受了委屈，大声喊冤！" }
+      ]
+    },
+    {
+      "id": "proper-names",
+      "name": "Important Names",
+      "chinese": "重要人名",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "元朝", "pinyin": "Yuán cháo", "back": "Yuan Dynasty (1271–1368) – China's first minority-ruled dynasty", "example": "元朝是中国历史上第一个少数民族统治全国的政权。", "exampleTranslation": "The Yuan Dynasty was the first minority-ruled regime to govern all of China.", "breakdown": null },
+        { "front": "忽必烈", "pinyin": "Hū bì liè", "back": "Kublai Khan – Mongol ruler who founded the Yuan Dynasty in 1271", "example": "1271年，忽必烈建立元朝，迁都大都（北京）。", "exampleTranslation": "In 1271, Kublai Khan founded the Yuan Dynasty and moved the capital to Dadu (Beijing).", "breakdown": null },
+        { "front": "蒙古族", "pinyin": "Méng gǔ zú", "back": "Mongol ethnic group", "example": "元朝是蒙古族建立的王朝。", "exampleTranslation": "The Yuan Dynasty was a dynasty founded by the Mongol ethnic group.", "breakdown": "族：旗帜（方）下聚集的一群人（矢）" },
+        { "front": "马可·波罗", "pinyin": "Mǎ kě Bō luó", "back": "Marco Polo – Italian traveler who wrote about China and amazed Europe", "example": "马可·波罗写的《马可·波罗游记》轰动了欧洲。", "exampleTranslation": "Marco Polo's travel memoir caused a sensation in Europe.", "breakdown": null },
+        { "front": "郭守敬", "pinyin": "Guō Shǒu jìng", "back": "Guo Shoujing – Yuan astronomer who created the Shoushi Calendar", "example": "郭守敬编成的《授时历》与现行的公历相同。", "exampleTranslation": "Guo Shoujing's Shoushi Calendar matches today's Gregorian calendar.", "breakdown": null },
+        { "front": "黄道婆", "pinyin": "Huáng Dào pó", "back": "Huang Daopo – Yuan inventor who improved cotton spinning technology", "example": "黄道婆改进纺车技术，使棉布在中国大量生产。", "exampleTranslation": "Huang Daopo improved spinning technology, enabling mass production of cotton cloth in China.", "breakdown": null },
+        { "front": "朱元璋", "pinyin": "Zhū Yuán zhāng", "back": "Zhu Yuanzhang – rebel leader who defeated the Yuan and founded the Ming Dynasty", "example": "义军领袖朱元璋带兵打败元军，元朝灭亡。", "exampleTranslation": "Rebel leader Zhu Yuanzhang led troops to defeat the Yuan army, ending the Yuan Dynasty.", "breakdown": null }
+      ]
+    }
+  ]
+}

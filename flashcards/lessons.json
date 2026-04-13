@@ -24,5 +24,22 @@
         "total": 46
       }
     ]
+  },
+  {
+    "id": "lesson8",
+    "num": "Lesson 8",
+    "titleZh": "元朝——民族统治与文化交流",
+    "titleEn": "Yuan Dynasty — Minority Rule & Cultural Exchange",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L8",
+        "emoji": "🏯",
+        "titleZh": "元朝词汇",
+        "titleEn": "Yuan Dynasty · Vocabulary",
+        "tags": ["🏛️ Rule & Policy", "🗺️ Territory", "🌾 Economy", "🎭 Culture", "⭐ Names"],
+        "total": 36
+      }
+    ]
   }
 ]

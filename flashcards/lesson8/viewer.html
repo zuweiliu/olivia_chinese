@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<script>
+var p=new URLSearchParams(window.location.search);
+var c=p.get("cards")||"cards.json";
+window.location.replace("../viewer.html?lesson=lesson8&cards="+c);
+</script>
+</head></html>
