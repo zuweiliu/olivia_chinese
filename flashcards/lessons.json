@@ -41,5 +41,22 @@
         "total": 36
       }
     ]
+  },
+  {
+    "id": "lesson9",
+    "num": "Lesson 9",
+    "titleZh": "明朝——盛世与衰亡",
+    "titleEn": "Ming Dynasty — Splendor & Decline",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L9",
+        "emoji": "⛵",
+        "titleZh": "明朝词汇",
+        "titleEn": "Ming Dynasty · Vocabulary",
+        "tags": ["🏛️ Politics & Rule", "⛵ Voyages & Diplomacy", "🏯 City & Architecture", "🏭 Economy & Industry", "📚 Science & Literature", "⚔️ Rise, Fall & Heroes", "⭐ Names"],
+        "total": 43
+      }
+    ]
   }
 ]

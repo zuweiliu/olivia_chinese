@@ -1,0 +1,106 @@
+{
+  "lesson": 9,
+  "title": "明朝词汇",
+  "subtitle": "Ming Dynasty · Vocabulary",
+  "groups": [
+    {
+      "id": "politics-rule",
+      "name": "Politics & Rule",
+      "chinese": "政治与统治",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "太监", "pinyin": "tài jiān", "back": "eunuch (palace servant castrated to serve the emperor)", "example": "朱棣派太监郑和出使西洋。", "exampleTranslation": "Zhu Di sent the eunuch Zheng He on diplomatic missions to the Western Seas.", "breakdown": "太：超过（大）一点点，表示最高、最大的 · 监：像眼睛从上往下看（臣），确保一切在掌控中" },
+        { "front": "迁都", "pinyin": "qiān dū", "back": "move the capital (to a new city)", "example": "明成祖把首都从南京迁到了北京。", "exampleTranslation": "The Yongle Emperor moved the capital from Nanjing to Beijing.", "breakdown": "迁：在道路上（辶）走向另一处（西），搬迁移动 · 都：聚集了所有人（者）的大城市（邑）" },
+        { "front": "胸怀大志", "pinyin": "xiōng huái dà zhì", "back": "to harbor great ambitions / have big dreams in one's heart", "example": "朱棣是一位胸怀大志的皇帝。", "exampleTranslation": "Zhu Di was an emperor who harbored great ambitions.", "breakdown": "胸：身体（月）里有一个藏东西的腔 · 怀：心里（忄）藏着某人或某事 · 志：心（心）里记住的目标，是人的志向" },
+        { "front": "统治", "pinyin": "tǒng zhì", "back": "to rule / govern ★复习L8", "example": "在朱棣的统治下，明朝越来越强大。", "exampleTranslation": "Under Zhu Di's rule, the Ming Dynasty grew stronger and stronger.", "breakdown": "统：丝线（纟）把所有东西统统串在一起 · 治：用水（氵）把台地上的洪水治理好" },
+        { "front": "归顺", "pinyin": "guī shùn", "back": "to surrender and submit (to a new ruler)", "example": "郑克塽归顺清朝，台湾归入清政府管辖。", "exampleTranslation": "Zheng Keshuang submitted to the Qing, and Taiwan came under Qing rule.", "breakdown": "归：从远处回来，回到原来的地方 · 顺：沿着河流（川）的方向顺势而为，不再抵抗" }
+      ]
+    },
+    {
+      "id": "voyages-diplomacy",
+      "name": "Voyages & Diplomacy",
+      "chinese": "航海与外交",
+      "emoji": "⛵",
+      "cards": [
+        { "front": "出使", "pinyin": "chū shǐ", "back": "to go on a diplomatic mission (represent one's country abroad)", "example": "郑和出使西洋，访问了许多国家。", "exampleTranslation": "Zheng He went on diplomatic missions to the Western Seas, visiting many countries.", "breakdown": "出：从山洞里走出来，超越了原来的界限 · 使：人（亻）奉命出发，代表国家去办事" },
+        { "front": "威望", "pinyin": "wēi wàng", "back": "prestige / high reputation that commands respect", "example": "郑和的出使提高了明朝的威望。", "exampleTranslation": "Zheng He's voyages raised the Ming Dynasty's prestige.", "breakdown": "威：手持武器的士兵（戌）让人感到敬畏 · 望：站在高处眺望，月亮让人仰望" },
+        { "front": "促进", "pinyin": "cù jìn", "back": "to promote / advance / help something grow", "example": "郑和的出使促进了中外文化交流。", "exampleTranslation": "Zheng He's voyages promoted cultural exchange between China and the world.", "breakdown": "促：人（亻）的脚步（足）加快，催促前进 · 进：向前走（辶），越走越好" },
+        { "front": "文化交流", "pinyin": "wén huà jiāo liú", "back": "cultural exchange (sharing ideas, art, and learning between countries)", "example": "郑和的出使促进了中外文化交流。", "exampleTranslation": "Zheng He's voyages promoted cultural exchange between China and the world.", "breakdown": "交：人叉开双腿，两边互相交换 · 流：水（氵）不停地流动，传播开去" },
+        { "front": "移民", "pinyin": "yí mín", "back": "to migrate / immigrant (person who moves to another land)", "example": "广东、福建移民南洋的人渐渐多了起来。", "exampleTranslation": "The number of migrants from Guangdong and Fujian to Southeast Asia gradually increased.", "breakdown": "移：将庄稼（禾）搬到别处，表示移动 · 民：古代表示被统治的人民" },
+        { "front": "传教士", "pinyin": "chuán jiào shì", "back": "missionary (person sent to spread their religion in a foreign land)", "example": "意大利传教士利玛窦来中国传教。", "exampleTranslation": "The Italian missionary Matteo Ricci came to China to spread his religion.", "breakdown": "传：人（亻）手把手（专）传递，一代传一代 · 教：大人拿棍子（攵）教孩子（子）在屋里学习 · 士：有知识有担当的人，站得笔直" }
+      ]
+    },
+    {
+      "id": "city-architecture",
+      "name": "City & Architecture",
+      "chinese": "城市与建筑",
+      "emoji": "🏯",
+      "cards": [
+        { "front": "布局", "pinyin": "bù jú", "back": "layout / arrangement (how a city or space is planned out)", "example": "北京的城市建筑布局严整，街道笔直。", "exampleTranslation": "Beijing's city layout was well-organized, with perfectly straight streets.", "breakdown": "布：用手把织好的布料摊开，铺展开来 · 局：口（空间）中有一把尺，规划整齐的格局" },
+        { "front": "笔直", "pinyin": "bǐ zhí", "back": "perfectly straight (like a ruler, not curved at all)", "example": "北京的街道笔直，一眼望到头。", "exampleTranslation": "Beijing's streets are perfectly straight, visible all the way to the end.", "breakdown": "笔：竹（竹）制的毛笔，笔管直直的 · 直：十个眼睛一起看，看得非常直" },
+        { "front": "金碧辉煌", "pinyin": "jīn bì huī huáng", "back": "resplendent and magnificent (gleaming gold and jade — used for grand palaces)", "example": "故宫金碧辉煌，是世界上最大的古代宫殿。", "exampleTranslation": "The Forbidden City is resplendent and magnificent — the world's largest ancient palace.", "breakdown": "金：地下埋着的闪光金属 · 碧：石头中绿色的宝玉 · 辉：光芒四射照耀一切 · 煌：火光如王者般明亮耀眼" },
+        { "front": "杰作", "pinyin": "jié zuò", "back": "masterpiece (an outstanding, extraordinary work)", "example": "北京古城是古代城市建筑的杰作。", "exampleTranslation": "Ancient Beijing is a masterpiece of ancient city architecture.", "breakdown": "杰：树木（木）上有鸟（大），站得比别人高 · 作：人（亻）突然（乍）动起来，开始做事" },
+        { "front": "浩大", "pinyin": "hào dà", "back": "vast / massive in scale (used for huge projects or endeavors)", "example": "明朝修复长城，工程浩大。", "exampleTranslation": "The Ming Dynasty restored the Great Wall — a massive engineering project.", "breakdown": "浩：水（氵）势滔天，浩浩荡荡，极其广大 · 大：一个人叉开双手双脚，表示非常大" },
+        { "front": "修复", "pinyin": "xiū fù", "back": "to restore / repair (bring something damaged back to its original state)", "example": "明朝修复了长城，使它更加坚固。", "exampleTranslation": "The Ming Dynasty restored the Great Wall, making it stronger.", "breakdown": "修：用手（攵）整理仪容（彡），精心修缮 · 复：走回来，回到原来的地方" }
+      ]
+    },
+    {
+      "id": "economy-industry",
+      "name": "Economy & Industry",
+      "chinese": "经济与工业",
+      "emoji": "🏭",
+      "cards": [
+        { "front": "手工业", "pinyin": "shǒu gōng yè", "back": "handicraft industry (goods made by hand, like pottery, silk weaving)", "example": "农村多余的劳动力流入了手工业与商业。", "exampleTranslation": "Surplus rural labor flowed into the handicraft industry and commerce.", "breakdown": "手：张开的手掌，五指分明 · 工：像一把尺子，表示工作和技艺 · 业：像书架一排排竖立，表示一项事业" },
+        { "front": "精巧", "pinyin": "jīng qiǎo", "back": "exquisite / skillfully crafted (delicate and cleverly made)", "example": "明朝手工业技术精巧，产品远销海外。", "exampleTranslation": "Ming handicraft techniques were exquisite, with products sold far overseas.", "breakdown": "精：用精选的米（米）加上青色，精益求精 · 巧：工（工）匠的手艺刚刚好，不差毫厘" },
+        { "front": "规模", "pinyin": "guī mó", "back": "scale / scope (how big an operation or project is)", "example": "明朝手工业生产规模不断扩大。", "exampleTranslation": "The scale of handicraft production in the Ming Dynasty kept expanding.", "breakdown": "规：用圆规画圆，定出规矩 · 模：木头（木）刻出的标准样板，用来模仿" },
+        { "front": "雇佣", "pinyin": "gù yōng", "back": "employment / to hire workers (paying someone to work for you)", "example": "明朝出现了雇佣关系，窑主雇工成百上千。", "exampleTranslation": "Employer-employee relationships emerged in the Ming, with kiln owners hiring hundreds of workers.", "breakdown": "雇：像雇鸟（隹）一样用钱财换来劳力 · 佣：人（亻）受雇于人，是有偿的用工（用）" },
+        { "front": "雇主", "pinyin": "gù zhǔ", "back": "employer (the person or company that hires and pays workers)", "example": "富人为雇主，雇有长工和短工。", "exampleTranslation": "Wealthy people were employers who hired long-term and short-term workers.", "breakdown": "雇：用钱财换来劳力 · 主：一盏灯的主心骨，是主人的标志" },
+        { "front": "国际", "pinyin": "guó jì", "back": "international (involving or between different countries)", "example": "明朝在国际贸易中是顺差。", "exampleTranslation": "The Ming Dynasty ran a surplus in international trade.", "breakdown": "国：口（边界）里有一块宝玉（玉），守护着领土 · 际：两堆土（阝）靠在一起，交界的地方" },
+        { "front": "顺差", "pinyin": "shùn chā", "back": "trade surplus (exporting more than you import — money flows in)", "example": "明朝出口多于进口，在国际贸易中是顺差。", "exampleTranslation": "The Ming exported more than it imported, running a surplus in international trade.", "breakdown": "顺：沿着流水方向，顺势而为，正向的 · 差：表示差额，这里指贸易的差额" },
+        { "front": "白银", "pinyin": "bái yín", "back": "silver (used as money — China imported huge amounts through trade)", "example": "明朝出口瓷器和丝绸，换取了大量的白银。", "exampleTranslation": "The Ming exported porcelain and silk in exchange for large amounts of silver.", "breakdown": "白：太阳刚升起，光芒洁白 · 银：金属（钅）中坚硬（艮）闪亮的那种，是货币" }
+      ]
+    },
+    {
+      "id": "science-literature",
+      "name": "Science & Literature",
+      "chinese": "科学与文学",
+      "emoji": "📚",
+      "cards": [
+        { "front": "领先", "pinyin": "lǐng xiān", "back": "to lead / be at the forefront (ahead of everyone else)", "example": "明朝时中国传统科技处于世界领先的地位。", "exampleTranslation": "During the Ming, China's traditional science and technology held a world-leading position.", "breakdown": "领：发号施令（令）的那个头（页）· 先：人先走一步，走在别人前面" },
+        { "front": "巨著", "pinyin": "jù zhù", "back": "monumental work / great book (a major, important literary or scientific work)", "example": "明朝科学家写出了三部科学巨著。", "exampleTranslation": "Ming scientists wrote three monumental works of science.", "breakdown": "巨：握着大工具的手，极大的意思 · 著：像草（艹）一样扎根（者），写出有分量的作品" },
+        { "front": "蓬勃", "pinyin": "péng bó", "back": "vigorous / flourishing (growing energetically, full of life)", "example": "明代是中国古典小说蓬勃发展的时期。", "exampleTranslation": "The Ming era was a period of vigorous development for classical Chinese novels.", "breakdown": "蓬：草（艹）长得蓬蓬乱乱（逢），生机勃勃 · 勃：用力气（力）像脉搏一样充满活力" },
+        { "front": "文艺复兴", "pinyin": "wén yì fù xīng", "back": "the Renaissance (European cultural rebirth in art and science, 14th–17th c.)", "example": "明朝和欧洲的文艺复兴处于同一时期。", "exampleTranslation": "The Ming Dynasty was in the same era as Europe's Renaissance.", "breakdown": "文：花纹图案，后来表示文字文化 · 艺：从小慢慢长出来的本领 · 复：走回来，回到原来的地方 · 兴：大家把东西高高托起来，欣欣向荣" },
+        { "front": "落后", "pinyin": "luò hòu", "back": "to fall behind / lag behind (become less advanced than others)", "example": "从文艺复兴以后，中国开始渐渐落后了。", "exampleTranslation": "After the Renaissance, China gradually began to fall behind.", "breakdown": "落：草木往下掉，像雨水落下 · 后：在后面迟迟不来，表示落在后面" }
+      ]
+    },
+    {
+      "id": "rise-fall-heroes",
+      "name": "Rise, Fall & Heroes",
+      "chinese": "兴衰与英雄",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "爆发", "pinyin": "bào fā", "back": "to break out / erupt suddenly (war, rebellion, volcano)", "example": "明朝后期爆发了李自成领导的农民起义。", "exampleTranslation": "In the late Ming, a peasant uprising led by Li Zicheng broke out.", "breakdown": "爆：火（火）和暴（暴）结合，忽然猛烈地发生 · 发：手拉弓，把东西射发出去" },
+        { "front": "农民起义", "pinyin": "nóng mín qǐ yì", "back": "peasant uprising (farmers rise up and rebel against their rulers)", "example": "1644年，农民起义军攻入北京，明朝灭亡。", "exampleTranslation": "In 1644, peasant rebel troops captured Beijing and the Ming Dynasty fell.", "breakdown": "农：在田野里弯腰劳作的人 · 起：自己（己）走起来，出发行动 · 义：心里有善良，愿意牺牲自己" },
+        { "front": "抗清", "pinyin": "kàng Qīng", "back": "to resist the Qing (fighting against Qing rule after Ming fell)", "example": "郑成功是著名的抗清名将。", "exampleTranslation": "Zheng Chenggong was a famous general who resisted the Qing.", "breakdown": "抗：用手（扌）高举（亢），不肯低头 · 清：水（氵）清澈，是清朝的国号" },
+        { "front": "收复", "pinyin": "shōu fù", "back": "to recover / recapture (take back lost land) ★复习L7", "example": "郑成功打败荷兰人，收复了台湾。", "exampleTranslation": "Zheng Chenggong defeated the Dutch and recovered Taiwan.", "breakdown": "收：用手（攵）把散落的东西收拢起来 · 复：走回来，回到原来的地方" },
+        { "front": "兴办", "pinyin": "xīng bàn", "back": "to establish / start up (schools, businesses, organizations)", "example": "郑成功在台湾兴办工商业，开办学堂。", "exampleTranslation": "Zheng Chenggong established industry, commerce, and schools in Taiwan.", "breakdown": "兴：大家一起把东西高高托起来，欣欣向荣 · 办：两边用力施压（力），把事情办成" }
+      ]
+    },
+    {
+      "id": "proper-names",
+      "name": "Important Names",
+      "chinese": "重要人名",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "明朝", "pinyin": "Míng cháo", "back": "Ming Dynasty (1368–1644) – founded by Zhu Yuanzhang, capital at Nanjing then Beijing", "example": "明朝是一个经济繁荣、对外关系比较开放的朝代。", "exampleTranslation": "The Ming Dynasty was a dynasty with a prosperous economy and relatively open foreign relations.", "breakdown": null },
+        { "front": "朱元璋", "pinyin": "Zhū Yuán zhāng", "back": "Zhu Yuanzhang – founder of Ming Dynasty, first emperor ★复习L8", "example": "公元1368年朱元璋建立明朝，定都南京。", "exampleTranslation": "In 1368 CE, Zhu Yuanzhang founded the Ming Dynasty and set the capital at Nanjing.", "breakdown": null },
+        { "front": "明成祖 / 朱棣", "pinyin": "Míng Chéng Zǔ / Zhū Dì", "back": "Yongle Emperor Zhu Di – 3rd Ming emperor, moved capital to Beijing, sent Zheng He's voyages", "example": "明成祖朱棣胸怀大志，把首都从南京迁到了北京。", "exampleTranslation": "The Yongle Emperor Zhu Di harbored great ambitions and moved the capital from Nanjing to Beijing.", "breakdown": null },
+        { "front": "郑和", "pinyin": "Zhèng Hé", "back": "Zheng He – Ming eunuch admiral who led seven great voyages to Southeast Asia, India, and Africa", "example": "郑和带领船队出使西洋，提高了明朝的威望。", "exampleTranslation": "Zheng He led a fleet on diplomatic missions to the Western Seas, raising Ming's prestige.", "breakdown": null },
+        { "front": "李自成", "pinyin": "Lǐ Zì chéng", "back": "Li Zicheng – peasant rebel leader who captured Beijing in 1644, ending the Ming Dynasty", "example": "李自成领导农民起义，1644年攻入北京，明朝灭亡。", "exampleTranslation": "Li Zicheng led a peasant uprising and captured Beijing in 1644, ending the Ming Dynasty.", "breakdown": null },
+        { "front": "郑成功", "pinyin": "Zhèng Chéng gōng", "back": "Zheng Chenggong (Koxinga) – anti-Qing general who recovered Taiwan from the Dutch", "example": "郑成功打败荷兰人，收复台湾，是民族英雄。", "exampleTranslation": "Zheng Chenggong defeated the Dutch, recovered Taiwan, and is a national hero.", "breakdown": null },
+        { "front": "徐光启", "pinyin": "Xú Guāng qǐ", "back": "Xu Guangqi – Ming scientist who co-translated Euclid's Elements with Matteo Ricci", "example": "徐光启和利玛窦一起翻译了《几何原本》。", "exampleTranslation": "Xu Guangqi and Matteo Ricci co-translated Euclid's Elements.", "breakdown": null },
+        { "front": "利玛窦", "pinyin": "Lì Mǎ dòu", "back": "Matteo Ricci (1552–1610) – Italian Jesuit missionary who brought Western science to China", "example": "意大利传教士利玛窦把西方科学知识传到中国。", "exampleTranslation": "The Italian missionary Matteo Ricci brought Western scientific knowledge to China.", "breakdown": null }
+      ]
+    }
+  ]
+}
