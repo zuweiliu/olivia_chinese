@@ -1,0 +1,82 @@
+{
+  "lesson": "8b",
+  "title": "元朝词汇（第二节）",
+  "subtitle": "Yuan Dynasty · Section 2",
+  "groups": [
+    {
+      "id": "governance-leadership",
+      "name": "Governance & Leadership",
+      "chinese": "统治与领导",
+      "emoji": "👑",
+      "cards": [
+        { "front": "观念", "pinyin": "guān niàn", "back": "concept / idea / mindset", "example": "蒙古族有着与汉族不同的统治观念。", "exampleTranslation": "The Mongols had different concepts of rule from the Han people.", "breakdown": "观：雚（一种鸟）加眼睛（见），仔细观察，形成想法 · 念：今（今天）加心（心），心里记挂着今天的事，引申为想法" },
+        { "front": "善战", "pinyin": "shàn zhàn", "back": "skilled in battle / good at fighting", "example": "蒙古骑兵骁勇善战，所向披靡。", "exampleTranslation": "Mongol cavalry were brave and skilled in battle, sweeping all before them.", "breakdown": "善：像羊（羊）一样温良，把事情做得很好，引申为擅长 · 战：拿着武器（戈）与人争斗（占）" },
+        { "front": "清楚", "pinyin": "qīng chǔ", "back": "clear / to understand clearly", "example": "忽必烈清楚地知道必须保护农业。", "exampleTranslation": "Kublai Khan clearly understood that agriculture had to be protected.", "breakdown": "清：水（氵）清澈透明，看得一清二楚 · 楚：丛林（林）里的荆棘，刺得清清楚楚，毫不含糊" },
+        { "front": "重用", "pinyin": "zhòng yòng", "back": "to entrust with important tasks / to give a key position to", "example": "忽必烈重用汉族官员，帮助治理国家。", "exampleTranslation": "Kublai Khan gave key positions to Han officials to help govern the country.", "breakdown": "重：人挑着沉甸甸（千）的东西，引申为重要、看重 · 用：用桶来盛水，代表使用和任用" },
+        { "front": "大力", "pinyin": "dà lì", "back": "vigorously / with great effort / energetically", "example": "忽必烈大力发展农业，恢复社会经济。", "exampleTranslation": "Kublai Khan vigorously developed agriculture and restored the social economy.", "breakdown": "大：人张开双臂，表示广大有力 · 力：手臂弯曲用力，代表力量和努力" },
+        { "front": "领袖", "pinyin": "lǐng xiù", "back": "leader / helmsman", "example": "义军领袖朱元璋带兵打败元军，推翻了元朝。", "exampleTranslation": "Rebel leader Zhu Yuanzhang led troops to defeat the Yuan army and overthrow the Yuan Dynasty.", "breakdown": "领：发号施令（令）的那个头（页），带领大家 · 袖：衣袖（衤）里藏着（由）东西，引申为身居核心的人物" }
+      ]
+    },
+    {
+      "id": "admin-territory",
+      "name": "Administration & Territory",
+      "chinese": "行政与领土",
+      "emoji": "🗺️",
+      "cards": [
+        { "front": "内", "pinyin": "nèi", "back": "inner / inside / within", "example": "元朝在国内各地设立行省，进行管理。", "exampleTranslation": "The Yuan Dynasty established provinces throughout the country for governance.", "breakdown": "内：走进门（冂）里面，就是内部了" },
+        { "front": "区", "pinyin": "qū", "back": "district / area / region", "example": "西藏成为元朝的正式行政区。", "exampleTranslation": "Tibet became an official administrative region of the Yuan.", "breakdown": "区：把东西分隔（匚）收入格子里，区分开来，表示一个划定的范围" },
+        { "front": "清查", "pinyin": "qīng chá", "back": "to investigate thoroughly / to check and verify", "example": "元朝官员清查户口，登记人口和土地。", "exampleTranslation": "Yuan officials thoroughly checked household registers and recorded the population and land.", "breakdown": "清：水（氵）清澈，把事情看得清楚 · 查：像在树（木）上用棍子（且）探查，仔细检查" },
+        { "front": "设立", "pinyin": "shè lì", "back": "to establish / to set up (an office or institution)", "example": "元朝设立澎湖巡检司，管理台湾地区。", "exampleTranslation": "The Yuan established the Penghu Patrol Inspection Office to govern the Taiwan region.", "breakdown": "设：用言语（讠）规划，然后动手（殳）建造 · 立：一个人叉开双腿，稳稳站在地上" },
+        { "front": "列岛", "pinyin": "liè dǎo", "back": "island chain / archipelago", "example": "元朝管理澎湖列岛和附近海域。", "exampleTranslation": "The Yuan governed the Penghu Island chain and nearby waters.", "breakdown": "列：用刀（刂）把东西切分，一排排整齐列好 · 岛：像鸟（鸟）站在山（山）上，四面环水的陆地" }
+      ]
+    },
+    {
+      "id": "culture-education",
+      "name": "Culture & Education",
+      "chinese": "文化与教育",
+      "emoji": "📚",
+      "cards": [
+        { "front": "孔庙", "pinyin": "Kǒng miào", "back": "Confucius Temple (temple dedicated to Confucius)", "example": "忽必烈在各地建立孔庙，推广儒学教育。", "exampleTranslation": "Kublai Khan built Confucius Temples throughout the land to promote Confucian education.", "breakdown": "孔：小孩（子）穿过一个洞口，原意为小孔，孔子是儒家始祖 · 庙：朝堂（朝）里庄严神圣的建筑（广）" },
+        { "front": "教育", "pinyin": "jiào yù", "back": "education / to educate", "example": "元朝重视儒学教育，在各地兴办学校。", "exampleTranslation": "The Yuan Dynasty valued Confucian education and established schools throughout the land.", "breakdown": "教：大人（父）手拿棍子教导孩子（子） · 育：母亲（母省）生下孩子（子），哺育其成长" },
+        { "front": "著名", "pinyin": "zhù míng", "back": "famous / well-known / renowned", "example": "马可·波罗是著名的意大利旅行家。", "exampleTranslation": "Marco Polo was a famous Italian traveler.", "breakdown": "著：植物（艹）生长得很茂盛（者），引申为显著突出 · 名：傍晚（夕）看不见时互相呼喊名字（口），让人记住" },
+        { "front": "开端", "pinyin": "kāi duān", "back": "beginning / start / opening (of something new)", "example": "元曲是中国现代戏曲艺术的重要开端。", "exampleTranslation": "Yuan opera was an important beginning for modern Chinese drama arts.", "breakdown": "开：用手把门打开，引申为开始 · 端：站得笔直（立），手（专）指着正前方，表示起点和正式开始" }
+      ]
+    },
+    {
+      "id": "economy-trade",
+      "name": "Economy & Trade",
+      "chinese": "经济与贸易",
+      "emoji": "⛵",
+      "cards": [
+        { "front": "贸易", "pinyin": "mào yì", "back": "trade / commerce (exchange of goods)", "example": "元朝中期，海外贸易空前发达。", "exampleTranslation": "In the mid-Yuan period, overseas trade was unprecedentedly thriving.", "breakdown": "贸：把财物（贝）拿出去与人交换（卯），做买卖 · 易：把东西交换出去，代表交换和互通有无" },
+        { "front": "欧亚", "pinyin": "Ōu Yà", "back": "Europe and Asia / Eurasian", "example": "欧亚之间的商业活动在元朝十分活跃。", "exampleTranslation": "Commercial activities between Europe and Asia were very active during the Yuan.", "breakdown": "欧：越过山区（区字旁），来到欧洲大陆 · 亚：比最高差一点，也指亚洲" },
+        { "front": "商业", "pinyin": "shāng yè", "back": "commerce / business activities", "example": "元朝的商业十分繁荣，市场热闹非凡。", "exampleTranslation": "Commerce in the Yuan Dynasty was very prosperous, with lively markets.", "breakdown": "商：来来往往讨价还价（商量），做生意的人 · 业：像书架一排排竖立，表示一项事业" },
+        { "front": "轰动", "pinyin": "hōng dòng", "back": "to cause a sensation / to create a stir", "example": "马可·波罗的游记轰动了整个欧洲。", "exampleTranslation": "Marco Polo's travel memoir caused a sensation throughout Europe.", "breakdown": "轰：很多车（车）同时轰鸣，声音震天 · 动：用力（力）搬动沉重（重）的东西，引发震动" }
+      ]
+    },
+    {
+      "id": "technology-society",
+      "name": "Technology & Society",
+      "chinese": "科技与社会",
+      "emoji": "🧵",
+      "cards": [
+        { "front": "普遍", "pinyin": "pǔ biàn", "back": "widespread / universal / common", "example": "棉花的种植在南方普遍起来。", "exampleTranslation": "Cotton cultivation became widespread in the south.", "breakdown": "普：太阳（日）照耀着所有人（并），无处不在，人人都有 · 遍：走遍（辶）每一个地方（扁），到处都是" },
+        { "front": "棉花", "pinyin": "mián huā", "back": "cotton", "example": "黄道婆推广了棉花的种植和纺织技术。", "exampleTranslation": "Huang Daopo promoted the cultivation of cotton and textile technology.", "breakdown": "棉：树木（木）上长出像白雪一样柔软的棉球（帛旁） · 花：植物（艹）开出美丽花朵（化），棉花形如白花" },
+        { "front": "改进", "pinyin": "gǎi jìn", "back": "to improve / to make improvements to", "example": "黄道婆改进了纺车技术，使棉布大量生产。", "exampleTranslation": "Huang Daopo improved spinning wheel technology, enabling mass production of cotton cloth.", "breakdown": "改：用棍子（攵）纠正自己（己）的错误，让事物变得更好 · 进：走进（辶）更好的地方（隹），向前进步" },
+        { "front": "技术", "pinyin": "jì shù", "back": "technology / technique / skill", "example": "元朝的科学技术取得了很多重要成就。", "exampleTranslation": "The Yuan Dynasty achieved many important accomplishments in science and technology.", "breakdown": "技：用手（扌）掌握一门专业技能（支） · 术：树（木）里面有一个核心，那是技术的精髓所在" }
+      ]
+    },
+    {
+      "id": "decline-fall",
+      "name": "Decline & Fall",
+      "chinese": "衰落与灭亡",
+      "emoji": "⚠️",
+      "cards": [
+        { "front": "保住", "pinyin": "bǎo zhù", "back": "to preserve / to keep / to hold on to", "example": "元朝末期，统治者无法保住自己的政权。", "exampleTranslation": "In the late Yuan period, rulers could not hold on to their regime.", "breakdown": "保：人（亻）把孩子（子）护在怀里，紧紧保护 · 住：人（亻）站定（主）在一个地方，稳稳守住不放" },
+        { "front": "矛盾", "pinyin": "máo dùn", "back": "contradiction / conflict (between opposing sides)", "example": "元朝末期，社会矛盾越来越深，民心大乱。", "exampleTranslation": "In the late Yuan, social contradictions deepened and the people's hearts were in turmoil.", "breakdown": "矛：古代长柄武器，用来刺击进攻 · 盾：古代防御盾牌，用来抵挡——矛与盾相互对立，比喻矛盾冲突" },
+        { "front": "灾害", "pinyin": "zāi hài", "back": "disaster / calamity", "example": "元朝末期，水灾、旱灾等灾害频繁发生。", "exampleTranslation": "In the late Yuan, disasters such as floods and droughts occurred frequently.", "breakdown": "灾：洪水（川）与大火（火）交替肆虐，带来大灾难 · 害：屋（宀）里有人（口）遭到刀（丰）伤害，危险降临" },
+        { "front": "末期", "pinyin": "mò qī", "back": "final period / last phase / end stage", "example": "元朝末期，各地义军纷纷起义，推翻了元朝。", "exampleTranslation": "In the final period of the Yuan Dynasty, rebel armies rose up everywhere and overthrew it.", "breakdown": "末：树木（木）顶端加一横，表示最顶端、最末端 · 期：按规律（其）按月（月）推算，到了最后一段时间" }
+      ]
+    }
+  ]
+}
