@@ -1,0 +1,750 @@
+{
+  "title": "汉字拆解 Hanzi Breakdown — Batch 2",
+  "description": "Character decomposition and memory aids for Song Dynasty vocabulary (new words)",
+  "characters": [
+
+    {"_comment": "=== 建立 group ==="},
+
+    {
+      "character": "建",
+      "pinyin": "jiàn",
+      "meaning": "to build / establish",
+      "components": [
+        { "part": "聿", "meaning": "ancient 'brush' — to write / create" },
+        { "part": "廴", "meaning": "walking / extending forward" }
+      ],
+      "breakdown": "拿着笔（聿），一步步走出去（廴）建造东西",
+      "memory_tip": "Pick up a brush (聿) and walk forward (廴) — step by step, you build something → 建"
+    },
+    {
+      "character": "立",
+      "pinyin": "lì",
+      "meaning": "to stand / establish",
+      "components": [
+        { "part": "大", "meaning": "a person with arms outstretched" },
+        { "part": "一 (bottom line)", "meaning": "the ground beneath their feet" }
+      ],
+      "breakdown": "一个人叉开双腿，稳稳站在地上",
+      "memory_tip": "A person (大) standing firmly on the ground (一) — feet planted → stand → 立"
+    },
+    {
+      "character": "定",
+      "pinyin": "dìng",
+      "meaning": "to settle / fix / decide",
+      "components": [
+        { "part": "宀", "meaning": "roof / house radical" },
+        { "part": "疋", "meaning": "foot / walking steadily" }
+      ],
+      "breakdown": "在屋子（宀）里稳稳地站定（疋），不再移动",
+      "memory_tip": "Under a roof (宀), feet planted steady (疋) — settled, not moving → fix / decide → 定"
+    },
+    {
+      "character": "都",
+      "pinyin": "dū",
+      "meaning": "capital city",
+      "components": [
+        { "part": "者", "meaning": "person / one who gathers" },
+        { "part": "阝(邑)", "meaning": "city / town radical" }
+      ],
+      "breakdown": "聚集了所有人（者）的大城市（邑）",
+      "memory_tip": "The place (阝) where everyone (者) gathers → the capital city → 都"
+    },
+    {
+      "character": "君",
+      "pinyin": "jūn",
+      "meaning": "ruler / lord / monarch",
+      "components": [
+        { "part": "尹", "meaning": "to govern / hand holding a staff" },
+        { "part": "口", "meaning": "mouth / to speak / issue commands" }
+      ],
+      "breakdown": "手持权杖（尹），开口发号施令（口）",
+      "memory_tip": "A hand holding a staff (尹) and a mouth giving orders (口) — that's a ruler → 君"
+    },
+    {
+      "character": "控",
+      "pinyin": "kòng",
+      "meaning": "to control / restrain",
+      "components": [
+        { "part": "扌(手)", "meaning": "hand" },
+        { "part": "空", "meaning": "empty / hollow / space" }
+      ],
+      "breakdown": "用手（扌）掌握空间（空），不让它乱跑",
+      "memory_tip": "A hand (扌) gripping the empty space (空) — holding everything in check → control → 控"
+    },
+    {
+      "character": "制",
+      "pinyin": "zhì",
+      "meaning": "system / to control / manufacture",
+      "components": [
+        { "part": "未", "meaning": "tree with branches — not yet / undecided" },
+        { "part": "刂(刀)", "meaning": "knife / blade" }
+      ],
+      "breakdown": "用刀（刂）把乱长的树枝（未）修剪整齐，制定规矩",
+      "memory_tip": "A knife (刂) trimming wild branches (未) into order — imposing a system → 制"
+    },
+    {
+      "character": "解",
+      "pinyin": "jiě",
+      "meaning": "to untie / remove / relieve",
+      "components": [
+        { "part": "角", "meaning": "horn / corner" },
+        { "part": "刀", "meaning": "knife" },
+        { "part": "牛", "meaning": "ox / cow" }
+      ],
+      "breakdown": "用刀（刀）把牛角（角）从牛（牛）身上切开",
+      "memory_tip": "A knife (刀) separating a horn (角) from an ox (牛) — cutting apart, untying → 解"
+    },
+    {
+      "character": "除",
+      "pinyin": "chú",
+      "meaning": "to remove / get rid of",
+      "components": [
+        { "part": "阝(阜)", "meaning": "mound / steps / terrain" },
+        { "part": "余", "meaning": "surplus / leftover" }
+      ],
+      "breakdown": "把多余（余）的土堆（阝）铲掉，清除干净",
+      "memory_tip": "Scrape away the surplus (余) from the earthen mound (阝) — remove what's extra → 除"
+    },
+    {
+      "character": "权",
+      "pinyin": "quán",
+      "meaning": "power / authority / right",
+      "components": [
+        { "part": "木", "meaning": "tree / wood" },
+        { "part": "又", "meaning": "hand / again" }
+      ],
+      "breakdown": "手（又）握住大树（木）——掌握了力量",
+      "memory_tip": "A hand (又) gripping a tree (木) — holding firm, not letting go → power / authority → 权"
+    },
+    {
+      "character": "威",
+      "pinyin": "wēi",
+      "meaning": "power / might / to threaten",
+      "components": [
+        { "part": "戌", "meaning": "a soldier with a weapon (axe)" },
+        { "part": "女", "meaning": "woman" }
+      ],
+      "breakdown": "手持武器的士兵（戌）让人（女）感到恐惧和敬畏",
+      "memory_tip": "An armed soldier (戌) intimidating others (女) — awe and fear → might → 威"
+    },
+    {
+      "character": "胁",
+      "pinyin": "xié",
+      "meaning": "to coerce / threaten / flank",
+      "components": [
+        { "part": "月(肉)", "meaning": "flesh / body part radical" },
+        { "part": "劦", "meaning": "three forces / combined pressure" }
+      ],
+      "breakdown": "三股力量（劦）同时压向身体（月），迫使就范",
+      "memory_tip": "Three forces (劦) pressing on the body (月) from the sides — squeezed and threatened → 胁"
+    },
+    {
+      "character": "裂",
+      "pinyin": "liè",
+      "meaning": "to split / crack / tear apart",
+      "components": [
+        { "part": "列", "meaning": "to arrange / separate into a row" },
+        { "part": "衣", "meaning": "clothing / fabric" }
+      ],
+      "breakdown": "衣服（衣）被撕裂，分成了一列一列（列）",
+      "memory_tip": "Cloth (衣) torn into separate strips (列) — ripped apart → split → 裂"
+    },
+    {
+      "character": "宴",
+      "pinyin": "yàn",
+      "meaning": "banquet / feast",
+      "components": [
+        { "part": "宀", "meaning": "roof / house" },
+        { "part": "女", "meaning": "woman / host" },
+        { "part": "日", "meaning": "sun / daytime celebration" }
+      ],
+      "breakdown": "在屋子（宀）里，大白天（日）设宴款待宾客",
+      "memory_tip": "Under a roof (宀), in the bright daytime (日), a hostess (女) entertains guests → banquet → 宴"
+    },
+
+    {"_comment": "=== 科举 / 改革 group ==="},
+
+    {
+      "character": "举",
+      "pinyin": "jǔ",
+      "meaning": "to lift / hold up / recommend",
+      "components": [
+        { "part": "兴 (top)", "meaning": "to rise / collaborative effort" },
+        { "part": "手 (bottom 手→丰)", "meaning": "hands lifting together" }
+      ],
+      "breakdown": "大家一起用手把东西高高举起来",
+      "memory_tip": "Many hands (手) working together to lift something high — raise up → 举"
+    },
+    {
+      "character": "值",
+      "pinyin": "zhí",
+      "meaning": "value / worth",
+      "components": [
+        { "part": "亻(人)", "meaning": "person radical" },
+        { "part": "直", "meaning": "straight / upright" }
+      ],
+      "breakdown": "一个人（亻）正直（直），所以有价值",
+      "memory_tip": "A person (亻) who is upright and straight (直) — that's someone of worth → 值"
+    },
+    {
+      "character": "观",
+      "pinyin": "guān",
+      "meaning": "view / perspective / to observe",
+      "components": [
+        { "part": "又 (left, simplified from 雚)", "meaning": "bird watching attentively" },
+        { "part": "见", "meaning": "to see / eye" }
+      ],
+      "breakdown": "睁大眼睛（见）仔细看，形成自己的看法",
+      "memory_tip": "Open eyes (见) watching carefully — forming a perspective → 观"
+    },
+    {
+      "character": "念",
+      "pinyin": "niàn",
+      "meaning": "thought / idea / to think of / to read aloud",
+      "components": [
+        { "part": "今", "meaning": "now / this moment" },
+        { "part": "心", "meaning": "heart / mind" }
+      ],
+      "breakdown": "此刻（今）心里（心）想着的东西",
+      "memory_tip": "What's on your heart (心) right now (今) — a thought lingering in the mind → 念"
+    },
+    {
+      "character": "变",
+      "pinyin": "biàn",
+      "meaning": "to change / transform",
+      "components": [
+        { "part": "亦 (top, simplified 丝)", "meaning": "tangled threads / complicated" },
+        { "part": "攵", "meaning": "to strike / action" },
+        { "part": "又 → 下部", "meaning": "hand taking action" }
+      ],
+      "breakdown": "用行动（攵）打乱原来的样子，让它改变",
+      "memory_tip": "A strike (攵) disrupts the tangled threads at the top — breaking the old pattern → change → 变"
+    },
+    {
+      "character": "宰",
+      "pinyin": "zǎi",
+      "meaning": "to slaughter / to rule over / prime minister",
+      "components": [
+        { "part": "宀", "meaning": "roof / house — authority over a domain" },
+        { "part": "辛", "meaning": "hardship / bitter labour" }
+      ],
+      "breakdown": "屋子（宀）里掌管一切辛苦事务（辛）的人",
+      "memory_tip": "Under the roof (宀) managing all the hard work (辛) — the one in charge → prime minister → 宰"
+    },
+    {
+      "character": "相",
+      "pinyin": "xiàng / xiāng",
+      "meaning": "minister / appearance / mutual",
+      "components": [
+        { "part": "木", "meaning": "tree" },
+        { "part": "目", "meaning": "eye" }
+      ],
+      "breakdown": "用眼睛（目）仔细观察树木（木），互相看清对方",
+      "memory_tip": "An eye (目) examining a tree (木) closely — looking carefully at each other → observe / minister → 相"
+    },
+    {
+      "character": "财",
+      "pinyin": "cái",
+      "meaning": "wealth / money / finance",
+      "components": [
+        { "part": "贝", "meaning": "shell / ancient money" },
+        { "part": "才", "meaning": "talent / just barely" }
+      ],
+      "breakdown": "有了钱财（贝），才（才）算有了资本",
+      "memory_tip": "Shells (贝) are the original currency, and talent (才) earns it — wealth → 财"
+    },
+    {
+      "character": "政",
+      "pinyin": "zhèng",
+      "meaning": "government / politics / administration",
+      "components": [
+        { "part": "正", "meaning": "upright / correct / straight" },
+        { "part": "攵", "meaning": "to strike / action / enforce" }
+      ],
+      "breakdown": "用行动（攵）维持正确（正）的秩序",
+      "memory_tip": "Enforcing (攵) what is correct (正) — keeping order through action → government → 政"
+    },
+    {
+      "character": "税",
+      "pinyin": "shuì",
+      "meaning": "tax",
+      "components": [
+        { "part": "禾", "meaning": "grain / crops (wealth from the land)" },
+        { "part": "兑", "meaning": "to exchange / convert" }
+      ],
+      "breakdown": "把粮食（禾）换成（兑）钱交给国家",
+      "memory_tip": "Grain (禾) converted (兑) into money for the state — taxation → 税"
+    },
+    {
+      "character": "收",
+      "pinyin": "shōu",
+      "meaning": "to collect / receive / harvest",
+      "components": [
+        { "part": "丩 (left)", "meaning": "twisted / tangled — things to gather" },
+        { "part": "攵", "meaning": "hand taking action" }
+      ],
+      "breakdown": "用手（攵）把散落的东西收拢起来",
+      "memory_tip": "A striking hand (攵) gathering scattered things together — harvest / collect → 收"
+    },
+    {
+      "character": "反",
+      "pinyin": "fǎn",
+      "meaning": "to oppose / reverse / turn against",
+      "components": [
+        { "part": "厂", "meaning": "cliff / overhang (shelter flipped)" },
+        { "part": "又", "meaning": "hand" }
+      ],
+      "breakdown": "手（又）用力向反方向推，把东西翻过来",
+      "memory_tip": "A hand (又) pushing back against the overhang (厂) — pushing in the opposite direction → oppose / reverse → 反"
+    },
+    {
+      "character": "对",
+      "pinyin": "duì",
+      "meaning": "to face / correct / oppose",
+      "components": [
+        { "part": "又", "meaning": "hand" },
+        { "part": "寸", "meaning": "inch / measure / precision" }
+      ],
+      "breakdown": "用手（又）精确地（寸）对准目标",
+      "memory_tip": "A hand (又) measuring precisely (寸) — facing something exactly → correct / oppose → 对"
+    },
+    {
+      "character": "明",
+      "pinyin": "míng",
+      "meaning": "bright / clear / obvious",
+      "components": [
+        { "part": "日", "meaning": "sun" },
+        { "part": "月", "meaning": "moon" }
+      ],
+      "breakdown": "太阳（日）加月亮（月），两个都亮，当然明！",
+      "memory_tip": "Sun (日) + Moon (月) shining together — brilliantly bright and clear → 明"
+    },
+    {
+      "character": "显",
+      "pinyin": "xiǎn",
+      "meaning": "evident / visible / to show",
+      "components": [
+        { "part": "日", "meaning": "sun / light" },
+        { "part": "业 (simplified 𥝢)", "meaning": "prominent / raised display" }
+      ],
+      "breakdown": "在阳光（日）下高高展示（业），一眼就能看见",
+      "memory_tip": "Something raised up (业) under sunlight (日) — impossible to miss → evident → 显"
+    },
+    {
+      "character": "巷",
+      "pinyin": "xiàng",
+      "meaning": "alley / lane",
+      "components": [
+        { "part": "共", "meaning": "shared / together" },
+        { "part": "巳 (bottom 己)", "meaning": "winding / snake-like path" }
+      ],
+      "breakdown": "大家共用（共）的蜿蜒小路（己）",
+      "memory_tip": "A winding path (己) shared (共) by everyone in the neighbourhood → alley → 巷"
+    },
+    {
+      "character": "兴",
+      "pinyin": "xīng / xìng",
+      "meaning": "to prosper / rise / interest / enthusiasm",
+      "components": [
+        { "part": "臼", "meaning": "mortar — a hollow vessel, something held up from below" },
+        { "part": "共", "meaning": "together / shared effort" }
+      ],
+      "breakdown": "大家一起（共）把东西高高托起来（臼），欣欣向荣",
+      "memory_tip": "Everyone (共) lifting something up together from below (臼) — rising with shared energy → prosper → 兴"
+    },
+    {
+      "character": "盛",
+      "pinyin": "shèng",
+      "meaning": "flourishing / grand / abundant",
+      "components": [
+        { "part": "成", "meaning": "to succeed / accomplish" },
+        { "part": "皿", "meaning": "dish / vessel / container" }
+      ],
+      "breakdown": "盘子（皿）里盛满了成功（成）的果实",
+      "memory_tip": "A vessel (皿) filled to the brim with success (成) — overflowing abundance → flourishing → 盛"
+    },
+
+    {"_comment": "=== 危机与入侵 group ==="},
+
+    {
+      "character": "作",
+      "pinyin": "zuò",
+      "meaning": "to do / make / act",
+      "components": [
+        { "part": "亻(人)", "meaning": "person" },
+        { "part": "乍", "meaning": "suddenly / to start" }
+      ],
+      "breakdown": "人（亻）突然（乍）动起来，开始做事",
+      "memory_tip": "A person (亻) suddenly springing into action (乍) — doing something → 作"
+    },
+    {
+      "character": "战",
+      "pinyin": "zhàn",
+      "meaning": "battle / war / to fight",
+      "components": [
+        { "part": "单", "meaning": "single / a weapon (ancient forked weapon)" },
+        { "part": "戈", "meaning": "spear / weapon" }
+      ],
+      "breakdown": "拿着武器（戈）与单独的对手（单）对打",
+      "memory_tip": "A forked weapon (单) clashing with a spear (戈) — head-to-head combat → battle → 战"
+    },
+    {
+      "character": "失",
+      "pinyin": "shī",
+      "meaning": "to lose / miss / fail",
+      "components": [
+        { "part": "手 (top, simplified)", "meaning": "hand" },
+        { "part": "一 (dropping stroke)", "meaning": "something slipping away" }
+      ],
+      "breakdown": "手里的东西从指缝间滑落，丢掉了",
+      "memory_tip": "Something slipping through an open hand — lost, gone → 失"
+    },
+    {
+      "character": "利",
+      "pinyin": "lì",
+      "meaning": "sharp / benefit / advantage",
+      "components": [
+        { "part": "禾", "meaning": "grain / crop" },
+        { "part": "刂(刀)", "meaning": "knife / blade" }
+      ],
+      "breakdown": "用刀（刂）割收庄稼（禾），收获利益",
+      "memory_tip": "A knife (刂) cutting through grain (禾) — sharp and efficient, bringing gain → 利"
+    },
+    {
+      "character": "攻",
+      "pinyin": "gōng",
+      "meaning": "to attack / assault",
+      "components": [
+        { "part": "工", "meaning": "work / craft / tool" },
+        { "part": "攵", "meaning": "to strike / action" }
+      ],
+      "breakdown": "手持工具（工）主动出击（攵）",
+      "memory_tip": "Using tools (工) to strike (攵) — taking offensive action → attack → 攻"
+    },
+    {
+      "character": "占",
+      "pinyin": "zhàn",
+      "meaning": "to occupy / seize / take",
+      "components": [
+        { "part": "卜", "meaning": "to divine / predict (planting a flag)" },
+        { "part": "口", "meaning": "mouth / to declare" }
+      ],
+      "breakdown": "插下旗帜（卜），大声宣告（口）这里是我的地盘",
+      "memory_tip": "Plant a flag (卜) and declare (口) 'this is mine!' → occupy → 占"
+    },
+    {
+      "character": "掳",
+      "pinyin": "lǔ",
+      "meaning": "to capture / abduct / carry off by force",
+      "components": [
+        { "part": "扌(手)", "meaning": "hand" },
+        { "part": "虏", "meaning": "prisoner of war / captive" }
+      ],
+      "breakdown": "用手（扌）抓住俘虏（虏）带走",
+      "memory_tip": "A hand (扌) grabbing a prisoner (虏) and dragging them off → abduct → 掳"
+    },
+    {
+      "character": "无",
+      "pinyin": "wú",
+      "meaning": "none / without / not have",
+      "components": [
+        { "part": "一", "meaning": "one / something" },
+        { "part": "人 (四笔变形)", "meaning": "person — but crossed out / negated" }
+      ],
+      "breakdown": "古字像一个人跳舞，后来借用为'没有'的意思",
+      "memory_tip": "Originally a dancing figure — borrowed to mean 'nothing' because the movement leaves nothing behind → 无"
+    },
+    {
+      "character": "能",
+      "pinyin": "néng",
+      "meaning": "able / capable / can",
+      "components": [
+        { "part": "厶 (top left)", "meaning": "private / self" },
+        { "part": "月(肉)", "meaning": "flesh / body" },
+        { "part": "匕 x2", "meaning": "two claws — a bear's powerful paws" }
+      ],
+      "breakdown": "像熊一样（月+匕匕），身体强壮，什么都能做",
+      "memory_tip": "A bear's powerful body (月) with strong claws (匕匕) — capable of anything → able → 能"
+    },
+    {
+      "character": "治",
+      "pinyin": "zhì",
+      "meaning": "to govern / manage / cure",
+      "components": [
+        { "part": "氵(水)", "meaning": "water / flow" },
+        { "part": "台", "meaning": "platform / to speak from / phonetic" }
+      ],
+      "breakdown": "像治水（氵）一样，从高台（台）上统筹管理",
+      "memory_tip": "Like controlling the flow of water (氵) from an elevated platform (台) — managing with authority → govern → 治"
+    },
+    {
+      "character": "臣",
+      "pinyin": "chén",
+      "meaning": "minister / official / subject (of a ruler)",
+      "components": [
+        { "part": "臣", "meaning": "an eye looking sideways and downward (ancient pictograph)" }
+      ],
+      "breakdown": "古字像一只眼睛向下看，表示臣子低头服从君主",
+      "memory_tip": "An eye (臣) looking downward in submission — bowing before the ruler → minister → 臣"
+    },
+    {
+      "character": "纸",
+      "pinyin": "zhǐ",
+      "meaning": "paper",
+      "components": [
+        { "part": "纟", "meaning": "silk thread / fibres" },
+        { "part": "氏", "meaning": "clan / root / base" }
+      ],
+      "breakdown": "用纤维（纟）为基础（氏）制成的薄片",
+      "memory_tip": "Fibres (纟) pressed into a flat base (氏) — the material of paper → 纸"
+    },
+    {
+      "character": "币",
+      "pinyin": "bì",
+      "meaning": "currency / coin / money",
+      "components": [
+        { "part": "巾", "meaning": "cloth / fabric" },
+        { "part": "一 (top, 丿stroke)", "meaning": "covering / marking of value" }
+      ],
+      "breakdown": "古代用布帛（巾）当货币，后来专指钱",
+      "memory_tip": "In ancient times, cloth (巾) was used as currency — a stamped piece of fabric with value → 币"
+    },
+    {
+      "character": "钞",
+      "pinyin": "chāo",
+      "meaning": "banknote / paper money",
+      "components": [
+        { "part": "钅(金)", "meaning": "metal / money radical" },
+        { "part": "少", "meaning": "few / small" }
+      ],
+      "breakdown": "用少量的金属（钅）价值来代表大额的钱",
+      "memory_tip": "A little metal (钅少) standing in for much larger value — a note, not a coin → banknote → 钞"
+    },
+    {
+      "character": "发",
+      "pinyin": "fā",
+      "meaning": "to issue / send out / emit / hair",
+      "components": [
+        { "part": "癶", "meaning": "two feet stepping outward" },
+        { "part": "弓", "meaning": "bow (launches arrows)" },
+        { "part": "又", "meaning": "hand" }
+      ],
+      "breakdown": "手拉弓（弓），两脚迈开（癶），把东西射发出去",
+      "memory_tip": "Feet apart (癶), hand (又) drawing a bow (弓) — and releasing → send out / issue → 发"
+    },
+    {
+      "character": "行",
+      "pinyin": "xíng / háng",
+      "meaning": "to go / carry out / profession / row",
+      "components": [
+        { "part": "彳", "meaning": "left step / walking" },
+        { "part": "亍", "meaning": "right step / pause then walk" }
+      ],
+      "breakdown": "左脚（彳）右脚（亍）交替迈出，走起来了",
+      "memory_tip": "Left step (彳) + right step (亍) — walking in motion → to go / carry out → 行"
+    },
+    {
+      "character": "娱",
+      "pinyin": "yú",
+      "meaning": "entertainment / amusement / pleasure",
+      "components": [
+        { "part": "女", "meaning": "woman" },
+        { "part": "吴 (吴→mouth + 天)", "meaning": "speaking / performing / lively" }
+      ],
+      "breakdown": "女子（女）载歌载舞，让人开心（吴）",
+      "memory_tip": "A woman (女) singing and performing (吴) — bringing joy and amusement → entertainment → 娱"
+    },
+    {
+      "character": "乐",
+      "pinyin": "yuè / lè",
+      "meaning": "music / happy / pleasure",
+      "components": [
+        { "part": "白 (top)", "meaning": "white / bright — the sound ringing out" },
+        { "part": "木", "meaning": "tree / wood (a wooden musical instrument)" }
+      ],
+      "breakdown": "古字像一架木制乐器上绑着丝弦，弹奏出美妙声音",
+      "memory_tip": "Strings stretched over wood (木) — a musical instrument making bright (白) sound → music / joy → 乐"
+    },
+
+    {"_comment": "=== 英雄与品德 group ==="},
+
+    {
+      "character": "帅",
+      "pinyin": "shuài",
+      "meaning": "commander-in-chief / handsome",
+      "components": [
+        { "part": "巾", "meaning": "cloth / banner / flag" },
+        { "part": "卩(师旁)", "meaning": "kneeling person / subordinate" }
+      ],
+      "breakdown": "手持旗帜（巾），让所有人俯首听命（卩）",
+      "memory_tip": "The one holding the banner (巾) that everyone (卩) bows to → commander → 帅"
+    },
+    {
+      "character": "武",
+      "pinyin": "wǔ",
+      "meaning": "military / martial / fierce",
+      "components": [
+        { "part": "止", "meaning": "foot / to stop" },
+        { "part": "戈", "meaning": "spear / weapon" }
+      ],
+      "breakdown": "古义：能拿着武器（戈）让战争停止（止）才是真武",
+      "memory_tip": "A spear (戈) used to make war stop (止) — true martial power brings peace → 武"
+    },
+    {
+      "character": "艺",
+      "pinyin": "yì",
+      "meaning": "art / skill / craft",
+      "components": [
+        { "part": "艹", "meaning": "plant / growing things" },
+        { "part": "乙", "meaning": "sprout / to grow in a winding way" }
+      ],
+      "breakdown": "像植物（艹）一样，从小慢慢（乙）长出来的本领",
+      "memory_tip": "A skill that grows (艹) slowly and organically (乙) — cultivated over time → art / skill → 艺"
+    },
+    {
+      "character": "勤",
+      "pinyin": "qín",
+      "meaning": "diligent / hardworking",
+      "components": [
+        { "part": "堇", "meaning": "a plant that endures hardship (also phonetic)" },
+        { "part": "力", "meaning": "strength / effort" }
+      ],
+      "breakdown": "像植物（堇）那样，默默用力（力）生长，从不懈怠",
+      "memory_tip": "The strength (力) of a plant (堇) that pushes through hardship without stopping → diligent → 勤"
+    },
+    {
+      "character": "奋",
+      "pinyin": "fèn",
+      "meaning": "to strive / exert oneself / vigorously",
+      "components": [
+        { "part": "大", "meaning": "big / great" },
+        { "part": "田", "meaning": "field / to work the land" },
+        { "part": "隹 (top simplified)", "meaning": "bird — taking flight" }
+      ],
+      "breakdown": "像鸟（隹）从田野（田）上大力（大）振翅飞起",
+      "memory_tip": "A bird (隹) powerfully (大) launching from the field (田) — soaring with effort → strive → 奋"
+    },
+    {
+      "character": "功",
+      "pinyin": "gōng",
+      "meaning": "merit / achievement / success",
+      "components": [
+        { "part": "工", "meaning": "work / labour" },
+        { "part": "力", "meaning": "strength / effort" }
+      ],
+      "breakdown": "用力气（力）努力干活（工），得到了功劳",
+      "memory_tip": "Work (工) + strength (力) = merit earned through effort → 功"
+    },
+    {
+      "character": "尊",
+      "pinyin": "zūn",
+      "meaning": "to respect / honour / exalted",
+      "components": [
+        { "part": "酋", "meaning": "tribal chief / aged wine (symbol of seniority)" },
+        { "part": "寸", "meaning": "inch / careful measure / respectful gesture" }
+      ],
+      "breakdown": "对长者（酋）恭敬地（寸）鞠躬行礼",
+      "memory_tip": "Bowing carefully (寸) before the elder chief (酋) — showing deep respect → 尊"
+    },
+    {
+      "character": "敬",
+      "pinyin": "jìng",
+      "meaning": "to respect / revere",
+      "components": [
+        { "part": "苟 (top: 茍)", "meaning": "to be cautious / conscientious" },
+        { "part": "攵", "meaning": "action / to strike — here: to urge oneself" }
+      ],
+      "breakdown": "时刻督促（攵）自己谨慎认真（苟），表现出恭敬",
+      "memory_tip": "Constantly urging (攵) yourself to be careful and conscientious (苟) → sincere respect → 敬"
+    },
+    {
+      "character": "退",
+      "pinyin": "tuì",
+      "meaning": "to retreat / withdraw / step back",
+      "components": [
+        { "part": "辶(辵)", "meaning": "walking / movement radical" },
+        { "part": "艮", "meaning": "to stop / resist / mountain-like obstacle" }
+      ],
+      "breakdown": "遇到阻碍（艮），只好走（辶）回头",
+      "memory_tip": "Hitting a wall (艮) and walking (辶) away from it — forced to step back → retreat → 退"
+    },
+    {
+      "character": "召",
+      "pinyin": "zhào",
+      "meaning": "to summon / call / beckon",
+      "components": [
+        { "part": "刀", "meaning": "knife — a commanding gesture" },
+        { "part": "口", "meaning": "mouth / to speak" }
+      ],
+      "breakdown": "张口呼唤（口），如刀声令下（刀），叫人过来",
+      "memory_tip": "A sharp command (刀) from a calling mouth (口) — summoning someone → 召"
+    },
+    {
+      "character": "诬",
+      "pinyin": "wū",
+      "meaning": "to falsely accuse / frame someone",
+      "components": [
+        { "part": "讠(言)", "meaning": "speech / words radical" },
+        { "part": "巫", "meaning": "witch / shaman — someone who deceives with dark arts" }
+      ],
+      "breakdown": "像巫师（巫）一样，用语言（讠）施咒陷害别人",
+      "memory_tip": "Words (讠) twisted like a witch's spell (巫) to curse the innocent — false accusation → 诬"
+    },
+    {
+      "character": "陷",
+      "pinyin": "xiàn",
+      "meaning": "to frame / trap / sink into / pitfall",
+      "components": [
+        { "part": "阝(阜)", "meaning": "mound / terrain" },
+        { "part": "臽", "meaning": "a person falling into a pit" }
+      ],
+      "breakdown": "在地形（阝）中挖坑，让人（臽）掉进去",
+      "memory_tip": "A person (臽) falling into a hole in the earth (阝) — trapped in a pit → frame / ensnare → 陷"
+    },
+    {
+      "character": "品",
+      "pinyin": "pǐn",
+      "meaning": "character / quality / grade / product",
+      "components": [
+        { "part": "口 x3", "meaning": "three mouths — many people judging / tasting" }
+      ],
+      "breakdown": "三个人（口口口）一起品评，共同判断品质",
+      "memory_tip": "Three mouths (口口口) all tasting and judging together — assessing quality → character / grade → 品"
+    },
+    {
+      "character": "德",
+      "pinyin": "dé",
+      "meaning": "virtue / morality / character",
+      "components": [
+        { "part": "彳", "meaning": "step / walk / conduct" },
+        { "part": "直", "meaning": "straight / upright" },
+        { "part": "心", "meaning": "heart" }
+      ],
+      "breakdown": "每走一步（彳）都保持心地（心）正直（直）",
+      "memory_tip": "Every step you walk (彳) guided by a straight (直) heart (心) — virtue in action → 德"
+    },
+    {
+      "character": "杂",
+      "pinyin": "zá",
+      "meaning": "mixed / various / miscellaneous",
+      "components": [
+        { "part": "九", "meaning": "nine / many" },
+        { "part": "木", "meaning": "tree / wood" }
+      ],
+      "breakdown": "许多（九）种树木（木）混杂在一起",
+      "memory_tip": "Many (九) different trees (木) all jumbled together — a mixed variety → 杂"
+    },
+    {
+      "character": "技",
+      "pinyin": "jì",
+      "meaning": "skill / technique",
+      "components": [
+        { "part": "扌(手)", "meaning": "hand" },
+        { "part": "支", "meaning": "branch / to support / offshoot" }
+      ],
+      "breakdown": "用手（扌）熟练地操控各个分支（支）",
+      "memory_tip": "Hands (扌) deftly managing every branch and extension (支) — manual skill → 技"
+    }
+
+  ]
+}

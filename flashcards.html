@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chinese Flashcards 汉语闪卡</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --gold: #ffd700; --gold-dim: #c8a800;
+      --bg: #0d0d1f; --bg2: #141428; --bg3: #1e1e3a; --bg4: #252545;
+      --text: #f0e6d3; --text-dim: #a08060;
+      --green: #2ecc71; --red: #e74c3c;
+      --radius: 16px; --card-w: 580px; --card-h: 340px;
+    }
+    html, body { width: 100%; height: 100%; background: var(--bg); color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif; overflow-x: hidden; }
+
+    /* Header */
+    header { display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 28px; background: var(--bg2); border-bottom: 1px solid #2a2a50;
+      gap: 16px; flex-wrap: wrap; }
+    .header-logo { font-size: 28px; font-family: "Microsoft YaHei","STHeiti",serif;
+      color: var(--gold); text-shadow: 0 0 12px rgba(255,215,0,.4); }
+    .header-sub { font-size: 13px; color: var(--text-dim); margin-top: 2px; }
+    #lessonSelect { background: var(--bg3); border: 1px solid #3a3a60; color: var(--text);
+      padding: 8px 14px; border-radius: 8px; font-size: 14px; cursor: pointer; min-width: 220px; }
+    #lessonSelect:focus { outline: 2px solid var(--gold); }
+
+    /* Main */
+    main { display: flex; flex-direction: column; align-items: center;
+      padding: 28px 20px 48px; gap: 20px; }
+
+    /* Lesson meta */
+    #lessonTitle { font-size: 22px; color: var(--gold);
+      font-family: "Microsoft YaHei","STHeiti",serif; text-align: center; }
+    #lessonSubtitle { font-size: 13px; color: var(--text-dim); text-align: center; margin-top: 4px; }
+
+    /* Group tabs */
+    #groupTabs { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .tab-btn { background: var(--bg3); border: 1px solid #3a3a60; color: var(--text-dim);
+      padding: 7px 16px; border-radius: 20px; font-size: 13px; cursor: pointer;
+      transition: all .2s; white-space: nowrap; }
+    .tab-btn:hover { border-color: var(--gold-dim); color: var(--text); }
+    .tab-btn.active { background: var(--gold); color: #111; border-color: var(--gold); font-weight: 600; }
+
+    /* Progress */
+    #progressWrap { width: 100%; max-width: var(--card-w); }
+    .progress-row { display: flex; justify-content: space-between;
+      font-size: 13px; color: var(--text-dim); margin-bottom: 6px; }
+    .progress-bar { background: var(--bg3); border-radius: 8px; height: 6px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg,var(--gold),#ff9500);
+      border-radius: 8px; transition: width .4s ease; }
+
+    /* Card */
+    #cardArea { perspective: 1200px; width: var(--card-w); max-width: 100%;
+      height: var(--card-h); cursor: pointer; user-select: none; }
+    .card-inner { width: 100%; height: 100%; position: relative;
+      transform-style: preserve-3d; transition: transform .5s cubic-bezier(.4,.2,.2,1); }
+    .card-inner.flipped { transform: rotateY(180deg); }
+    .card-face { position: absolute; inset: 0; border-radius: var(--radius);
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
+      display: flex; flex-direction: column; align-items: center;
+      justify-content: center; padding: 28px 32px; text-align: center; }
+    .card-front { background: linear-gradient(135deg,var(--bg3),var(--bg4));
+      border: 1px solid #3a3a65;
+      box-shadow: 0 8px 40px rgba(0,0,0,.5),0 0 0 1px rgba(255,215,0,.05); }
+    .card-back { background: linear-gradient(135deg,#1a2a1a,#0f1f0f);
+      border: 1px solid #2a5a2a; box-shadow: 0 8px 40px rgba(0,0,0,.5);
+      transform: rotateY(180deg); }
+    .card-label { font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--text-dim); margin-bottom: 12px; }
+    .card-chinese { font-size: 52px; font-family: "Microsoft YaHei","STHeiti","Noto Sans SC",serif;
+      color: var(--gold); text-shadow: 0 0 20px rgba(255,215,0,.3); line-height: 1.2; margin-bottom: 12px; }
+    .card-pinyin { font-size: 20px; color: #aaa; font-style: italic; }
+    .card-hint { position: absolute; bottom: 14px; font-size: 11px; color: #555; letter-spacing: 1px; }
+    .card-badge { position: absolute; top: 14px; right: 14px; font-size: 18px; }
+    .card-num { position: absolute; top: 14px; left: 14px; font-size: 12px; color: #555; }
+    .card-meaning { font-size: 22px; color: #90ee90; font-weight: 600;
+      margin-bottom: 18px; line-height: 1.4; }
+    .card-example { background: rgba(0,0,0,.3); border-radius: 10px;
+      padding: 12px 18px; width: 100%; }
+    .card-example .zh { font-size: 20px; font-family: "Microsoft YaHei","STHeiti",serif;
+      color: #ddd; margin-bottom: 6px; }
+    .card-example .en { font-size: 13px; color: #888; font-style: italic; }
+
+    /* Buttons */
+    .btn { background: var(--bg3); border: 1px solid #3a3a60; color: var(--text);
+      padding: 10px 20px; border-radius: 10px; font-size: 14px; cursor: pointer;
+      transition: all .15s; display: flex; align-items: center; gap: 6px; }
+    .btn:hover { background: var(--bg4); border-color: #5a5a90; }
+    .btn:active { transform: scale(.97); }
+    .btn:disabled { opacity: .3; cursor: not-allowed; }
+    .btn-know { background: rgba(46,204,113,.15); border-color: var(--green); color: var(--green); }
+    .btn-know:hover { background: rgba(46,204,113,.25); }
+    .btn-learn { background: rgba(231,76,60,.15); border-color: var(--red); color: var(--red); }
+    .btn-learn:hover { background: rgba(231,76,60,.25); }
+    .btn-primary { background: var(--gold); border-color: var(--gold); color: #111; font-weight: 600; }
+    .btn-primary:hover { background: #ffeb50; }
+    .controls-row { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+
+    /* Status */
+    #statusRow { display: flex; gap: 20px; font-size: 13px; color: var(--text-dim); flex-wrap: wrap; justify-content: center; }
+    .status-item { display: flex; align-items: center; gap: 6px; }
+    .status-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .dot-know { background: var(--green); } .dot-learn { background: var(--red); } .dot-unseen { background: #555; }
+
+    /* Key help */
+    #keyHelp { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; font-size: 12px; color: #555; }
+    .key { display: inline-block; background: #1a1a30; border: 1px solid #333;
+      border-radius: 5px; padding: 2px 8px; font-family: monospace; color: #888; margin: 0 2px; }
+
+    /* Empty */
+    #emptyState { display: none; text-align: center; color: var(--text-dim); padding: 60px 20px; }
+    #emptyState h3 { font-size: 24px; margin-bottom: 8px; }
+
+    /* Toast */
+    #toast { position: fixed; bottom: 30px; left: 50%;
+      transform: translateX(-50%) translateY(80px);
+      background: #222244; border: 1px solid #4a4a80; color: var(--text);
+      padding: 10px 22px; border-radius: 20px; font-size: 14px;
+      transition: transform .3s ease; pointer-events: none; z-index: 99; white-space: nowrap; }
+    #toast.show { transform: translateX(-50%) translateY(0); }
+
+    @media (max-width: 620px) {
+      :root { --card-w: 100%; --card-h: 300px; }
+      .card-chinese { font-size: 38px; } .card-meaning { font-size: 18px; }
+      header { padding: 10px 16px; } #lessonSelect { min-width: 160px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="header-logo">汉语闪卡</div>
+    <div class="header-sub">Chinese Flashcards</div>
+  </div>
+  <select id="lessonSelect"><option value="">Loading…</option></select>
+</header>
+
+<main>
+  <div>
+    <div id="lessonTitle">—</div>
+    <div id="lessonSubtitle">Select a lesson to begin</div>
+  </div>
+
+  <div id="groupTabs"></div>
+
+  <div id="progressWrap">
+    <div class="progress-row">
+      <span id="progressText">Card 0 / 0</span>
+      <span id="knownCount">0 known</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  </div>
+
+  <div id="cardArea" role="button" aria-label="Flip card" tabindex="0">
+    <div class="card-inner" id="cardInner">
+      <div class="card-face card-front">
+        <div class="card-num" id="cardNum"></div>
+        <div class="card-badge" id="cardBadge"></div>
+        <div class="card-label">FRONT — click to flip</div>
+        <div class="card-chinese" id="frontChinese">—</div>
+        <div class="card-pinyin" id="frontPinyin"></div>
+        <div class="card-hint">SPACE or click to flip</div>
+      </div>
+      <div class="card-face card-back">
+        <div class="card-num" id="cardNumBack"></div>
+        <div class="card-badge" id="cardBadgeBack"></div>
+        <div class="card-label">BACK — meaning</div>
+        <div class="card-meaning" id="backMeaning">—</div>
+        <div class="card-example" id="backExample" style="display:none">
+          <div class="zh" id="backExZh"></div>
+          <div class="en" id="backExEn"></div>
+        </div>
+        <div class="card-hint">← → to navigate</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls-row">
+    <button class="btn" id="btnPrev">← Prev</button>
+    <button class="btn btn-learn" id="btnLearn">Still Learning</button>
+    <button class="btn btn-know" id="btnKnow">✓ Know It!</button>
+    <button class="btn" id="btnNext">Next →</button>
+  </div>
+
+  <div class="controls-row">
+    <button class="btn" id="btnShuffle">🔀 Shuffle</button>
+    <button class="btn" id="btnReset">↺ Reset Progress</button>
+    <button class="btn btn-primary" id="btnReviewWeak">⚡ Review Still Learning</button>
+  </div>
+
+  <div id="statusRow">
+    <div class="status-item"><div class="status-dot dot-know"></div><span id="statKnown">0 Know It</span></div>
+    <div class="status-item"><div class="status-dot dot-learn"></div><span id="statLearn">0 Still Learning</span></div>
+    <div class="status-item"><div class="status-dot dot-unseen"></div><span id="statUnseen">0 Unseen</span></div>
+  </div>
+
+  <div id="keyHelp">
+    <span><span class="key">Space</span> flip</span>
+    <span><span class="key">←</span><span class="key">→</span> navigate</span>
+    <span><span class="key">K</span> know it</span>
+    <span><span class="key">L</span> still learning</span>
+    <span><span class="key">S</span> shuffle</span>
+  </div>
+
+  <div id="emptyState">
+    <h3>🎉 All Done!</h3>
+    <p>You've reviewed all cards in this group.<br>Press <strong>Reset</strong> or switch to another group.</p>
+  </div>
+</main>
+
+<div id="toast"></div>
+
+<script>
+/* ─────────────────────────────────────────────────────
+   FlashcardApp
+   To add a new lesson:
+     1. Create data/flashcards/lessonN.json  (same schema)
+     2. Add an entry to data/flashcards/index.json
+   ───────────────────────────────────────────────────── */
+const App = {
+  lessons: [],
+  lessonData: null,
+  allCards: [],
+  deck: [],
+  deckPos: 0,
+  flipped: false,
+  activeGroup: 'all',
+  progress: {},
+  storageKey: '',
+  toastTimer: null,
+
+  async init() {
+    try {
+      const res = await fetch('data/flashcards/index.json');
+      const data = await res.json();
+      this.lessons = data.lessons || [];
+      this.buildLessonSelect();
+      if (this.lessons.length) await this.loadLesson(this.lessons[0].file);
+    } catch (e) {
+      this.toast('⚠️ Could not load lesson index.');
+    }
+    this.bindEvents();
+  },
+
+  buildLessonSelect() {
+    const sel = document.getElementById('lessonSelect');
+    sel.innerHTML = this.lessons.map(l =>
+      `<option value="${l.file}">Lesson ${l.lesson}: ${l.subtitle}</option>`
+    ).join('');
+  },
+
+  async loadLesson(file) {
+    try {
+      const res = await fetch(file);
+      this.lessonData = await res.json();
+      this.storageKey = `flashcards_L${this.lessonData.lesson}`;
+      this.progress = JSON.parse(localStorage.getItem(this.storageKey) || '{}');
+      this.activeGroup = 'all';
+      this.buildGroupTabs();
+      this.buildDeck();
+      document.getElementById('lessonTitle').textContent = this.lessonData.title;
+      document.getElementById('lessonSubtitle').textContent =
+        `Lesson ${this.lessonData.lesson} · ${this.lessonData.subtitle}`;
+    } catch (e) {
+      this.toast('⚠️ Could not load lesson.');
+    }
+  },
+
+  buildGroupTabs() {
+    const el = document.getElementById('groupTabs');
+    const tabs = [{ id: 'all', emoji: '🀄', name: 'All Cards' }, ...this.lessonData.groups];
+    el.innerHTML = tabs.map(g =>
+      `<button class="tab-btn${g.id === this.activeGroup ? ' active' : ''}"
+        data-gid="${g.id}">${g.emoji || ''} ${g.name}</button>`
+    ).join('');
+    el.querySelectorAll('.tab-btn').forEach(btn =>
+      btn.addEventListener('click', () => {
+        this.activeGroup = btn.dataset.gid;
+        el.querySelectorAll('.tab-btn').forEach(b =>
+          b.classList.toggle('active', b.dataset.gid === this.activeGroup));
+        this.buildDeck();
+      })
+    );
+  },
+
+  buildDeck(onlyWeak = false) {
+    const groups = this.lessonData.groups || [];
+    let cards = [];
+    (this.activeGroup === 'all' ? groups : groups.filter(g => g.id === this.activeGroup))
+      .forEach(g => g.cards.forEach(c => cards.push({ ...c, emoji: g.emoji })));
+
+    this.allCards = cards;
+    this.deck = cards.map((_, i) => i)
+      .filter(i => !onlyWeak || this.status(cards[i]) === 'learn');
+    this.deckPos = 0;
+    this.flipped = false;
+    this.render();
+  },
+
+  key(c) { return c.front + '|' + c.pinyin; },
+  status(c) { return this.progress[this.key(c)] || 'unseen'; },
+  setStatus(c, s) {
+    this.progress[this.key(c)] = s;
+    localStorage.setItem(this.storageKey, JSON.stringify(this.progress));
+  },
+
+  render() {
+    const empty = this.deck.length === 0;
+    document.getElementById('cardArea').style.display = empty ? 'none' : '';
+    document.getElementById('emptyState').style.display = empty ? 'block' : 'none';
+    if (empty) { this.updateStats(); return; }
+
+    const c = this.allCards[this.deck[this.deckPos]];
+    const pos = `${this.deckPos + 1} / ${this.deck.length}`;
+
+    document.getElementById('cardInner').classList.remove('flipped');
+    this.flipped = false;
+
+    document.getElementById('cardNum').textContent = pos;
+    document.getElementById('cardBadge').textContent = c.emoji || '';
+    document.getElementById('frontChinese').textContent = c.front;
+    document.getElementById('frontPinyin').textContent = c.pinyin;
+
+    document.getElementById('cardNumBack').textContent = pos;
+    document.getElementById('cardBadgeBack').textContent = c.emoji || '';
+    document.getElementById('backMeaning').textContent = c.back;
+
+    const exEl = document.getElementById('backExample');
+    if (c.example) {
+      exEl.style.display = '';
+      document.getElementById('backExZh').textContent = c.example;
+      document.getElementById('backExEn').textContent = c.exampleTranslation || '';
+    } else {
+      exEl.style.display = 'none';
+    }
+
+    document.getElementById('btnPrev').disabled = this.deckPos === 0;
+    document.getElementById('btnNext').disabled = this.deckPos === this.deck.length - 1;
+    this.updateStats();
+  },
+
+  flip() {
+    this.flipped = !this.flipped;
+    document.getElementById('cardInner').classList.toggle('flipped', this.flipped);
+  },
+
+  go(delta) {
+    const p = this.deckPos + delta;
+    if (p < 0 || p >= this.deck.length) return;
+    this.deckPos = p;
+    this.render();
+  },
+
+  mark(s) {
+    if (!this.deck.length) return;
+    this.setStatus(this.allCards[this.deck[this.deckPos]], s);
+    this.toast(s === 'know' ? '✓ Know It!' : '📚 Still Learning');
+    this.updateStats();
+    if (this.deckPos < this.deck.length - 1) setTimeout(() => this.go(1), 320);
+  },
+
+  shuffle() {
+    for (let i = this.deck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [this.deck[i], this.deck[j]] = [this.deck[j], this.deck[i]];
+    }
+    this.deckPos = 0; this.flipped = false; this.render();
+    this.toast('🔀 Shuffled!');
+  },
+
+  reset() {
+    if (!confirm('Reset all progress for this lesson?')) return;
+    this.progress = {};
+    localStorage.removeItem(this.storageKey);
+    this.buildDeck();
+    this.toast('↺ Progress reset');
+  },
+
+  reviewWeak() {
+    this.buildDeck(true);
+    if (!this.deck.length) {
+      this.toast('🎉 No "Still Learning" cards!');
+      this.buildDeck(false);
+    } else {
+      this.toast(`⚡ Reviewing ${this.deck.length} weak cards`);
+    }
+  },
+
+  updateStats() {
+    const total = this.deck.length;
+    const known  = this.deck.filter(i => this.status(this.allCards[i]) === 'know').length;
+    const learn  = this.deck.filter(i => this.status(this.allCards[i]) === 'learn').length;
+    const unseen = total - known - learn;
+    document.getElementById('progressText').textContent = `Card ${this.deckPos + 1} / ${total}`;
+    document.getElementById('knownCount').textContent = `${known} known`;
+    document.getElementById('progressFill').style.width = total ? `${Math.round(known/total*100)}%` : '0%';
+    document.getElementById('statKnown').textContent  = `${known} Know It`;
+    document.getElementById('statLearn').textContent  = `${learn} Still Learning`;
+    document.getElementById('statUnseen').textContent = `${unseen} Unseen`;
+  },
+
+  toast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(this.toastTimer);
+    this.toastTimer = setTimeout(() => t.classList.remove('show'), 2000);
+  },
+
+  bindEvents() {
+    document.getElementById('cardArea').addEventListener('click', () => this.flip());
+    document.getElementById('cardArea').addEventListener('keydown', e => {
+      if (e.key === 'Enter') this.flip();
+    });
+    document.getElementById('btnPrev').addEventListener('click', () => this.go(-1));
+    document.getElementById('btnNext').addEventListener('click', () => this.go(1));
+    document.getElementById('btnKnow').addEventListener('click', () => this.mark('know'));
+    document.getElementById('btnLearn').addEventListener('click', () => this.mark('learn'));
+    document.getElementById('btnShuffle').addEventListener('click', () => this.shuffle());
+    document.getElementById('btnReset').addEventListener('click', () => this.reset());
+    document.getElementById('btnReviewWeak').addEventListener('click', () => this.reviewWeak());
+    document.getElementById('lessonSelect').addEventListener('change', e => {
+      if (e.target.value) this.loadLesson(e.target.value);
+    });
+    document.addEventListener('keydown', e => {
+      if (['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)) return;
+      if (e.key === ' ' || e.key === 'ArrowUp' || e.key === 'ArrowDown') { e.preventDefault(); this.flip(); }
+      else if (e.key === 'ArrowLeft')  this.go(-1);
+      else if (e.key === 'ArrowRight') this.go(1);
+      else if (e.key === 'k' || e.key === 'K') this.mark('know');
+      else if (e.key === 'l' || e.key === 'L') this.mark('learn');
+      else if (e.key === 's' || e.key === 'S') this.shuffle();
+    });
+  }
+};
+
+App.init();
+</script>
+</body>
+</html>

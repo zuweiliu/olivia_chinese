@@ -1,0 +1,238 @@
+{
+  "title": "汉字拆解 Hanzi Breakdown",
+  "description": "Character decomposition and memory aids for Song Dynasty vocabulary",
+  "characters": [
+    {
+      "character": "灭",
+      "pinyin": "miè",
+      "meaning": "to extinguish / destroy",
+      "components": [
+        { "part": "火", "meaning": "fire" },
+        { "part": "一", "meaning": "a horizontal stroke pressing down on top" }
+      ],
+      "breakdown": "一横压在火上面，把火压灭了",
+      "memory_tip": "A flat lid pressed down on fire — the fire is snuffed out → 灭！"
+    },
+    {
+      "character": "亡",
+      "pinyin": "wáng",
+      "meaning": "to perish / die / flee",
+      "components": [
+        { "part": "亡", "meaning": "a person hiding or escaping (ancient pictograph)" }
+      ],
+      "breakdown": "古字：一个人躲进角落，藏起来不见了",
+      "memory_tip": "Someone hiding in a corner, gone from view → perished / fled → 亡"
+    },
+    {
+      "character": "继",
+      "pinyin": "jì",
+      "meaning": "to continue / succeed",
+      "components": [
+        { "part": "糸 (纟)", "meaning": "silk thread / continuity" },
+        { "part": "㡭", "meaning": "phonetic component suggesting connection" }
+      ],
+      "breakdown": "丝线（纟）不断地接续下去",
+      "memory_tip": "Like silk thread (纟) that keeps connecting — one piece after another → continue → 继"
+    },
+    {
+      "character": "廷",
+      "pinyin": "tíng",
+      "meaning": "royal court / hall",
+      "components": [
+        { "part": "廴", "meaning": "to walk/extend (walking radical)" },
+        { "part": "壬", "meaning": "upright person standing tall" }
+      ],
+      "breakdown": "一个人挺立着走进大殿",
+      "memory_tip": "A person standing upright (壬) walking forward (廴) into the palace hall → 廷"
+    },
+    {
+      "character": "抗",
+      "pinyin": "kàng",
+      "meaning": "to resist / fight against",
+      "components": [
+        { "part": "扌(手)", "meaning": "hand" },
+        { "part": "亢", "meaning": "high / unyielding" }
+      ],
+      "breakdown": "用手高举，不肯低头",
+      "memory_tip": "Hand (扌) raised high (亢), refusing to bow → resist → 抗"
+    },
+    {
+      "character": "义",
+      "pinyin": "yì",
+      "meaning": "righteousness / justice",
+      "components": [
+        { "part": "羊", "meaning": "sheep (top part, symbolising goodness/sacrifice)" },
+        { "part": "我", "meaning": "I / me (simplified: the bottom stroke)" }
+      ],
+      "breakdown": "我心里有善良（羊），愿意牺牲自己",
+      "memory_tip": "A sheep (羊) on top of me (我) — sacrifice for what is right → 义"
+    },
+    {
+      "character": "领",
+      "pinyin": "lǐng",
+      "meaning": "to lead / collar / commander",
+      "components": [
+        { "part": "令", "meaning": "order / command" },
+        { "part": "页", "meaning": "head / page" }
+      ],
+      "breakdown": "发号施令（令）的那个头（页）",
+      "memory_tip": "The head (页) who gives commands (令) → leader/commander → 领"
+    },
+    {
+      "character": "败",
+      "pinyin": "bài",
+      "meaning": "to defeat / fail",
+      "components": [
+        { "part": "贝", "meaning": "shell / valuables" },
+        { "part": "攴(攵)", "meaning": "to strike / hit" }
+      ],
+      "breakdown": "用棍子打（攵）打散了财物（贝）",
+      "memory_tip": "Strike (攵) at valuables (贝) and smash them apart → defeat → 败"
+    },
+    {
+      "character": "复",
+      "pinyin": "fù",
+      "meaning": "to return / recover",
+      "components": [
+        { "part": "彳", "meaning": "step / walk" },
+        { "part": "复 inner part 日+夂", "meaning": "sun + descending foot (going back)" }
+      ],
+      "breakdown": "走回来，回到原来的地方",
+      "memory_tip": "Steps going back (彳) to where the sun was → return / recover → 复"
+    },
+    {
+      "character": "勇",
+      "pinyin": "yǒng",
+      "meaning": "brave / courageous",
+      "components": [
+        { "part": "甬", "meaning": "a path / surge upward (phonetic)" },
+        { "part": "力", "meaning": "strength / force" }
+      ],
+      "breakdown": "力量（力）像泉水一样向上涌出",
+      "memory_tip": "Strength (力) surging upward like a spring → bravery → 勇"
+    },
+    {
+      "character": "英",
+      "pinyin": "yīng",
+      "meaning": "heroic / outstanding / flower",
+      "components": [
+        { "part": "艹", "meaning": "grass / plant radical" },
+        { "part": "央", "meaning": "center / middle" }
+      ],
+      "breakdown": "植物中间开出最美的花，出类拔萃",
+      "memory_tip": "The flower (艹) at the center (央) of all plants — the most outstanding one → 英"
+    },
+    {
+      "character": "术",
+      "pinyin": "shù",
+      "meaning": "technique / method / art",
+      "components": [
+        { "part": "木", "meaning": "tree / wood" },
+        { "part": "一 (dot inside)", "meaning": "the core/essence inside" }
+      ],
+      "breakdown": "树（木）里面有一个核心，那是技术的精髓",
+      "memory_tip": "A dot at the heart of a tree (木) — the hidden skill inside → technique → 术"
+    },
+    {
+      "character": "印",
+      "pinyin": "yìn",
+      "meaning": "to print / seal / stamp",
+      "components": [
+        { "part": "爪 (simplified top)", "meaning": "hand pressing down" },
+        { "part": "卩", "meaning": "a kneeling person / seal shape" }
+      ],
+      "breakdown": "用手往下压，把印章盖在纸上",
+      "memory_tip": "A hand pressing down onto a kneeling figure — stamping a seal → print → 印"
+    },
+    {
+      "character": "药",
+      "pinyin": "yào",
+      "meaning": "medicine / chemical (火药 = gunpowder)",
+      "components": [
+        { "part": "艹", "meaning": "plant / herb radical" },
+        { "part": "约", "meaning": "to restrain / approx. (phonetic)" }
+      ],
+      "breakdown": "用草药（艹）制成的东西，能控制（约）病情",
+      "memory_tip": "Herbs (艹) that restrain and control (约) illness → medicine → 药"
+    },
+    {
+      "character": "瑰",
+      "pinyin": "guī",
+      "meaning": "precious gem / rare and beautiful",
+      "components": [
+        { "part": "王(玨)", "meaning": "jade / precious stone radical" },
+        { "part": "鬼", "meaning": "ghost / spirit" }
+      ],
+      "breakdown": "玉石（王旁）里藏着鬼魅般的光芒，珍奇无比",
+      "memory_tip": "A jade stone (王) with an almost ghostly (鬼) glow — rare and magical → precious gem → 瑰"
+    },
+    {
+      "character": "就",
+      "pinyin": "jiù",
+      "meaning": "to accomplish / right away / exactly",
+      "components": [
+        { "part": "京", "meaning": "capital city / high place" },
+        { "part": "尤", "meaning": "especially / outstanding" },
+        { "part": "攵(刀旁)", "meaning": "action / strike" }
+      ],
+      "breakdown": "在高处（京）用行动（攵）成就了出众（尤）的事",
+      "memory_tip": "Reach a high place (京) through outstanding action (尤 + 攵) → accomplish → 就"
+    },
+    {
+      "character": "荣",
+      "pinyin": "róng",
+      "meaning": "prosperous / glorious / to flourish",
+      "components": [
+        { "part": "艹", "meaning": "plant / growing things" },
+        { "part": "火 (two dots)", "meaning": "fire / energy" },
+        { "part": "木", "meaning": "tree / wood" }
+      ],
+      "breakdown": "树木（木）燃烧着生命的火焰，蓬勃生长",
+      "memory_tip": "A tree (木) with fire-like energy (火) bursting from leaves (艹) — flourishing gloriously → 荣"
+    },
+    {
+      "character": "繁",
+      "pinyin": "fán",
+      "meaning": "numerous / busy / flourishing",
+      "components": [
+        { "part": "敏 upper part (每)", "meaning": "every / plentiful" },
+        { "part": "糸 (纟)", "meaning": "silk threads / many strands" }
+      ],
+      "breakdown": "无数的丝线（糸）密密麻麻交织在一起",
+      "memory_tip": "Countless silk threads (糸) all tangled together in abundance → numerous / flourishing → 繁"
+    },
+    {
+      "character": "贸",
+      "pinyin": "mào",
+      "meaning": "trade / commerce",
+      "components": [
+        { "part": "卯", "meaning": "4th Earthly Branch / to open up" },
+        { "part": "贝", "meaning": "shell / money / valuables" }
+      ],
+      "breakdown": "打开门（卯）用钱财（贝）做生意",
+      "memory_tip": "Open the door (卯) with money (贝) in hand → trade → 贸"
+    },
+    {
+      "character": "瓷",
+      "pinyin": "cí",
+      "meaning": "porcelain / china",
+      "components": [
+        { "part": "次", "meaning": "next / secondary (phonetic)" },
+        { "part": "瓦", "meaning": "tile / earthenware" }
+      ],
+      "breakdown": "比瓦（瓦）更精致的陶器",
+      "memory_tip": "Earthenware (瓦) at the next level of refinement (次) → fine porcelain → 瓷"
+    },
+    {
+      "character": "绸",
+      "pinyin": "chóu",
+      "meaning": "silk fabric",
+      "components": [
+        { "part": "纟", "meaning": "silk thread radical" },
+        { "part": "周", "meaning": "all around / everywhere" }
+      ],
+      "breakdown": "丝线（纟）绕来绕去（周）织成的布",
+      "memory_tip": "Silk threads (纟) woven all around (周) → silk cloth → 绸"
+    }
+  ]
+}

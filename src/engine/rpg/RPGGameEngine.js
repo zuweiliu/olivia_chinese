@@ -23,7 +23,7 @@ class RPGGameEngine {
         this.shadowGenerator = null;
 
         this._currentChapter = null;
-        this._chapterList    = [Chapter1, Chapter2, Chapter3]; // ordered list
+        this._chapterList    = [Chapter1, Chapter2, Chapter3, Chapter4]; // ordered list
         this._chapterIndex   = 0;
     }
 
@@ -212,6 +212,16 @@ class RPGGameEngine {
                 color:    '#2aaa55',
                 bgDim:    'rgba(42,170,85,0.20)',
                 bgHover:  'rgba(42,170,85,0.45)'
+            },
+            {
+                index: 3,
+                title:    '第四章',
+                subtitle: '靖康之变',
+                desc:     '宋徽宗绘画而不理国事，\n三道警报被无视，\n金军攻占开封，北宋灭亡。',
+                emoji:    '🌊',
+                color:    '#aa3333',
+                bgDim:    'rgba(170,51,51,0.20)',
+                bgHover:  'rgba(170,51,51,0.45)'
             }
         ];
 

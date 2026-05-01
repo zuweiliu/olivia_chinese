@@ -1,0 +1,12 @@
+{
+  "lessons": [
+    {
+      "id": "lesson7",
+      "file": "data/flashcards/lesson7.json",
+      "lesson": 7,
+      "title": "南宋与民族英雄岳飞",
+      "subtitle": "The Southern Song & National Hero Yue Fei",
+      "cardCount": 27
+    }
+  ]
+}
