@@ -46,8 +46,17 @@
         "emoji": "⛵",
         "titleZh": "元朝词汇（第二节）",
         "titleEn": "Yuan Dynasty · Section 2",
-        "tags": ["👑 Governance", "🗺️ Administration", "📚 Culture & Education", "⛵ Economy & Trade", "🧵 Technology", "⚠️ Decline & Fall", "💪 Power & Development", "🏙️ City & Architecture", "🏪 Production & Commerce", "🏺 Crafts & Places"],
-        "total": 45
+        "tags": ["👑 Governance", "🗺️ Administration", "📚 Culture & Education", "⛵ Economy & Trade", "🧵 Technology", "⚠️ Decline & Fall"],
+        "total": 27
+      },
+      {
+        "file": "cards-section3.json",
+        "storeKey": "fc_L8c",
+        "emoji": "🏙️",
+        "titleZh": "元朝词汇（第三节）",
+        "titleEn": "Yuan Dynasty · Section 3",
+        "tags": ["💪 Power & Development", "🏙️ City & Architecture", "🏪 Production & Commerce", "🏺 Crafts & Places"],
+        "total": 18
       }
     ]
   },
