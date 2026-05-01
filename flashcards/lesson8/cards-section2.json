@@ -77,6 +77,56 @@
         { "front": "灾害", "pinyin": "zāi hài", "back": "disaster / calamity", "example": "元朝末期，水灾、旱灾等灾害频繁发生。", "exampleTranslation": "In the late Yuan, disasters such as floods and droughts occurred frequently.", "breakdown": "灾：洪水（川）与大火（火）交替肆虐，带来大灾难 · 害：屋（宀）里有人（口）遭到刀（丰）伤害，危险降临" },
         { "front": "末期", "pinyin": "mò qī", "back": "final period / last phase / end stage", "example": "元朝末期，各地义军纷纷起义，推翻了元朝。", "exampleTranslation": "In the final period of the Yuan Dynasty, rebel armies rose up everywhere and overthrew it.", "breakdown": "末：树木（木）顶端加一横，表示最顶端、最末端 · 期：按规律（其）按月（月）推算，到了最后一段时间" }
       ]
+    },
+    {
+      "id": "power-development",
+      "name": "Power & Development",
+      "chinese": "强盛与发展",
+      "emoji": "💪",
+      "cards": [
+        { "front": "强大", "pinyin": "qiáng dà", "back": "powerful / mighty / strong", "example": "蒙古帝国非常强大，疆域辽阔无比。", "exampleTranslation": "The Mongol Empire was extremely powerful, with an incomparably vast territory.", "breakdown": "强：弓（弓）加上小虫（虫），小虫拉开硬弓，力量惊人 · 大：人张开双臂，表示广大有力" },
+        { "front": "而且", "pinyin": "ér qiě", "back": "moreover / and also / furthermore", "example": "元朝疆域辽阔，而且民族众多。", "exampleTranslation": "The Yuan territory was vast, and moreover its ethnic groups were many.", "breakdown": "而：像下巴上的胡须，表示转折或递进 · 且：像砖头一层层往上叠，表示还有更多" },
+        { "front": "激起", "pinyin": "jī qǐ", "back": "to arouse / to stir up / to provoke", "example": "元朝的歧视政策激起了人民的强烈不满。", "exampleTranslation": "The Yuan's discriminatory policies provoked strong discontent among the people.", "breakdown": "激：水（氵）猛烈冲击（敫），溅起浪花 · 起：自己（己）走起来（走），出发行动" },
+        { "front": "发展", "pinyin": "fā zhǎn", "back": "to develop / development", "example": "忽必烈大力发展农业和商业。", "exampleTranslation": "Kublai Khan vigorously developed agriculture and commerce.", "breakdown": "发：头发生长，引申为出发、蓬勃发展 · 展：把衣服（衣）展开铺平，引申为展现和发展" }
+      ]
+    },
+    {
+      "id": "city-architecture",
+      "name": "City & Architecture",
+      "chinese": "城市与建筑",
+      "emoji": "🏙️",
+      "cards": [
+        { "front": "城市", "pinyin": "chéng shì", "back": "city", "example": "大都是当时世界上最大的城市之一。", "exampleTranslation": "Dadu was one of the largest cities in the world at the time.", "breakdown": "城：用土（土）筑成的防御墙（成），保护里面的人 · 市：人们聚在一起买卖（巾）东西的地方" },
+        { "front": "建筑", "pinyin": "jiàn zhù", "back": "architecture / building / to build", "example": "大都的建筑雄伟壮观。", "exampleTranslation": "The architecture of Dadu was grand and magnificent.", "breakdown": "建：拿着笔（聿）一步步走出去（廴），建造出来 · 筑：用竹（竹）模具和工具（巩）夯土筑墙" },
+        { "front": "严整", "pinyin": "yán zhěng", "back": "orderly / neat and well-organized", "example": "大都的城市布局严整有序。", "exampleTranslation": "Dadu's city layout was orderly and well-organized.", "breakdown": "严：悬崖（厂）上挂着装饰（敢），气氛庄严肃穆 · 整：用棍子（攵）把歪的东西（束）摆正（正），整理整齐" },
+        { "front": "街道", "pinyin": "jiē dào", "back": "street / road", "example": "大都的街道宽阔笔直，规划整齐。", "exampleTranslation": "Dadu's streets were wide, straight, and well-planned.", "breakdown": "街：两个土（圭）夹着行人走的路（行），就是街道 · 道：在路上（辶）用头脑（首）找方向" },
+        { "front": "工程", "pinyin": "gōng chéng", "back": "engineering / project / construction work", "example": "元朝修建了许多大型水利工程。", "exampleTranslation": "The Yuan built many large-scale water engineering projects.", "breakdown": "工：像一把尺子，代表工匠和工作 · 程：用禾苗（禾）丈量路程（呈），表示过程和计划" }
+      ]
+    },
+    {
+      "id": "production-commerce",
+      "name": "Production & Commerce",
+      "chinese": "生产与商业",
+      "emoji": "🏪",
+      "cards": [
+        { "front": "产量", "pinyin": "chǎn liàng", "back": "output / production volume / yield", "example": "元朝粮食产量大幅增加。", "exampleTranslation": "Grain output in the Yuan Dynasty increased dramatically.", "breakdown": "产：在悬崖（厂）边生产东西，引申为产出 · 量：太阳（日）照着大地（里），丈量多少" },
+        { "front": "多余", "pinyin": "duō yú", "back": "surplus / excess / superfluous", "example": "多余的粮食可以用来做贸易。", "exampleTranslation": "Surplus grain could be used for trade.", "breakdown": "多：两个月亮（夕）叠在一起，表示数量多 · 余：屋子（余）里还剩下的东西，用不完" },
+        { "front": "资本", "pinyin": "zī běn", "back": "capital (financial resources)", "example": "元朝商人积累了大量资本，商业越来越繁荣。", "exampleTranslation": "Yuan merchants accumulated large amounts of capital, and commerce grew increasingly prosperous.", "breakdown": "资：用次序（次）管理钱财（贝），就是资金 · 本：树（木）下面加一横，表示树根，引申为根本和本钱" },
+        { "front": "繁多", "pinyin": "fán duō", "back": "numerous / varied / many kinds", "example": "元朝市场上商品种类繁多。", "exampleTranslation": "The markets in the Yuan Dynasty had numerous varieties of goods.", "breakdown": "繁：像枝繁叶茂的大树，丝线（糸）纷纷交织 · 多：两个月亮（夕）叠在一起，非常多" },
+        { "front": "销售", "pinyin": "xiāo shòu", "back": "to sell / sales", "example": "棉布在全国各地销售，十分畅销。", "exampleTranslation": "Cotton cloth was sold throughout the country and was very popular.", "breakdown": "销：用金属（钅）做的东西卖出去（肖），消化库存 · 售：把嘴（口）里的商品卖出去（隹），完成交易" }
+      ]
+    },
+    {
+      "id": "crafts-places",
+      "name": "Crafts & Places",
+      "chinese": "工艺与地名",
+      "emoji": "🏺",
+      "cards": [
+        { "front": "青花瓷", "pinyin": "qīng huā cí", "back": "blue-and-white porcelain", "example": "元代青花瓷闻名世界，是中国瓷器的代表。", "exampleTranslation": "Yuan blue-and-white porcelain was world-famous and a symbol of Chinese ceramics.", "breakdown": "青：像草木生长的颜色，蓝绿色 · 花：植物（艹）开出的花朵（化）· 瓷：用瓦（瓦）做成的光滑器物（次）" },
+        { "front": "景德镇", "pinyin": "Jǐng dé zhèn", "back": "Jingdezhen – China's porcelain capital", "example": "景德镇是中国最著名的瓷器产地。", "exampleTranslation": "Jingdezhen is China's most famous porcelain-producing region.", "breakdown": null },
+        { "front": "苏杭", "pinyin": "Sū Háng", "back": "Suzhou and Hangzhou – two famously prosperous cities", "example": "元朝时苏杭是繁华的商业城市。", "exampleTranslation": "During the Yuan Dynasty, Suzhou and Hangzhou were prosperous commercial cities.", "breakdown": null },
+        { "front": "翻译", "pinyin": "fān yì", "back": "to translate / translation", "example": "元朝翻译了大量外国书籍，促进了文化交流。", "exampleTranslation": "The Yuan Dynasty translated many foreign books, promoting cultural exchange.", "breakdown": "翻：像鸟翅（羽）扇动，把东西翻转（番）过来 · 译：用语言（讠）把一种话变成（睪）另一种话" }
+      ]
     }
   ]
 }
