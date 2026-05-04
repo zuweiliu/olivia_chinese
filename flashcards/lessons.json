@@ -76,5 +76,22 @@
         "total": 19
       }
     ]
+  },
+  {
+    "id": "lesson10",
+    "num": "Lesson 10",
+    "titleZh": "清朝——鸦片战争与辛亥革命",
+    "titleEn": "Qing Dynasty — Opium War & Revolution of 1911",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L10",
+        "emoji": "🏛️",
+        "titleZh": "清朝词汇",
+        "titleEn": "Qing Dynasty · Vocabulary",
+        "tags": ["🏛️ Dynasty & Territory", "💰 Trade & Economy", "🌿 Opium Crisis", "⚔️ War & Treaties", "🔻 Decline & Revolution", "⭐ Names"],
+        "total": 33
+      }
+    ]
   }
 ]

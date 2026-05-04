@@ -1,0 +1,88 @@
+{
+  "lesson": 10,
+  "title": "清朝词汇",
+  "subtitle": "Qing Dynasty · Vocabulary",
+  "groups": [
+    {
+      "id": "dynasty-territory",
+      "name": "Dynasty & Territory",
+      "chinese": "朝代与疆域",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "封建社会", "pinyin": "fēng jiàn shè huì", "back": "feudal society (a system where land and power belong to a small ruling class)", "example": "清朝是中国封建社会最后一个朝代。", "exampleTranslation": "The Qing Dynasty was the last dynasty of China's feudal society.", "breakdown": "封：土堆（土）上种树（寸），表示封土封地 · 建：用笔（聿）踏出脚步（廴），开创建立 · 社：土地神（示）的聚会（土），人们聚集的组织 · 会：人们聚在一起，合在一处" },
+        { "front": "疆域", "pinyin": "jiāng yù", "back": "territory / domain (all the land within a country's borders)", "example": "清朝初期疆域达到1,200万平方千米。", "exampleTranslation": "In its early period, the Qing Dynasty's territory reached 12 million square kilometers.", "breakdown": "疆：弓（弓）划定土地（田）边界，极其宽广 · 域：围起来的（口）土地（土），加上武力（戈）守护" },
+        { "front": "天朝上国", "pinyin": "tiān cháo shàng guó", "back": "Celestial Empire (China's self-important title — arrogant belief in its own superiority)", "example": "大清以天朝上国自居，不知道世界正在发生巨大变化。", "exampleTranslation": "The Qing considered itself the Celestial Empire, unaware of the great changes happening in the world.", "breakdown": "天：人头顶上那片广阔的天空 · 朝：早晨太阳升起，臣民朝见君王 · 上：基准线上方，表示高级、上等 · 国：有边界的土地，守护着领土" },
+        { "front": "闭关自守", "pinyin": "bì guān zì shǒu", "back": "isolationism / closed-door policy (shut the gates and guard oneself — refusing contact with the outside world)", "example": "大清闭关自守，使中国落后于世界的先进潮流。", "exampleTranslation": "The Qing's closed-door policy caused China to fall behind the world's advanced trends.", "breakdown": "闭：门（门）关闭，不让外人进入 · 关：门栓拉上，关起来 · 自：鼻子的象形，表示自己 · 守：屋顶（宀）下用手（寸）看守" },
+        { "front": "盲目自大", "pinyin": "máng mù zì dà", "back": "blind arrogance (overconfident and ignoring reality — literally 'blind eyes, puffed up self')", "example": "清朝盲目自大，不知道欧洲正在发生巨大变化。", "exampleTranslation": "The Qing was blindly arrogant, unaware of the great changes happening in Europe.", "breakdown": "盲：眼睛（目）死了（亡），什么也看不见 · 目：眼睛的象形 · 自：表示自己 · 大：人张开双臂，非常大、伟大" }
+      ]
+    },
+    {
+      "id": "trade-economy",
+      "name": "Trade & Global Change",
+      "chinese": "贸易与世界变化",
+      "emoji": "💰",
+      "cards": [
+        { "front": "逆差", "pinyin": "nì chā", "back": "trade deficit (importing more than you export — money flows out) ↔ 顺差", "example": "在中英贸易中，英国一直有很大的逆差。", "exampleTranslation": "In China-Britain trade, Britain always had a large trade deficit.", "breakdown": "逆：人倒着走（辶），违反顺序，反向的 · 差：差额，这里指贸易的差额" },
+        { "front": "呢绒", "pinyin": "ní róng", "back": "woollen goods (woven woollen cloth — a British export that failed to sell in China)", "example": "英国的呢绒、钟表等在中国销路不好。", "exampleTranslation": "British woollen goods and clocks did not sell well in China.", "breakdown": "呢：口（口）中带着毛料的质感，指粗毛织物 · 绒：丝线（纟）做成的绒布，软而厚实" },
+        { "front": "工业革命", "pinyin": "gōng yè gé mìng", "back": "Industrial Revolution (18th–19th c. shift from farming to factory production, starting in Europe)", "example": "欧洲的工业革命带来了全新的生产方式和社会变化。", "exampleTranslation": "Europe's Industrial Revolution brought entirely new methods of production and social change.", "breakdown": "工：像一把尺子，表示工作与技艺 · 业：一排排竖立，表示一项事业 · 革：动物的皮，后来表示根本改变 · 命：跪下听令，天命、生命" }
+      ]
+    },
+    {
+      "id": "opium-crisis",
+      "name": "Opium Crisis",
+      "chinese": "鸦片危机",
+      "emoji": "🌿",
+      "cards": [
+        { "front": "鸦片", "pinyin": "yā piàn", "back": "opium (highly addictive drug smuggled into China by British traders)", "example": "英国开始了罪恶的鸦片贸易，每年有四万多箱鸦片卖到中国。", "exampleTranslation": "Britain began the evil opium trade, with over 40,000 chests of opium sold to China each year.", "breakdown": "鸦：黑色的乌鸦（鸟），发出yā的叫声 · 片：木头切开的一半，薄薄的一片" },
+        { "front": "禁烟", "pinyin": "jìn yān", "back": "ban on opium / prohibit opium-smoking (禁烟 = 禁止鸦片)", "example": "清朝皇帝命令林则徐到广州禁烟。", "exampleTranslation": "The Qing emperor ordered Lin Zexu to go to Guangzhou to ban opium.", "breakdown": "禁：两棵树（林），森林神圣不可侵犯，加上示（示），表示禁止 · 烟：火（火）燃烧产生的烟雾（因）" },
+        { "front": "销毁", "pinyin": "xiāo huǐ", "back": "to destroy completely by burning / to incinerate", "example": "林则徐在虎门将收来的鸦片全部销毁。", "exampleTranslation": "Lin Zexu completely destroyed all the collected opium at Humen.", "breakdown": "销：金属（钅）被火融化消除（肖） · 毁：臼（臼）与工（工）结合，表示砸烂、彻底破坏" },
+        { "front": "军舰", "pinyin": "jūn jiàn", "back": "warship / armed naval vessel", "example": "1840年，英国派军舰入侵中国广州和浙江。", "exampleTranslation": "In 1840, Britain sent warships to invade Guangzhou and Zhejiang in China.", "breakdown": "军：战车（车）被覆盖保护，是军队的意思 · 舰：船（舟）加上观察（监），是大型战船" },
+        { "front": "虎门销烟", "pinyin": "Hǔ mén xiāo yān", "back": "Humen Opium Burning — Lin Zexu's 1839 destruction of 20,000+ chests of British opium at Humen, near Guangzhou", "example": "林则徐在虎门将鸦片全部销毁，这就是历史上著名的\"虎门销烟\"。", "exampleTranslation": "Lin Zexu destroyed all the opium at Humen — this is the famous 'Humen Opium Burning' in history.", "breakdown": null }
+      ]
+    },
+    {
+      "id": "war-treaties",
+      "name": "War & Treaties",
+      "chinese": "战争与条约",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "鸦片战争", "pinyin": "yā piàn zhàn zhēng", "back": "Opium War (1840–1842) — Britain invaded China after Lin Zexu destroyed British opium; China was defeated", "example": "1840年，英国发动了\"鸦片战争\"，清军奋力抵抗，但最终战败。", "exampleTranslation": "In 1840, Britain launched the Opium War; the Qing army fought hard but ultimately lost.", "breakdown": null },
+        { "front": "签订", "pinyin": "qiān dìng", "back": "to sign / conclude (a treaty or agreement)", "example": "1842年，清政府被迫同英国签订了《南京条约》。", "exampleTranslation": "In 1842, the Qing government was forced to sign the Treaty of Nanjing with Britain.", "breakdown": "签：竹（竹）制的笔，用来书写签名（佥）· 订：用言语（讠）钉（丁）定，约好不变" },
+        { "front": "条约", "pinyin": "tiáo yuē", "back": "treaty / convention (a formal written agreement between countries)", "example": "《南京条约》是中国近代史上第一个不平等条约。", "exampleTranslation": "The Treaty of Nanjing was the first unequal treaty in modern Chinese history.", "breakdown": "条：细长的一根，表示一条一条的规定 · 约：用丝线（纟）捆绑约束，做出承诺" },
+        { "front": "不平等条约", "pinyin": "bù píng děng tiáo yuē", "back": "unequal treaty (a treaty imposed by a stronger nation on a weaker one by force)", "example": "一连串的不平等条约使中国丧失了大量土地和财富。", "exampleTranslation": "A series of unequal treaties caused China to lose vast amounts of land and wealth.", "breakdown": "不平等：不公平，一方受益另一方受损 · 条约：两国之间正式签订的协议" },
+        { "front": "赔款", "pinyin": "péi kuǎn", "back": "war indemnity / to pay reparations (money a defeated nation is forced to pay)", "example": "条约规定中国向英国赔款2,100万银圆。", "exampleTranslation": "The treaty stipulated that China pay Britain an indemnity of 21 million silver dollars.", "breakdown": "赔：用钱财（贝）补偿对方的损失 · 款：流动的钱财，这里指赔偿的金额" },
+        { "front": "割让", "pinyin": "gē ràng", "back": "to cede (give up territory to another country by force of treaty)", "example": "《南京条约》规定中国割让香港岛给英国。", "exampleTranslation": "The Treaty of Nanjing stipulated that China cede Hong Kong Island to Britain.", "breakdown": "割：用刀（刀）切断分开（害）· 让：用言语（讠）退步，把东西让给别人" },
+        { "front": "殖民地", "pinyin": "zhí mín dì", "back": "colony (a territory fully controlled and exploited by a foreign power)", "example": "鸦片战争之前，中国还不是殖民地。", "exampleTranslation": "Before the Opium War, China was not yet a colony.", "breakdown": "殖：像植物（植）一样在外地繁殖扎根 · 民：古代被统治的人民 · 地：大地，土地" },
+        { "front": "半殖民地", "pinyin": "bàn zhí mín dì", "back": "semi-colony (partly colonized — sovereignty weakened but not fully lost, as happened to China)", "example": "1840年鸦片战争后，中国变为半殖民地半封建社会。", "exampleTranslation": "After the 1840 Opium War, China became a semi-colonial, semi-feudal society.", "breakdown": "半：把东西分成两半，表示不完全 · 殖民地：被外国控制的土地" }
+      ]
+    },
+    {
+      "id": "decline-revolution",
+      "name": "Decline & Revolution",
+      "chinese": "衰落与革命",
+      "emoji": "🔻",
+      "cards": [
+        { "front": "丧失", "pinyin": "sàng shī", "back": "to lose / forfeit (something important — land, rights, or power)", "example": "一连串的不平等条约使中国丧失了150万平方千米的土地。", "exampleTranslation": "A series of unequal treaties caused China to forfeit 1.5 million square kilometers of land.", "breakdown": "丧：死亡、失去，古代像送葬的仪式 · 失：手里（手）的东西滑落，失去了" },
+        { "front": "推翻", "pinyin": "tuī fān", "back": "to overthrow / topple (a government or ruler)", "example": "辛亥革命推翻了清朝的统治，结束了封建帝制。", "exampleTranslation": "The Revolution of 1911 overthrew Qing rule, ending the feudal imperial system.", "breakdown": "推：用手（扌）向前推出去 · 翻：用翅膀（羽）翻转，倒过来" },
+        { "front": "辛亥革命", "pinyin": "xīn hài gé mìng", "back": "the Revolution of 1911 — led by Sun Yat-sen, overthrew the Qing Dynasty and established the Republic of China", "example": "1911年孙中山领导的辛亥革命推翻了满清，建立了民国。", "exampleTranslation": "The 1911 Revolution led by Sun Yat-sen overthrew the Manchu Qing and established the Republic of China.", "breakdown": "辛亥：1911年的干支纪年（辛亥年）· 革命：彻底的政治变革，推翻旧政权" },
+        { "front": "临时", "pinyin": "lín shí", "back": "provisional / temporary (for a limited period, not yet permanent)", "example": "1912年孙中山宣布成立中华民国临时政府。", "exampleTranslation": "In 1912, Sun Yat-sen declared the establishment of the provisional government of the Republic of China.", "breakdown": "临：人（人）俯视（品）某处，接近某个时刻或地点 · 时：日（日）加上寸（一点时间），时间、时机" },
+        { "front": "宣布", "pinyin": "xuān bù", "back": "to declare / announce officially (a public, formal announcement)", "example": "孙中山宣布中华民国临时政府在南京成立。", "exampleTranslation": "Sun Yat-sen declared the establishment of the provisional government of the Republic of China in Nanjing.", "breakdown": "宣：屋顶（宀）下面向外传播（亘），公开宣告 · 布：用手把织好的布料摊开，铺展公告" }
+      ]
+    },
+    {
+      "id": "proper-names",
+      "name": "Important Names",
+      "chinese": "重要人名",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "清朝", "pinyin": "Qīng cháo", "back": "Qing Dynasty (1644–1912) — last imperial dynasty of China, founded by the Manchu people, capital Beijing", "example": "清朝是中国封建社会最后一个朝代，由满族人建立。", "exampleTranslation": "The Qing Dynasty was the last dynasty of China's feudal society, founded by the Manchu people.", "breakdown": null },
+        { "front": "满族", "pinyin": "Mǎn zú", "back": "Manchu people — ethnic group from northeast China who conquered the Ming and founded the Qing Dynasty in 1644", "example": "满族人建立了清朝，1644年入山海关打败了李自成。", "exampleTranslation": "The Manchu people founded the Qing Dynasty, entering Shanhai Pass in 1644 and defeating Li Zicheng.", "breakdown": null },
+        { "front": "康熙皇帝", "pinyin": "Kāng Xī huáng dì", "back": "Emperor Kangxi (r. 1661–1722) — one of China's greatest emperors; unified Taiwan in 1683; Qing reached its peak under his rule", "example": "1683年康熙皇帝出兵统一了台湾。", "exampleTranslation": "In 1683, Emperor Kangxi sent troops to unify Taiwan.", "breakdown": null },
+        { "front": "林则徐", "pinyin": "Lín Zé xú", "back": "Lin Zexu (1785–1850) — Qing official who destroyed British opium at Humen in 1839; hero of the anti-opium movement", "example": "林则徐到广州禁烟，在虎门将鸦片全部销毁。", "exampleTranslation": "Lin Zexu went to Guangzhou to ban opium and destroyed it all at Humen.", "breakdown": null },
+        { "front": "西太后", "pinyin": "Xī tài hòu", "back": "Empress Dowager Cixi (1835–1908) — de facto ruler of late Qing; conservative, executed Hundred Days' Reform leaders, failed to resist foreign invasion", "example": "西太后顽固守旧，杀害了百日维新的谭嗣同等人。", "exampleTranslation": "Empress Dowager Cixi was stubbornly conservative and killed Tan Sitong and others who supported the Hundred Days' Reform.", "breakdown": null },
+        { "front": "谭嗣同", "pinyin": "Tán Sì tóng", "back": "Tan Sitong (1865–1898) — reformer executed by Empress Dowager Cixi after the failure of the Hundred Days' Reform", "example": "谭嗣同是百日维新的改革者，被西太后杀害。", "exampleTranslation": "Tan Sitong was a reformer of the Hundred Days' Reform who was executed by Empress Dowager Cixi.", "breakdown": null },
+        { "front": "孙中山", "pinyin": "Sūn Zhōng shān", "back": "Sun Yat-sen (1866–1925) — leader of the Revolution of 1911, founded the Republic of China, known as the 'Father of the Nation'", "example": "孙中山领导辛亥革命，推翻满清，建立中华民国。", "exampleTranslation": "Sun Yat-sen led the Revolution of 1911, overthrew the Manchu Qing, and established the Republic of China.", "breakdown": null }
+      ]
+    }
+  ]
+}
