@@ -1,0 +1,70 @@
+{
+  "lesson": "10b",
+  "title": "清朝词汇（第二节）",
+  "subtitle": "Qing Dynasty · Section 2",
+  "groups": [
+    {
+      "id": "rise-stability",
+      "name": "Rise & Stability",
+      "chinese": "兴盛与稳定",
+      "emoji": "🌅",
+      "cards": [
+        { "front": "初期", "pinyin": "chū qī", "back": "early period / initial stage (the beginning phase of a dynasty or era)", "example": "清朝初期的一百多年，国家稳定，社会繁荣。", "exampleTranslation": "In the first hundred-plus years of the Qing Dynasty, the country was stable and society prosperous.", "breakdown": "初：用刀（刀）裁布（衣），第一次开始做的事 · 期：每月（月）的特定时间（其），一段时期" },
+        { "front": "稳定", "pinyin": "wěn dìng", "back": "stable / steady (not changing or shaking — used for countries, prices, moods)", "example": "清朝初期国家稳定，社会繁荣。", "exampleTranslation": "In the early Qing, the country was stable and society prosperous.", "breakdown": "稳：禾苗（禾）在急流中站稳（急），不倒不摇 · 定：屋顶（宀）下一切安定（正），不再变动" },
+        { "front": "繁荣", "pinyin": "fán róng", "back": "prosperous / flourishing (economy booming, society thriving) ★复习L8", "example": "清朝初期社会繁荣，疆域达到1,200万平方千米。", "exampleTranslation": "In the early Qing, society flourished and the territory reached 12 million square kilometers.", "breakdown": "繁：枝繁叶茂的大树，丝线（糸）纷纷交织 · 荣：草木（艹）在房屋（冖）上茂盛生长，兴旺辉煌" }
+      ]
+    },
+    {
+      "id": "commerce-trends",
+      "name": "Commerce & Trends",
+      "chinese": "商业与潮流",
+      "emoji": "🌊",
+      "cards": [
+        { "front": "航行", "pinyin": "háng xíng", "back": "to sail / to navigate / voyage (traveling by sea or air)", "example": "欧洲人通过远洋航行开辟了海外市场。", "exampleTranslation": "Europeans opened up overseas markets through ocean voyages.", "breakdown": "航：船（舟）沿着方向（亢）行驶 · 行：十字路口，人走路" },
+        { "front": "开辟", "pinyin": "kāi pì", "back": "to open up / to create (a new path, market, or territory where none existed)", "example": "欧洲人通过远洋航行开辟了海外市场。", "exampleTranslation": "Europeans opened up overseas markets through ocean voyages.", "breakdown": "开：两只手（廾）移开门栓（一），打开大门 · 辟：用力（辛）把门（口）打开，开创新路" },
+        { "front": "市场", "pinyin": "shì chǎng", "back": "market / marketplace (a place or system for buying and selling goods)", "example": "欧洲人开辟了海外市场，商业经济取代了农业经济。", "exampleTranslation": "Europeans opened overseas markets; the commercial economy replaced the agricultural economy.", "breakdown": "市：人们聚在一起买卖东西的地方 · 场：太阳（日）照着的土地（土），宽阔的场所" },
+        { "front": "经济", "pinyin": "jīng jì", "back": "economy / economic (the system of producing, trading, and consuming goods)", "example": "商业经济取代了农业经济。", "exampleTranslation": "The commercial economy replaced the agricultural economy.", "breakdown": "经：丝线（纟）编织的经线，表示经常、经营 · 济：水（氵）流过去，渡过难关，帮助发展" },
+        { "front": "贸易", "pinyin": "mào yì", "back": "trade / commerce (buying and selling between countries or regions)", "example": "18世纪末，在中英贸易中，英国一直有很大的逆差。", "exampleTranslation": "In the late 18th century, Britain consistently had a large deficit in Sino-British trade.", "breakdown": "贸：用商品（卯）交换钱财（贝）· 易：蜥蜴变色，表示交换、改变" },
+        { "front": "潮流", "pinyin": "cháo liú", "back": "trend / current / tide (a direction of change in society or the world)", "example": "闭关自守、盲目自大，使中国落后于世界的先进潮流。", "exampleTranslation": "Isolationism and blind arrogance caused China to fall behind the world's advanced trends.", "breakdown": "潮：水（氵）随着早晨（朝）的月亮涨落，是潮水 · 流：水（氵）不停地流动，传播开去" }
+      ]
+    },
+    {
+      "id": "opium-outrage",
+      "name": "Opium Outrage",
+      "chinese": "鸦片罪恶",
+      "emoji": "💀",
+      "cards": [
+        { "front": "每年", "pinyin": "měi nián", "back": "every year / each year / annually", "example": "每年有四万多箱鸦片卖到中国。", "exampleTranslation": "Over 40,000 chests of opium were sold to China each year.", "breakdown": "每：像母亲（母）一样，每一个都不落下 · 年：庄稼成熟的一个周期，一年" },
+        { "front": "居然", "pinyin": "jū rán", "back": "unexpectedly / to one's surprise (expressing shock or disbelief at something outrageous)", "example": "英国居然冒天下之大不韪，开始了罪恶的鸦片贸易。", "exampleTranslation": "Britain actually had the audacity to defy all morality and began the evil opium trade.", "breakdown": "居：屋子（尸）里的人安居下来，本来安稳 · 然：像火（灬）烤肉（月），竟然，表示出乎意料" },
+        { "front": "冒天下之大不韪", "pinyin": "mào tiān xià zhī dà bù wěi", "back": "to risk universal condemnation / to defy all morality (doing something so outrageous that the whole world condemns it)", "example": "英国居然冒天下之大不韪，开始了鸦片贸易。", "exampleTranslation": "Britain had the audacity to defy all morality and started the opium trade.", "breakdown": "冒：遮住眼睛（目）往上闯，不顾危险 · 天下：全天下的人 · 之：的 · 大不韪：极大的错误（韪 = 对的，不韪 = 不对的）" },
+        { "front": "箱", "pinyin": "xiāng", "back": "chest / box / crate (a container; here a measure word for opium shipments)", "example": "到了1838年，每年有四万多箱鸦片卖到中国。", "exampleTranslation": "By 1838, over 40,000 chests of opium were sold to China each year.", "breakdown": "箱：竹子（竹）做的容器，用来装东西（相）" },
+        { "front": "深受其害", "pinyin": "shēn shòu qí hài", "back": "to suffer deeply from something / to be seriously harmed by it", "example": "鸦片贸易不但使老百姓深受其害，而且白银大量外流。", "exampleTranslation": "The opium trade not only deeply harmed the common people, but also caused a massive outflow of silver.", "breakdown": "深：水（氵）很深，程度很大 · 受：接受、承受 · 其：代词，指那个东西 · 害：屋顶（宀）下带来伤害" },
+        { "front": "而且", "pinyin": "ér qiě", "back": "moreover / and also / furthermore (adding another point, often with 不但…而且…)", "example": "不但老百姓深受其害，而且白银大量外流。", "exampleTranslation": "Not only did the common people suffer deeply, but moreover silver flowed out in great quantities.", "breakdown": "而：像下巴上的胡须，表示转折或递进 · 且：像砖头一层层往上叠，表示还有更多" }
+      ]
+    },
+    {
+      "id": "invasion-resistance",
+      "name": "Invasion & Resistance",
+      "chinese": "入侵与抵抗",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "全部", "pinyin": "quán bù", "back": "all / entire / completely (every single bit, nothing left out)", "example": "林则徐在虎门将收来的鸦片全部销毁。", "exampleTranslation": "Lin Zexu completely destroyed all the collected opium at Humen.", "breakdown": "全：屋顶下（入）有宝玉（玉），完整无缺 · 部：划分区域，每个部分（阝 + 咅）" },
+        { "front": "入侵", "pinyin": "rù qīn", "back": "to invade / invasion (armed forces entering another country's territory)", "example": "1840年，英国派军舰入侵中国广州和浙江。", "exampleTranslation": "In 1840, Britain sent warships to invade Guangzhou and Zhejiang.", "breakdown": "入：像箭头插入，进入内部 · 侵：人（亻）手持扫帚闯入，侵犯领地" },
+        { "front": "奋力", "pinyin": "fèn lì", "back": "with all one's might / to fight hard (giving everything you have)", "example": "清军奋力抵抗，但最终战败。", "exampleTranslation": "The Qing army fought with all its might but ultimately lost.", "breakdown": "奋：大鸟振翅高飞（大 + 田），拼尽全力 · 力：像一只伸出的手臂，表示力量" }
+      ]
+    },
+    {
+      "id": "treaty-concessions",
+      "name": "Treaty & Concessions",
+      "chinese": "条约与让步",
+      "emoji": "📜",
+      "cards": [
+        { "front": "被迫", "pinyin": "bèi pò", "back": "to be forced / to be compelled (having no choice — done against one's will)", "example": "清政府被迫同英国签订了《南京条约》。", "exampleTranslation": "The Qing government was forced to sign the Treaty of Nanjing with Britain.", "breakdown": "被：衣服（衤）覆盖在身上，被动承受 · 迫：在路上（辶）被人追赶（白），不得不做" },
+        { "front": "规定", "pinyin": "guī dìng", "back": "to stipulate / regulation / rule (an official requirement written in law or treaty)", "example": "条约规定中国向英国赔款2,100万银圆。", "exampleTranslation": "The treaty stipulated that China pay Britain an indemnity of 21 million silver dollars.", "breakdown": "规：用圆规画圆（夫），定出规矩（见）· 定：屋顶（宀）下安定（正），做出确定不变的决定" },
+        { "front": "香港", "pinyin": "Xiāng Gǎng", "back": "Hong Kong — island ceded to Britain by the Treaty of Nanjing in 1842; its New Territories were later leased as well", "example": "《南京条约》规定中国割让香港岛给英国。", "exampleTranslation": "The Treaty of Nanjing stipulated that China cede Hong Kong Island to Britain.", "breakdown": null },
+        { "front": "口岸", "pinyin": "kǒu àn", "back": "port / trade port (a city or harbor opened for foreign trade)", "example": "《南京条约》规定中国开放五个通商口岸。", "exampleTranslation": "The Treaty of Nanjing stipulated that China open five ports to foreign trade.", "breakdown": "口：嘴巴，这里指河流入海口 · 岸：山（山）边水的尽头（厂），河岸、海岸" },
+        { "front": "裁判权", "pinyin": "cái pàn quán", "back": "jurisdiction / judicial authority (here: extraterritoriality — a foreign power's right to judge its own citizens on Chinese soil)", "example": "《南京条约》规定英国单方面拥有领事裁判权。", "exampleTranslation": "The Treaty of Nanjing granted Britain unilateral consular jurisdiction.", "breakdown": "裁：用衣（衣）料裁剪（戈），引申为裁决 · 判：用刀（刂）把东西分开（半），判断是非 · 权：树木（木）的重要枝干（雚），引申为权力" }
+      ]
+    }
+  ]
+}

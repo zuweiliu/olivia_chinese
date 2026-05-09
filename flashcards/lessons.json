@@ -91,6 +91,15 @@
         "titleEn": "Qing Dynasty · Vocabulary",
         "tags": ["🏛️ Dynasty & Territory", "💰 Trade & Economy", "🌿 Opium Crisis", "⚔️ War & Treaties", "🔻 Decline & Revolution", "⭐ Names"],
         "total": 33
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L10b",
+        "emoji": "📜",
+        "titleZh": "清朝词汇（第二节）",
+        "titleEn": "Qing Dynasty · Section 2",
+        "tags": ["🌅 Rise & Stability", "🌊 Commerce & Trends", "💀 Opium Outrage", "⚔️ Invasion & Resistance", "📜 Treaty & Concessions"],
+        "total": 23
       }
     ]
   }
