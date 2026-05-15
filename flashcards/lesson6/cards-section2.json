@@ -1,0 +1,85 @@
+{
+  "lesson": 6,
+  "title": "唐朝文化与衰亡",
+  "subtitle": "Tang Culture, Trade & Decline",
+  "groups": [
+    {
+      "id": "agriculture-economy",
+      "name": "Agriculture & Economy",
+      "chinese": "农业与经济",
+      "emoji": "🌾",
+      "cards": [
+        { "front": "灌溉", "pinyin": "guàn gài", "back": "irrigation", "example": "灌溉工程超过历代的总和。", "exampleTranslation": "Irrigation projects surpassed all previous dynasties combined.", "breakdown": "灌：用水（氵）浇灌 · 溉：用水（氵）冲洗田地" },
+        { "front": "历代", "pinyin": "lì dài", "back": "successive dynasties / all previous eras", "example": "唐朝灌溉工程超过历代的总和。", "exampleTranslation": "Tang irrigation projects surpassed all previous dynasties combined." },
+        { "front": "通商", "pinyin": "tōng shāng", "back": "to trade (between countries)", "example": "与唐通商的国家有70多个。", "exampleTranslation": "Over 70 countries traded with the Tang." },
+        { "front": "商业", "pinyin": "shāng yè", "back": "commerce / business", "example": "唐商业繁荣。", "exampleTranslation": "Tang commerce was prosperous." }
+      ]
+    },
+    {
+      "id": "openness-culture",
+      "name": "Openness & Exchange",
+      "chinese": "开放与交流",
+      "emoji": "🌏",
+      "cards": [
+        { "front": "允许", "pinyin": "yǔn xǔ", "back": "to permit / allow", "example": "唐允许外国人长期居住。", "exampleTranslation": "The Tang permitted foreigners to reside long-term.", "breakdown": "允：一个人点头答应 · 许：用言语（讠）表示同意" },
+        { "front": "通婚", "pinyin": "tōng hūn", "back": "to intermarry", "example": "外国人可以和中国人通婚。", "exampleTranslation": "Foreigners could intermarry with Chinese people." },
+        { "front": "声望", "pinyin": "shēng wàng", "back": "prestige / reputation", "example": "唐在世界上很有声望。", "exampleTranslation": "The Tang had great prestige in the world.", "breakdown": "声：士人敲磬（殳）发出声音 · 望：站在高处（亡）远远地看（月+王）" },
+        { "front": "唐人", "pinyin": "Táng rén", "back": "'Tang people' — what foreigners called Chinese people", "example": "各国开始把中国人称为唐人。", "exampleTranslation": "Countries began to call Chinese people 'Tang people.'" },
+        { "front": "留学生", "pinyin": "liú xué shēng", "back": "international student / exchange student", "example": "日本的留学生来到长安。", "exampleTranslation": "Japanese exchange students came to Chang'an." },
+        { "front": "任官", "pinyin": "rèn guān", "back": "to hold an official position", "example": "外国人也可以在中国任官。", "exampleTranslation": "Foreigners could also hold office in China." },
+        { "front": "交往", "pinyin": "jiāo wǎng", "back": "to interact / have exchanges with", "example": "唐积极与各国交往。", "exampleTranslation": "The Tang actively interacted with many countries." }
+      ]
+    },
+    {
+      "id": "city-commerce",
+      "name": "City & Commerce",
+      "chinese": "都市与商业",
+      "emoji": "🏙️",
+      "cards": [
+        { "front": "四通八达", "pinyin": "sì tōng bā dá", "back": "extending in all directions (well-connected roads)", "example": "交通以长安为中心四通八达。", "exampleTranslation": "Transport extended in all directions from Chang'an." },
+        { "front": "琳琅满目", "pinyin": "lín láng mǎn mù", "back": "a superb collection of beautiful things (dazzling variety)", "example": "商品琳琅满目。", "exampleTranslation": "Goods were a dazzling array of beautiful things.", "breakdown": "琳琅：美玉（王）碰撞发出悦耳的声音 · 满目：充满眼睛所能看到的" },
+        { "front": "林立", "pinyin": "lín lì", "back": "standing in great numbers (like a forest)", "example": "长安店铺林立。", "exampleTranslation": "Shops stood in great numbers in Chang'an.", "breakdown": "林：两棵树（木木）并排站着，像森林一样密集" },
+        { "front": "整齐", "pinyin": "zhěng qí", "back": "neat / orderly", "example": "城内街道整齐，树木成行。", "exampleTranslation": "City streets were orderly, with trees in rows." },
+        { "front": "排水沟", "pinyin": "pái shuǐ gōu", "back": "drainage ditch", "example": "街道两边有排水沟。", "exampleTranslation": "There were drainage ditches on both sides of the streets." }
+      ]
+    },
+    {
+      "id": "art-literature",
+      "name": "Art & Literature",
+      "chinese": "文艺",
+      "emoji": "🎭",
+      "cards": [
+        { "front": "灿烂", "pinyin": "càn làn", "back": "brilliant / splendid / magnificent", "example": "创造了灿烂的隋唐文化。", "exampleTranslation": "They created brilliant Sui-Tang culture.", "breakdown": "灿：火（火）光闪耀 · 烂：火（火）烧得彻底，光芒四射" },
+        { "front": "封建文化", "pinyin": "fēng jiàn wén huà", "back": "feudal culture", "example": "隋唐文化是中国封建文化的高峰。", "exampleTranslation": "Sui-Tang culture was the peak of Chinese feudal culture." },
+        { "front": "诗歌", "pinyin": "shī gē", "back": "poetry", "example": "唐朝是中国诗歌的黄金时代。", "exampleTranslation": "The Tang was the golden age of Chinese poetry." },
+        { "front": "黄金时代", "pinyin": "huáng jīn shí dài", "back": "golden age", "example": "唐朝是诗歌的黄金时代。", "exampleTranslation": "The Tang was the golden age of poetry." },
+        { "front": "吸收", "pinyin": "xī shōu", "back": "to absorb / take in", "example": "汉族吸收了不少外来文化。", "exampleTranslation": "The Han people absorbed much foreign culture.", "breakdown": "吸：用嘴（口）往里吸气 · 收：用手把东西收拢起来" },
+        { "front": "乐舞", "pinyin": "yuè wǔ", "back": "music and dance", "example": "可以欣赏胡人的优美乐舞。", "exampleTranslation": "One could enjoy the beautiful music and dance of the Hu people." }
+      ]
+    },
+    {
+      "id": "decline-fall",
+      "name": "Decline & Fall",
+      "chinese": "衰落与灭亡",
+      "emoji": "🔻",
+      "cards": [
+        { "front": "安史之乱", "pinyin": "Ān Shǐ zhī luàn", "back": "the An Lushan Rebellion (major turning point of Tang decline)", "example": "唐朝在安史之乱后走向衰落。", "exampleTranslation": "The Tang declined after the An Lushan Rebellion." },
+        { "front": "衰落", "pinyin": "shuāi luò", "back": "to decline / wane", "example": "唐朝走向衰落。", "exampleTranslation": "The Tang moved toward decline.", "breakdown": "衰：衣服（衣）中间破了，由盛转衰" },
+        { "front": "爆发", "pinyin": "bào fā", "back": "to break out / erupt", "example": "唐朝末年爆发了黄巢起义。", "exampleTranslation": "The Huang Chao Uprising erupted at the end of the Tang.", "breakdown": "爆：火（火）猛烈（暴）地炸开" },
+        { "front": "黄巢起义", "pinyin": "Huáng Cháo qǐ yì", "back": "the Huang Chao Uprising (late Tang peasant rebellion)", "example": "黄巢起义加速了唐朝灭亡。", "exampleTranslation": "The Huang Chao Uprising accelerated the Tang's fall." }
+      ]
+    },
+    {
+      "id": "names",
+      "name": "Key Names",
+      "chinese": "重要人名",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "武则天", "pinyin": "Wǔ Zétiān", "back": "Empress Wu Zetian — China's only female emperor", "example": "武则天是中国历史上唯一的女皇帝。", "exampleTranslation": "Wu Zetian was the only female emperor in Chinese history." },
+        { "front": "李白", "pinyin": "Lǐ Bái", "back": "Li Bai — famous Tang dynasty poet", "example": "著名诗人有李白等。", "exampleTranslation": "Famous poets included Li Bai and others." },
+        { "front": "新罗", "pinyin": "Xīn Luó", "back": "Silla (ancient Korean kingdom)", "example": "新罗的商人来到长安。", "exampleTranslation": "Merchants from Silla came to Chang'an." },
+        { "front": "波斯", "pinyin": "Bō Sī", "back": "Persia", "example": "在波斯人开的酒店里可以欣赏乐舞。", "exampleTranslation": "In restaurants opened by Persians, one could enjoy music and dance." }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,31 @@
 [
   {
+    "id": "lesson6",
+    "num": "Lesson 6",
+    "titleZh": "隋唐——统一与盛世",
+    "titleEn": "Sui & Tang — Reunification & Golden Age",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L6",
+        "emoji": "🏛️",
+        "titleZh": "隋唐词汇",
+        "titleEn": "Sui & Tang · Vocabulary",
+        "tags": ["🏛️ Governance & System", "🌊 Infrastructure", "⚔️ Rise & Fall", "🏯 Tang Prosperity", "⭐ Names"],
+        "total": 30
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L6b",
+        "emoji": "🌏",
+        "titleZh": "唐朝文化与衰亡",
+        "titleEn": "Tang Culture, Trade & Decline",
+        "tags": ["🌾 Agriculture & Economy", "🌏 Openness & Exchange", "🏙️ City & Commerce", "🎭 Art & Literature", "🔻 Decline & Fall", "⭐ Names"],
+        "total": 30
+      }
+    ]
+  },
+  {
     "id": "lesson7",
     "num": "Lesson 7",
     "titleZh": "宋朝——繁荣与危机",

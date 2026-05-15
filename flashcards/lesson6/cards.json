@@ -1,0 +1,77 @@
+{
+  "lesson": 6,
+  "title": "隋唐——统一与盛世",
+  "subtitle": "Sui & Tang — Reunification & Golden Age",
+  "groups": [
+    {
+      "id": "governance",
+      "name": "Governance & System",
+      "chinese": "制度与选官",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "科举制", "pinyin": "kē jǔ zhì", "back": "imperial examination system (select officials by exam)", "example": "隋朝改用科举制选官。", "exampleTranslation": "The Sui adopted the imperial examination system to select officials.", "breakdown": "科：用斗（斗）量谷物，分出等级 · 举：两只手（⺘）把东西举起来" },
+        { "front": "选拔", "pinyin": "xuǎn bá", "back": "to select / pick out (talented people)", "example": "用考试选拔人才。", "exampleTranslation": "Use exams to select talented people.", "breakdown": "选：走（辶）到人群中挑出最好的 · 拔：用手（扌）把东西往上拔出来" },
+        { "front": "人才", "pinyin": "rén cái", "back": "talented person / talent", "example": "有才能的人可以做官。", "exampleTranslation": "People with talent could become officials." },
+        { "front": "门第", "pinyin": "mén dì", "back": "family status / social standing", "example": "门第不高的人也可以做官。", "exampleTranslation": "People of low social standing could also become officials.", "breakdown": "门：一扇大门，代表一个家族 · 第：竹简上排列的次序" },
+        { "front": "统一", "pinyin": "tǒng yī", "back": "to unify / reunify", "example": "杨坚重新统一了中国。", "exampleTranslation": "Yang Jian reunified China.", "breakdown": "统：丝线（纟）汇到一起 · 一：天下合为一体" },
+        { "front": "定都", "pinyin": "dìng dū", "back": "to establish a capital", "example": "隋朝定都洛阳。", "exampleTranslation": "The Sui established its capital in Luoyang." }
+      ]
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure & Geography",
+      "chinese": "工程与交通",
+      "emoji": "🌊",
+      "cards": [
+        { "front": "开凿", "pinyin": "kāi záo", "back": "to dig / excavate (a canal or tunnel)", "example": "隋朝时开凿了大运河。", "exampleTranslation": "The Grand Canal was dug during the Sui.", "breakdown": "凿：用金属工具凿开石头" },
+        { "front": "大运河", "pinyin": "dà yùn hé", "back": "the Grand Canal", "example": "大运河从北京到杭州，全长1,794公里。", "exampleTranslation": "The Grand Canal runs from Beijing to Hangzhou, 1,794 km long.", "breakdown": "运：走（辶）着搬运东西 · 河：水（氵）流过的地方" },
+        { "front": "动脉", "pinyin": "dòng mài", "back": "artery (major transportation route)", "example": "运河成为南北交通的大动脉。", "exampleTranslation": "The canal became the great artery of north-south transport.", "breakdown": "脉：身体（月）里血液流动的通道" },
+        { "front": "古老", "pinyin": "gǔ lǎo", "back": "ancient / age-old", "example": "这是世界上最古老的运河。", "exampleTranslation": "This is the oldest canal in the world." }
+      ]
+    },
+    {
+      "id": "rise-fall",
+      "name": "Rise & Fall",
+      "chinese": "兴衰",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "短暂", "pinyin": "duǎn zàn", "back": "of short duration / brief", "example": "隋朝的繁荣很短暂。", "exampleTranslation": "The Sui's prosperity was short-lived.", "breakdown": "短：箭（矢）太短了，射不远 · 暂：车（车）停一会儿，只是暂时的" },
+        { "front": "腐化", "pinyin": "fǔ huà", "back": "corruption / moral decay", "example": "皇帝的腐化使隋走向灭亡。", "exampleTranslation": "The emperor's corruption led the Sui to ruin.", "breakdown": "腐：府里的肉（肉）放太久，腐烂了" },
+        { "front": "暴政", "pinyin": "bào zhèng", "back": "tyranny / oppressive rule", "example": "腐化和暴政使隋迅速灭亡。", "exampleTranslation": "Corruption and tyranny quickly destroyed the Sui.", "breakdown": "暴：太阳下用力（力）对待，粗暴凶猛" },
+        { "front": "迅速", "pinyin": "xùn sù", "back": "rapid / swift", "example": "隋迅速走向灭亡。", "exampleTranslation": "The Sui swiftly marched toward ruin." },
+        { "front": "灭亡", "pinyin": "miè wáng", "back": "to perish / fall (of a dynasty)", "example": "907年，唐帝国灭亡。", "exampleTranslation": "In 907, the Tang empire perished.", "breakdown": "灭：一横压在火上面，把火压灭了 · 亡：一个人躲进角落，不见了" }
+      ]
+    },
+    {
+      "id": "tang-prosperity",
+      "name": "Tang Prosperity & Power",
+      "chinese": "唐朝盛世",
+      "emoji": "🏯",
+      "cards": [
+        { "front": "蓬勃", "pinyin": "péng bó", "back": "vigorous / thriving", "example": "唐朝前期蓬勃发展。", "exampleTranslation": "The early Tang developed vigorously.", "breakdown": "蓬：草（艹）蓬蓬勃勃地长 · 勃：力量不断涌出" },
+        { "front": "繁荣", "pinyin": "fán róng", "back": "prosperous / flourishing", "example": "唐朝经济繁荣。", "exampleTranslation": "The Tang economy was prosperous.", "breakdown": "繁：丝线（糸）交织出繁密的花纹 · 荣：树木在屋下（冖）蓬勃生长" },
+        { "front": "富庶", "pinyin": "fù shù", "back": "rich and populous", "example": "唐朝是当时世界上最富庶的国家。", "exampleTranslation": "The Tang was the richest and most populous country in the world.", "breakdown": "富：屋顶（宀）下有田地和口粮，家里很富 · 庶：广大的人民" },
+        { "front": "强盛", "pinyin": "qiáng shèng", "back": "powerful and prosperous", "example": "唐朝是强盛的国家。", "exampleTranslation": "The Tang was a powerful and prosperous country." },
+        { "front": "疆域", "pinyin": "jiāng yù", "back": "territory / domain", "example": "唐打败了突厥，扩大了疆域。", "exampleTranslation": "The Tang defeated the Turks and expanded its territory.", "breakdown": "疆：弓（弓）旁边的土地边界 · 域：一片有边界（或）的土（土）地" },
+        { "front": "雄才大略", "pinyin": "xióng cái dà lüè", "back": "great talent and bold strategy", "example": "唐太宗雄才大略。", "exampleTranslation": "Emperor Taizong had great talent and bold strategy." },
+        { "front": "善于", "pinyin": "shàn yú", "back": "to be good at / skilled in", "example": "唐太宗善于听取意见。", "exampleTranslation": "Taizong was good at listening to advice." },
+        { "front": "清明", "pinyin": "qīng míng", "back": "enlightened / clean (of governance)", "example": "唐太宗的政治清明。", "exampleTranslation": "Taizong's governance was enlightened." },
+        { "front": "贞观之治", "pinyin": "zhēn guān zhī zhì", "back": "the Prosperity of Zhenguan (Taizong's golden era)", "example": "唐太宗时期史称贞观之治。", "exampleTranslation": "Taizong's era is known in history as the Prosperity of Zhenguan." }
+      ]
+    },
+    {
+      "id": "names",
+      "name": "Important Names",
+      "chinese": "重要人名",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "杨坚", "pinyin": "Yáng Jiān", "back": "Yang Jian — founder of the Sui dynasty (581)", "example": "581年，杨坚建立隋朝。", "exampleTranslation": "In 581, Yang Jian founded the Sui dynasty." },
+        { "front": "李渊", "pinyin": "Lǐ Yuān", "back": "Li Yuan — Emperor Gaozu, founder of the Tang dynasty (618)", "example": "618年，李渊灭隋，建立唐朝。", "exampleTranslation": "In 618, Li Yuan overthrew the Sui and founded the Tang." },
+        { "front": "唐太宗", "pinyin": "Táng Tài Zōng", "back": "Emperor Taizong of Tang (Li Shimin) — one of China's greatest emperors", "example": "唐太宗李世民雄才大略。", "exampleTranslation": "Emperor Taizong Li Shimin had great talent and bold strategy." },
+        { "front": "文成公主", "pinyin": "Wén Chéng Gōng Zhǔ", "back": "Princess Wencheng — married to the Tibetan leader to strengthen friendship", "example": "唐太宗把文成公主嫁给吐蕃首领。", "exampleTranslation": "Taizong married Princess Wencheng to the Tibetan leader." },
+        { "front": "吐蕃", "pinyin": "Tǔ bō", "back": "ancient Tibetan Empire", "example": "唐太宗加强了唐蕃友好。", "exampleTranslation": "Taizong strengthened Tang-Tibet friendship." },
+        { "front": "突厥", "pinyin": "Tū jué", "back": "ancient Turkic nomadic people in northern China", "example": "唐朝打败了突厥。", "exampleTranslation": "The Tang defeated the Turks." }
+      ]
+    }
+  ]
+}
