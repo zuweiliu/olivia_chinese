@@ -88,6 +88,10 @@
     .btn-know:hover  { background: rgba(46,204,113,.25); }
     .btn-learn { background: rgba(231,76,60,.15); border-color: var(--red); color: var(--red); }
     .btn-learn:hover { background: rgba(231,76,60,.25); }
+    .btn-global { background: rgba(255,215,0,.1); border-color: var(--gold-dim); color: var(--gold); }
+    .btn-global:hover { background: rgba(255,215,0,.2); }
+    .btn-global-remove { background: rgba(255,215,0,.25); border-color: var(--gold); color: var(--gold); }
+    .btn-global-remove:hover { background: rgba(255,215,0,.15); }
     .btn-gold  { background: var(--gold); border-color: var(--gold); color: #111; font-weight: 600; }
     .btn-gold:hover  { background: #ffeb50; }
     .btn-sm { padding: 7px 14px; font-size: 13px; }
@@ -197,26 +201,44 @@
 <div id="toast"></div>
 
 <script>
+const GLOBAL_HARD_KEY = 'fc_global_hard';
+
 const FC = {
   data: null, allCards: [], deck: [], pos: 0, flipped: false,
   group: 'all', progress: {}, storeKey: '', toastT: null,
   mode: 'speak', recog: null, listening: false, speechOK: false, ttsOK: false,
+  isGlobal: false, lessonLabel: '',
 
   async init() {
     const p        = new URLSearchParams(window.location.search);
-    const lessonId = p.get('lesson') || 'lesson7';
-    const cardsFile = p.get('cards') || 'cards.json';
+    this.isGlobal  = p.get('global') === '1';
 
-    document.getElementById('backBtn').href = `lesson.html?lesson=${lessonId}`;
-
-    const res  = await fetch(`${lessonId}/${cardsFile}`);
-    this.data  = await res.json();
-    this.storeKey = p.get('storeKey') || ('fc_' + lessonId + '_' + cardsFile.replace('.json',''));
-    this.progress = JSON.parse(localStorage.getItem(this.storeKey) || '{}');
-
-    document.title = this.data.title + ' · 汉语闪卡';
-    document.getElementById('hTitle').textContent = this.data.title;
-    document.getElementById('hSub').textContent   = this.data.subtitle || '';
+    if (this.isGlobal) {
+      document.getElementById('backBtn').href = '../index.html';
+      this.storeKey = 'fc_global_review';
+      this.progress = JSON.parse(localStorage.getItem(this.storeKey) || '{}');
+      const hardCards = this.loadGlobalHard();
+      this.data = {
+        title: '📚 Global Hard Cards',
+        subtitle: 'All "Still Learning" cards across lessons',
+        groups: hardCards.length ? [{ id: 'all', emoji: '📚', name: 'All Hard Cards', cards: hardCards }] : []
+      };
+      document.title = 'Global Hard Cards · 汉语闪卡';
+      document.getElementById('hTitle').textContent = '📚 Hard Cards';
+      document.getElementById('hSub').textContent   = hardCards.length + ' cards from all lessons';
+    } else {
+      const lessonId  = p.get('lesson') || 'lesson7';
+      const cardsFile = p.get('cards') || 'cards.json';
+      document.getElementById('backBtn').href = `lesson.html?lesson=${lessonId}`;
+      const res  = await fetch(`${lessonId}/${cardsFile}`);
+      this.data  = await res.json();
+      this.storeKey = p.get('storeKey') || ('fc_' + lessonId + '_' + cardsFile.replace('.json',''));
+      this.progress = JSON.parse(localStorage.getItem(this.storeKey) || '{}');
+      this.lessonLabel = this.data.title || lessonId;
+      document.title = this.data.title + ' · 汉语闪卡';
+      document.getElementById('hTitle').textContent = this.data.title;
+      document.getElementById('hSub').textContent   = this.data.subtitle || '';
+    }
 
     this.initSpeech();
     this.initTTS();
@@ -315,11 +337,13 @@ const FC = {
          <div class="feedback-actions">
            <button class="btn btn-sm btn-know"  onclick="FC.mark('know')">✓ Know It!</button>
            <button class="btn btn-sm btn-learn" onclick="FC.mark('learn')">Still Learning</button>
+           ${this.globalBtnHtml()}
          </div>`
       : `<div>✗ Not quite — correct pinyin: &nbsp;<strong>${card.pinyin}</strong></div>
          <div class="feedback-actions">
            <button class="btn btn-sm" onclick="FC.retryCard()">🔁 Try Again</button>
            <button class="btn btn-sm btn-learn" onclick="FC.mark('learn')">Still Learning</button>
+           ${this.globalBtnHtml()}
          </div>`;
   },
 
@@ -344,6 +368,7 @@ const FC = {
       <div class="feedback-actions">
         <button class="btn btn-sm btn-know"  onclick="FC.mark('know')">✓ Know It!</button>
         <button class="btn btn-sm btn-learn" onclick="FC.mark('learn')">Still Learning</button>
+        ${this.globalBtnHtml()}
       </div>`;
   },
 
@@ -424,7 +449,8 @@ const FC = {
 
   mark(s) {
     if (!this.deck.length) return;
-    this.setSt(this.currentCard(), s);
+    const card = this.currentCard();
+    this.setSt(card, s);
     this.toast(s === 'know' ? '✓ Know It!' : '📚 Still Learning');
     this.updateStats();
     if (this.pos < this.deck.length - 1) setTimeout(() => this.go(1), 350);
@@ -476,6 +502,71 @@ const FC = {
     document.getElementById('panelType').classList.toggle('active',  m === 'type');
     this.clearFeedback();
     if (m === 'type') setTimeout(() => document.getElementById('pinyinInput').focus(), 50);
+  },
+
+  loadGlobalHard() {
+    try {
+      const store = JSON.parse(localStorage.getItem(GLOBAL_HARD_KEY) || '{}');
+      return Object.values(store);
+    } catch { return []; }
+  },
+
+  isInGlobal(card) {
+    try {
+      const store = JSON.parse(localStorage.getItem(GLOBAL_HARD_KEY) || '{}');
+      return !!store[this.key(card)];
+    } catch { return false; }
+  },
+
+  globalBtnHtml() {
+    if (this.isGlobal) return '';
+    const card = this.currentCard();
+    if (!card) return '';
+    const inList = this.isInGlobal(card);
+    return inList
+      ? `<button class="btn btn-sm btn-global-remove" onclick="FC.globalToggle()">★ In Global</button>`
+      : `<button class="btn btn-sm btn-global" onclick="FC.globalToggle()">☆ Add to Global</button>`;
+  },
+
+  globalToggle() {
+    const card = this.currentCard();
+    if (!card) return;
+    if (this.isInGlobal(card)) {
+      this.globalRemove(card);
+      this.toast('Removed from Global Hard Cards');
+    } else {
+      this.globalAdd(card);
+      this.toast('⭐ Added to Global Hard Cards');
+    }
+    this.refreshGlobalBtns();
+  },
+
+  refreshGlobalBtns() {
+    document.querySelectorAll('.btn-global, .btn-global-remove').forEach(btn => {
+      const card = this.currentCard();
+      if (!card) return;
+      const inList = this.isInGlobal(card);
+      btn.className = inList ? 'btn btn-sm btn-global-remove' : 'btn btn-sm btn-global';
+      btn.textContent = inList ? '★ In Global' : '☆ Add to Global';
+    });
+  },
+
+  globalAdd(card) {
+    const store = JSON.parse(localStorage.getItem(GLOBAL_HARD_KEY) || '{}');
+    const k = this.key(card);
+    if (!store[k]) {
+      store[k] = { front: card.front, pinyin: card.pinyin, back: card.back, example: card.example || '', exampleTranslation: card.exampleTranslation || '', breakdown: card.breakdown || '', emoji: card.emoji || '', source: this.lessonLabel };
+      localStorage.setItem(GLOBAL_HARD_KEY, JSON.stringify(store));
+    }
+  },
+
+  globalRemove(card) {
+    const store = JSON.parse(localStorage.getItem(GLOBAL_HARD_KEY) || '{}');
+    const k = this.key(card);
+    if (store[k]) {
+      delete store[k];
+      localStorage.setItem(GLOBAL_HARD_KEY, JSON.stringify(store));
+    }
   },
 
   bindEvents() {

@@ -119,6 +119,14 @@
     <div class="section-title">选择一课 · Choose a Lesson</div>
     <div class="section-desc">Click any lesson to start reviewing vocabulary with flashcards.</div>
 
+    <a class="lesson-card" id="globalHardCard" href="flashcards/viewer.html?global=1" style="display:none; border-color:#e74c3c; background: linear-gradient(135deg, #1f1428, #2a1535);">
+        <div class="lesson-num" style="color:#e74c3c;">GLOBAL REVIEW</div>
+        <div class="lesson-title-zh" style="color:#ff6b6b;">📚 Still Learning</div>
+        <div class="lesson-title-en">Hard cards from all lessons — review them here</div>
+        <div class="lesson-meta" id="globalHardMeta" style="color:#e74c3c;">📇 0 cards</div>
+        <div class="lesson-arrow">→</div>
+    </a>
+
     <div class="lesson-grid" id="lessonGrid">
         <!-- populated by script -->
     </div>
@@ -153,6 +161,17 @@ async function renderLessons() {
 }
 
 renderLessons();
+
+(function showGlobalHard() {
+    try {
+        const store = JSON.parse(localStorage.getItem('fc_global_hard') || '{}');
+        const count = Object.keys(store).length;
+        if (count > 0) {
+            document.getElementById('globalHardCard').style.display = 'block';
+            document.getElementById('globalHardMeta').textContent = '📇 ' + count + ' card' + (count !== 1 ? 's' : '');
+        }
+    } catch {}
+})();
 </script>
 </body>
 </html>
