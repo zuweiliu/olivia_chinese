@@ -1,0 +1,81 @@
+{
+  "lesson": 5,
+  "title": "两晋南北朝",
+  "subtitle": "Two Jin & Northern-Southern Dynasties",
+  "groups": [
+    {
+      "id": "dynasties-change",
+      "name": "Dynasties & Change",
+      "chinese": "朝代与变迁",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "皇族", "pinyin": "huáng zú", "back": "imperial clan / royal family", "example": "西晋统一后，皇族争夺王位长期混战。", "exampleTranslation": "After the Western Jin unified China, the imperial clan fought long wars for the throne.", "breakdown": "皇：白光闪耀的王（王），至高无上 · 族：旗帜（方）下聚集的一群人（矢）" },
+        { "front": "宗室", "pinyin": "zōng shì", "back": "imperial clan member / royal house", "example": "宗室司马睿在长江以南建立东晋。", "exampleTranslation": "Royal clan member Sima Rui established the Eastern Jin south of the Yangtze.", "breakdown": "宗：屋顶（宀）下供奉祖先的祭台（示） · 室：屋子（宀）里到达的地方" },
+        { "front": "更迭", "pinyin": "gēng dié", "back": "to alternate / change (of regimes)", "example": "南方和北方政权更迭。", "exampleTranslation": "Northern and southern regimes alternated in power.", "breakdown": "更：太阳升起又落下，交替更换 · 迭：走（辶）了一次又一次，反复交替" },
+        { "front": "政权", "pinyin": "zhèng quán", "back": "political power / regime", "example": "先后成立了16个政权。", "exampleTranslation": "A total of 16 regimes were established one after another." },
+        { "front": "灭亡", "pinyin": "miè wáng", "back": "to perish / fall (of a dynasty)", "example": "匈奴人攻入长安，西晋灭亡。", "exampleTranslation": "The Xiongnu attacked Chang'an, and the Western Jin perished.", "breakdown": "灭：一横压在火上面，把火压灭了 · 亡：一个人躲进角落，不见了" },
+        { "front": "夺取", "pinyin": "duó qǔ", "back": "to seize / capture", "example": "杨坚夺取政权建立隋朝。", "exampleTranslation": "Yang Jian seized power and established the Sui dynasty.", "breakdown": "夺：大力（大）抢走手中之物 · 取：用手（又）抓住耳朵（耳），古代战场割耳计功" },
+        { "front": "隋朝", "pinyin": "Suí cháo", "back": "Sui Dynasty (581–618 CE)", "example": "公元581年，杨坚建立隋朝。", "exampleTranslation": "In 581 CE, Yang Jian established the Sui dynasty." }
+      ]
+    },
+    {
+      "id": "ethnic-migration",
+      "name": "Ethnic Groups & Migration",
+      "chinese": "民族与迁移",
+      "emoji": "🌏",
+      "cards": [
+        { "front": "少数民族", "pinyin": "shǎo shù mín zú", "back": "ethnic minority", "example": "北方少数民族向黄河流域迁移。", "exampleTranslation": "Northern ethnic minorities migrated to the Yellow River basin." },
+        { "front": "匈奴", "pinyin": "xiōng nú", "back": "Xiongnu (nomadic people who attacked the Western Jin)", "example": "匈奴人攻入长安，西晋灭亡。", "exampleTranslation": "The Xiongnu attacked Chang'an, and the Western Jin fell." },
+        { "front": "迁移", "pinyin": "qiān yí", "back": "to migrate / relocate", "example": "少数民族向黄河流域迁移。", "exampleTranslation": "Ethnic minorities migrated toward the Yellow River basin.", "breakdown": "迁：走（辶）到新地方去 · 移：把禾苗（禾）从一处移到另一处" },
+        { "front": "杂居", "pinyin": "zá jū", "back": "to live mixed together (different ethnic groups)", "example": "他们同汉族长期杂居。", "exampleTranslation": "They lived mixed together with the Han people for a long time.", "breakdown": "杂：衣服（衣）里混着不同的东西 · 居：屁股（尸）坐在一个地方住下来" },
+        { "front": "界限", "pinyin": "jiè xiàn", "back": "boundary / limit", "example": "民族界限日益缩小。", "exampleTranslation": "Ethnic boundaries increasingly narrowed.", "breakdown": "界：田地（田）的分界线 · 限：山丘（阝）挡住去路的边界" },
+        { "front": "日益", "pinyin": "rì yì", "back": "day by day / increasingly", "example": "民族界限日益缩小。", "exampleTranslation": "Ethnic boundaries increasingly narrowed.", "breakdown": "日：太阳，一天天 · 益：水（水）满出皿中，越来越多" },
+        { "front": "缩小", "pinyin": "suō xiǎo", "back": "to shrink / narrow down", "example": "民族界限日益缩小。", "exampleTranslation": "Ethnic boundaries increasingly narrowed.", "breakdown": "缩：丝线（纟）收紧变小 · 小：一点一点变得更小" },
+        { "front": "鲜卑族", "pinyin": "xiān bēi zú", "back": "Xianbei people (nomadic group; founded Northern Wei)", "example": "北魏孝文帝使鲜卑族汉化。", "exampleTranslation": "Emperor Xiaowen of Northern Wei sinicized the Xianbei people." },
+        { "front": "汉化", "pinyin": "hàn huà", "back": "sinicization / to adopt Han Chinese culture", "example": "北魏孝文帝进行改革，使鲜卑族汉化。", "exampleTranslation": "Emperor Xiaowen reformed and sinicized the Xianbei people." },
+        { "front": "融合", "pinyin": "róng hé", "back": "fusion / integration / blending", "example": "促进了北方民族的融合。", "exampleTranslation": "This promoted the integration of northern ethnic groups.", "breakdown": "融：鬲（鬲）中加热使物质融化 · 合：上下两个口合在一起" }
+      ]
+    },
+    {
+      "id": "society-religion",
+      "name": "Society & Religion",
+      "chinese": "社会与宗教",
+      "emoji": "🕉️",
+      "cards": [
+        { "front": "动荡", "pinyin": "dòng dàng", "back": "turbulent / unstable", "example": "两晋南北朝是中国历史上的动荡时期。", "exampleTranslation": "The Two Jin and N-S Dynasties was a turbulent period in Chinese history.", "breakdown": "动：用力（力）让重物动起来 · 荡：水（氵）来回摇晃" },
+        { "front": "佛教", "pinyin": "fó jiào", "back": "Buddhism", "example": "由于连年战争，佛教盛行。", "exampleTranslation": "Due to years of war, Buddhism became popular.", "breakdown": "佛：一个人（亻）领悟了最高的道理 · 教：用手（攵）传授知识" },
+        { "front": "盛行", "pinyin": "shèng xíng", "back": "to be prevalent / popular", "example": "人民生活痛苦，因此佛教盛行。", "exampleTranslation": "People's lives were full of suffering, so Buddhism became prevalent." },
+        { "front": "改革", "pinyin": "gǎi gé", "back": "to reform / reform", "example": "北魏孝文帝迁都洛阳，进行改革。", "exampleTranslation": "Emperor Xiaowen moved the capital to Luoyang and carried out reforms." }
+      ]
+    },
+    {
+      "id": "arts-science",
+      "name": "Arts & Science",
+      "chinese": "艺术与科学",
+      "emoji": "🎨",
+      "cards": [
+        { "front": "绘画", "pinyin": "huì huà", "back": "painting / drawing", "example": "绘画和书法水平很高。", "exampleTranslation": "The level of painting and calligraphy was very high.", "breakdown": "绘：用丝线（纟）绣出美丽图案 · 画：用笔在框（凵）里描绘" },
+        { "front": "书法", "pinyin": "shū fǎ", "back": "calligraphy", "example": "书法家王羲之的《兰亭序》非常珍贵。", "exampleTranslation": "Calligrapher Wang Xizhi's Preface to the Orchid Pavilion is extremely precious." },
+        { "front": "珍贵", "pinyin": "zhēn guì", "back": "precious / valuable", "example": "《女史箴图》和《兰亭序》都非常珍贵。", "exampleTranslation": "The Admonitions Scroll and the Orchid Pavilion Preface are both extremely precious.", "breakdown": "珍：玉（王）一样珍稀 · 贵：贝壳（贝）价值很高" },
+        { "front": "圆周率", "pinyin": "yuán zhōu lǜ", "back": "pi (π) — the ratio of circumference to diameter", "example": "祖冲之把圆周率推算到小数点后7位数。", "exampleTranslation": "Zu Chongzhi calculated pi to 7 decimal places.", "breakdown": "圆：圆圈（囗）里完整无缺 · 周：环绕一圈 · 率：比率" },
+        { "front": "小数点", "pinyin": "xiǎo shù diǎn", "back": "decimal point", "example": "推算到小数点后7位数。", "exampleTranslation": "Calculated to 7 digits after the decimal point." },
+        { "front": "推算", "pinyin": "tuī suàn", "back": "to calculate / deduce", "example": "祖冲之是最早把圆周率推算到小数点后7位数的人。", "exampleTranslation": "Zu Chongzhi was the first to calculate pi to 7 decimal places.", "breakdown": "推：用手（扌）往前推进 · 算：竹（竹）做的算筹放在桌上计算" },
+        { "front": "农书", "pinyin": "nóng shū", "back": "agricultural treatise / book on farming", "example": "贾思勰写出了农书《齐民要术》。", "exampleTranslation": "Jia Sixie wrote the agricultural treatise Essential Techniques for the People." }
+      ]
+    },
+    {
+      "id": "names",
+      "name": "Important Names",
+      "chinese": "重要人名",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "司马睿", "pinyin": "Sī Mǎ Ruì", "back": "Sima Rui — founded the Eastern Jin dynasty south of the Yangtze (317 CE)", "example": "宗室司马睿在长江以南建立东晋。", "exampleTranslation": "Royal clan member Sima Rui established the Eastern Jin south of the Yangtze." },
+        { "front": "北魏孝文帝", "pinyin": "Běi Wèi Xiào Wén Dì", "back": "Emperor Xiaowen of Northern Wei — reformed and sinicized the Xianbei people", "example": "北魏孝文帝迁都洛阳，进行改革。", "exampleTranslation": "Emperor Xiaowen moved the capital to Luoyang and carried out reforms." },
+        { "front": "顾恺之", "pinyin": "Gù Kǎi Zhī", "back": "Gu Kaizhi — famous painter; created the Admonitions Scroll (《女史箴图》)", "example": "画家顾恺之的《女史箴图》非常珍贵。", "exampleTranslation": "Painter Gu Kaizhi's Admonitions Scroll is extremely precious." },
+        { "front": "王羲之", "pinyin": "Wáng Xī Zhī", "back": "Wang Xizhi — the 'Sage of Calligraphy'; wrote the Orchid Pavilion Preface", "example": "书法家王羲之的《兰亭序》非常珍贵。", "exampleTranslation": "Calligrapher Wang Xizhi's Orchid Pavilion Preface is extremely precious." },
+        { "front": "祖冲之", "pinyin": "Zǔ Chōng Zhī", "back": "Zu Chongzhi — mathematician; first to calculate pi to 7 decimal places", "example": "祖冲之是世界上最早把圆周率推算到小数点后7位数的人。", "exampleTranslation": "Zu Chongzhi was the first person in the world to calculate pi to 7 decimal places." },
+        { "front": "贾思勰", "pinyin": "Jiǎ Sī Xié", "back": "Jia Sixie — agronomist; wrote Essential Techniques for the People (《齐民要术》)", "example": "农学家贾思勰写出了农书《齐民要术》。", "exampleTranslation": "Agronomist Jia Sixie wrote the agricultural treatise Essential Techniques for the People." }
+      ]
+    }
+  ]
+}

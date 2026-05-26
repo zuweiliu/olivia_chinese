@@ -1,0 +1,73 @@
+{
+  "lesson": 5,
+  "title": "三国鼎立",
+  "subtitle": "Three Kingdoms — Rise of Rival States",
+  "groups": [
+    {
+      "id": "politics-governance",
+      "name": "Politics & Governance",
+      "chinese": "政治与治理",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "军阀", "pinyin": "jūn fá", "back": "warlord / military strongman", "example": "东汉末年，军阀混战。", "exampleTranslation": "At the end of the Eastern Han, warlords fought in chaos.", "breakdown": "军：车（车）上盖着布（冖），军队的战车 · 阀：门（门）里有武力（伐），手握兵权的人" },
+        { "front": "杰出", "pinyin": "jié chū", "back": "outstanding / remarkable", "example": "曹操是个杰出的政治家。", "exampleTranslation": "Cao Cao was an outstanding statesman.", "breakdown": "杰：木上站着一个了不起的人 · 出：脚从山里走出来，超出众人" },
+        { "front": "能谋善断", "pinyin": "néng móu shàn duàn", "back": "skilled in strategy and decisive", "example": "曹操能谋善断。", "exampleTranslation": "Cao Cao was skilled in strategy and decisive." },
+        { "front": "求贤令", "pinyin": "qiú xián lìng", "back": "edict seeking talented people", "example": "曹操三次发布求贤令。", "exampleTranslation": "Cao Cao issued the edict seeking talent three times.", "breakdown": "求：伸出手恳求 · 贤：贝（贝）表示才华像宝贝一样珍贵 · 令：人在高台上发号施令" },
+        { "front": "门第", "pinyin": "mén dì", "back": "family background / social standing", "example": "不论门第高低，有能力就可以做官。", "exampleTranslation": "Regardless of family status, anyone with ability could become an official.", "breakdown": "门：一扇大门，代表一个家族 · 第：竹简上排列的次序" },
+        { "front": "屯田制", "pinyin": "tún tián zhì", "back": "military farming system", "example": "曹操推行屯田制发展农业。", "exampleTranslation": "Cao Cao promoted the military farming system to develop agriculture.", "breakdown": "屯：草木刚刚冒出地面 · 田：划分好的田地 · 制：用刀（刂）裁制规则" },
+        { "front": "鼎立", "pinyin": "dǐng lì", "back": "stand like a tripod (three-way rivalry)", "example": "魏、蜀、吴三国鼎立形成。", "exampleTranslation": "The three kingdoms of Wei, Shu, and Wu stood in a three-way rivalry.", "breakdown": "鼎：古代三脚铜器，象征三方力量并立 · 立：一个人站在地上" }
+      ]
+    },
+    {
+      "id": "battle-strategy",
+      "name": "Battle & Strategy",
+      "chinese": "战争与策略",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "混战", "pinyin": "hùn zhàn", "back": "free-for-all / chaotic fighting", "example": "东汉末年，军阀混战。", "exampleTranslation": "At the end of the Eastern Han, warlords fought in chaos.", "breakdown": "混：水（氵）混在一起，分不清 · 战：拿着戈（戈）去打仗" },
+        { "front": "赤壁", "pinyin": "chì bì", "back": "Red Cliff (site of the famous battle in 208 CE)", "example": "刘备和孙权联军决战于赤壁。", "exampleTranslation": "Liu Bei and Sun Quan's allied forces fought the decisive battle at Red Cliff.", "breakdown": "赤：大火（大+火）烧得通红 · 壁：墙壁上的土（土）" },
+        { "front": "联军", "pinyin": "lián jūn", "back": "allied forces / coalition army", "example": "孙刘联军可以打败曹军。", "exampleTranslation": "The Sun-Liu allied forces could defeat Cao's army.", "breakdown": "联：耳（耳）朵相连，联合在一起 · 军：军队" },
+        { "front": "率", "pinyin": "shuài", "back": "to lead / command (troops)", "example": "曹操率大军20万南下。", "exampleTranslation": "Cao Cao led a 200,000-strong army southward." },
+        { "front": "兵马", "pinyin": "bīng mǎ", "back": "troops; soldiers and horses", "example": "刘备有2万兵马。", "exampleTranslation": "Liu Bei had 20,000 troops." },
+        { "front": "晕船", "pinyin": "yùn chuán", "back": "seasick / motion-sick on a boat", "example": "北方士兵晕船又不会游泳。", "exampleTranslation": "The northern soldiers got seasick and couldn't swim.", "breakdown": "晕：太阳（日）周围一圈光晕，头晕目眩 · 船：在水上行走的舟（舟）" },
+        { "front": "连环船", "pinyin": "lián huán chuán", "back": "chain-linked boats", "example": "曹操采用了连环船的办法。", "exampleTranslation": "Cao Cao adopted the method of chain-linked boats.", "breakdown": "连：车（车）一辆接一辆 · 环：玉（王）做成圆圈，一环扣一环" },
+        { "front": "铁链", "pinyin": "tiě liàn", "back": "iron chain", "example": "将战船用铁链连在一起。", "exampleTranslation": "The warships were linked together with iron chains.", "breakdown": "铁：金属（钅）中最硬的 · 链：金属（钅）做成的一环一环的链条" },
+        { "front": "投降", "pinyin": "tóu xiáng", "back": "to surrender / submit", "example": "黄盖假装投降曹操。", "exampleTranslation": "Huang Gai pretended to surrender to Cao Cao.", "breakdown": "投：用手（扌）把东西扔出去 · 降：从高处（阝）走下来，低头服从" },
+        { "front": "曹营", "pinyin": "cáo yíng", "back": "Cao Cao's military camp", "example": "黄盖带领十只小船向曹营划来。", "exampleTranslation": "Huang Gai led ten small boats rowing toward Cao's camp." },
+        { "front": "艘", "pinyin": "sōu", "back": "measure word for ships / vessels", "example": "黄盖带领十艘小船。", "exampleTranslation": "Huang Gai led ten small boats." },
+        { "front": "乱作一团", "pinyin": "luàn zuò yī tuán", "back": "thrown into chaos / in complete disarray", "example": "曹军乱作一团。", "exampleTranslation": "Cao's army was thrown into complete chaos." },
+        { "front": "大败", "pinyin": "dà bài", "back": "to suffer a crushing defeat", "example": "曹军大败。", "exampleTranslation": "Cao's army suffered a crushing defeat.", "breakdown": "败：用手（攵）把贝壳（贝）打碎，失败了" }
+      ]
+    },
+    {
+      "id": "kingdoms-formation",
+      "name": "Three Kingdoms Formation",
+      "chinese": "三国成立",
+      "emoji": "👑",
+      "cards": [
+        { "front": "废", "pinyin": "fèi", "back": "to depose / abolish", "example": "曹丕废汉献帝自立为帝。", "exampleTranslation": "Cao Pi deposed Emperor Xian of Han and declared himself emperor.", "breakdown": "废：广大的房屋（广）里用手（殳）丢弃，废除" },
+        { "front": "国号", "pinyin": "guó hào", "back": "dynastic title / official name of a state", "example": "曹丕国号魏。", "exampleTranslation": "Cao Pi named his state Wei." },
+        { "front": "称帝", "pinyin": "chēng dì", "back": "to proclaim oneself emperor", "example": "刘备在成都称帝。", "exampleTranslation": "Liu Bei proclaimed himself emperor in Chengdu." },
+        { "front": "定都", "pinyin": "dìng dū", "back": "to establish a capital", "example": "西晋定都洛阳。", "exampleTranslation": "The Western Jin established its capital in Luoyang." },
+        { "front": "灭", "pinyin": "miè", "back": "to conquer / destroy (a state)", "example": "魏国最强，灭了蜀。", "exampleTranslation": "Wei was the strongest and conquered Shu.", "breakdown": "灭：一横压在火上面，把火压灭了" },
+        { "front": "统一南北", "pinyin": "tǒng yī nán běi", "back": "to unify the north and south", "example": "西晋派兵灭吴，统一南北。", "exampleTranslation": "The Western Jin sent troops to conquer Wu, unifying north and south." }
+      ]
+    },
+    {
+      "id": "names",
+      "name": "Important Names",
+      "chinese": "重要人名",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "曹操", "pinyin": "Cáo Cāo", "back": "Cao Cao — warlord who unified northern China; outstanding statesman, strategist, and poet", "example": "曹操实力最强，基本统一了北方。", "exampleTranslation": "Cao Cao was the most powerful and basically unified the north." },
+        { "front": "刘备", "pinyin": "Liú Bèi", "back": "Liu Bei — founded the Kingdom of Shu Han in Chengdu", "example": "刘备在成都称帝，国号汉。", "exampleTranslation": "Liu Bei proclaimed himself emperor in Chengdu, naming his state Han." },
+        { "front": "孙权", "pinyin": "Sūn Quán", "back": "Sun Quan — founded the Kingdom of Wu in Jianye (Nanjing)", "example": "孙权在建业称帝，国号吴。", "exampleTranslation": "Sun Quan proclaimed himself emperor in Jianye, naming his state Wu." },
+        { "front": "诸葛亮", "pinyin": "Zhū Gě Liàng", "back": "Zhuge Liang — brilliant strategist; advisor to Liu Bei", "example": "诸葛亮认为孙刘联军可以打败曹军。", "exampleTranslation": "Zhuge Liang believed the Sun-Liu allied forces could defeat Cao's army." },
+        { "front": "周瑜", "pinyin": "Zhōu Yú", "back": "Zhou Yu — Sun Quan's chief general at Red Cliff", "example": "孙权的大将周瑜派黄盖假装投降曹操。", "exampleTranslation": "Sun Quan's general Zhou Yu sent Huang Gai to pretend to surrender to Cao Cao." },
+        { "front": "黄盖", "pinyin": "Huáng Gài", "back": "Huang Gai — Wu general who led the fire-attack at Red Cliff", "example": "黄盖带领十只小船向曹营划来。", "exampleTranslation": "Huang Gai led ten small boats rowing toward Cao's camp." },
+        { "front": "曹丕", "pinyin": "Cáo Pī", "back": "Cao Pi — Cao Cao's son; founded the Kingdom of Wei", "example": "曹丕废汉献帝自立为帝，国号魏。", "exampleTranslation": "Cao Pi deposed Emperor Xian and declared himself emperor, naming his state Wei." },
+        { "front": "司马炎", "pinyin": "Sī Mǎ Yán", "back": "Sima Yan — founded the Western Jin dynasty in 265 CE", "example": "265年，司马炎废魏帝建立晋朝。", "exampleTranslation": "In 265, Sima Yan deposed the Wei emperor and established the Jin dynasty." }
+      ]
+    }
+  ]
+}

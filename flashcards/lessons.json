@@ -1,5 +1,31 @@
 [
   {
+    "id": "lesson5",
+    "num": "Lesson 5",
+    "titleZh": "三国鼎立两晋南北朝",
+    "titleEn": "Three Kingdoms & Jin / Northern-Southern Dynasties",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L5",
+        "emoji": "⚔️",
+        "titleZh": "三国鼎立",
+        "titleEn": "Three Kingdoms · Rise of Rival States",
+        "tags": ["🏛️ Politics & Governance", "⚔️ Battle & Strategy", "👑 Three Kingdoms Formation", "⭐ Names"],
+        "total": 34
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L5b",
+        "emoji": "🏛️",
+        "titleZh": "两晋南北朝",
+        "titleEn": "Two Jin & Northern-Southern Dynasties",
+        "tags": ["🏛️ Dynasties & Change", "🌏 Ethnic Groups & Migration", "🕉️ Society & Religion", "🎨 Arts & Science", "⭐ Names"],
+        "total": 34
+      }
+    ]
+  },
+  {
     "id": "lesson6",
     "num": "Lesson 6",
     "titleZh": "隋唐——统一与盛世",
