@@ -34,3 +34,51 @@
 诸侯	zhūhóu	feudal lord / feudal vassal
 迁	qiān	move / change / shift
 宗法	zōngfǎ	patriarchal clan system
+
+=== 扩展词语 (Extended Vocabulary from the Text) ===
+
+位于	wèiyú	be located at
+证明	zhèngmíng	prove
+原始	yuánshǐ	primitive / original
+相传	xiāngchuán	legend has it / it is said
+联合	liánhé	unite / join forces
+打败	dǎbài	defeat
+合并	hébìng	merge / combine
+形成	xíngchéng	form / take shape
+水灾	shuǐzāi	flood disaster
+洪水	hóngshuǐ	floodwaters
+首领	shǒulǐng	chief / leader
+带领	dàilǐng	lead / guide
+治理	zhìlǐ	harness / manage / govern
+推举	tuījǔ	elect / recommend
+才能	cáinéng	ability / talent
+禅让	shànràng	abdication
+青铜	qīngtóng	bronze
+势力	shìlì	power / influence
+发达	fādá	developed / advanced
+继承	jìchéng	inherit / succeed to
+王朝	wángcháo	dynasty
+分封	fēnfēng	enfeoff / grant land
+天子	tiānzǐ	Son of Heaven
+等级	děngjí	rank / hierarchy
+功臣	gōngchén	meritorious official
+世代	shìdài	generation after generation
+农历	nónglì	lunar (farming) calendar
+文字	wénzì	writing / script
+汉字	hànzì	Chinese characters
+发展	fāzhǎn	develop / evolve
+记录	jìlù	record / write down
+灭亡	mièwáng	fall / perish
+
+=== 专有名词 (Names & Terms) ===
+
+华夏族	Huáxiàzú	the Huaxia people (ancestors of the Chinese)
+炎黄子孙	Yán-Huáng zǐsūn	descendants of Yan and Huang
+黄帝	Huángdì	the Yellow Emperor
+炎帝	Yándì	the Yan Emperor
+蚩尤	Chīyóu	Chi You (defeated tribal leader)
+甲骨文	jiǎgǔwén	oracle bone script
+金文	jīnwén	bronze inscriptions
+夏朝	Xiàcháo	the Xia dynasty
+商朝	Shāngcháo	the Shang dynasty
+西周	Xīzhōu	the Western Zhou

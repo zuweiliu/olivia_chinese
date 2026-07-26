@@ -1,0 +1,61 @@
+{
+  "lesson": "1b",
+  "title": "夏商西周（下）",
+  "subtitle": "System, Writing & Names",
+  "groups": [
+    {
+      "id": "rule-succession",
+      "name": "Rule & Succession Words",
+      "chinese": "制度与继承",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "世袭", "pinyin": "shì xí", "back": "to inherit (a title or throne passed down through the family)", "example": "启继承父位，开始了世袭王朝。", "exampleTranslation": "Qi inherited his father's position, starting a hereditary dynasty.", "breakdown": "世：一代又一代 · 袭：龙袍（衣）一代传给一代" },
+        { "front": "继承", "pinyin": "jì chéng", "back": "to inherit / succeed to", "example": "禹的儿子启继承了父位。", "exampleTranslation": "Yu's son Qi inherited his father's position.", "breakdown": "继：丝线（纟）不断地接续下去 · 承：双手向上托住，接了下来" },
+        { "front": "王朝", "pinyin": "wáng cháo", "back": "dynasty (a ruling royal family)", "example": "夏是中国第一个世袭王朝。", "exampleTranslation": "Xia was China's first hereditary dynasty.", "breakdown": "王：一竖通着三横，连通天地人的君王 · 朝：太阳从草间升起，早晨拜见君王" },
+        { "front": "分封", "pinyin": "fēn fēng", "back": "to enfeoff / grant land to nobles", "example": "周天子把土地分封给功臣。", "exampleTranslation": "The Zhou king granted land to meritorious officials.", "breakdown": "分：用刀（刀）把东西分开（八） · 封：用手（寸）在土地（圭）上划界，赐给别人" },
+        { "front": "诸侯", "pinyin": "zhū hóu", "back": "feudal lord / vassal (a nobleman given land by the king)", "example": "天子分封功臣，建立诸侯国。", "exampleTranslation": "The Son of Heaven enfeoffed officials and set up vassal states.", "breakdown": "诸：许多（诸多）的意思 · 侯：受封（亻）掌管一方的贵族" },
+        { "front": "宗法", "pinyin": "zōng fǎ", "back": "patriarchal clan system (rules based on family bloodline)", "example": "西周建立了宗法制。", "exampleTranslation": "The Western Zhou established the patriarchal clan system.", "breakdown": "宗：屋顶（宀）下供着祖先牌位（示），一家之本 · 法：像水（氵）一样有规矩的制度" },
+        { "front": "嫡", "pinyin": "dí", "back": "legitimate (the main wife's son, of the proper line)", "example": "西周实行嫡长子继承权。", "exampleTranslation": "The Western Zhou practiced inheritance by the eldest legitimate son.", "breakdown": "嫡：正妻（女）生的、地位最正统的那一个" },
+        { "front": "血缘", "pinyin": "xuè yuán", "back": "bloodline / blood relationship (family by birth)", "example": "宗法制以血缘关系为基础。", "exampleTranslation": "The patriarchal clan system was based on bloodline.", "breakdown": "血：盘子里盛着的一滴血 · 缘：丝线（纟）把一家人连在一起的关系" },
+        { "front": "天子", "pinyin": "tiān zǐ", "back": "the Son of Heaven (the king / emperor)", "example": "土地归周天子所有。", "exampleTranslation": "The land belonged to the Zhou Son of Heaven.", "breakdown": "天：一个人（大）头顶上方就是天 · 子：孩子——天的儿子" },
+        { "front": "等级", "pinyin": "děng jí", "back": "rank / level / hierarchy", "example": "宗法制是一种等级制度。", "exampleTranslation": "The patriarchal clan system was a hierarchical system.", "breakdown": "等：竹简（竹）按官府（寺）的次序排列 · 级：丝线（纟）一段一段，有高有低" },
+        { "front": "功臣", "pinyin": "gōng chén", "back": "meritorious official (a minister who did great service)", "example": "天子把土地分给亲属和功臣。", "exampleTranslation": "The king gave land to relatives and meritorious officials.", "breakdown": "功：出力气（力）做工（工），立下功劳 · 臣：低头的眼睛，服从君主的官员" },
+        { "front": "世代", "pinyin": "shì dài", "back": "generation after generation", "example": "封地可以世代享用。", "exampleTranslation": "A fief could be enjoyed for generations.", "breakdown": "世：一代又一代 · 代：一个人（亻）替换（弋）另一个，一代接一代" }
+      ]
+    },
+    {
+      "id": "writing-history",
+      "name": "Writing & History Words",
+      "chinese": "文字与历史",
+      "emoji": "📜",
+      "cards": [
+        { "front": "历法", "pinyin": "lì fǎ", "back": "calendar (the system for counting days and years)", "example": "夏朝就有了历法。", "exampleTranslation": "The Xia dynasty already had a calendar.", "breakdown": "历：一片片经历过的日子 · 法：像水（氵）一样有规矩的方法" },
+        { "front": "农历", "pinyin": "nóng lì", "back": "the lunar (farming) calendar", "example": "今天用的农历又叫'夏历'。", "exampleTranslation": "The lunar calendar used today is also called the 'Xia calendar'.", "breakdown": "农：在田里劳动的农事 · 历：一段段经历过的日子" },
+        { "front": "文字", "pinyin": "wén zì", "back": "writing / script / characters", "example": "甲骨文是刻在龟甲兽骨上的文字。", "exampleTranslation": "Oracle bone script was writing carved on turtle shells and animal bones.", "breakdown": "文：像交错的花纹，最早的字 · 字：屋子（宀）里生出的孩子（子），文字不断孳生" },
+        { "front": "汉字", "pinyin": "hàn zì", "back": "Chinese characters", "example": "今天的汉字是从甲骨文发展来的。", "exampleTranslation": "Today's Chinese characters developed from oracle bone script.", "breakdown": "汉：汉水（氵）边的汉族 · 字：一个个方块文字" },
+        { "front": "发展", "pinyin": "fā zhǎn", "back": "to develop / evolve / grow", "example": "汉字从甲骨文一步步发展。", "exampleTranslation": "Chinese characters developed step by step from oracle bone script.", "breakdown": "发：像箭一样射发出去 · 展：身体舒展开来，铺展开" },
+        { "front": "记录", "pinyin": "jì lù", "back": "to record / write down", "example": "金文记录了许多西周的大事。", "exampleTranslation": "Bronze inscriptions recorded many major events of the Western Zhou.", "breakdown": "记：用话（讠）把自己（己）记住 · 录：一笔一笔刻录下来" },
+        { "front": "迁", "pinyin": "qiān", "back": "to move / relocate / shift", "example": "周平王迁都洛阳，建立了东周。", "exampleTranslation": "King Ping of Zhou moved the capital to Luoyang and founded the Eastern Zhou.", "breakdown": "迁：走（辶）到很远（千）的地方，搬家" },
+        { "front": "灭亡", "pinyin": "miè wáng", "back": "to fall / perish (a state or dynasty ends)", "example": "商朝最后被周打败灭亡。", "exampleTranslation": "The Shang was finally defeated and fell to the Zhou.", "breakdown": "灭：一横压在火上面，把火压灭了 · 亡：一个人躲进角落，藏起来不见了" }
+      ]
+    },
+    {
+      "id": "proper-names",
+      "name": "Important Names & Terms",
+      "chinese": "重要人名和朝代",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "华夏族", "pinyin": "Huá xià zú", "back": "the Huaxia people – the ancestors of the Chinese nation", "example": null, "exampleTranslation": null },
+        { "front": "炎黄子孙", "pinyin": "Yán Huáng zǐ sūn", "back": "'descendants of Yan and Huang' – what Chinese people call themselves", "example": null, "exampleTranslation": null },
+        { "front": "黄帝", "pinyin": "Huáng Dì", "back": "the Yellow Emperor – legendary ancestor of the Chinese", "example": null, "exampleTranslation": null },
+        { "front": "炎帝", "pinyin": "Yán Dì", "back": "the Yan Emperor – legendary ancestor who joined with the Yellow Emperor", "example": null, "exampleTranslation": null },
+        { "front": "蚩尤", "pinyin": "Chī yóu", "back": "Chi You – tribal leader defeated by Yan and Huang", "example": null, "exampleTranslation": null },
+        { "front": "甲骨文", "pinyin": "jiǎ gǔ wén", "back": "oracle bone script – writing carved on turtle shells and animal bones", "example": null, "exampleTranslation": null },
+        { "front": "金文", "pinyin": "jīn wén", "back": "bronze inscriptions – characters cast onto bronze vessels", "example": null, "exampleTranslation": null },
+        { "front": "夏朝", "pinyin": "Xià cháo", "back": "the Xia dynasty – China's first slave-owning state", "example": null, "exampleTranslation": null },
+        { "front": "商朝", "pinyin": "Shāng cháo", "back": "the Shang dynasty – known for oracle bones and bronze casting", "example": null, "exampleTranslation": null },
+        { "front": "西周", "pinyin": "Xī Zhōu", "back": "the Western Zhou – used the feudal and patriarchal clan systems", "example": null, "exampleTranslation": null }
+      ]
+    }
+  ]
+}

@@ -1,62 +1,55 @@
 {
   "lesson": 1,
-  "title": "中国最早的人类及夏商西周",
-  "subtitle": "Earliest Humans & the Xia, Shang, Western Zhou",
+  "title": "夏商西周（上）",
+  "subtitle": "Origins, Floods & Bronze",
   "groups": [
     {
-      "id": "history-civilization",
-      "name": "History & Civilization Words",
-      "chinese": "历史与文明",
+      "id": "origins-civilization",
+      "name": "Origins & Civilization Words",
+      "chinese": "起源与文明",
       "emoji": "🏺",
       "cards": [
+        { "front": "位于", "pinyin": "wèi yú", "back": "to be located at / situated in", "example": "中国位于欧亚大陆的东方。", "exampleTranslation": "China is located in the east of the Eurasian continent.", "breakdown": "位：一个人（亻）站在自己的位置（立）上 · 于：表示'在……'的意思" },
+        { "front": "证明", "pinyin": "zhèng míng", "back": "to prove / demonstrate", "example": "考古证明中国很早就有原始人类。", "exampleTranslation": "Archaeology proves China had primitive humans very early.", "breakdown": "证：用话（讠）说出正确（正）的事实 · 明：日月同辉，清清楚楚" },
+        { "front": "原始", "pinyin": "yuán shǐ", "back": "primitive / original / earliest", "example": "中国大地上早就有了原始人类。", "exampleTranslation": "There were primitive humans on Chinese land long ago.", "breakdown": "原：山崖（厂）下泉水（泉）流出的源头 · 始：女子（女）孕育生命的开始" },
+        { "front": "相传", "pinyin": "xiāng chuán", "back": "it is said / legend has it", "example": "相传4600年前有黄帝和炎帝。", "exampleTranslation": "Legend says the Yellow Emperor and Yan Emperor lived 4,600 years ago.", "breakdown": "相：用眼睛（目）看着树木（木），你看我我看你 · 传：一个人（亻）把话一代代传（专）下去" },
+        { "front": "联合", "pinyin": "lián hé", "back": "to unite / join forces", "example": "黄帝部落和炎帝部落联合起来。", "exampleTranslation": "The Yellow Emperor's tribe and the Yan Emperor's tribe joined forces.", "breakdown": "联：耳朵（耳）一个接一个相连 · 合：许多人聚到一起（人+一+口）" },
+        { "front": "打败", "pinyin": "dǎ bài", "back": "to defeat / beat", "example": "两大部落打败了蚩尤部落。", "exampleTranslation": "The two great tribes defeated the Chi You tribe.", "breakdown": "打：用手（扌）敲打（丁） · 败：用棍子（攵）打散了财物（贝）" },
+        { "front": "合并", "pinyin": "hé bìng", "back": "to merge / combine", "example": "炎、黄两大部落合并了。", "exampleTranslation": "The Yan and Huang tribes merged together.", "breakdown": "合：合到一起 · 并：两个人肩并肩站在一起" },
+        { "front": "形成", "pinyin": "xíng chéng", "back": "to form / take shape", "example": "两个部落合并，形成了华夏族。", "exampleTranslation": "The two tribes merged and formed the Huaxia people.", "breakdown": "形：用毛笔（彡）描出的样子 · 成：一件事做完，成功了" },
         { "front": "考古", "pinyin": "kǎo gǔ", "back": "archaeology (studying the past by digging up old things)", "example": "考古证明中国很早就有原始人类。", "exampleTranslation": "Archaeology proves China had primitive humans very early.", "breakdown": "考：老人低头，仔细琢磨很久 · 古：十张口一代代传下来的老故事" },
-        { "front": "部落", "pinyin": "bù luò", "back": "tribe (an early group of people living together)", "example": "黄帝部落和炎帝部落联合起来。", "exampleTranslation": "The Yellow Emperor's tribe and the Yan Emperor's tribe joined together.", "breakdown": "部：一个片区（阝）分成好几块 · 落：草木（艹）落下的地方，人们聚居的村落" },
-        { "front": "历法", "pinyin": "lì fǎ", "back": "calendar (the system for counting days and years)", "example": "夏朝就有了历法。", "exampleTranslation": "The Xia dynasty already had a calendar.", "breakdown": "历：一片片经历过的日子 · 法：像水（氵）一样有规矩的方法" },
-        { "front": "血缘", "pinyin": "xuè yuán", "back": "bloodline / blood relationship (family by birth)", "example": "宗法制以血缘关系为基础。", "exampleTranslation": "The patriarchal clan system was based on bloodline.", "breakdown": "血：盘子里盛着的一滴血 · 缘：丝线（纟）把一家人连在一起的关系" }
+        { "front": "部落", "pinyin": "bù luò", "back": "tribe (an early group of people living together)", "example": "黄帝部落和炎帝部落联合起来。", "exampleTranslation": "The Yellow Emperor's tribe and the Yan Emperor's tribe joined together.", "breakdown": "部：一个片区（阝）分成好几块 · 落：草木（艹）落下的地方，人们聚居的村落" }
       ]
     },
     {
-      "id": "slaves-labor",
-      "name": "Slaves & Labor Words",
+      "id": "floods-leadership",
+      "name": "Floods & Leadership Words",
+      "chinese": "治水与禅让",
+      "emoji": "🌊",
+      "cards": [
+        { "front": "水灾", "pinyin": "shuǐ zāi", "back": "flood disaster", "example": "黄帝之后，黄河常有水灾。", "exampleTranslation": "After the Yellow Emperor, the Yellow River often had floods.", "breakdown": "灾：房子（宀）着了火（火），就是灾难 · 水：流动的大水" },
+        { "front": "洪水", "pinyin": "hóng shuǐ", "back": "floodwaters / a great flood", "example": "禹带领大家治理洪水。", "exampleTranslation": "Yu led everyone to control the floodwaters.", "breakdown": "洪：很多水（氵）一起（共）涌来，就是大水" },
+        { "front": "首领", "pinyin": "shǒu lǐng", "back": "chief / leader (of a tribe)", "example": "禹当了部落的首领。", "exampleTranslation": "Yu became the chief of the tribe.", "breakdown": "首：一个头，最前面的 · 领：发号施令（令）的那个头（页）" },
+        { "front": "带领", "pinyin": "dài lǐng", "back": "to lead / guide", "example": "尧、舜、禹带领大家治水。", "exampleTranslation": "Yao, Shun, and Yu led everyone to control the floods.", "breakdown": "带：像一条腰带，把大家系在一起 · 领：走在最前面领头的人" },
+        { "front": "治理", "pinyin": "zhì lǐ", "back": "to harness / manage / govern", "example": "他们先后治理洪水。", "exampleTranslation": "They worked one after another to harness the floods.", "breakdown": "治：像治水（氵）一样统筹管理（台） · 理：把玉（王）上的纹理（里）梳理清楚" },
+        { "front": "推举", "pinyin": "tuī jǔ", "back": "to elect / recommend (someone for a post)", "example": "大家推举有才能的人当首领。", "exampleTranslation": "Everyone elected a talented person as chief.", "breakdown": "推：用手（扌）往前推 · 举：大家一起用手把人高高举起来" },
+        { "front": "才能", "pinyin": "cái néng", "back": "ability / talent", "example": "新首领要有才能。", "exampleTranslation": "The new chief had to have ability.", "breakdown": "才：刚冒出土的幼苗，天生的本事 · 能：像熊一样强壮，什么都能做" },
+        { "front": "禅让", "pinyin": "shàn ràng", "back": "abdication (passing leadership to a talented person, not one's son)", "example": "尧、舜、禹都是通过禅让当上首领的。", "exampleTranslation": "Yao, Shun, and Yu all became chiefs through abdication.", "breakdown": "禅：像祭祀（示）一样郑重地把位子交出 · 让：用话（讠）谦让给别人" }
+      ]
+    },
+    {
+      "id": "slaves-production",
+      "name": "Slaves & Production Words",
       "chinese": "奴隶与生产",
       "emoji": "🌾",
       "cards": [
         { "front": "奴隶", "pinyin": "nú lì", "back": "slave (a person forced to work with no freedom)", "example": "商朝大批奴隶在田里耕作。", "exampleTranslation": "In the Shang dynasty large numbers of slaves worked in the fields.", "breakdown": "奴：一只手（又）牢牢抓住一个女子，不放她自由 · 隶：被人管着、跟在后面的仆人" },
-        { "front": "大批", "pinyin": "dà pī", "back": "large numbers of / a large batch of", "example": "大批奴隶集体劳动。", "exampleTranslation": "Large numbers of slaves worked together.", "breakdown": "大：张开双臂的大 · 批：用手（扌）一次比较、分出一大堆" },
+        { "front": "大批", "pinyin": "dà pī", "back": "large numbers of / a large batch of", "example": "大批奴隶集体在田里劳动。", "exampleTranslation": "Large numbers of slaves worked together in the fields.", "breakdown": "大：张开双臂的大 · 批：用手（扌）一次比较、分出一大堆" },
         { "front": "耕作", "pinyin": "gēng zuò", "back": "to till / farm the land", "example": "奴隶在田里耕作。", "exampleTranslation": "The slaves tilled the fields.", "breakdown": "耕：用农具（耒）在田地（井）里翻土 · 作：一个人（亻）动手干活" },
-        { "front": "铸造", "pinyin": "zhù zào", "back": "to cast / mould (metal into shapes)", "example": "商朝的青铜铸造十分发达。", "exampleTranslation": "Bronze casting was highly developed in the Shang dynasty.", "breakdown": "铸：把金属（钅）熔化后倒进模子，做成长久（寿）的器物 · 造：走（辶）到作坊里制作东西" }
-      ]
-    },
-    {
-      "id": "rule-succession",
-      "name": "Rule & Succession Words",
-      "chinese": "制度与继承",
-      "emoji": "🏛️",
-      "cards": [
-        { "front": "世袭", "pinyin": "shì xí", "back": "to inherit (a title or throne passed down through the family)", "example": "启继承父位，开始了世袭王朝。", "exampleTranslation": "Qi inherited his father's position, starting a hereditary dynasty.", "breakdown": "世：一代又一代 · 袭：龙袍（衣）一代传给一代" },
-        { "front": "嫡", "pinyin": "dí", "back": "legitimate (the main wife's son, of the proper line)", "example": "西周实行嫡长子继承权。", "exampleTranslation": "The Western Zhou practiced inheritance by the eldest legitimate son.", "breakdown": "嫡：正妻（女）生的、地位最正统的那一个" },
-        { "front": "诸侯", "pinyin": "zhū hóu", "back": "feudal lord / vassal (a nobleman given land by the king)", "example": "天子把土地分给功臣，建立诸侯国。", "exampleTranslation": "The Son of Heaven gave land to meritorious officials to set up vassal states.", "breakdown": "诸：许多（诸多）的意思 · 侯：受封（亻）掌管一方的贵族" },
-        { "front": "宗法", "pinyin": "zōng fǎ", "back": "patriarchal clan system (rules based on family bloodline)", "example": "西周建立了宗法制。", "exampleTranslation": "The Western Zhou established the patriarchal clan system.", "breakdown": "宗：屋顶（宀）下供着祖先牌位（示），一家之本 · 法：像水（氵）一样有规矩的制度" },
-        { "front": "迁", "pinyin": "qiān", "back": "to move / relocate / shift", "example": "周平王迁都洛阳，建立了东周。", "exampleTranslation": "King Ping of Zhou moved the capital to Luoyang and founded the Eastern Zhou.", "breakdown": "迁：走（辶）到很远（千）的地方，搬家" }
-      ]
-    },
-    {
-      "id": "proper-names",
-      "name": "Important Names & Terms",
-      "chinese": "重要人名和朝代",
-      "emoji": "⭐",
-      "cards": [
-        { "front": "华夏族", "pinyin": "Huá xià zú", "back": "the Huaxia people – the ancestors of the Chinese nation", "example": null, "exampleTranslation": null },
-        { "front": "炎黄子孙", "pinyin": "Yán Huáng zǐ sūn", "back": "'descendants of Yan and Huang' – what Chinese people call themselves", "example": null, "exampleTranslation": null },
-        { "front": "黄帝", "pinyin": "Huáng Dì", "back": "the Yellow Emperor – legendary ancestor of the Chinese", "example": null, "exampleTranslation": null },
-        { "front": "炎帝", "pinyin": "Yán Dì", "back": "the Yan Emperor – legendary ancestor who joined with the Yellow Emperor", "example": null, "exampleTranslation": null },
-        { "front": "蚩尤", "pinyin": "Chī yóu", "back": "Chi You – tribal leader defeated by Yan and Huang", "example": null, "exampleTranslation": null },
-        { "front": "禅让", "pinyin": "shàn ràng", "back": "abdication – choosing a talented person as the new leader", "example": null, "exampleTranslation": null },
-        { "front": "甲骨文", "pinyin": "jiǎ gǔ wén", "back": "oracle bone script – writing carved on turtle shells and animal bones", "example": null, "exampleTranslation": null },
-        { "front": "金文", "pinyin": "jīn wén", "back": "bronze inscriptions – characters cast onto bronze vessels", "example": null, "exampleTranslation": null },
-        { "front": "夏朝", "pinyin": "Xià cháo", "back": "the Xia dynasty – China's first slave-owning state", "example": null, "exampleTranslation": null },
-        { "front": "商朝", "pinyin": "Shāng cháo", "back": "the Shang dynasty – known for oracle bones and bronze casting", "example": null, "exampleTranslation": null },
-        { "front": "西周", "pinyin": "Xī Zhōu", "back": "the Western Zhou – used the feudal and patriarchal clan systems", "example": null, "exampleTranslation": null }
+        { "front": "铸造", "pinyin": "zhù zào", "back": "to cast / mould (metal into shapes)", "example": "商朝的青铜铸造十分发达。", "exampleTranslation": "Bronze casting was highly developed in the Shang dynasty.", "breakdown": "铸：把金属（钅）熔化后倒进模子，做成长久（寿）的器物 · 造：走（辶）到作坊里制作东西" },
+        { "front": "青铜", "pinyin": "qīng tóng", "back": "bronze (a metal used for tools and vessels)", "example": "商代的青铜器很有名。", "exampleTranslation": "Shang-era bronze vessels are very famous.", "breakdown": "青：像草木初生的那种颜色 · 铜：一种金属（钅），读音同'同'" },
+        { "front": "势力", "pinyin": "shì lì", "back": "power / influence (of a state or group)", "example": "商朝势力东到大海，西到陕西。", "exampleTranslation": "Shang power reached east to the sea and west to Shaanxi.", "breakdown": "势：用力量（力）造成的态势 · 力：一条用力的肌肉" },
+        { "front": "发达", "pinyin": "fā dá", "back": "developed / advanced / flourishing", "example": "当时的青铜铸造已十分发达。", "exampleTranslation": "Bronze casting at that time was already highly developed.", "breakdown": "发：像箭一样射发出去 · 达：走（辶）得通畅，四通八达" }
       ]
     }
   ]

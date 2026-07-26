@@ -9,10 +9,19 @@
         "file": "cards.json",
         "storeKey": "fc_L1",
         "emoji": "🏺",
-        "titleZh": "第一课词汇",
-        "titleEn": "Lesson 1 · Vocabulary",
-        "tags": ["🏺 History & Civilization", "🌾 Slaves & Labor", "🏛️ Rule & Succession", "⭐ Names"],
-        "total": 24
+        "titleZh": "夏商西周（上）",
+        "titleEn": "Section 1 · Origins, Floods & Bronze",
+        "tags": ["🏺 Origins & Civilization", "� Floods & Leadership", "�🌾 Slaves & Production"],
+        "total": 25
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L1b",
+        "emoji": "📜",
+        "titleZh": "夏商西周（下）",
+        "titleEn": "Section 2 · System, Writing & Names",
+        "tags": ["🏛️ Rule & Succession", "📜 Writing & History", "⭐ Names"],
+        "total": 30
       }
     ]
   },
