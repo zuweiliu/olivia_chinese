@@ -11,7 +11,7 @@
         "emoji": "🏺",
         "titleZh": "夏商西周（上）",
         "titleEn": "Section 1 · Origins, Floods & Bronze",
-        "tags": ["🏺 Origins & Civilization", "� Floods & Leadership", "�🌾 Slaves & Production"],
+        "tags": ["🏺 Origins & Civilization", "🌊 Floods & Leadership", "🌾 Slaves & Production"],
         "total": 25
       },
       {
@@ -141,7 +141,7 @@
         "emoji": "⛵",
         "titleZh": "明朝词汇",
         "titleEn": "Ming Dynasty · Vocabulary",
-        "tags": ["🏛️ Politics & Rule", "⛵ Voyages & Diplomacy", "� City & Architecture", "� Economy & Industry", "📚 Science & Literature", "⚔️ Rise, Fall & Heroes", "⭐ Names"],
+        "tags": ["🏛️ Politics & Rule", "⛵ Voyages & Diplomacy", " City & Architecture", " Economy & Industry", "📚 Science & Literature", "⚔️ Rise, Fall & Heroes", "⭐ Names"],
         "total": 43
       },
       {
@@ -150,7 +150,7 @@
         "emoji": "🏙️",
         "titleZh": "明朝词汇（第二节）",
         "titleEn": "Ming Dynasty · Section 2",
-        "tags": ["💪 Power & Development", "�️ City & Architecture", "� Production & Commerce", "🏺 Crafts & Places"],
+        "tags": ["💪 Power & Development", "️ City & Architecture", " Production & Commerce", "🏺 Crafts & Places"],
         "total": 19
       }
     ]
