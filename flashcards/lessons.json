@@ -1,5 +1,22 @@
 [
   {
+    "id": "lesson1",
+    "num": "Lesson 1",
+    "titleZh": "中国最早的人类及夏商西周",
+    "titleEn": "Earliest Humans & the Xia, Shang, Western Zhou",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L1",
+        "emoji": "🏺",
+        "titleZh": "第一课词汇",
+        "titleEn": "Lesson 1 · Vocabulary",
+        "tags": ["🏺 History & Civilization", "🌾 Slaves & Labor", "🏛️ Rule & Succession", "⭐ Names"],
+        "total": 24
+      }
+    ]
+  },
+  {
     "id": "lesson5",
     "num": "Lesson 5",
     "titleZh": "三国鼎立两晋南北朝",
