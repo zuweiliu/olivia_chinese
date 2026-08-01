@@ -1,0 +1,64 @@
+{
+  "lesson": "2b",
+  "title": "春秋与战国（下）",
+  "subtitle": "Feudal System & Hundred Schools",
+  "groups": [
+    {
+      "id": "new-laws-feudalism",
+      "name": "New Laws & Feudalism Words",
+      "chinese": "新法与封建制",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "私有", "pinyin": "sī yǒu", "back": "private ownership / privately owned", "example": "新法规定土地私有。", "exampleTranslation": "The new law made land privately owned.", "breakdown": "私：自己（厶）种的庄稼（禾），归自己所有 · 有：手（ナ）里拿着肉（月），拥有" },
+        { "front": "买卖", "pinyin": "mǎi mài", "back": "to buy and sell / trade / business", "example": "土地可以自由买卖。", "exampleTranslation": "Land could be freely bought and sold.", "breakdown": "买：拿钱换回财物（贝） · 卖：把东西拿出去换钱，比'买'多出一部分" },
+        { "front": "设立", "pinyin": "shè lì", "back": "to set up / establish (an institution)", "example": "全国设立了三十一个县。", "exampleTranslation": "Thirty-one counties were set up across the country.", "breakdown": "设：用话（讠）安排、布置（殳）好 · 立：一个人稳稳站定" },
+        { "front": "官员", "pinyin": "guān yuán", "back": "official / officer", "example": "政府派官员管理各县。", "exampleTranslation": "The government sent officials to manage the counties.", "breakdown": "官：屋子（宀）里管事的人 · 员：张口（口）办事、占名额（贝）的人" },
+        { "front": "管理", "pinyin": "guǎn lǐ", "back": "to manage / administer", "example": "官员负责管理地方。", "exampleTranslation": "Officials were in charge of managing the localities.", "breakdown": "管：用竹（竹）制的工具，像官（官）一样掌管 · 理：把玉（王）上的纹理（里）梳理清楚" },
+        { "front": "官爵", "pinyin": "guān jué", "back": "official rank / rank and title", "example": "要有军功才能得到官爵。", "exampleTranslation": "One needed military merit to gain rank and title.", "breakdown": "官：管事的职位 · 爵：古代像一只酒器，赐给有功之人的爵位" },
+        { "front": "军功", "pinyin": "jūn gōng", "back": "military merit / battle achievement", "example": "官位、爵位要有军功才能得到。", "exampleTranslation": "Posts and titles required military merit to earn.", "breakdown": "军：车（车）上盖着布（冖），军队 · 功：出力（力）做工（工），立下功劳" },
+        { "front": "奖励", "pinyin": "jiǎng lì", "back": "to reward / award", "example": "新法奖励耕战。", "exampleTranslation": "The new law rewarded farming and fighting.", "breakdown": "奖：把好东西（大）拿出来鼓励大家 · 励：用力（力）鞭策（厉），使人上进" },
+        { "front": "免除", "pinyin": "miǎn chú", "back": "to exempt / waive / remove", "example": "生产多的人可以免除劳役。", "exampleTranslation": "Those who produced a lot could be exempted from labor service.", "breakdown": "免：像兔子逃脱，去掉了那一点，免去了 · 除：把多余的铲掉，清除" },
+        { "front": "剥夺", "pinyin": "bō duó", "back": "to deprive / strip away", "example": "商鞅变法剥夺了贵族的特权。", "exampleTranslation": "Shang Yang's reforms stripped the nobles of their privileges.", "breakdown": "剥：用刀（刂）把外皮一层层剥掉 · 夺：从手中硬抢走" },
+        { "front": "特权", "pinyin": "tè quán", "back": "privilege / special right", "example": "贵族失去了特权。", "exampleTranslation": "The nobles lost their privileges.", "breakdown": "特：一头特别的大牛（牛），与众不同 · 权：手（又）握大树（木），掌握权力" },
+        { "front": "封建", "pinyin": "fēng jiàn", "back": "feudal / feudalism", "example": "商鞅变法确立了封建制度。", "exampleTranslation": "Shang Yang's reforms established the feudal system.", "breakdown": "封：在土地（圭）上用手（寸）划界分封 · 建：拿着笔（聿）一步步（廴）建立制度" }
+      ]
+    },
+    {
+      "id": "hundred-schools",
+      "name": "Hundred Schools Words",
+      "chinese": "百家争鸣",
+      "emoji": "📚",
+      "cards": [
+        { "front": "哲学", "pinyin": "zhé xué", "back": "philosophy", "example": "那是哲学的黄金时代。", "exampleTranslation": "It was a golden age of philosophy.", "breakdown": "哲：分析道理（折），开口（口）讲出智慧 · 学：孩子（子）在屋里学习知识" },
+        { "front": "学者", "pinyin": "xué zhě", "back": "scholar", "example": "各国学者到齐国讲学。", "exampleTranslation": "Scholars from many states came to Qi to lecture.", "breakdown": "学：学习知识 · 者：表示'……的人'" },
+        { "front": "学说", "pinyin": "xué shuō", "back": "theory / doctrine / teachings", "example": "学者们提出自己的学说。", "exampleTranslation": "The scholars put forward their own doctrines.", "breakdown": "学：学问 · 说：用话（讠）把想法讲出来（兑）" },
+        { "front": "主张", "pinyin": "zhǔ zhāng", "back": "view / stance / to advocate", "example": "他们提出自己的主张。", "exampleTranslation": "They put forward their own views.", "breakdown": "主：一家之主，拿主意的人 · 张：把弓（弓）拉开（长），伸张、主张" },
+        { "front": "论辩", "pinyin": "lùn biàn", "back": "debate / argument", "example": "学者们讲学论辩。", "exampleTranslation": "The scholars lectured and debated.", "breakdown": "论：用话（讠）有条理（仑）地讲道理 · 辩：两个'辛'中间用话（讠）争辩" },
+        { "front": "记录", "pinyin": "jì lù", "back": "to record / write down", "example": "辩论之后记录整理成书。", "exampleTranslation": "After the debates, the records were compiled into books.", "breakdown": "记：用话（讠）把自己（己）记住 · 录：一笔一笔刻录下来" },
+        { "front": "百家争鸣", "pinyin": "bǎi jiā zhēng míng", "back": "a hundred schools of thought contend", "example": "春秋战国出现了百家争鸣。", "exampleTranslation": "The Spring and Autumn and Warring States saw a hundred schools of thought contend.", "breakdown": "百家：许许多多的学派 · 争鸣：像百鸟争着鸣叫，各抒己见" },
+        { "front": "茁壮", "pinyin": "zhuó zhuàng", "back": "to thrive / grow strong and healthy", "example": "中国文化在这茁壮的根基上形成。", "exampleTranslation": "Chinese culture formed on this thriving foundation.", "breakdown": "茁：小草（艹）刚冒出（出）就长得旺 · 壮：像强壮的士（士）一样，粗壮有力" },
+        { "front": "根基", "pinyin": "gēn jī", "back": "foundation / basis / root", "example": "这是中国文化的根基。", "exampleTranslation": "This is the foundation of Chinese culture.", "breakdown": "根：树木（木）向下扎的根（艮） · 基：建筑最下面的土（土）台，基础（其）" }
+      ]
+    },
+    {
+      "id": "proper-names",
+      "name": "Important Names & Terms",
+      "chinese": "重要人名和名词",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "春秋五霸", "pinyin": "Chūnqiū Wǔ Bà", "back": "the Five Hegemons of the Spring and Autumn period", "example": null, "exampleTranslation": null },
+        { "front": "战国七雄", "pinyin": "Zhànguó Qī Xióng", "back": "the Seven Warring States – Qi, Chu, Yan, Han, Zhao, Wei, Qin", "example": null, "exampleTranslation": null },
+        { "front": "齐桓公", "pinyin": "Qí Huán Gōng", "back": "Duke Huan of Qi – the first hegemon of the Spring and Autumn period", "example": null, "exampleTranslation": null },
+        { "front": "商鞅", "pinyin": "Shāng Yāng", "back": "Shang Yang – the reformer whose Legalist reforms transformed the state of Qin", "example": null, "exampleTranslation": null },
+        { "front": "秦孝公", "pinyin": "Qín Xiào Gōng", "back": "Duke Xiao of Qin – the ruler who supported Shang Yang's reforms", "example": null, "exampleTranslation": null },
+        { "front": "孔子", "pinyin": "Kǒngzǐ", "back": "Confucius – founder of Confucianism (the Ru school)", "example": null, "exampleTranslation": null },
+        { "front": "老子", "pinyin": "Lǎozǐ", "back": "Laozi – founder of Taoism (the Dao school)", "example": null, "exampleTranslation": null },
+        { "front": "墨子", "pinyin": "Mòzǐ", "back": "Mozi – founder of Mohism (the Mo school)", "example": null, "exampleTranslation": null },
+        { "front": "儒家", "pinyin": "Rújiā", "back": "Confucianism / the Confucian school of thought", "example": null, "exampleTranslation": null },
+        { "front": "道家", "pinyin": "Dàojiā", "back": "Taoism / the Daoist school of thought", "example": null, "exampleTranslation": null },
+        { "front": "墨家", "pinyin": "Mòjiā", "back": "Mohism / the Mohist school of thought", "example": null, "exampleTranslation": null },
+        { "front": "稷下学宫", "pinyin": "Jìxià Xuégōng", "back": "the Jixia Academy – where scholars from many states gathered to lecture and debate", "example": null, "exampleTranslation": null }
+      ]
+    }
+  ]
+}

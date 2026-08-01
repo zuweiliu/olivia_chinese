@@ -1,0 +1,72 @@
+{
+  "lesson": 2,
+  "title": "春秋与战国（上）",
+  "subtitle": "Turmoil, Hegemony & Reform",
+  "groups": [
+    {
+      "id": "turmoil-hegemony",
+      "name": "Turmoil & Hegemony Words",
+      "chinese": "动荡与争霸",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "动荡", "pinyin": "dòng dàng", "back": "turmoil / unrest / upheaval", "example": "春秋战国是社会动荡的时期。", "exampleTranslation": "The Spring and Autumn and Warring States were a time of social upheaval.", "breakdown": "动：用力（力）让重物动起来 · 荡：水（氵）面上草木（艹）随波摇晃，动荡不安" },
+        { "front": "变革", "pinyin": "biàn gé", "back": "transformation / reform / change", "example": "那是一个大变革的时代。", "exampleTranslation": "It was an era of great transformation.", "breakdown": "变：用行动（攵）打乱原样，让它改变 · 革：一张兽皮（革）被彻底加工改造" },
+        { "front": "时期", "pinyin": "shí qī", "back": "period / era / phase", "example": "东周分为春秋和战国两个时期。", "exampleTranslation": "The Eastern Zhou is divided into the Spring-Autumn and Warring-States periods.", "breakdown": "时：太阳（日）走到寺庙（寺）上方，表示时间 · 期：月亮（月）转一圈（其），一个周期" },
+        { "front": "瓦解", "pinyin": "wǎ jiě", "back": "to collapse / disintegrate / fall apart", "example": "春秋时期奴隶制度逐渐瓦解。", "exampleTranslation": "During the Spring and Autumn period the slave system gradually collapsed.", "breakdown": "瓦：屋顶的瓦片，一片片碎裂掉落 · 解：用刀（刀）把牛角（角）从牛（牛）身上分开" },
+        { "front": "力量", "pinyin": "lì liàng", "back": "strength / power / force", "example": "春秋初期周天子力量很弱。", "exampleTranslation": "In the early Spring and Autumn period the Zhou king's power was weak.", "breakdown": "力：一条用力的肌肉 · 量：用工具一点点称量、衡量" },
+        { "front": "听从", "pinyin": "tīng cóng", "back": "to obey / comply with / heed", "example": "诸侯不再听从天子的命令。", "exampleTranslation": "The lords no longer obeyed the king's orders.", "breakdown": "听：用耳朵听，再点头接受 · 从：一个人跟在另一个人后面（从），跟随服从" },
+        { "front": "命令", "pinyin": "mìng lìng", "back": "order / command", "example": "诸侯不听天子的命令。", "exampleTranslation": "The lords didn't heed the king's commands.", "breakdown": "命：口（口）中发出、让人听令（令）的话 · 令：人在高台上发号施令" },
+        { "front": "争夺", "pinyin": "zhēng duó", "back": "to fight over / scramble for / contend for", "example": "诸侯为了争夺土地和人口而打仗。", "exampleTranslation": "The lords fought to seize land and people.", "breakdown": "争：两只手抢同一样东西 · 夺：用手（寸）把怀里（大）的东西硬抢走" },
+        { "front": "争霸", "pinyin": "zhēng bà", "back": "to contend for hegemony / vie for supremacy", "example": "春秋时诸侯争霸。", "exampleTranslation": "In the Spring and Autumn period the lords contended for hegemony.", "breakdown": "争：两只手相争 · 霸：下着雨（雨）也要称王（革+月），做天下的霸主" },
+        { "front": "霸主", "pinyin": "bà zhǔ", "back": "overlord / hegemon (the dominant lord)", "example": "打赢的大国成为霸主。", "exampleTranslation": "The victorious great state became the hegemon.", "breakdown": "霸：压倒众人、称雄一方 · 主：油灯上的一点火苗（丶），一家之主" }
+      ]
+    },
+    {
+      "id": "warring-states-reform",
+      "name": "Warring States & Reform Words",
+      "chinese": "战国与改革",
+      "emoji": "🗡️",
+      "cards": [
+        { "front": "称霸", "pinyin": "chēng bà", "back": "to dominate / become the hegemon", "example": "齐桓公最早称霸。", "exampleTranslation": "Duke Huan of Qi was the first to become hegemon.", "breakdown": "称：用手掂量后郑重宣称 · 霸：压倒众人，称雄一方" },
+        { "front": "战争", "pinyin": "zhàn zhēng", "back": "war", "example": "诸侯国之间常常发生战争。", "exampleTranslation": "Wars often broke out between the states.", "breakdown": "战：拿着武器（戈）与对手（单）交战 · 争：两手相争" },
+        { "front": "承认", "pinyin": "chéng rèn", "back": "to acknowledge / recognize / admit", "example": "大家要承认霸主的地位。", "exampleTranslation": "Everyone had to recognize the hegemon's status.", "breakdown": "承：双手向上托住，接受下来 · 认：用话（讠）点头认下（人）" },
+        { "front": "地位", "pinyin": "dì wèi", "back": "status / position / standing", "example": "霸主有很高的地位。", "exampleTranslation": "The hegemon held a very high status.", "breakdown": "地：一块（也）土地（土） · 位：一个人（亻）站在自己的位置（立）上" },
+        { "front": "改革", "pinyin": "gǎi gé", "back": "reform / to reform", "example": "战国七雄都进行了改革。", "exampleTranslation": "All seven Warring States carried out reforms.", "breakdown": "改：用行动（攵）把自己（己）变好 · 革：把兽皮彻底加工，除旧更新" },
+        { "front": "进行", "pinyin": "jìn xíng", "back": "to carry out / conduct", "example": "各国进行变法。", "exampleTranslation": "The states carried out reforms.", "breakdown": "进：向前走（辶），越走越好 · 行：左右脚交替迈出，做起来" },
+        { "front": "任用", "pinyin": "rèn yòng", "back": "to appoint (to a post) / put to use", "example": "秦孝公任用商鞅变法。", "exampleTranslation": "Duke Xiao of Qin appointed Shang Yang to carry out reforms.", "breakdown": "任：一个人（亻）挑起担子（壬），担当职责 · 用：把东西拿来使用" },
+        { "front": "变法", "pinyin": "biàn fǎ", "back": "to reform the law / carry out political reform", "example": "商鞅变法使秦国强大。", "exampleTranslation": "Shang Yang's reforms made Qin powerful.", "breakdown": "变：打乱原样，让它改变 · 法：像水（氵）一样有规矩的法律" }
+      ]
+    },
+    {
+      "id": "shangyang-trust",
+      "name": "Shang Yang & Trust Words",
+      "chinese": "商鞅立木",
+      "emoji": "🌳",
+      "cards": [
+        { "front": "相信", "pinyin": "xiāng xìn", "back": "to believe / trust", "example": "老百姓都不相信。", "exampleTranslation": "The common people didn't believe it.", "breakdown": "相：用眼睛（目）看着树木（木），仔细端详 · 信：一个人（亻）说的话（言）算数，值得信任" },
+        { "front": "增加", "pinyin": "zēng jiā", "back": "to increase / add", "example": "商鞅把赏金增加到五十金。", "exampleTranslation": "Shang Yang increased the reward to fifty gold.", "breakdown": "增：往土（土）上一层层堆叠（曾），越堆越多 · 加：出力（力）再添上一张口（口）" },
+        { "front": "果然", "pinyin": "guǒ rán", "back": "sure enough / as expected", "example": "果然有人把木头搬到北门。", "exampleTranslation": "Sure enough, someone moved the log to the north gate.", "breakdown": "果：树（木）上真的结出了果实（田） · 然：如此、这样" },
+        { "front": "算数", "pinyin": "suàn shù", "back": "to keep one's word / count (be valid)", "example": "政府说话算数。", "exampleTranslation": "The government kept its word.", "breakdown": "算：用竹（竹）制算具，两手（廾）拨算，算得清清楚楚 · 数：一个个点数" },
+        { "front": "传遍", "pinyin": "chuán biàn", "back": "to spread throughout / spread everywhere", "example": "这件事很快传遍了全国。", "exampleTranslation": "The news quickly spread across the whole country.", "breakdown": "传：一个人（亻）把话一个个（专）传下去 · 遍：走（辶）遍每一处" },
+        { "front": "规定", "pinyin": "guī dìng", "back": "to stipulate / rule / regulation", "example": "新法规定土地可以自由买卖。", "exampleTranslation": "The new law stipulated that land could be freely bought and sold.", "breakdown": "规：用圆规画圆，定出规矩 · 定：在屋子（宀）里稳稳定下，不再变" },
+        { "front": "废除", "pinyin": "fèi chú", "back": "to abolish / do away with", "example": "商鞅废除了旧的制度。", "exampleTranslation": "Shang Yang abolished the old system.", "breakdown": "废：大屋子（广）里把没用的东西丢弃 · 除：把多余（余）的土堆（阝）铲掉，清除干净" }
+      ]
+    },
+    {
+      "id": "prosperity-system",
+      "name": "Prosperity & System Words",
+      "chinese": "富强与制度",
+      "emoji": "💰",
+      "cards": [
+        { "front": "贵族", "pinyin": "guì zú", "back": "nobility / aristocrat", "example": "变法剥夺了贵族的特权。", "exampleTranslation": "The reform took away the nobles' privileges.", "breakdown": "贵：手里捧着财宝（贝），身份高贵 · 族：旗帜（方）下聚集的一群人" },
+        { "front": "确立", "pinyin": "què lì", "back": "to establish (firmly) / set up for good", "example": "封建制度逐步确立起来。", "exampleTranslation": "The feudal system was gradually and firmly established.", "breakdown": "确：像石头（石）一样确实、坚定 · 立：稳稳站定" },
+        { "front": "富强", "pinyin": "fù qiáng", "back": "prosperous and strong (of a country)", "example": "秦国成为当时最富强的国家。", "exampleTranslation": "Qin became the most prosperous and powerful state of the time.", "breakdown": "富：屋顶（宀）下有田有粮，家里富足 · 强：像强弓（弓）一样有力量" },
+        { "front": "军力", "pinyin": "jūn lì", "back": "military strength / military power", "example": "变法使秦国军力加强。", "exampleTranslation": "The reform strengthened Qin's military power.", "breakdown": "军：军队 · 力：力量" },
+        { "front": "逐步", "pinyin": "zhú bù", "back": "step by step / gradually", "example": "封建制度在各国逐步确立。", "exampleTranslation": "The feudal system was gradually established in the various states.", "breakdown": "逐：一步步（辶）追着猪（豕）走 · 步：左脚右脚（止）一步步向前" },
+        { "front": "粮食", "pinyin": "liáng shi", "back": "grain / food", "example": "生产粮食多的人可以免除劳役。", "exampleTranslation": "Those who produced much grain could be exempted from labor service.", "breakdown": "粮：把米（米）量好（量）储存的口粮 · 食：一个人（人）低头吃饭（良）" },
+        { "front": "布帛", "pinyin": "bù bó", "back": "cloth and silk / textiles", "example": "生产布帛多的人受到奖励。", "exampleTranslation": "Those who produced much cloth and silk were rewarded.", "breakdown": "布：用手把织好的布料摊开 · 帛：白色（白）的丝织品（巾）" },
+        { "front": "劳役", "pinyin": "láo yì", "back": "forced labor / corvée", "example": "生产多的人可免除劳役。", "exampleTranslation": "Those who produced a lot could be exempt from corvée.", "breakdown": "劳：在灯火下用力（力）干活，很辛劳 · 役：拿着工具（殳）被派去（彳）服劳役" }
+      ]
+    }
+  ]
+}

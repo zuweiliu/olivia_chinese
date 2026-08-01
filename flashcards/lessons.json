@@ -26,6 +26,32 @@
     ]
   },
   {
+    "id": "lesson2",
+    "num": "Lesson 2",
+    "titleZh": "春秋与战国",
+    "titleEn": "The Spring & Autumn and Warring States Periods",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L2",
+        "emoji": "⚔️",
+        "titleZh": "春秋战国（上）",
+        "titleEn": "Section 1 · Turmoil, Hegemony & Rise of Qin",
+        "tags": ["⚔️ Turmoil & Hegemony", "🗡️ Warring States & Reform", "🌳 Shang Yang & Trust", "💰 Prosperity & System"],
+        "total": 33
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L2b",
+        "emoji": "📚",
+        "titleZh": "春秋战国（下）",
+        "titleEn": "Section 2 · Feudal System & Hundred Schools",
+        "tags": ["🏛️ New Laws & Feudalism", " Hundred Schools", "⭐ Names"],
+        "total": 33
+      }
+    ]
+  },
+  {
     "id": "lesson5",
     "num": "Lesson 5",
     "titleZh": "三国鼎立两晋南北朝",
