@@ -1,0 +1,48 @@
+{
+  "lesson": "3b",
+  "title": "秦（下）",
+  "subtitle": "Important Names, Places & Terms",
+  "groups": [
+    {
+      "id": "important-people",
+      "name": "Important People",
+      "chinese": "重要人物",
+      "emoji": "👑",
+      "cards": [
+        { "front": "秦始皇", "pinyin": "Qín Shǐ Huáng", "back": "Qin Shi Huang – the First Emperor, who unified China and established the centralized imperial system", "example": null, "exampleTranslation": null },
+        { "front": "嬴政", "pinyin": "Yíng Zhèng", "back": "Ying Zheng – the personal name of Qin Shi Huang before he became emperor", "example": null, "exampleTranslation": null },
+        { "front": "陈胜", "pinyin": "Chén Shèng", "back": "Chen Sheng – leader of the first major peasant uprising against the Qin Dynasty", "example": null, "exampleTranslation": null },
+        { "front": "吴广", "pinyin": "Wú Guǎng", "back": "Wu Guang – co-leader with Chen Sheng of the peasant uprising against Qin", "example": null, "exampleTranslation": null },
+        { "front": "刘邦", "pinyin": "Liú Bāng", "back": "Liu Bang – the rebel general who captured Xianyang and later founded the Han Dynasty", "example": null, "exampleTranslation": null }
+      ]
+    },
+    {
+      "id": "important-places",
+      "name": "Important Places",
+      "chinese": "重要地名",
+      "emoji": "🗺️",
+      "cards": [
+        { "front": "咸阳", "pinyin": "Xiányáng", "back": "Xianyang – the capital city of the Qin Dynasty", "example": null, "exampleTranslation": null },
+        { "front": "河套", "pinyin": "Hétào", "back": "Hetao – the bend of the Yellow River, a strategic region recovered from the Xiongnu", "example": null, "exampleTranslation": null },
+        { "front": "百越", "pinyin": "Bǎi Yuè", "back": "Baiyue – the southern regions inhabited by various non-Chinese peoples, conquered by Qin", "example": null, "exampleTranslation": null }
+      ]
+    },
+    {
+      "id": "important-terms",
+      "name": "Important Terms & Concepts",
+      "chinese": "重要术语",
+      "emoji": "📜",
+      "cards": [
+        { "front": "郡县制", "pinyin": "jùn xiàn zhì", "back": "prefecture and county system – the centralized administrative system replacing feudalism", "example": null, "exampleTranslation": null },
+        { "front": "分封制", "pinyin": "fēn fēng zhì", "back": "feudal system – the old system where land was granted to nobles, abolished by Qin", "example": null, "exampleTranslation": null },
+        { "front": "长城", "pinyin": "Chángchéng", "back": "Great Wall – the massive fortification built to defend against northern invasions", "example": null, "exampleTranslation": null },
+        { "front": "灵渠", "pinyin": "Língqú", "back": "Lingqu Canal – the canal connecting the Yangtze and Pearl River systems, built for the southern conquest", "example": null, "exampleTranslation": null },
+        { "front": "焚书坑儒", "pinyin": "fén shū kēng rú", "back": "burning books and burying scholars – Qin Shi Huang's suppression of dissenting intellectuals", "example": null, "exampleTranslation": null },
+        { "front": "车轨", "pinyin": "chē guǐ", "back": "wheel gauge / track width – standardized distance between wheels to fit unified roads", "example": null, "exampleTranslation": null },
+        { "front": "匈奴", "pinyin": "Xiōngnú", "back": "Xiongnu – a powerful nomadic confederation to the north that Qin fought against", "example": null, "exampleTranslation": null },
+        { "front": "中央集权", "pinyin": "zhōng yāng jí quán", "back": "centralized power – the political system where authority is concentrated in the central government", "example": null, "exampleTranslation": null },
+        { "front": "封建帝国", "pinyin": "fēng jiàn dì guó", "back": "feudal empire – the unified imperial system established by Qin", "example": null, "exampleTranslation": null }
+      ]
+    }
+  ]
+}

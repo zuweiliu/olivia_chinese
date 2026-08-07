@@ -52,6 +52,32 @@
     ]
   },
   {
+    "id": "lesson3",
+    "num": "Lesson 3",
+    "titleZh": "秦",
+    "titleEn": "The Qin Dynasty — Unification & Centralization",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L3",
+        "emoji": "🏛️",
+        "titleZh": "秦（上）",
+        "titleEn": "Section 1 · Unification & Centralization",
+        "tags": ["🏛️ Political System", "💰 Economic & Legal", "⚔️ Military & Conquest", "🏗️ Construction & Punishment"],
+        "total": 28
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L3b",
+        "emoji": "📜",
+        "titleZh": "秦（下）",
+        "titleEn": "Section 2 · Names, Places & Terms",
+        "tags": ["👑 Important People", "🗺️ Important Places", "📜 Important Terms"],
+        "total": 17
+      }
+    ]
+  },
+  {
     "id": "lesson5",
     "num": "Lesson 5",
     "titleZh": "三国鼎立两晋南北朝",

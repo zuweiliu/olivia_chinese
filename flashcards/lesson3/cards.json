@@ -1,0 +1,66 @@
+{
+  "lesson": 3,
+  "title": "秦",
+  "subtitle": "The Qin Dynasty — Unification & Centralization",
+  "groups": [
+    {
+      "id": "political-system",
+      "name": "Political System Words",
+      "chinese": "政治制度",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "郡县", "pinyin": "jùn xiàn", "back": "prefectures and counties", "example": "秦朝实行郡县制，把全国分为36郡。", "exampleTranslation": "The Qin Dynasty implemented the prefecture and county system, dividing the country into 36 prefectures.", "breakdown": "郡：君主（君）管理的区域 · 县：悬挂（县）着治理一方，县级行政区" },
+        { "front": "任命", "pinyin": "rèn mìng", "back": "to appoint someone", "example": "各级官员都由皇帝任命。", "exampleTranslation": "Officials at all levels were appointed by the emperor.", "breakdown": "任：一个人（亻）挑起担子（壬），担当职责 · 命：口（口）中发出让人听令（令）的话" },
+        { "front": "权力", "pinyin": "quán lì", "back": "power / authority", "example": "皇帝权力至高无上。", "exampleTranslation": "The emperor's power was supreme.", "breakdown": "权：手（又）握大树（木），掌握权力 · 力：一条用力的肌肉" },
+        { "front": "至高无上", "pinyin": "zhì gāo wú shàng", "back": "supreme / paramount / highest", "example": "皇帝的权力至高无上。", "exampleTranslation": "The emperor's power was supreme.", "breakdown": "至：到（至）达最高处 · 高：高大崇高 · 无：没有 · 上：上面" },
+        { "front": "中央集权", "pinyin": "zhōng yāng jí quán", "back": "centralization of power / centralized system", "example": "秦建立了统一的中央集权的封建帝国。", "exampleTranslation": "Qin established a unified centralized feudal empire.", "breakdown": "中央：中心 · 集：聚集 · 权：权力" }
+      ]
+    },
+    {
+      "id": "economic-legal",
+      "name": "Economic & Legal Words",
+      "chinese": "经济与法律",
+      "emoji": "💰",
+      "cards": [
+        { "front": "申报", "pinyin": "shēn bào", "back": "to register / declare", "example": "秦统一后，下令全国申报田产。", "exampleTranslation": "After unification, Qin ordered the entire country to register land holdings.", "breakdown": "申：用话（讠）一一说明 · 报：用手（扌）拿着报告（幸），汇报" },
+        { "front": "纳税", "pinyin": "nà shuì", "back": "to pay tax", "example": "按亩纳税，从法律上承认土地私有。", "exampleTranslation": "Pay tax according to land acreage, legally acknowledging private land ownership.", "breakdown": "纳：丝（纟）线收进（内）来，接纳 · 税：禾（禾）苗收割后交给国家的税" },
+        { "front": "法律", "pinyin": "fǎ lǜ", "back": "law", "example": "从法律上承认土地私有。", "exampleTranslation": "Legally acknowledge private land ownership.", "breakdown": "法：像水（氵）一样有规矩的法律 · 律：双人（彳）走在笔直的道路上，纪律、法律" },
+        { "front": "货币", "pinyin": "huò bì", "back": "currency / money", "example": "秦统一了货币。", "exampleTranslation": "Qin unified the currency.", "breakdown": "货：化（化）钱（贝）变成货物 · 币：丝巾（巾）做的钱币" },
+        { "front": "度量衡", "pinyin": "dù liàng héng", "back": "weights and measures", "example": "秦统一了度量衡。", "exampleTranslation": "Qin unified weights and measures.", "breakdown": "度：用手（又）丈量（庶） · 量：用工具一点点称量、衡量 · 衡：行（行）走在平衡（角）的大鱼（鱼）旁，称量" },
+        { "front": "统一", "pinyin": "tǒng yī", "back": "to unify / unite", "example": "秦统一了文字、货币和度量衡。", "exampleTranslation": "Qin unified writing, currency, and weights and measures.", "breakdown": "统：丝（纟）线总（纟）在一起，统管 · 一：一个、整体" },
+        { "front": "私有", "pinyin": "sī yǒu", "back": "private ownership / privately owned", "example": "从法律上承认土地私有。", "exampleTranslation": "Legally acknowledge private land ownership.", "breakdown": "私：自己（厶）种的庄稼（禾），归自己所有 · 有：手（ナ）里拿着肉（月），拥有" }
+      ]
+    },
+    {
+      "id": "military-conquest",
+      "name": "Military & Conquest Words",
+      "chinese": "军事与征服",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "击", "pinyin": "jī", "back": "to strike / attack", "example": "秦始皇派兵北击匈奴。", "exampleTranslation": "Qin Shi Huang sent troops north to attack the Xiongnu.", "breakdown": "击：手（扌）拿着器物（殳）打（几）" },
+        { "front": "水系", "pinyin": "shuǐ xì", "back": "water system / river system", "example": "灵渠沟通了长江和珠江两大水系。", "exampleTranslation": "The Lingqu Canal connected the two major water systems of the Yangtze and Pearl Rivers.", "breakdown": "水：水流 · 系：连接（糸）在一起，系统" },
+        { "front": "征服", "pinyin": "zhēng fú", "back": "to conquer; control", "example": "为了征服百越地区，又开凿灵渠。", "exampleTranslation": "To conquer the Baiyue region, the Lingqu Canal was excavated.", "breakdown": "征：行走（彳）去征讨（正） · 服：用手（卩）按住（𠬝）一个人（亻），使其服从" },
+        { "front": "收回", "pinyin": "shōu huí", "back": "to take back / recover", "example": "北击匈奴，收回河套地区。", "exampleTranslation": "Attack the Xiongnu in the north and recover the Hetao region.", "breakdown": "收：用手（攵）把东西收拢（丩） · 回：回到原来的地方" },
+        { "front": "修建", "pinyin": "xiū jiàn", "back": "to build / construct", "example": "秦始皇修建长城。", "exampleTranslation": "Qin Shi Huang built the Great Wall.", "breakdown": "修：人（亻）拿着工具（攸）装饰（彡） · 建：拿着笔（聿）一步步（廴）建立" },
+        { "front": "开凿", "pinyin": "kāi záo", "back": "to excavate / cut through", "example": "开凿灵渠，沟通长江和珠江。", "exampleTranslation": "Excavate the Lingqu Canal to connect the Yangtze and Pearl Rivers.", "breakdown": "开：把门（门）打开（廾） · 凿：在凿子（业）下打孔（冖）" },
+        { "front": "沟通", "pinyin": "gōu tōng", "back": "to connect / link up", "example": "灵渠沟通了长江和珠江两大水系。", "exampleTranslation": "The Lingqu Canal connected the two major water systems of the Yangtze and Pearl Rivers.", "breakdown": "沟：水（氵）流过的沟渠 · 通：走（辶）到一起，通过、连通" }
+      ]
+    },
+    {
+      "id": "construction-punishment",
+      "name": "Construction & Punishment Words",
+      "chinese": "建设与刑罚",
+      "emoji": "🏗️",
+      "cards": [
+        { "front": "陵墓", "pinyin": "líng mù", "back": "tomb / mausoleum", "example": "秦始皇用大量人力修宫殿、陵墓。", "exampleTranslation": "Qin Shi Huang used massive manpower to build palaces and tombs.", "breakdown": "陵：高地（阝）上的土（土）堆，陵墓 · 墓：在草（莫）地（土）下埋葬" },
+        { "front": "宫殿", "pinyin": "gōng diàn", "back": "palace", "example": "秦始皇用大量人力修宫殿。", "exampleTranslation": "Qin Shi Huang used massive manpower to build palaces.", "breakdown": "宫：屋顶（宀）下有多个房间（吕），宫殿 · 殿：尸（尸）体旁边（共）的建筑物，殿堂" },
+        { "front": "刑罚", "pinyin": "xíng fá", "back": "penalty / punishment", "example": "秦朝有严厉的刑罚。", "exampleTranslation": "The Qin Dynasty had harsh punishments.", "breakdown": "刑：开（开）刀（刂）刑罚 · 罚：用言（讠）语（刀）处罚（罒）" },
+        { "front": "焚", "pinyin": "fén", "back": "to burn", "example": "秦始皇焚书坑儒。", "exampleTranslation": "Qin Shi Huang burned books and buried scholars alive.", "breakdown": "焚：林（林）中火（火）烧" },
+        { "front": "人力", "pinyin": "rén lì", "back": "manpower / human labor", "example": "秦始皇用大量人力修宫殿、陵墓。", "exampleTranslation": "Qin Shi Huang used massive manpower to build palaces and tombs.", "breakdown": "人：人类 · 力：力量" },
+        { "front": "爆发", "pinyin": "bào fā", "back": "to break out / erupt", "example": "终于爆发了陈胜、吴广农民起义。", "exampleTranslation": "Finally, the Chen Sheng and Wu Guang peasant uprising broke out.", "breakdown": "爆：火（火）突然暴（暴）发 · 发：出发、发生" },
+        { "front": "起义", "pinyin": "qǐ yì", "back": "uprising / revolt", "example": "陈胜、吴广发动农民起义。", "exampleTranslation": "Chen Sheng and Wu Guang launched a peasant uprising.", "breakdown": "起：走（走）起来（巳），开始 · 义：正义、道义" },
+        { "front": "灭亡", "pinyin": "miè wáng", "back": "to be destroyed / fall / perish", "example": "前206年，秦灭亡。", "exampleTranslation": "In 206 BC, the Qin Dynasty fell.", "breakdown": "灭：火（火）把东西（戌）烧灭 · 亡：人（亻）逃跑（乚），死亡、灭亡" }
+      ]
+    }
+  ]
+}
