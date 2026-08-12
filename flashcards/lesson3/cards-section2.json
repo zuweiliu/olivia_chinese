@@ -4,44 +4,64 @@
   "subtitle": "Important Names, Places & Terms",
   "groups": [
     {
-      "id": "important-people",
-      "name": "Important People",
-      "chinese": "重要人物",
+      "id": "vocabulary-people",
+      "name": "People & Leadership Words",
+      "chinese": "人物与领导",
       "emoji": "👑",
+      "cards": [
+        { "front": "皇帝", "pinyin": "huáng dì", "back": "emperor", "example": "他自称'始皇帝'，也就是秦始皇。", "exampleTranslation": "He called himself the 'First Emperor', that is, Qin Shi Huang.", "breakdown": "皇：白玉发光（白），光辉灿烂 · 帝：花蒂（丷）下结出果实，帝王" },
+        { "front": "将领", "pinyin": "jiàng lǐng", "back": "general / military commander", "example": "另一位义军将领刘邦攻进咸阳。", "exampleTranslation": "Another rebel general Liu Bang attacked and entered Xianyang.", "breakdown": "将：手（扌）拿着肉（爿）分给壮士（寸），将领 · 领：脖子（页）上的衣领，领导" },
+        { "front": "义军", "pinyin": "yì jūn", "back": "rebel army / righteous army", "example": "陈胜、吴广发动农民起义，组成义军。", "exampleTranslation": "Chen Sheng and Wu Guang launched a peasant uprising, forming a rebel army.", "breakdown": "义：正义、道义 · 军：车（车）上盖着布（冖），军队" },
+        { "front": "百姓", "pinyin": "bǎi xìng", "back": "common people / the masses", "example": "百姓生活越来越苦。", "exampleTranslation": "The common people's lives became increasingly difficult.", "breakdown": "百：一百 · 姓：女子（女）生的（生），家族姓氏" }
+      ]
+    },
+    {
+      "id": "vocabulary-places",
+      "name": "Geography & Places Words",
+      "chinese": "地理与地名",
+      "emoji": "🗺️",
+      "cards": [
+        { "front": "首都", "pinyin": "shǒu dū", "back": "capital city", "example": "秦定都咸阳。", "exampleTranslation": "Qin established its capital at Xianyang.", "breakdown": "首：头（𠂒），第一 · 都：者（者）聚居的地方（阝），都城" },
+        { "front": "地区", "pinyin": "dì qū", "back": "region / area", "example": "收回河套地区。", "exampleTranslation": "Recover the Hetao region.", "breakdown": "地：土地（土） · 区：用刀（匚）把东西划分（乂）成区域" },
+        { "front": "全国", "pinyin": "quán guó", "back": "nationwide / throughout the country", "example": "把全国分为36郡。", "exampleTranslation": "Divide the entire country into 36 prefectures.", "breakdown": "全：人（入）在玉（王）上，完整 · 国：围墙（囗）里拿着武器（戈）保卫国家" }
+      ]
+    },
+    {
+      "id": "vocabulary-terms",
+      "name": "System & Conquest Words",
+      "chinese": "制度与征服",
+      "emoji": "📜",
+      "cards": [
+        { "front": "制度", "pinyin": "zhì dù", "back": "system / institution", "example": "这一套完整的政治制度在中国基本上沿用了两千多年。", "exampleTranslation": "This complete political system was basically used in China for over two thousand years.", "breakdown": "制：用刀（刂）裁制（木） · 度：用手（又）丈量（庶）" },
+        { "front": "沿用", "pinyin": "yán yòng", "back": "to continue to use / follow", "example": "这套制度在中国基本上沿用了两千多年。", "exampleTranslation": "This system was basically used in China for over two thousand years.", "breakdown": "沿：顺着水（氵）流走（㐬） · 用：拿来使用" },
+        { "front": "基本上", "pinyin": "jī běn shàng", "back": "basically / fundamentally", "example": "这套制度在中国基本上沿用了两千多年。", "exampleTranslation": "This system was basically used in China for over two thousand years.", "breakdown": "基：建筑最下面的土（土）台，基础（其） · 本：树木（木）的根（一） · 上：上面" },
+        { "front": "废除", "pinyin": "fèi chú", "back": "to abolish / do away with", "example": "秦朝废除了分封制，实行郡县制。", "exampleTranslation": "The Qin Dynasty abolished the feudal system and implemented the prefecture and county system.", "breakdown": "废：大屋子（广）里把没用的东西丢弃 · 除：把多余（余）的土堆（阝）铲掉，清除干净" },
+        { "front": "实行", "pinyin": "shí xíng", "back": "to implement / carry out", "example": "秦朝实行郡县制。", "exampleTranslation": "The Qin Dynasty implemented the prefecture and county system.", "breakdown": "实：果实（宀）充实（贯） · 行：左右脚交替迈出，做起来" },
+        { "front": "道路", "pinyin": "dào lù", "back": "road / path", "example": "统一了道路宽度和车轮间的距离。", "exampleTranslation": "Unified the road width and the distance between wheels.", "breakdown": "道：走（辶）在头（首）前，道路 · 路：足（足）走在各（各）处，道路" },
+        { "front": "宽度", "pinyin": "kuān dù", "back": "width", "example": "统一了道路宽度。", "exampleTranslation": "Unified the road width.", "breakdown": "宽：屋顶（宀）下见（见）得广（艹），宽阔 · 度：丈量" },
+        { "front": "距离", "pinyin": "jù lí", "back": "distance", "example": "统一了车轮间的距离。", "exampleTranslation": "Unified the distance between wheels.", "breakdown": "距：脚（足）走（巨）过的距离 · 离：离开（离）别" }
+      ]
+    },
+    {
+      "id": "proper-names",
+      "name": "Important Names & Terms",
+      "chinese": "重要人名和名词",
+      "emoji": "⭐",
       "cards": [
         { "front": "秦始皇", "pinyin": "Qín Shǐ Huáng", "back": "Qin Shi Huang – the First Emperor, who unified China and established the centralized imperial system", "example": null, "exampleTranslation": null },
         { "front": "嬴政", "pinyin": "Yíng Zhèng", "back": "Ying Zheng – the personal name of Qin Shi Huang before he became emperor", "example": null, "exampleTranslation": null },
         { "front": "陈胜", "pinyin": "Chén Shèng", "back": "Chen Sheng – leader of the first major peasant uprising against the Qin Dynasty", "example": null, "exampleTranslation": null },
         { "front": "吴广", "pinyin": "Wú Guǎng", "back": "Wu Guang – co-leader with Chen Sheng of the peasant uprising against Qin", "example": null, "exampleTranslation": null },
-        { "front": "刘邦", "pinyin": "Liú Bāng", "back": "Liu Bang – the rebel general who captured Xianyang and later founded the Han Dynasty", "example": null, "exampleTranslation": null }
-      ]
-    },
-    {
-      "id": "important-places",
-      "name": "Important Places",
-      "chinese": "重要地名",
-      "emoji": "🗺️",
-      "cards": [
+        { "front": "刘邦", "pinyin": "Liú Bāng", "back": "Liu Bang – the rebel general who captured Xianyang and later founded the Han Dynasty", "example": null, "exampleTranslation": null },
         { "front": "咸阳", "pinyin": "Xiányáng", "back": "Xianyang – the capital city of the Qin Dynasty", "example": null, "exampleTranslation": null },
         { "front": "河套", "pinyin": "Hétào", "back": "Hetao – the bend of the Yellow River, a strategic region recovered from the Xiongnu", "example": null, "exampleTranslation": null },
-        { "front": "百越", "pinyin": "Bǎi Yuè", "back": "Baiyue – the southern regions inhabited by various non-Chinese peoples, conquered by Qin", "example": null, "exampleTranslation": null }
-      ]
-    },
-    {
-      "id": "important-terms",
-      "name": "Important Terms & Concepts",
-      "chinese": "重要术语",
-      "emoji": "📜",
-      "cards": [
+        { "front": "百越", "pinyin": "Bǎi Yuè", "back": "Baiyue – the southern regions inhabited by various non-Chinese peoples, conquered by Qin", "example": null, "exampleTranslation": null },
         { "front": "郡县制", "pinyin": "jùn xiàn zhì", "back": "prefecture and county system – the centralized administrative system replacing feudalism", "example": null, "exampleTranslation": null },
         { "front": "分封制", "pinyin": "fēn fēng zhì", "back": "feudal system – the old system where land was granted to nobles, abolished by Qin", "example": null, "exampleTranslation": null },
         { "front": "长城", "pinyin": "Chángchéng", "back": "Great Wall – the massive fortification built to defend against northern invasions", "example": null, "exampleTranslation": null },
         { "front": "灵渠", "pinyin": "Língqú", "back": "Lingqu Canal – the canal connecting the Yangtze and Pearl River systems, built for the southern conquest", "example": null, "exampleTranslation": null },
         { "front": "焚书坑儒", "pinyin": "fén shū kēng rú", "back": "burning books and burying scholars – Qin Shi Huang's suppression of dissenting intellectuals", "example": null, "exampleTranslation": null },
-        { "front": "车轨", "pinyin": "chē guǐ", "back": "wheel gauge / track width – standardized distance between wheels to fit unified roads", "example": null, "exampleTranslation": null },
-        { "front": "匈奴", "pinyin": "Xiōngnú", "back": "Xiongnu – a powerful nomadic confederation to the north that Qin fought against", "example": null, "exampleTranslation": null },
-        { "front": "中央集权", "pinyin": "zhōng yāng jí quán", "back": "centralized power – the political system where authority is concentrated in the central government", "example": null, "exampleTranslation": null },
-        { "front": "封建帝国", "pinyin": "fēng jiàn dì guó", "back": "feudal empire – the unified imperial system established by Qin", "example": null, "exampleTranslation": null }
+        { "front": "匈奴", "pinyin": "Xiōngnú", "back": "Xiongnu – a powerful nomadic confederation to the north that Qin fought against", "example": null, "exampleTranslation": null }
       ]
     }
   ]

@@ -71,9 +71,9 @@
         "storeKey": "fc_L3b",
         "emoji": "📜",
         "titleZh": "秦（下）",
-        "titleEn": "Section 2 · Names, Places & Terms",
-        "tags": ["👑 Important People", "🗺️ Important Places", "📜 Important Terms"],
-        "total": 17
+        "titleEn": "Section 2 · People, Places & Terms",
+        "tags": ["👑 People & Leadership", "🗺️ Geography & Places", "📜 System & Conquest", "⭐ Names"],
+        "total": 29
       }
     ]
   },
