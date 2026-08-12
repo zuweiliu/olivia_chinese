@@ -78,6 +78,32 @@
     ]
   },
   {
+    "id": "lesson4",
+    "num": "Lesson 4",
+    "titleZh": "西汉 东汉",
+    "titleEn": "Western Han & Eastern Han — Silk Road & Culture",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L4",
+        "emoji": "🏛️",
+        "titleZh": "西汉 东汉（上）",
+        "titleEn": "Section 1 · Western Han & Silk Road",
+        "tags": ["🏛️ Western Han Founding", "🐎 Zhang Qian & Silk Road", "📚 Culture & Ideology", "⭐ Western Han Names"],
+        "total": 34
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L4b",
+        "emoji": "📜",
+        "titleZh": "西汉 东汉（下）",
+        "titleEn": "Section 2 · Eastern Han & Technology",
+        "tags": ["🏛️ Eastern Han Founding", "📜 Technology & Paper", "⚕️ Medicine & Doctors", "⚔️ Decline & Fall", "⭐ Eastern Han Names"],
+        "total": 31
+      }
+    ]
+  },
+  {
     "id": "lesson5",
     "num": "Lesson 5",
     "titleZh": "三国鼎立两晋南北朝",

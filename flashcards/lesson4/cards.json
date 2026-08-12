@@ -1,0 +1,73 @@
+{
+  "lesson": 4,
+  "title": "西汉 东汉（上）",
+  "subtitle": "Western Han & Eastern Han - Silk Road & Culture",
+  "groups": [
+    {
+      "id": "western-han-founding",
+      "name": "Western Han Founding Words",
+      "chinese": "西汉建立",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "田租", "pinyin": "tián zū", "back": "land tax", "example": "刘邦减轻田租，让百姓休养生息。", "exampleTranslation": "Liu Bang reduced land tax to let the people rest and recover.", "breakdown": "田：耕种的田地 · 租：用禾（禾）和且（且）表示税收" },
+        { "front": "休养生息", "pinyin": "xiū yǎng shēng xī", "back": "to rest and build up strength (recovery after hardship)", "example": "汉朝初年，让百姓休养生息。", "exampleTranslation": "In the early Han years, the people were allowed to rest and recover.", "breakdown": "休：人（亻）靠在树（木）边休息 · 养：养育 · 生：生命 · 息：呼吸、休息" },
+        { "front": "国力", "pinyin": "guó lì", "back": "national power / strength of a country", "example": "到汉武帝时，西汉国力强盛。", "exampleTranslation": "By the time of Emperor Wu, Western Han national power was strong.", "breakdown": "国：国家 · 力：力量" },
+        { "front": "强盛", "pinyin": "qiáng shèng", "back": "strong and prosperous / flourishing", "example": "西汉国力强盛。", "exampleTranslation": "Western Han national power was strong and prosperous.", "breakdown": "强：弓（弓）有力，强壮 · 盛：皿（皿）中食物丰盛" },
+        { "front": "进犯", "pinyin": "jìn fàn", "back": "to invade / encroach upon (territory)", "example": "匈奴常常进犯汉朝国土。", "exampleTranslation": "The Xiongnu often invaded Han territory.", "breakdown": "进：向前走 · 犯：用犬（犭）侵犯，冲撞" }
+      ]
+    },
+    {
+      "id": "zhang-qian-silk-road",
+      "name": "Zhang Qian & Silk Road Words",
+      "chinese": "张骞与丝路",
+      "emoji": "🐎",
+      "cards": [
+        { "front": "张骞", "pinyin": "Zhāng Qiān", "back": "Zhang Qian (Chinese diplomat and explorer who opened the Silk Road)", "example": "汉武帝派张骞出使西域。", "exampleTranslation": "Emperor Wu sent Zhang Qian as an envoy to the Western Regions.", "breakdown": "张：姓张 · 骞：马（马）跑得快，千里马" },
+        { "front": "西域", "pinyin": "xī yù", "back": "the Western Regions (areas west of the Han Empire)", "example": "张骞出使西域，开通了丝绸之路。", "exampleTranslation": "Zhang Qian went to the Western Regions and opened the Silk Road.", "breakdown": "西：西方 · 域：土（土）地上的区域" },
+        { "front": "出使", "pinyin": "chū shǐ", "back": "to go on a diplomatic mission / serve as an envoy", "example": "汉武帝派张骞出使西域。", "exampleTranslation": "Emperor Wu sent Zhang Qian on a diplomatic mission to the Western Regions.", "breakdown": "出：出去 · 使：使者，出使的人" },
+        { "front": "联络", "pinyin": "lián luò", "back": "to establish contact / coordinate with", "example": "张骞去联络大月氏共同打匈奴。", "exampleTranslation": "Zhang Qian went to establish contact with the Yuezhi to fight the Xiongnu together.", "breakdown": "联：连接 · 络：丝线（纟）网络，联系" },
+        { "front": "葡萄", "pinyin": "pú tao", "back": "grape", "example": "西域的葡萄传入内地。", "exampleTranslation": "Grapes from the Western Regions were introduced to the interior.", "breakdown": "葡：草字头（艹），植物 · 萄：草字头（艹），植物" },
+        { "front": "物产", "pinyin": "wù chǎn", "back": "products / resources / natural produce", "example": "张骞报告了西域各国的物产情况。", "exampleTranslation": "Zhang Qian reported on the products of the Western Regions countries.", "breakdown": "物：物品 · 产：生产" },
+        { "front": "疆土", "pinyin": "jiāng tǔ", "back": "territory / land of a country", "example": "汉朝扩大了疆土。", "exampleTranslation": "The Han dynasty expanded its territory.", "breakdown": "疆：弓（弓）和田（田）组成的边界 · 土：土地" },
+        { "front": "丝绸之路", "pinyin": "sī chóu zhī lù", "back": "the Silk Road (ancient trade route connecting East and West)", "example": "张骞开通了丝绸之路。", "exampleTranslation": "Zhang Qian opened the Silk Road.", "breakdown": "丝：丝绸 · 绸：丝绸 · 之：的 · 路：道路" },
+        { "front": "西亚", "pinyin": "xī yà", "back": "West Asia", "example": "汉朝的丝绸运往西亚和欧洲。", "exampleTranslation": "Han silk was shipped to West Asia and Europe.", "breakdown": "西：西方 · 亚：亚洲" },
+        { "front": "交往", "pinyin": "jiāo wǎng", "back": "to interact / have dealings with", "example": "汉朝积极与外国交往。", "exampleTranslation": "The Han dynasty actively interacted with foreign countries.", "breakdown": "交：交叉 · 往：来往" }
+      ]
+    },
+    {
+      "id": "culture-ideology",
+      "name": "Culture & Ideology Words",
+      "chinese": "文化与思想",
+      "emoji": "📚",
+      "cards": [
+        { "front": "罢黜", "pinyin": "bà chù", "back": "to dismiss from office / reject", "example": "汉武帝时'罢黜百家，独尊儒术'。", "exampleTranslation": "Emperor Wu 'dismissed the hundred schools and honored only Confucianism'.", "breakdown": "罢：网（罒）下去，停止 · 黜：黑（黑）色被贬退" },
+        { "front": "独尊", "pinyin": "dú zūn", "back": "to exclusively honor / give sole respect to", "example": "汉武帝独尊儒术。", "exampleTranslation": "Emperor Wu exclusively honored Confucianism.", "breakdown": "独：单独 · 尊：尊敬" },
+        { "front": "儒术", "pinyin": "rú shù", "back": "Confucianism / Confucian teachings", "example": "汉武帝把儒家学说作为正统思想。", "exampleTranslation": "Emperor Wu made Confucianism the orthodox ideology.", "breakdown": "儒：人（亻）需要的学问 · 术：学术、方法" },
+        { "front": "正统", "pinyin": "zhèng tǒng", "back": "orthodox / legitimate / the accepted standard", "example": "儒家学说成为正统思想。", "exampleTranslation": "Confucianism became the orthodox ideology.", "breakdown": "正：正确 · 统：统一、系统" },
+        { "front": "四书五经", "pinyin": "sì shū wǔ jīng", "back": "the Four Books and Five Classics (Confucian canonical texts)", "example": "儒家的'四书五经'作为学生的课程。", "exampleTranslation": "The Confucian 'Four Books and Five Classics' became the curriculum for students.", "breakdown": "四：四本书 · 书：书籍 · 五：五本书 · 经：经典" },
+        { "front": "杰出", "pinyin": "jié chū", "back": "outstanding / distinguished / eminent", "example": "司马迁是一位杰出的历史学家。", "exampleTranslation": "Sima Qian was an outstanding historian.", "breakdown": "杰：人（亻）站在木（木）上，杰出 · 出：超出" },
+        { "front": "历史学家", "pinyin": "lì shǐ xué jiā", "back": "historian", "example": "司马迁是一位杰出的历史学家。", "exampleTranslation": "Sima Qian was an outstanding historian.", "breakdown": "历：历史 · 史：历史 · 学：学习 · 家：专家" },
+        { "front": "史记", "pinyin": "Shǐ Jì", "back": "Records of the Grand Historian (Sima Qian's famous historical work)", "example": "司马迁写出了《史记》一书。", "exampleTranslation": "Sima Qian wrote the book 'Records of the Grand Historian'.", "breakdown": "史：历史 · 记：记录" },
+        { "front": "叙述", "pinyin": "xù shù", "back": "to narrate / recount / tell", "example": "《史记》叙述了3000多年的历史。", "exampleTranslation": "The 'Records of the Grand Historian' narrates over 3,000 years of history.", "breakdown": "叙：按照次序（余）说（讠） · 述：走（辶）着说（术）" }
+      ]
+    },
+    {
+      "id": "western-han-names",
+      "name": "Western Han Names & Terms",
+      "chinese": "西汉重要人名和术语",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "刘邦", "pinyin": "Liú Bāng", "back": "Liu Bang – founder of the Western Han dynasty, also known as Emperor Gaozu", "example": null, "exampleTranslation": null },
+        { "front": "汉武帝", "pinyin": "Hàn Wǔ Dì", "back": "Emperor Wu of Han – one of the greatest Han emperors", "example": null, "exampleTranslation": null },
+        { "front": "匈奴", "pinyin": "Xiōng nú", "back": "Xiongnu – nomadic people who frequently fought with the Han", "example": null, "exampleTranslation": null },
+        { "front": "大月氏", "pinyin": "Dà Yuè Zhī", "back": "Yuezhi – ancient Central Asian people Zhang Qian sought to ally with", "example": null, "exampleTranslation": null },
+        { "front": "司马迁", "pinyin": "Sī Mǎ Qiān", "back": "Sima Qian – great historian who wrote the Records of the Grand Historian", "example": null, "exampleTranslation": null },
+        { "front": "《史记》", "pinyin": "Shǐ Jì", "back": "Records of the Grand Historian – Sima Qian's masterpiece", "example": null, "exampleTranslation": null },
+        { "front": "长安", "pinyin": "Cháng'ān", "back": "Chang'an – capital of Western Han, modern-day Xi'an", "example": null, "exampleTranslation": null },
+        { "front": "汉人", "pinyin": "Hàn rén", "back": "Han people – what the Chinese were called by foreigners", "example": null, "exampleTranslation": null },
+        { "front": "汉语", "pinyin": "Hàn yǔ", "back": "Chinese language – called 'Hanyu' by foreigners", "example": null, "exampleTranslation": null },
+        { "front": "汉字", "pinyin": "Hàn zì", "back": "Chinese characters – called 'Hanzi' by foreigners", "example": null, "exampleTranslation": null }
+      ]
+    }
+  ]
+}

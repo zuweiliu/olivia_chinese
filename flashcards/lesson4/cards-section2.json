@@ -1,0 +1,78 @@
+{
+  "lesson": "4b",
+  "title": "西汉 东汉（下）",
+  "subtitle": "Eastern Han - Technology, Medicine & Decline",
+  "groups": [
+    {
+      "id": "eastern-han-founding",
+      "name": "Eastern Han Founding Words",
+      "chinese": "东汉建立",
+      "emoji": "🏛️",
+      "cards": [
+        { "front": "刘秀", "pinyin": "Liú Xiù", "back": "Liu Xiu (founder of the Eastern Han dynasty)", "example": "刘秀建立东汉，定都洛阳。", "exampleTranslation": "Liu Xiu founded the Eastern Han and made Luoyang the capital.", "breakdown": "刘：姓刘 · 秀：禾（禾）谷秀丽，美好" },
+        { "front": "东汉", "pinyin": "Dōng Hàn", "back": "Eastern Han dynasty (25-220 AD)", "example": "刘秀建立东汉（公元25年—220年）。", "exampleTranslation": "Liu Xiu founded the Eastern Han (25-220 AD).", "breakdown": "东：东方 · 汉：汉朝" },
+        { "front": "王室", "pinyin": "wáng shì", "back": "royal family / imperial house", "example": "刘秀是西汉王室后代。", "exampleTranslation": "Liu Xiu was a descendant of the Western Han royal family.", "breakdown": "王：君王 · 室：房屋，王室就是王族" },
+        { "front": "后代", "pinyin": "hòu dài", "back": "descendant / later generation", "example": "刘秀是西汉王室后代。", "exampleTranslation": "Liu Xiu was a descendant of the Western Han royal family.", "breakdown": "后：后面 · 代：世代" },
+        { "front": "统一", "pinyin": "tǒng yī", "back": "to unify / unite", "example": "刘秀统一全国后，科学技术取得了成就。", "exampleTranslation": "After Liu Xiu unified the country, science and technology achieved success.", "breakdown": "统：丝线（纟）统一起来 · 一：一个" },
+        { "front": "起义", "pinyin": "qǐ yì", "back": "uprising / rebellion", "example": "西汉后期，爆发了起义。", "exampleTranslation": "In the late Western Han, uprisings broke out.", "breakdown": "起：站起来 · 义：正义，为了正义而战" }
+      ]
+    },
+    {
+      "id": "technology-paper",
+      "name": "Technology & Paper Words",
+      "chinese": "科技与造纸",
+      "emoji": "📜",
+      "cards": [
+        { "front": "蔡伦", "pinyin": "Cài Lún", "back": "Cai Lun (inventor of paper-making)", "example": "蔡伦用树皮、麻头、破布等原料造纸。", "exampleTranslation": "Cai Lun used tree bark, hemp heads, rags and other materials to make paper.", "breakdown": "蔡：姓蔡 · 伦：人（亻）伦，人伦" },
+        { "front": "造纸", "pinyin": "zào zhǐ", "back": "paper-making", "example": "蔡伦造纸是一件大事。", "exampleTranslation": "Cai Lun's paper-making was a major event.", "breakdown": "造：制造 · 纸：纸张" },
+        { "front": "树皮", "pinyin": "shù pí", "back": "tree bark", "example": "蔡伦用树皮做造纸的原料。", "exampleTranslation": "Cai Lun used tree bark as material for making paper.", "breakdown": "树：树木 · 皮：表皮" },
+        { "front": "麻头", "pinyin": "má tóu", "back": "hemp heads / hemp fibers", "example": "蔡伦用麻头做造纸的原料。", "exampleTranslation": "Cai Lun used hemp fibers as material for making paper.", "breakdown": "麻：麻类植物 · 头：头部，这里指麻的顶部" },
+        { "front": "破布", "pinyin": "pò bù", "back": "rags / worn-out cloth", "example": "蔡伦用破布做造纸的原料。", "exampleTranslation": "Cai Lun used rags as material for making paper.", "breakdown": "破：石（皮）打破 · 布：布匹" },
+        { "front": "原料", "pinyin": "yuán liào", "back": "raw material", "example": "蔡伦用各种原料造纸。", "exampleTranslation": "Cai Lun used various raw materials to make paper.", "breakdown": "原：原来 · 料：材料" },
+        { "front": "促进", "pinyin": "cù jìn", "back": "to promote / advance / accelerate", "example": "造纸促进了文化学习和知识的传播。", "exampleTranslation": "Paper-making promoted cultural learning and the spread of knowledge.", "breakdown": "促：人（亻）走得快，催促 · 进：前进" },
+        { "front": "传播", "pinyin": "chuán bō", "back": "to spread / propagate / disseminate", "example": "造纸促进了知识的传播。", "exampleTranslation": "Paper-making promoted the spread of knowledge.", "breakdown": "传：传递 · 播：播种，散布" }
+      ]
+    },
+    {
+      "id": "medicine-doctors",
+      "name": "Medicine & Doctors Words",
+      "chinese": "医学与名医",
+      "emoji": "⚕️",
+      "cards": [
+        { "front": "张仲景", "pinyin": "Zhāng Zhòngjǐng", "back": "Zhang Zhongjing (famous doctor, known as the 'Medical Saint')", "example": "张仲景救助无数病人。", "exampleTranslation": "Zhang Zhongjing saved countless patients.", "breakdown": "张：姓张 · 仲：中间 · 景：风景" },
+        { "front": "华佗", "pinyin": "Huá Tuó", "back": "Hua Tuo (famous doctor known for surgery and anesthesia)", "example": "名医华佗制成了全身麻醉的药。", "exampleTranslation": "Famous doctor Hua Tuo created a medicine for whole-body anesthesia.", "breakdown": "华：华丽 · 佗：人（亻）佗，人名" },
+        { "front": "瘟疫", "pinyin": "wēn yì", "back": "plague / epidemic", "example": "东汉末年瘟疫流行。", "exampleTranslation": "In the late Eastern Han, plagues were widespread.", "breakdown": "瘟：病字旁（疒），瘟病 · 疫：病字旁（疒），疫病" },
+        { "front": "流行", "pinyin": "liú xíng", "back": "to spread / be prevalent / popular", "example": "东汉末年瘟疫流行。", "exampleTranslation": "In the late Eastern Han, plagues were prevalent.", "breakdown": "流：流动 · 行：行走" },
+        { "front": "救助", "pinyin": "zhù jiù", "back": "to help / save / rescue", "example": "张仲景救助无数病人。", "exampleTranslation": "Zhang Zhongjing saved countless patients.", "breakdown": "助：帮助 · 救：救援" },
+        { "front": "治疗", "pinyin": "zhì liáo", "back": "to treat / cure (medical treatment)", "example": "张仲景写出了《伤寒杂病论》，成为中医治疗学的基础。", "exampleTranslation": "Zhang Zhongjing wrote 'Treatise on Cold Damage', becoming the foundation of Chinese medical treatment.", "breakdown": "治：治理 · 疗：病字旁（疒），治疗" },
+        { "front": "医圣", "pinyin": "yī shèng", "back": "Medical Saint (title for Zhang Zhongjing)", "example": "后人称张仲景为医圣。", "exampleTranslation": "Later generations called Zhang Zhongjing the Medical Saint.", "breakdown": "医：医生 · 圣：圣人" },
+        { "front": "麻醉", "pinyin": "má zuì", "back": "anesthesia / numbing", "example": "华佗制成了可以全身麻醉的药。", "exampleTranslation": "Hua Tuo created a medicine for whole-body anesthesia.", "breakdown": "麻：麻木 · 醉：酒醉，这里指失去知觉" },
+        { "front": "麻沸散", "pinyin": "má fèi sǎn", "back": "Mafeisan (an ancient anesthetic powder invented by Hua Tuo)", "example": "华佗制成了麻沸散。", "exampleTranslation": "Hua Tuo created Mafeisan.", "breakdown": "麻：麻醉 · 沸：沸腾 · 散：药散" }
+      ]
+    },
+    {
+      "id": "decline-fall",
+      "name": "Decline & Fall Words",
+      "chinese": "衰亡与军阀",
+      "emoji": "⚔️",
+      "cards": [
+        { "front": "爆发", "pinyin": "bào fā", "back": "to break out / erupt / explode", "example": "东汉后期，爆发了黄巾起义。", "exampleTranslation": "In the late Eastern Han, the Yellow Turban Rebellion broke out.", "breakdown": "爆：火（火）爆发 · 发：发生" },
+        { "front": "黄巾起义", "pinyin": "Huáng Jīn Qǐ Yì", "back": "Yellow Turban Rebellion (peasant uprising in late Eastern Han)", "example": "东汉后期，爆发了黄巾起义。", "exampleTranslation": "In the late Eastern Han, the Yellow Turban Rebellion broke out.", "breakdown": "黄：黄色 · 巾：头巾 · 起：起义 · 义：正义" },
+        { "front": "镇压", "pinyin": "zhèn yā", "back": "to suppress / crack down on", "example": "在镇压黄巾军起义时，各地出现许多军阀。", "exampleTranslation": "While suppressing the Yellow Turban Rebellion, many warlords appeared in various regions.", "breakdown": "镇：镇压 · 压：压力" },
+        { "front": "军阀", "pinyin": "jūn fá", "back": "warlord (military commander controlling a region)", "example": "各地出现许多军阀。", "exampleTranslation": "Many warlords appeared in various regions.", "breakdown": "军：军队 · 阀：阀门，这里指掌握军权的人" },
+        { "front": "政权", "pinyin": "zhèng quán", "back": "regime / political power / government", "example": "东汉政权名存实亡。", "exampleTranslation": "The Eastern Han regime existed in name only.", "breakdown": "政：政治 · 权：权力" },
+        { "front": "名存实亡", "pinyin": "míng cún shí wáng", "back": "to exist in name only / nominal existence", "example": "东汉政权名存实亡。", "exampleTranslation": "The Eastern Han regime existed in name only.", "breakdown": "名：名字 · 存：存在 · 实：实际 · 亡：灭亡" }
+      ]
+    },
+    {
+      "id": "eastern-han-names",
+      "name": "Eastern Han Names & Terms",
+      "chinese": "东汉重要人名和术语",
+      "emoji": "⭐",
+      "cards": [
+        { "front": "洛阳", "pinyin": "Luòyáng", "back": "Luoyang – capital of Eastern Han", "example": null, "exampleTranslation": null },
+        { "front": "《伤寒杂病论》", "pinyin": "Shāng Hán Zá Bìng Lùn", "back": "Treatise on Cold Damage and Miscellaneous Diseases – Zhang Zhongjing's medical work", "example": null, "exampleTranslation": null }
+      ]
+    }
+  ]
+}
