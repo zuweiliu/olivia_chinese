@@ -258,5 +258,31 @@
         "total": 23
       }
     ]
+  },
+  {
+    "id": "lesson11",
+    "num": "Lesson 11",
+    "titleZh": "中国哲学（一）孔子的思想",
+    "titleEn": "Chinese Philosophy I — The Thought of Confucius",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L11",
+        "emoji": "📜",
+        "titleZh": "孔子思想与教育",
+        "titleEn": "Section 1 · Core Ideas and Educational Legacy",
+        "tags": ["📜 Confucian Thought", "🏫 Education", "⭐ Names"],
+        "total": 25
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L11b",
+        "emoji": "📝",
+        "titleZh": "第一课生词",
+        "titleEn": "Section 2 · Lesson 1 Vocabulary",
+        "tags": ["📝 Core Vocabulary", "✍️ Dictation Words"],
+        "total": 19
+      }
+    ]
   }
 ]

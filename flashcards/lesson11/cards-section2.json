@@ -1,0 +1,148 @@
+{
+  "lesson": "11b",
+  "title": "中国哲学（一）生词",
+  "subtitle": "Chinese Philosophy I · Vocabulary List",
+  "groups": [
+    {
+      "id": "core-vocab",
+      "name": "Core Vocabulary",
+      "chinese": "核心生词",
+      "emoji": "📝",
+      "cards": [
+        {
+          "front": "教育",
+          "pinyin": "jiào yù",
+          "back": "education",
+          "example": "教育对社会发展很重要。",
+          "exampleTranslation": "Education is very important for social development."
+        },
+        {
+          "front": "圣人",
+          "pinyin": "shèng rén",
+          "back": "sage; saint",
+          "example": "孔子被称为中国的圣人。",
+          "exampleTranslation": "Confucius is called a sage of China."
+        },
+        {
+          "front": "儒家",
+          "pinyin": "rú jiā",
+          "back": "the Confucianists; Confucian school",
+          "example": "儒家强调仁和礼。",
+          "exampleTranslation": "Confucianism emphasizes benevolence and ritual."
+        },
+        {
+          "front": "学派",
+          "pinyin": "xué pài",
+          "back": "school (of thought)",
+          "example": "儒家是中国重要的学派。",
+          "exampleTranslation": "Confucianism is an important Chinese school of thought."
+        },
+        {
+          "front": "哲学",
+          "pinyin": "zhé xué",
+          "back": "philosophy",
+          "example": "我们今天学习中国哲学。",
+          "exampleTranslation": "Today we study Chinese philosophy."
+        },
+        {
+          "front": "仁",
+          "pinyin": "rén",
+          "back": "benevolence",
+          "example": "仁是儒家最高的道德理想。",
+          "exampleTranslation": "Benevolence is the highest moral ideal in Confucianism."
+        },
+        {
+          "front": "主张",
+          "pinyin": "zhǔ zhāng",
+          "back": "claim; advocate",
+          "example": "孔子主张爱人。",
+          "exampleTranslation": "Confucius advocated loving others."
+        },
+        {
+          "front": "解释",
+          "pinyin": "jiě shì",
+          "back": "explain",
+          "example": "老师解释了这句话的意思。",
+          "exampleTranslation": "The teacher explained the meaning of this sentence."
+        },
+        {
+          "front": "道德",
+          "pinyin": "dào dé",
+          "back": "morality",
+          "example": "道德教育很重要。",
+          "exampleTranslation": "Moral education is very important."
+        },
+        {
+          "front": "高尚",
+          "pinyin": "gāo shàng",
+          "back": "noble",
+          "example": "他有高尚的品德。",
+          "exampleTranslation": "He has noble moral character."
+        },
+        {
+          "front": "忠恕",
+          "pinyin": "zhōng shù",
+          "back": "loyalty and forgiveness",
+          "example": "忠恕之道强调换位思考。",
+          "exampleTranslation": "The way of zhongshu stresses empathy."
+        },
+        {
+          "front": "宽容",
+          "pinyin": "kuān róng",
+          "back": "tolerant",
+          "example": "我们要学会宽容别人。",
+          "exampleTranslation": "We should learn to be tolerant toward others."
+        },
+        {
+          "front": "欲",
+          "pinyin": "yù",
+          "back": "want; desire",
+          "example": "己所不欲，勿施于人。",
+          "exampleTranslation": "Do not impose on others what you do not want yourself."
+        },
+        {
+          "front": "施",
+          "pinyin": "shī",
+          "back": "impose; apply; carry out",
+          "example": "不要把自己的想法强施于人。",
+          "exampleTranslation": "Do not force your own ideas on others."
+        },
+        {
+          "front": "行为",
+          "pinyin": "xíng wéi",
+          "back": "behavior",
+          "example": "我们要规范自己的行为。",
+          "exampleTranslation": "We should regulate our own behavior."
+        },
+        {
+          "front": "遵守",
+          "pinyin": "zūn shǒu",
+          "back": "abide by; observe",
+          "example": "大家都要遵守社会规范。",
+          "exampleTranslation": "Everyone should follow social norms."
+        },
+        {
+          "front": "规范",
+          "pinyin": "guī fàn",
+          "back": "rules and norms",
+          "example": "学校有很多行为规范。",
+          "exampleTranslation": "Schools have many behavioral rules and norms."
+        },
+        {
+          "front": "有教无类",
+          "pinyin": "yǒu jiào wú lèi",
+          "back": "no social distinctions in teaching",
+          "example": "有教无类是孔子的重要教育思想。",
+          "exampleTranslation": "Education for all is an important Confucian educational ideal."
+        },
+        {
+          "front": "贱",
+          "pinyin": "jiàn",
+          "back": "humble; low (in social status)",
+          "example": "孔子对学生不分贵贱。",
+          "exampleTranslation": "Confucius did not distinguish students by high or low status."
+        }
+      ]
+    }
+  ]
+}

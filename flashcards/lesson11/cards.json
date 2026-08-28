@@ -1,0 +1,206 @@
+{
+  "lesson": 11,
+  "title": "中国哲学（一）：孔子的思想",
+  "subtitle": "Chinese Philosophy I · The Thought of Confucius",
+  "groups": [
+    {
+      "id": "confucius-core",
+      "name": "Confucian Core Ideas",
+      "chinese": "儒家核心思想",
+      "emoji": "📜",
+      "cards": [
+        {
+          "front": "思想家",
+          "pinyin": "sī xiǎng jiā",
+          "back": "thinker; philosopher",
+          "example": "孔子是伟大的思想家。",
+          "exampleTranslation": "Confucius was a great thinker."
+        },
+        {
+          "front": "政治家",
+          "pinyin": "zhèng zhì jiā",
+          "back": "statesman; politician",
+          "example": "他也是一位政治家。",
+          "exampleTranslation": "He was also a statesman."
+        },
+        {
+          "front": "教育家",
+          "pinyin": "jiào yù jiā",
+          "back": "educator",
+          "example": "孔子是著名的教育家。",
+          "exampleTranslation": "Confucius was a famous educator."
+        },
+        {
+          "front": "儒家",
+          "pinyin": "rú jiā",
+          "back": "Confucianism; the Confucian school",
+          "example": "孔子创立了儒家学派。",
+          "exampleTranslation": "Confucius founded the Confucian school."
+        },
+        {
+          "front": "仁爱",
+          "pinyin": "rén ài",
+          "back": "benevolence; love for others",
+          "example": "孔子提出了仁爱的主张。",
+          "exampleTranslation": "Confucius proposed the idea of benevolence."
+        },
+        {
+          "front": "爱人",
+          "pinyin": "ài rén",
+          "back": "to love others",
+          "example": "孔子说仁就是爱人。",
+          "exampleTranslation": "Confucius said benevolence means loving others."
+        },
+        {
+          "front": "忠恕",
+          "pinyin": "zhōng shù",
+          "back": "loyal devotion and forgiveness",
+          "example": "忠恕是孔子的重要思想。",
+          "exampleTranslation": "Zhongshu is an important Confucian idea."
+        },
+        {
+          "front": "己所不欲，勿施于人",
+          "pinyin": "jǐ suǒ bù yù, wù shī yú rén",
+          "back": "Do not impose on others what you do not want yourself.",
+          "example": "这句话体现了忠恕之道。",
+          "exampleTranslation": "This sentence reflects the way of zhongshu."
+        },
+        {
+          "front": "己欲立而立人，己欲达而达人",
+          "pinyin": "jǐ yù lì ér lì rén, jǐ yù dá ér dá rén",
+          "back": "Help others establish themselves and succeed as you wish for yourself.",
+          "example": "孔子强调要先人后己。",
+          "exampleTranslation": "Confucius emphasized helping others as you help yourself."
+        },
+        {
+          "front": "克己复礼",
+          "pinyin": "kè jǐ fù lǐ",
+          "back": "restrain oneself and return to propriety",
+          "example": "克己复礼强调道德自律。",
+          "exampleTranslation": "Kejifuli emphasizes moral self-discipline."
+        },
+        {
+          "front": "社会规范",
+          "pinyin": "shè huì guī fàn",
+          "back": "social norms",
+          "example": "复礼就是遵守社会规范。",
+          "exampleTranslation": "Returning to ritual means following social norms."
+        },
+        {
+          "front": "道德高尚",
+          "pinyin": "dào dé gāo shàng",
+          "back": "morally noble",
+          "example": "按孔子的教导去做，可以成为道德高尚的人。",
+          "exampleTranslation": "Following Confucius's teaching can make one morally noble."
+        }
+      ]
+    },
+    {
+      "id": "education-legacy",
+      "name": "Education and Legacy",
+      "chinese": "教育与影响",
+      "emoji": "🏫",
+      "cards": [
+        {
+          "front": "私学",
+          "pinyin": "sī xué",
+          "back": "private school",
+          "example": "孔子第一个开办私学。",
+          "exampleTranslation": "Confucius was the first to open private schools."
+        },
+        {
+          "front": "学在官府",
+          "pinyin": "xué zài guān fǔ",
+          "back": "learning belonged to government schools (old system)",
+          "example": "古代教育曾经学在官府。",
+          "exampleTranslation": "In ancient times, education was once monopolized by official schools."
+        },
+        {
+          "front": "有教无类",
+          "pinyin": "yǒu jiào wú lèi",
+          "back": "education for all, without social distinction",
+          "example": "孔子主张有教无类。",
+          "exampleTranslation": "Confucius advocated education for everyone."
+        },
+        {
+          "front": "贵贱贫富",
+          "pinyin": "guì jiàn pín fù",
+          "back": "social rank, rich and poor",
+          "example": "他不分贵贱贫富收学生。",
+          "exampleTranslation": "He accepted students regardless of social rank or wealth."
+        },
+        {
+          "front": "至圣先师",
+          "pinyin": "zhì shèng xiān shī",
+          "back": "the Greatest Sage and First Teacher",
+          "example": "后人称孔子为至圣先师。",
+          "exampleTranslation": "Later generations called Confucius the Greatest Sage and First Teacher."
+        },
+        {
+          "front": "《论语》",
+          "pinyin": "Lún Yǔ",
+          "back": "The Analects",
+          "example": "孔子弟子把他的言论编成《论语》。",
+          "exampleTranslation": "Confucius's disciples compiled his sayings into The Analects."
+        },
+        {
+          "front": "六经",
+          "pinyin": "liù jīng",
+          "back": "the Six Classics",
+          "example": "孔子晚年整理了六经。",
+          "exampleTranslation": "In his later years, Confucius organized the Six Classics."
+        },
+        {
+          "front": "周游列国",
+          "pinyin": "zhōu yóu liè guó",
+          "back": "to travel among many states",
+          "example": "孔子曾周游列国推行主张。",
+          "exampleTranslation": "Confucius traveled among states to promote his political ideas."
+        }
+      ]
+    },
+    {
+      "id": "proper-names",
+      "name": "Important Names",
+      "chinese": "重要人名",
+      "emoji": "⭐",
+      "cards": [
+        {
+          "front": "孔子",
+          "pinyin": "Kǒng Zǐ",
+          "back": "Confucius",
+          "example": null,
+          "exampleTranslation": null
+        },
+        {
+          "front": "苏格拉底",
+          "pinyin": "Sū gé lā dǐ",
+          "back": "Socrates",
+          "example": null,
+          "exampleTranslation": null
+        },
+        {
+          "front": "释迦牟尼",
+          "pinyin": "Shì jiā móu ní",
+          "back": "Shakyamuni (the Buddha)",
+          "example": null,
+          "exampleTranslation": null
+        },
+        {
+          "front": "张载",
+          "pinyin": "Zhāng Zǎi",
+          "back": "Zhang Zai (Song dynasty philosopher)",
+          "example": null,
+          "exampleTranslation": null
+        },
+        {
+          "front": "程颢",
+          "pinyin": "Chéng Hào",
+          "back": "Cheng Hao (Song dynasty philosopher)",
+          "example": null,
+          "exampleTranslation": null
+        }
+      ]
+    }
+  ]
+}
