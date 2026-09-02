@@ -282,6 +282,15 @@
         "titleEn": "Section 2 · Lesson 1 Vocabulary",
         "tags": ["📝 Core Vocabulary", "✍️ Dictation Words"],
         "total": 19
+      },
+      {
+        "file": "cards-section3.json",
+        "storeKey": "fc_L11c",
+        "emoji": "📖",
+        "titleZh": "第一课补充生词",
+        "titleEn": "Section 3 · Additional Lesson 1 Vocabulary",
+        "tags": ["📖 Additional Vocabulary", "💭 Ideas & Feelings"],
+        "total": 19
       }
     ]
   }

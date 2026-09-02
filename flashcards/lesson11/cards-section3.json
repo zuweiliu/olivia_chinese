@@ -1,0 +1,148 @@
+{
+  "lesson": "11c",
+  "title": "中国哲学（一）补充生词",
+  "subtitle": "Chinese Philosophy I · Additional Vocabulary",
+  "groups": [
+    {
+      "id": "additional-vocab",
+      "name": "Additional Vocabulary",
+      "chinese": "补充生词",
+      "emoji": "📖",
+      "cards": [
+        {
+          "front": "丰富",
+          "pinyin": "fēng fù",
+          "back": "rich; abundant; to enrich",
+          "example": "中国哲学有丰富的思想内容。",
+          "exampleTranslation": "Chinese philosophy has rich intellectual content."
+        },
+        {
+          "front": "供",
+          "pinyin": "gōng",
+          "back": "to provide; to supply",
+          "example": "古代的学校供贵族子弟学习。",
+          "exampleTranslation": "Ancient schools provided education for the children of nobles."
+        },
+        {
+          "front": "贵族",
+          "pinyin": "guì zú",
+          "back": "noble; aristocrat; nobility",
+          "example": "古代只有贵族子弟有机会接受教育。",
+          "exampleTranslation": "In ancient times, only the children of nobles had the opportunity to receive an education."
+        },
+        {
+          "front": "愚笨",
+          "pinyin": "yú bèn",
+          "back": "foolish; slow-witted",
+          "example": "孔子认为学生不应该因为愚笨而放弃学习。",
+          "exampleTranslation": "Confucius believed students should not give up learning because they were slow-witted."
+        },
+        {
+          "front": "欢迎",
+          "pinyin": "huān yíng",
+          "back": "to welcome; to be well received",
+          "example": "孔子欢迎不同身份的人来学习。",
+          "exampleTranslation": "Confucius welcomed people of different social backgrounds to study."
+        },
+        {
+          "front": "希腊",
+          "pinyin": "Xī là",
+          "back": "Greece",
+          "example": "苏格拉底是古希腊著名的哲学家。",
+          "exampleTranslation": "Socrates was a famous philosopher of ancient Greece."
+        },
+        {
+          "front": "印度",
+          "pinyin": "Yìn dù",
+          "back": "India",
+          "example": "释迦牟尼出生在古印度。",
+          "exampleTranslation": "Shakyamuni was born in ancient India."
+        },
+        {
+          "front": "真诚",
+          "pinyin": "zhēn chéng",
+          "back": "sincere; genuine",
+          "example": "我们应该真诚地对待别人。",
+          "exampleTranslation": "We should treat others sincerely."
+        },
+        {
+          "front": "虚情假意",
+          "pinyin": "xū qíng jiǎ yì",
+          "back": "false friendship; hypocritical show of affection",
+          "example": "真正的仁爱不是虚情假意。",
+          "exampleTranslation": "True benevolence is not a hypocritical show of affection."
+        },
+        {
+          "front": "些",
+          "pinyin": "xiē",
+          "back": "some; a few; a little",
+          "example": "我们可以从孔子的思想中学到一些道理。",
+          "exampleTranslation": "We can learn some principles from Confucius's thought."
+        },
+        {
+          "front": "感情",
+          "pinyin": "gǎn qíng",
+          "back": "feeling; emotion; affection",
+          "example": "仁爱包含对他人的真诚感情。",
+          "exampleTranslation": "Benevolence includes sincere feelings toward others."
+        },
+        {
+          "front": "整个宇宙",
+          "pinyin": "zhěng gè yǔ zhòu",
+          "back": "the entire universe",
+          "example": "古代哲学家思考人与整个宇宙的关系。",
+          "exampleTranslation": "Ancient philosophers considered the relationship between humanity and the entire universe."
+        },
+        {
+          "front": "一切",
+          "pinyin": "yí qiè",
+          "back": "everything; all",
+          "example": "他认为世间的一切都是相连的。",
+          "exampleTranslation": "He believed that everything in the world is interconnected."
+        },
+        {
+          "front": "相连",
+          "pinyin": "xiāng lián",
+          "back": "to be connected; interconnected",
+          "example": "人与自然彼此相连。",
+          "exampleTranslation": "Humanity and nature are interconnected."
+        },
+        {
+          "front": "尽心",
+          "pinyin": "jìn xīn",
+          "back": "to do one's utmost; wholeheartedly",
+          "example": "我们应该尽心帮助有困难的人。",
+          "exampleTranslation": "We should do our utmost to help people in difficulty."
+        },
+        {
+          "front": "幸福",
+          "pinyin": "xìng fú",
+          "back": "happiness; happy",
+          "example": "仁爱可以给别人带来幸福。",
+          "exampleTranslation": "Benevolence can bring happiness to others."
+        },
+        {
+          "front": "痛苦",
+          "pinyin": "tòng kǔ",
+          "back": "pain; suffering; painful",
+          "example": "我们不应该把痛苦带给别人。",
+          "exampleTranslation": "We should not bring suffering to others."
+        },
+        {
+          "front": "失败",
+          "pinyin": "shī bài",
+          "back": "to fail; failure",
+          "example": "即使遇到失败，也要继续努力。",
+          "exampleTranslation": "Even when we encounter failure, we should keep trying."
+        },
+        {
+          "front": "应该",
+          "pinyin": "yīng gāi",
+          "back": "should; ought to",
+          "example": "我们应该遵守社会规范。",
+          "exampleTranslation": "We should follow social norms."
+        }
+      ]
+    }
+  ]
+}
