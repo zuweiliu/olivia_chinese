@@ -1,0 +1,206 @@
+{
+  "lesson": 12,
+  "title": "中国哲学（二）：孟子的思想",
+  "subtitle": "Chinese Philosophy II · The Thought of Mencius",
+  "groups": [
+    {
+      "id": "mencius-core",
+      "name": "Mencius and Confucian Ideas",
+      "chinese": "孟子与儒家思想",
+      "emoji": "📜",
+      "cards": [
+        {
+          "front": "孟子",
+          "pinyin": "meng zi",
+          "back": "Mencius",
+          "example": null,
+          "exampleTranslation": null
+        },
+        {
+          "front": "亚圣",
+          "pinyin": "ya sheng",
+          "back": "the Second Sage (title of Mencius)",
+          "example": "中国人称孟子为亚圣。",
+          "exampleTranslation": "Chinese people call Mencius the Second Sage."
+        },
+        {
+          "front": "儒家",
+          "pinyin": "ru jia",
+          "back": "Confucianism; the Confucian school",
+          "example": "孟子是儒家的代表人物。",
+          "exampleTranslation": "Mencius is a representative figure of Confucianism."
+        },
+        {
+          "front": "性善论",
+          "pinyin": "xing shan lun",
+          "back": "the theory that human nature is good",
+          "example": "孟子提出了性善论。",
+          "exampleTranslation": "Mencius proposed the theory that human nature is good."
+        },
+        {
+          "front": "仁政",
+          "pinyin": "ren zheng",
+          "back": "benevolent governance",
+          "example": "他主张国君实行仁政。",
+          "exampleTranslation": "He advocated that rulers practice benevolent governance."
+        },
+        {
+          "front": "继承",
+          "pinyin": "ji cheng",
+          "back": "to inherit; carry on",
+          "example": "孟子继承了孔子的思想。",
+          "exampleTranslation": "Mencius inherited Confucius's thought."
+        },
+        {
+          "front": "仁爱",
+          "pinyin": "ren ai",
+          "back": "benevolence; love for others",
+          "example": "仁爱是儒家道德的重要内容。",
+          "exampleTranslation": "Benevolence is an important part of Confucian morality."
+        },
+        {
+          "front": "理论",
+          "pinyin": "li lun",
+          "back": "theory",
+          "example": "他对道德问题做了理论说明。",
+          "exampleTranslation": "He gave a theoretical explanation of moral questions."
+        }
+      ]
+    },
+    {
+      "id": "four-beginnings",
+      "name": "The Four Beginnings",
+      "chinese": "四端与四德",
+      "emoji": "🧠",
+      "cards": [
+        {
+          "front": "四端",
+          "pinyin": "si duan",
+          "back": "the Four Beginnings (moral roots)",
+          "example": "孟子说人有四端。",
+          "exampleTranslation": "Mencius said people have four moral beginnings."
+        },
+        {
+          "front": "恻隐之心",
+          "pinyin": "ce yin zhi xin",
+          "back": "the heart of compassion",
+          "example": "恻隐之心就是同情心。",
+          "exampleTranslation": "The heart of compassion means sympathy."
+        },
+        {
+          "front": "羞恶之心",
+          "pinyin": "xiu wu zhi xin",
+          "back": "the sense of shame toward wrongdoing",
+          "example": "羞恶之心让人知道羞耻。",
+          "exampleTranslation": "The sense of shame helps people know shame."
+        },
+        {
+          "front": "辞让之心",
+          "pinyin": "ci rang zhi xin",
+          "back": "the heart of modesty and yielding",
+          "example": "辞让之心体现了谦让。",
+          "exampleTranslation": "The heart of yielding reflects modesty."
+        },
+        {
+          "front": "是非之心",
+          "pinyin": "shi fei zhi xin",
+          "back": "the ability to distinguish right and wrong",
+          "example": "是非之心让人分辨善恶。",
+          "exampleTranslation": "The heart of right and wrong lets people distinguish good from evil."
+        },
+        {
+          "front": "仁",
+          "pinyin": "ren",
+          "back": "benevolence",
+          "example": "恻隐之心发展为仁。",
+          "exampleTranslation": "Compassion develops into benevolence."
+        },
+        {
+          "front": "义",
+          "pinyin": "yi",
+          "back": "righteousness; justice",
+          "example": "羞恶之心发展为义。",
+          "exampleTranslation": "The sense of shame develops into righteousness."
+        },
+        {
+          "front": "礼",
+          "pinyin": "li",
+          "back": "ritual propriety; courtesy",
+          "example": "辞让之心发展为礼。",
+          "exampleTranslation": "The heart of yielding develops into propriety."
+        },
+        {
+          "front": "智",
+          "pinyin": "zhi",
+          "back": "wisdom",
+          "example": "是非之心发展为智。",
+          "exampleTranslation": "The heart of right and wrong develops into wisdom."
+        },
+        {
+          "front": "勿忘，勿助长",
+          "pinyin": "wu wang, wu zhu zhang",
+          "back": "do not forget, and do not force growth",
+          "example": "培养道德要做到勿忘，勿助长。",
+          "exampleTranslation": "To cultivate morality, do not forget it and do not force it to grow."
+        },
+        {
+          "front": "拔苗助长",
+          "pinyin": "ba miao zhu zhang",
+          "back": "to spoil things by rushing for quick results",
+          "example": "学习要努力，但不能拔苗助长。",
+          "exampleTranslation": "You should work hard in learning, but you should not force progress unrealistically."
+        }
+      ]
+    },
+    {
+      "id": "benevolent-rule",
+      "name": "People and Benevolent Rule",
+      "chinese": "民本与仁政",
+      "emoji": "🏛️",
+      "cards": [
+        {
+          "front": "民为贵，君为轻",
+          "pinyin": "min wei gui, jun wei qing",
+          "back": "the people are most important, rulers come second",
+          "example": "孟子提出了民为贵，君为轻。",
+          "exampleTranslation": "Mencius proposed that people are most important and rulers come second."
+        },
+        {
+          "front": "老吾老以及人之老，幼吾幼以及人之幼",
+          "pinyin": "lao wu lao yi ji ren zhi lao, you wu you yi ji ren zhi you",
+          "back": "care for others' elders and children as you care for your own",
+          "example": "这句话体现了仁政思想。",
+          "exampleTranslation": "This sentence reflects the idea of benevolent governance."
+        },
+        {
+          "front": "国君",
+          "pinyin": "guo jun",
+          "back": "monarch; ruler",
+          "example": "国君应该对人民有爱心。",
+          "exampleTranslation": "A ruler should care for the people."
+        },
+        {
+          "front": "朝廷",
+          "pinyin": "chao ting",
+          "back": "imperial court",
+          "example": "孟子认为朝廷也要重视百姓。",
+          "exampleTranslation": "Mencius believed the court should also value the common people."
+        },
+        {
+          "front": "拥护",
+          "pinyin": "yong hu",
+          "back": "to support; to uphold",
+          "example": "爱人民的人才会受到拥护。",
+          "exampleTranslation": "Only those who love the people will gain support."
+        },
+        {
+          "front": "资格",
+          "pinyin": "zi ge",
+          "back": "qualification",
+          "example": "有德的人才有资格当国君。",
+          "exampleTranslation": "Only virtuous people are qualified to be rulers."
+        }
+      ]
+    }
+  ]
+}

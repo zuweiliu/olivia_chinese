@@ -1,0 +1,204 @@
+{
+  "lesson": "12b",
+  "title": "中国哲学（二）生词（合并）",
+  "subtitle": "Chinese Philosophy II · Combined Vocabulary",
+  "groups": [
+    {
+      "id": "combined-vocab",
+      "name": "Combined Vocabulary",
+      "chinese": "核心与补充生词",
+      "emoji": "📝",
+      "cards": [
+        {
+          "front": "继承",
+          "pinyin": "ji cheng",
+          "back": "to inherit; carry on",
+          "example": "孟子继承了孔子的思想。",
+          "exampleTranslation": "Mencius inherited Confucius's thought."
+        },
+        {
+          "front": "恻隐",
+          "pinyin": "ce yin",
+          "back": "compassion; sympathy",
+          "example": "恻隐之心就是同情心。",
+          "exampleTranslation": "The heart of compassion is sympathy."
+        },
+        {
+          "front": "羞耻",
+          "pinyin": "xiu chi",
+          "back": "shame",
+          "example": "做错事要有羞耻心。",
+          "exampleTranslation": "One should feel shame after doing wrong."
+        },
+        {
+          "front": "谦让",
+          "pinyin": "qian rang",
+          "back": "modesty; to yield courteously",
+          "example": "我们要学会谦让。",
+          "exampleTranslation": "We should learn to be modest and yield to others."
+        },
+        {
+          "front": "善恶",
+          "pinyin": "shan e",
+          "back": "good and evil",
+          "example": "是非之心能分辨善恶。",
+          "exampleTranslation": "The sense of right and wrong can distinguish good from evil."
+        },
+        {
+          "front": "区别",
+          "pinyin": "qu bie",
+          "back": "difference; distinction",
+          "example": "人与动物有根本区别。",
+          "exampleTranslation": "Humans and animals have fundamental differences."
+        },
+        {
+          "front": "正义",
+          "pinyin": "zheng yi",
+          "back": "justice; righteousness",
+          "example": "正义是重要的道德观念。",
+          "exampleTranslation": "Justice is an important moral concept."
+        },
+        {
+          "front": "急于求成",
+          "pinyin": "ji yu qiu cheng",
+          "back": "to be impatient for quick success",
+          "example": "学习语言不能急于求成。",
+          "exampleTranslation": "You cannot be impatient for quick success when learning a language."
+        },
+        {
+          "front": "逐渐",
+          "pinyin": "zhu jian",
+          "back": "gradually",
+          "example": "道德品质是逐渐培养起来的。",
+          "exampleTranslation": "Moral character is cultivated gradually."
+        },
+        {
+          "front": "培养",
+          "pinyin": "pei yang",
+          "back": "to cultivate; to foster",
+          "example": "学校要培养学生的品德。",
+          "exampleTranslation": "Schools should cultivate students' moral character."
+        },
+        {
+          "front": "人民",
+          "pinyin": "ren min",
+          "back": "the people",
+          "example": "人民是国家的基础。",
+          "exampleTranslation": "The people are the foundation of the nation."
+        },
+        {
+          "front": "基础",
+          "pinyin": "ji chu",
+          "back": "foundation; basis",
+          "example": "教育是社会发展的基础。",
+          "exampleTranslation": "Education is the foundation of social development."
+        },
+        {
+          "front": "拥护",
+          "pinyin": "yong hu",
+          "back": "to support; to back",
+          "example": "爱人民的人会受到拥护。",
+          "exampleTranslation": "Those who love the people will gain support."
+        },
+        {
+          "front": "资格",
+          "pinyin": "zi ge",
+          "back": "qualification",
+          "example": "他有资格参加这个考试。",
+          "exampleTranslation": "He is qualified to take this exam."
+        },
+        {
+          "front": "思想家",
+          "pinyin": "si xiang jia",
+          "back": "thinker; philosopher",
+          "example": "孟子是著名的思想家。",
+          "exampleTranslation": "Mencius was a famous thinker."
+        },
+        {
+          "front": "圣人",
+          "pinyin": "sheng ren",
+          "back": "sage",
+          "example": "中国古代有很多圣人思想。",
+          "exampleTranslation": "Ancient China had many sage traditions."
+        },
+        {
+          "front": "同情心",
+          "pinyin": "tong qing xin",
+          "back": "sympathy; compassion",
+          "example": "同情心是重要的道德起点。",
+          "exampleTranslation": "Compassion is an important moral starting point."
+        },
+        {
+          "front": "分别",
+          "pinyin": "fen bie",
+          "back": "to distinguish; to tell apart",
+          "example": "我们要学会分别对错。",
+          "exampleTranslation": "We should learn to distinguish right from wrong."
+        },
+        {
+          "front": "根本",
+          "pinyin": "gen ben",
+          "back": "fundamental; basic",
+          "example": "这是人与动物的根本区别。",
+          "exampleTranslation": "This is the fundamental difference between humans and animals."
+        },
+        {
+          "front": "美德",
+          "pinyin": "mei de",
+          "back": "virtue",
+          "example": "仁义礼智都是美德。",
+          "exampleTranslation": "Benevolence, righteousness, propriety, and wisdom are all virtues."
+        },
+        {
+          "front": "幼苗",
+          "pinyin": "you miao",
+          "back": "seedling",
+          "example": "幼苗需要时间慢慢长大。",
+          "exampleTranslation": "Seedlings need time to grow."
+        },
+        {
+          "front": "爱护",
+          "pinyin": "ai hu",
+          "back": "to cherish; to care for",
+          "example": "我们要爱护自己的品德。",
+          "exampleTranslation": "We should cherish our own moral character."
+        },
+        {
+          "front": "禾苗",
+          "pinyin": "he miao",
+          "back": "rice seedlings",
+          "example": "农民每天看禾苗有没有长高。",
+          "exampleTranslation": "The farmer checked daily whether the rice seedlings grew taller."
+        },
+        {
+          "front": "着急",
+          "pinyin": "zhao ji",
+          "back": "anxious; worried",
+          "example": "他太着急，结果做错了。",
+          "exampleTranslation": "He was too anxious and ended up making mistakes."
+        },
+        {
+          "front": "道德品质",
+          "pinyin": "dao de pin zhi",
+          "back": "moral character",
+          "example": "道德品质需要长期培养。",
+          "exampleTranslation": "Moral character needs long-term cultivation."
+        },
+        {
+          "front": "百姓",
+          "pinyin": "bai xing",
+          "back": "common people",
+          "example": "国君要关心百姓生活。",
+          "exampleTranslation": "Rulers should care about the lives of ordinary people."
+        },
+        {
+          "front": "幸福",
+          "pinyin": "xing fu",
+          "back": "happiness; happy",
+          "example": "好的政治应该让人民幸福。",
+          "exampleTranslation": "Good governance should make people happy."
+        }
+      ]
+    }
+  ]
+}

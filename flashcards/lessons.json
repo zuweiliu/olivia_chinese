@@ -293,5 +293,31 @@
         "total": 19
       }
     ]
+  },
+  {
+    "id": "lesson12",
+    "num": "Lesson 12",
+    "titleZh": "中国哲学（二）孟子的思想",
+    "titleEn": "Chinese Philosophy II — The Thought of Mencius",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L12",
+        "emoji": "📜",
+        "titleZh": "孟子思想与仁政",
+        "titleEn": "Section 1 · Core Ideas and Benevolent Rule",
+        "tags": ["📜 Confucian Thought", "🧠 Four Beginnings", "🏛️ Benevolent Governance"],
+        "total": 25
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L12b",
+        "emoji": "📝",
+        "titleZh": "第二课生词（合并）",
+        "titleEn": "Section 2 · Combined Lesson 2 Vocabulary",
+        "tags": ["📝 Core Vocabulary", "📖 Additional Vocabulary", "✍️ Dictation Words"],
+        "total": 27
+      }
+    ]
   }
 ]
