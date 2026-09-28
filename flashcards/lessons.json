@@ -319,5 +319,31 @@
         "total": 27
       }
     ]
+  },
+  {
+    "id": "lesson13",
+    "num": "Lesson 13",
+    "titleZh": "中国哲学（三）荀子的思想",
+    "titleEn": "Chinese Philosophy III — The Thought of Xunzi",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L13",
+        "emoji": "📜",
+        "titleZh": "荀子思想与天人之分",
+        "titleEn": "Section 1 · Human Nature, Order & Reason",
+        "tags": ["📜 Confucian Thought", "🌿 Human Nature", "🏛️ Order & Governance", "🧠 Reason & Society"],
+        "total": 25
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L13b",
+        "emoji": "📝",
+        "titleZh": "第三课生词",
+        "titleEn": "Section 2 · Lesson 3 Vocabulary",
+        "tags": ["📝 Core Vocabulary", "✍️ Dictation Words"],
+        "total": 18
+      }
+    ]
   }
 ]

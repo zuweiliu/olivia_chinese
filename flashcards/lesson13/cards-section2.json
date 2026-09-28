@@ -1,0 +1,159 @@
+{
+  "lesson": "13b",
+  "title": "中国哲学（三）生词",
+  "subtitle": "Chinese Philosophy III · Vocabulary List",
+  "groups": [
+    {
+      "id": "core-vocab",
+      "name": "Core Vocabulary",
+      "chinese": "核心生词",
+      "emoji": "📝",
+      "cards": [
+        {
+          "front": "伪",
+          "pinyin": "wěi",
+          "back": "hypocritical; counterfeit; artificial",
+          "example": "人之性恶，其善者伪也。",
+          "exampleTranslation": "Human nature is evil; what is good is the result of human effort.",
+          "breakdown": "伪：人为制造出来的，不是天生的"
+        },
+        {
+          "front": "欲望",
+          "pinyin": "yù wàng",
+          "back": "desire; longing",
+          "example": "人生来就有各种欲望。",
+          "exampleTranslation": "People are born with many desires.",
+          "breakdown": "欲：想要、追求 · 望：希望、期待"
+        },
+        {
+          "front": "利益",
+          "pinyin": "lì yì",
+          "back": "benefit; interest",
+          "example": "他追求个人利益。",
+          "exampleTranslation": "He pursues personal interests.",
+          "breakdown": "利：利益、好处 · 益：增加、有益"
+        },
+        {
+          "front": "本能",
+          "pinyin": "běn néng",
+          "back": "instinct",
+          "example": "求生本能是人类的天性。",
+          "exampleTranslation": "The instinct for survival is part of human nature.",
+          "breakdown": "本：本来、天生 · 能：能力、力量"
+        },
+        {
+          "front": "制度",
+          "pinyin": "zhì dù",
+          "back": "system; institution; regulation",
+          "example": "完善制度能减少混乱。",
+          "exampleTranslation": "A sound system can reduce disorder.",
+          "breakdown": "制：规定、约束 · 度：标准、尺度"
+        },
+        {
+          "front": "法规",
+          "pinyin": "fǎ guī",
+          "back": "laws and regulations",
+          "example": "国家需要健全的法规。",
+          "exampleTranslation": "A country needs sound laws and regulations.",
+          "breakdown": "法：法律 · 规：规则"
+        },
+        {
+          "front": "性质",
+          "pinyin": "xìng zhì",
+          "back": "nature; characteristic; property",
+          "example": "我们要分清事物的性质。",
+          "exampleTranslation": "We should distinguish the nature of things.",
+          "breakdown": "性：本性 · 质：本质、性质"
+        },
+        {
+          "front": "功能",
+          "pinyin": "gōng néng",
+          "back": "function; role",
+          "example": "每件器物都有自己的功能。",
+          "exampleTranslation": "Every tool has its own function.",
+          "breakdown": "功：作用 · 能：能力"
+        },
+        {
+          "front": "规律",
+          "pinyin": "guī lǜ",
+          "back": "law; regular pattern; rule",
+          "example": "自然界有规律可循。",
+          "exampleTranslation": "Nature follows its own laws.",
+          "breakdown": "规：规则 · 律：法度、节律"
+        },
+        {
+          "front": "目的",
+          "pinyin": "mù dì",
+          "back": "aim; purpose",
+          "example": "人要明确自己的目的。",
+          "exampleTranslation": "People should be clear about their purpose.",
+          "breakdown": "目：目标 · 的：标记 · 目的：达到的目标"
+        },
+        {
+          "front": "联系",
+          "pinyin": "lián xì",
+          "back": "connection; relation",
+          "example": "所有事物之间都有联系。",
+          "exampleTranslation": "All things are connected.",
+          "breakdown": "联：连接 · 系：关联"
+        },
+        {
+          "front": "理性",
+          "pinyin": "lǐ xìng",
+          "back": "reason; rationality",
+          "example": "人具有理性，能思考问题。",
+          "exampleTranslation": "Human beings have reason and can think.",
+          "breakdown": "理：道理 · 性：本性"
+        },
+        {
+          "front": "改造",
+          "pinyin": "gǎi zào",
+          "back": "to reform; to transform",
+          "example": "人要学会改造自然。",
+          "exampleTranslation": "People should learn to transform nature.",
+          "breakdown": "改：修改 · 造：制造、建造"
+        },
+        {
+          "front": "组织",
+          "pinyin": "zǔ zhī",
+          "back": "to organize; organization",
+          "example": "我们需要组织学习小组。",
+          "exampleTranslation": "We need to organize a study group.",
+          "breakdown": "组：分组 · 织：编织"
+        },
+        {
+          "front": "社会",
+          "pinyin": "shè huì",
+          "back": "society",
+          "example": "社会需要规则和秩序。",
+          "exampleTranslation": "Society needs rules and order.",
+          "breakdown": "社：祭祀、土地神 · 会：聚会"
+        },
+        {
+          "front": "集体",
+          "pinyin": "jí tǐ",
+          "back": "collective; group as a whole",
+          "example": "集体利益也很重要。",
+          "exampleTranslation": "Collective interests are also important.",
+          "breakdown": "集：聚合 · 体：整体"
+        },
+        {
+          "front": "无限",
+          "pinyin": "wú xiàn",
+          "back": "limitless; infinite",
+          "example": "知识是无限的。",
+          "exampleTranslation": "Knowledge is limitless.",
+          "breakdown": "无：没有 · 限：界限"
+        },
+        {
+          "front": "企图",
+          "pinyin": "qǐ tú",
+          "back": "attempt; plan; intention",
+          "example": "他企图逃跑。",
+          "exampleTranslation": "He attempted to escape.",
+          "breakdown": "企：打算 · 图：谋划"
+        }
+      ]
+    }
+  ]
+}
