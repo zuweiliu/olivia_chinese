@@ -1,0 +1,92 @@
+{
+  "lesson": "14b",
+  "title": "中国哲学（四）生词",
+  "subtitle": "Chinese Philosophy IV · Vocabulary List",
+  "groups": [
+    {
+      "id": "core-vocab",
+      "name": "Core Vocabulary",
+      "chinese": "核心生词",
+      "emoji": "📝",
+      "cards": [
+        {
+          "front": "讨论",
+          "pinyin": "tǎo lùn",
+          "back": "to discuss",
+          "example": "他们经常讨论劳动问题。",
+          "exampleTranslation": "They often discussed questions about labor."
+        },
+        {
+          "front": "蹄",
+          "pinyin": "tí",
+          "back": "hoof",
+          "example": "有些动物以蹄爪为鞋子。",
+          "exampleTranslation": "Some animals use their hooves and claws as shoes."
+        },
+        {
+          "front": "生存",
+          "pinyin": "shēng cún",
+          "back": "to survive",
+          "example": "墨子认为人必须劳动才能生存。",
+          "exampleTranslation": "Mozi believed people must work in order to survive."
+        },
+        {
+          "front": "占有",
+          "pinyin": "zhàn yǒu",
+          "back": "to possess; to occupy",
+          "example": "他不应该占有别人的劳动成果。",
+          "exampleTranslation": "He should not take possession of the fruits of others' labor."
+        },
+        {
+          "front": "不劳而获",
+          "pinyin": "bù láo ér huò",
+          "back": "to get something for nothing",
+          "example": "不劳而获是不道德的。",
+          "exampleTranslation": "Getting something for nothing is immoral."
+        },
+        {
+          "front": "兼",
+          "pinyin": "jiān",
+          "back": "simultaneously; all together",
+          "example": "兼爱里的兼有全面和平等的意思。",
+          "exampleTranslation": "The jian in universal love carries the idea of being broad and equal."
+        },
+        {
+          "front": "差别",
+          "pinyin": "chā bié",
+          "back": "difference; distinction",
+          "example": "墨子反对爱的差别。",
+          "exampleTranslation": "Mozi opposed distinctions in love."
+        },
+        {
+          "front": "争夺",
+          "pinyin": "zhēng duó",
+          "back": "to fight for; to contend over",
+          "example": "如果大家互相爱，世界上就没有争夺了。",
+          "exampleTranslation": "If everyone loved one another, there would be no fighting over things in the world."
+        },
+        {
+          "front": "非攻",
+          "pinyin": "fēi gōng",
+          "back": "against aggression",
+          "example": "非攻是墨子的重要主张之一。",
+          "exampleTranslation": "Opposing aggression is one of Mozi's important teachings."
+        },
+        {
+          "front": "罪恶",
+          "pinyin": "zuì è",
+          "back": "evil; sin",
+          "example": "战争是罪恶。",
+          "exampleTranslation": "War is evil."
+        },
+        {
+          "front": "依靠",
+          "pinyin": "yī kào",
+          "back": "to rely on",
+          "example": "老人和孤儿都应该有所依靠。",
+          "exampleTranslation": "Old people and orphans should all have something to rely on."
+        }
+      ]
+    }
+  ]
+}

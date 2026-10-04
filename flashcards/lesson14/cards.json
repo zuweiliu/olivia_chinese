@@ -1,0 +1,256 @@
+{
+  "lesson": 14,
+  "title": "中国哲学（四）：墨子的思想",
+  "subtitle": "Chinese Philosophy IV · The Thought of Mozi",
+  "groups": [
+    {
+      "id": "mozi-labor",
+      "name": "Mozi, Labor and Morality",
+      "chinese": "墨子、劳动与道德",
+      "emoji": "🔨",
+      "cards": [
+        {
+          "front": "墨子",
+          "pinyin": "Mò zǐ",
+          "back": "Mozi",
+          "example": "墨子是中国重要的思想家。",
+          "exampleTranslation": "Mozi was an important Chinese thinker."
+        },
+        {
+          "front": "思想家",
+          "pinyin": "sī xiǎng jiā",
+          "back": "thinker; philosopher",
+          "example": "墨子是战国时期的重要思想家。",
+          "exampleTranslation": "Mozi was an important thinker of the Warring States period."
+        },
+        {
+          "front": "墨家",
+          "pinyin": "Mò jiā",
+          "back": "Mohism; the Mohist school",
+          "example": "墨子创立了墨家学派。",
+          "exampleTranslation": "Mozi founded the Mohist school."
+        },
+        {
+          "front": "创立",
+          "pinyin": "chuàng lì",
+          "back": "to found; to establish",
+          "example": "墨子创立了自己的学派。",
+          "exampleTranslation": "Mozi founded his own school of thought."
+        },
+        {
+          "front": "手工业者",
+          "pinyin": "shǒu gōng yè zhě",
+          "back": "craftsman; artisan",
+          "example": "墨子和他的学生大多是手工业者。",
+          "exampleTranslation": "Mozi and most of his students were artisans."
+        },
+        {
+          "front": "劳动",
+          "pinyin": "láo dòng",
+          "back": "labor; to work",
+          "example": "墨子认为每一个人都应该劳动。",
+          "exampleTranslation": "Mozi believed everyone should work."
+        },
+        {
+          "front": "劳动成果",
+          "pinyin": "láo dòng chéng guǒ",
+          "back": "the fruits of labor",
+          "example": "人只有参加劳动才能享受劳动成果。",
+          "exampleTranslation": "Only by joining in labor can people enjoy its fruits."
+        },
+        {
+          "front": "占有",
+          "pinyin": "zhàn yǒu",
+          "back": "to possess; to take possession of",
+          "example": "不劳动而占有别人的劳动成果是不对的。",
+          "exampleTranslation": "It is wrong to possess the fruits of others' labor without working."
+        },
+        {
+          "front": "不劳而获",
+          "pinyin": "bù láo ér huò",
+          "back": "to get something for nothing",
+          "example": "墨子认为不劳而获是不道德的。",
+          "exampleTranslation": "Mozi believed getting something for nothing is immoral."
+        }
+      ]
+    },
+    {
+      "id": "universal-love",
+      "name": "Universal Love and Moral Equality",
+      "chinese": "兼爱与平等之爱",
+      "emoji": "❤️",
+      "cards": [
+        {
+          "front": "兼爱",
+          "pinyin": "jiān ài",
+          "back": "universal love; loving everyone equally",
+          "example": "兼爱就是人与人之间互相爱。",
+          "exampleTranslation": "Universal love means people loving one another."
+        },
+        {
+          "front": "爱人",
+          "pinyin": "ài rén",
+          "back": "to love others",
+          "example": "墨子认为人的最高道德是爱人。",
+          "exampleTranslation": "Mozi believed the highest morality is to love others."
+        },
+        {
+          "front": "爱有差等",
+          "pinyin": "ài yǒu chā děng",
+          "back": "love with distinctions; graded love",
+          "example": "孔子、孟子主张爱有差等。",
+          "exampleTranslation": "Confucius and Mencius advocated graded love."
+        },
+        {
+          "front": "爱无差等",
+          "pinyin": "ài wú chā děng",
+          "back": "love without distinctions; equal love",
+          "example": "墨子主张爱无差等。",
+          "exampleTranslation": "Mozi advocated love without distinctions."
+        },
+        {
+          "front": "差别",
+          "pinyin": "chā bié",
+          "back": "difference; distinction",
+          "example": "墨子反对爱的差别。",
+          "exampleTranslation": "Mozi opposed distinctions in love."
+        },
+        {
+          "front": "互相帮助",
+          "pinyin": "hù xiāng bāng zhù",
+          "back": "to help one another",
+          "example": "墨子的兼爱就是要人们互相帮助。",
+          "exampleTranslation": "Mozi's universal love means people should help one another."
+        },
+        {
+          "front": "交相利",
+          "pinyin": "jiāo xiāng lì",
+          "back": "mutual benefit; benefiting one another",
+          "example": "兼爱不只靠嘴上说，还要做到交相利。",
+          "exampleTranslation": "Universal love is not just talk; it must bring mutual benefit."
+        },
+        {
+          "front": "爱心",
+          "pinyin": "ài xīn",
+          "back": "loving heart; compassion",
+          "example": "有爱心又能帮助别人，才是道德的行为。",
+          "exampleTranslation": "Actions are moral only when they come from compassion and help others."
+        }
+      ]
+    },
+    {
+      "id": "against-aggression",
+      "name": "Against Aggression and War",
+      "chinese": "非攻与反战",
+      "emoji": "🕊️",
+      "cards": [
+        {
+          "front": "非攻",
+          "pinyin": "fēi gōng",
+          "back": "against aggression; opposition to offensive war",
+          "example": "墨子提出了非攻的主张。",
+          "exampleTranslation": "Mozi put forward the idea of opposing aggressive war."
+        },
+        {
+          "front": "战火不断",
+          "pinyin": "zhàn huǒ bù duàn",
+          "back": "wars breaking out continuously",
+          "example": "战国时期，各国战火不断。",
+          "exampleTranslation": "During the Warring States period, wars kept breaking out among the states."
+        },
+        {
+          "front": "百姓",
+          "pinyin": "bǎi xìng",
+          "back": "common people",
+          "example": "墨子看到战争害得百姓受苦。",
+          "exampleTranslation": "Mozi saw that war caused suffering among the common people."
+        },
+        {
+          "front": "家园破碎",
+          "pinyin": "jiā yuán pò suì",
+          "back": "homes shattered; families ruined",
+          "example": "战争会让很多人的家园破碎。",
+          "exampleTranslation": "War can shatter many people's homes."
+        },
+        {
+          "front": "罪恶",
+          "pinyin": "zuì è",
+          "back": "evil; sin",
+          "example": "墨子认为战争是罪恶。",
+          "exampleTranslation": "Mozi believed war is evil."
+        },
+        {
+          "front": "和平",
+          "pinyin": "hé píng",
+          "back": "peace",
+          "example": "墨子主张要和平，反对战争。",
+          "exampleTranslation": "Mozi advocated peace and opposed war."
+        },
+        {
+          "front": "守城",
+          "pinyin": "shǒu chéng",
+          "back": "to defend a city",
+          "example": "墨子派弟子到宋国帮助守城。",
+          "exampleTranslation": "Mozi sent his disciples to Song to help defend the city."
+        },
+        {
+          "front": "说服",
+          "pinyin": "shuō fú",
+          "back": "to persuade",
+          "example": "墨子说服了楚王，不再攻打宋国。",
+          "exampleTranslation": "Mozi persuaded the king of Chu not to attack Song again."
+        }
+      ]
+    },
+    {
+      "id": "proper-names",
+      "name": "Important Names and Legacy",
+      "chinese": "重要人名与影响",
+      "emoji": "⭐",
+      "cards": [
+        {
+          "front": "翟",
+          "pinyin": "Dí",
+          "back": "Di (Mozi's given name)",
+          "example": "墨子名翟。",
+          "exampleTranslation": "Mozi's given name was Di."
+        },
+        {
+          "front": "楚国",
+          "pinyin": "Chǔ guó",
+          "back": "the state of Chu",
+          "example": "楚国曾经想攻打宋国。",
+          "exampleTranslation": "The state of Chu once wanted to attack Song."
+        },
+        {
+          "front": "宋国",
+          "pinyin": "Sòng guó",
+          "back": "the state of Song",
+          "example": "墨子帮助宋国守城。",
+          "exampleTranslation": "Mozi helped Song defend its city."
+        },
+        {
+          "front": "楚王",
+          "pinyin": "Chǔ wáng",
+          "back": "the king of Chu",
+          "example": "墨子亲自到楚国说服楚王。",
+          "exampleTranslation": "Mozi personally went to Chu to persuade the king of Chu."
+        },
+        {
+          "front": "创始人",
+          "pinyin": "chuàng shǐ rén",
+          "back": "founder",
+          "example": "墨子是墨家学派的创始人。",
+          "exampleTranslation": "Mozi was the founder of the Mohist school."
+        },
+        {
+          "front": "《墨子》",
+          "pinyin": "Mò zǐ",
+          "back": "Mozi, the book compiled from his sayings",
+          "example": "弟子把墨子的言论编成了《墨子》一书。",
+          "exampleTranslation": "His disciples compiled Mozi's sayings into the book Mozi."
+        }
+      ]
+    }
+  ]
+}

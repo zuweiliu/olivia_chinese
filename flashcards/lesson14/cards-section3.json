@@ -1,0 +1,155 @@
+{
+  "lesson": "14c",
+  "title": "中国哲学（四）补充生词",
+  "subtitle": "Chinese Philosophy IV · Additional Vocabulary",
+  "groups": [
+    {
+      "id": "additional-vocab",
+      "name": "Additional Vocabulary",
+      "chinese": "补充生词",
+      "emoji": "📖",
+      "cards": [
+        {
+          "front": "重视",
+          "pinyin": "zhòng shì",
+          "back": "to value; to attach importance to",
+          "example": "墨子和他的学生都很重视劳动。",
+          "exampleTranslation": "Mozi and his students all attached great importance to labor."
+        },
+        {
+          "front": "经常",
+          "pinyin": "jīng cháng",
+          "back": "often; frequently",
+          "example": "他们经常讨论劳动问题。",
+          "exampleTranslation": "They often discussed labor issues."
+        },
+        {
+          "front": "果园",
+          "pinyin": "guǒ yuán",
+          "back": "orchard",
+          "example": "一个人不能到别人的果园里偷水果。",
+          "exampleTranslation": "A person should not go into someone else's orchard to steal fruit."
+        },
+        {
+          "front": "水果",
+          "pinyin": "shuǐ guǒ",
+          "back": "fruit",
+          "example": "果园里有很多水果。",
+          "exampleTranslation": "There is a lot of fruit in the orchard."
+        },
+        {
+          "front": "行为",
+          "pinyin": "xíng wéi",
+          "back": "behavior; action",
+          "example": "偷别人的水果是不对的行为。",
+          "exampleTranslation": "Stealing other people's fruit is wrong behavior."
+        },
+        {
+          "front": "亲人",
+          "pinyin": "qīn rén",
+          "back": "one's family; close relatives",
+          "example": "孔子、孟子主张先爱自己的亲人。",
+          "exampleTranslation": "Confucius and Mencius advocated loving one's own family first."
+        },
+        {
+          "front": "父母",
+          "pinyin": "fù mǔ",
+          "back": "parents",
+          "example": "墨子说要爱别人的父母，就像爱自己的父母一样。",
+          "exampleTranslation": "Mozi said we should love other people's parents as we love our own."
+        },
+        {
+          "front": "世界",
+          "pinyin": "shì jiè",
+          "back": "world",
+          "example": "如果大家互相爱，世界上就没有战争了。",
+          "exampleTranslation": "If everyone loved one another, there would be no war in the world."
+        },
+        {
+          "front": "真实",
+          "pinyin": "zhēn shí",
+          "back": "real; genuine",
+          "example": "兼爱要给别人真实的好处。",
+          "exampleTranslation": "Universal love should give others real benefits."
+        },
+        {
+          "front": "好处",
+          "pinyin": "hǎo chù",
+          "back": "benefit; advantage",
+          "example": "这种行为对人民没有任何好处。",
+          "exampleTranslation": "This kind of behavior brings no benefit to the people."
+        },
+        {
+          "front": "强壮",
+          "pinyin": "qiáng zhuàng",
+          "back": "strong; sturdy",
+          "example": "强壮的人应该帮助弱小的人。",
+          "exampleTranslation": "Strong people should help the weak."
+        },
+        {
+          "front": "弱小",
+          "pinyin": "ruò xiǎo",
+          "back": "weak; small and weak",
+          "example": "墨子希望弱小的人也能过上好生活。",
+          "exampleTranslation": "Mozi hoped that weak people could also live good lives."
+        },
+        {
+          "front": "富人",
+          "pinyin": "fù rén",
+          "back": "rich person",
+          "example": "富人应该帮助穷人。",
+          "exampleTranslation": "Rich people should help the poor."
+        },
+        {
+          "front": "穷人",
+          "pinyin": "qióng rén",
+          "back": "poor person",
+          "example": "穷人也应该得到帮助。",
+          "exampleTranslation": "Poor people should also receive help."
+        },
+        {
+          "front": "孤苦",
+          "pinyin": "gū kǔ",
+          "back": "lonely and suffering",
+          "example": "社会应该照顾孤苦老人。",
+          "exampleTranslation": "Society should care for lonely and suffering elderly people."
+        },
+        {
+          "front": "孤儿",
+          "pinyin": "gū ér",
+          "back": "orphan",
+          "example": "孤儿也要有所依靠。",
+          "exampleTranslation": "Orphans should also have something to rely on."
+        },
+        {
+          "front": "勤劳",
+          "pinyin": "qín láo",
+          "back": "diligent; hardworking",
+          "example": "墨子主张人要勤劳。",
+          "exampleTranslation": "Mozi advocated that people should be hardworking."
+        },
+        {
+          "front": "刻苦",
+          "pinyin": "kè kǔ",
+          "back": "hardworking; enduring hardship",
+          "example": "刻苦劳动是墨子赞成的品质。",
+          "exampleTranslation": "Working hard and enduring hardship is a quality Mozi praised."
+        },
+        {
+          "front": "吞并",
+          "pinyin": "tūn bìng",
+          "back": "to annex; to swallow up",
+          "example": "墨子反对诸侯之间相互吞并的战争。",
+          "exampleTranslation": "Mozi opposed wars in which feudal lords annexed one another."
+        },
+        {
+          "front": "言论",
+          "pinyin": "yán lùn",
+          "back": "sayings; remarks; views expressed in words",
+          "example": "弟子把墨子的言论编成了书。",
+          "exampleTranslation": "His disciples compiled Mozi's sayings into a book."
+        }
+      ]
+    }
+  ]
+}

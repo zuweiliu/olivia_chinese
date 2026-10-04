@@ -345,5 +345,40 @@
         "total": 18
       }
     ]
+  },
+  {
+    "id": "lesson14",
+    "num": "Lesson 14",
+    "titleZh": "中国哲学（四）墨子的思想",
+    "titleEn": "Chinese Philosophy IV — The Thought of Mozi",
+    "decks": [
+      {
+        "file": "cards.json",
+        "storeKey": "fc_L14",
+        "emoji": "📜",
+        "titleZh": "墨子思想与墨家主张",
+        "titleEn": "Section 1 · Core Ideas, Labor & Universal Love",
+        "tags": ["🔨 Labor & Morality", "❤️ Universal Love", "🕊️ Against Aggression", "⭐ Names"],
+        "total": 31
+      },
+      {
+        "file": "cards-section2.json",
+        "storeKey": "fc_L14b",
+        "emoji": "📝",
+        "titleZh": "第四课生词",
+        "titleEn": "Section 2 · Lesson 4 Vocabulary",
+        "tags": ["📝 Core Vocabulary", "✍️ Dictation Words"],
+        "total": 11
+      },
+      {
+        "file": "cards-section3.json",
+        "storeKey": "fc_L14c",
+        "emoji": "📖",
+        "titleZh": "第四课补充生词",
+        "titleEn": "Section 3 · Additional Lesson 4 Vocabulary",
+        "tags": ["📖 Additional Vocabulary", "🌍 Society & Ethics"],
+        "total": 20
+      }
+    ]
   }
 ]
